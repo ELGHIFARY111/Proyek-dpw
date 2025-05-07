@@ -10,7 +10,7 @@ Website ini dibuat sebagai tugas akhir untuk mata kuliah **Dasar Pemrograman Web
 - [@Mohammad Elghifary](https://www.github.com/ELGHIFARY111)
 - [@Ach Rayyan](https://www.github.com/ACH-Rayyan)
 - [@Rendi Yulistio Firmansyah](https://www.github.com/lucathy-475)
-- [@Muhammad Fathul Iman Wahid](https://www.github.com/Roti18)
+- [@Muhammad Fathul Iman Wahid](https://www.github.com/Fathulimann123)
 - [@Moch. Zamroni Fahreza](https://www.github.com/Roti18)
 
 ## Run Locally
