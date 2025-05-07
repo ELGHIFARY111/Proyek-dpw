@@ -16,21 +16,11 @@
 - **Bootstrap Icons** → Untuk ikon SVG ringan
   - Instalasi: `npm install bootstrap-icons`
 
-### ⚙️ Backend (kalau pakai)
+### ⚙️ Backend
 
 ---
 
 ## 🔧 Tools Development
-
----
-
-## 📄 Catatan Tambahan
-
-- HTML utama ada di: `views/index.html`
-- File gambar & gif disimpan di `public/images/`
-- Video diletakkan di `public/videos/`
-
----
 
 ## 👥 Author
 
