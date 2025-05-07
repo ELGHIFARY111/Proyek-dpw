@@ -6,7 +6,7 @@ Website ini dibuat sebagai tugas akhir untuk mata kuliah **Dasar Pemrograman Web
 
 ## Authors
 
-- [@Raihan Aryanova Narendra](https://www.github.com/ELGHIFARY111)
+- [@Raihan Aryanova Narendra](https://www.github.com/hann050505)
 - [@Mohammad Elghifary](https://www.github.com/ELGHIFARY111)
 - [@Ach Rayyan](https://www.github.com/ACH-Rayyan)
 - [@Rendi Yulistio Firmansyah](https://www.github.com/lucathy-475)
