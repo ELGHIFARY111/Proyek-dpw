@@ -1,0 +1,11 @@
+*{
+    font-family: "Pixelify Sans";
+}
+#faq-container{
+    width: 1400px;
+    height: 1400px;
+    background-color: var(--biru1);
+    border-radius: 5%;
+    margin: 50px;
+
+}
