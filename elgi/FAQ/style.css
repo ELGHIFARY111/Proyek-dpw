@@ -1,11 +1,25 @@
 *{
     font-family: "Pixelify Sans";
 }
+body{
+    background-color: azure;
+}
 #faq-container{
     width: 1400px;
     height: 1400px;
     background-color: var(--biru1);
     border-radius: 5%;
     margin: 50px;
-
+    border: 1px solid blue;
+    box-shadow:10px 10px  0 black;
+}
+.judul{
+    text-align: center;
+    font-size: 50px;
+    -webkit-text-stroke: 1px var(--biru3);
+    color: white;
+}
+.faq{
+    margin-left:100px;
+    
 }
