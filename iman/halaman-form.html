@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form pengaturan</title>
+    <link rel="stylesheet" href="halaman-form.css">
+</head>
+<body>
+    <h1>Settings</h1>
+    <h3>profil</h3>
+    <p>This information is confidential so be careful what you share.</p>
+    <section>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td><label for="nama">Nama</label></td>
+                    <td><label for="username">Username</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nama" name="nama"></td>
+                    <td><input type="text" name="username" id="username" class="readonly" readonly></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email Adress</label></td>
+                    <td><label for="wa">Whatsapp</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="email" id="email"></td>
+                    <td><input type="text" name="wa" id="wa" class="readonly"readonly></td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Simpan</button></td>
+                </tr>
+            </table>
+        </form>
+        <hr>
+        <h1>Change password</h1>
+        <form action="#" method="post">
+            <table>
+                <tr>
+                    <td><label for="pwlama">Password Lama</label></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="pwlama" id="pwlama"></td>
+                </tr>
+                <tr>
+                    <td><label for="pwbaru">Password Baru</label></td>
+                    <td><label for="ulangpwbaru">Ulangi Password Baru</label></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="pwbaru" id="pwbaru"></td>
+                    <td><input type="password" name="ulangpwbaru" id="ulangpwbaru"></td>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+        </form>
+    </section>
+</body>
+</html>

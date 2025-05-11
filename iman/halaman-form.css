@@ -1,0 +1,6 @@
+table{
+    width: 100%;
+}
+input[type="text"], input[type="password"] {
+    width: 50%; /* Mengatur lebar input menjadi setengah dari lebar halaman */
+}
