@@ -20,19 +20,20 @@ body {
 }
 
 .left-side h1 {
+    margin-top: -50px;
     font-size: 60px; 
-    margin-bottom: 20px;
     letter-spacing: 5px;
 }
 
 .pixel-berdiri {
-    width: 200px;
+    width: 750px;
+    height: 750px;
+    margin-top: -275px;
     image-rendering: pixelated;
-    margin-bottom: 20px;
 }
 
 .left-side span {
-    margin-top: 40px;
+    margin-top: 10px;
     font-size: 15px;
     align-items: center;
 }
