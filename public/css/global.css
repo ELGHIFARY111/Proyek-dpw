@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Poppins&display=swap");
+
+/* Import font lokal untuk Depixelklein dan Kemco Pixel */
+@font-face {
+  font-family: "Depixelklein";
+  src: url("/fonts/DePixelKlein.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kemco Pixel";
+  src: url("/fonts/DePixelKlein.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  /* font */
+  --font-pixel: "Pixelify Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-depixelklein: "Depixelklein", sans-serif;
+  --font-kemco: "Kemco Pixel", sans-serif;
+
+  /* pixel / 8 bit */
+  --biru1: #622aff;
+  --biru2: #28248c;
+  --biru3: #222044;
+  --kuning: #e3ff37;
+  --putih: #ffffff;
+  --hijau1: #8ad22e;
+  --hijau2: #569a00;
+}
