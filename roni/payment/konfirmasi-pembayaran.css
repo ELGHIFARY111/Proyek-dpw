@@ -6,7 +6,7 @@
 body {
   background: transparent;
   font-size: 16px;
-  height: 100vh; /* supaya full layar */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +55,7 @@ section {
   /* margin: 1rem 0; */
   font-family: var(--font-pixel);
   margin-bottom: 0.5rem;
-  color: var(--putihRedup);
+  color: var(--putih);
 }
 .disclaimer i {
   color: var(--merah);

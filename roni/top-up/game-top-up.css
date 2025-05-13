@@ -332,3 +332,7 @@ main {
 .right .kontak p span a:hover {
   color: orange;
 }
+
+.dropdown-content {
+  display: none;
+}

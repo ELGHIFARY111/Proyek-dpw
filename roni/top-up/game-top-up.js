@@ -1,4 +1,4 @@
-fetch("./game.json")
+fetch("/data/json/game.json")
   .then((ress) => ress.json())
   .then((data) => {
     data.game.forEach((game) => {
@@ -6,9 +6,11 @@ fetch("./game.json")
       console.log(`Nama Game: ${game.nama}`);
       console.log(`Developer: ${game.dev}`);
       console.log(game.deskripsi);
-      console.log(game.tutor);
       console.log(`Direktori Gambar: ${game.gambar.logo}`);
       console.log(`Direktori Gambar: ${game.gambar.background}`);
+      game.tutor.forEach((tutorial) => {
+        console.log(tutorial);
+      });
       game.input.inputan.forEach((input) => {
         console.log(`Jumlah inputan: ${game.input.jumlah_input}`);
         console.log(`Input yang diperlukan: ${input.label}`);
