@@ -1,0 +1,24 @@
+{
+  "testimoni": [
+    {
+      "id": "mlbb",
+      "bintang": 5,
+      "komentar": "berkali-kali topup disini, aman ygy no phising2",
+      "waktu": {
+        "jam": "18:38:01",
+        "tanggal": "12/05/2025"
+      },
+      "barang": "1x qyt Mobile Legends 443 Diamonds"
+    },
+    {
+      "id": "ff",
+      "bintang": 4,
+      "komentar": "Langsung masuk, aman, Trusted",
+      "waktu": {
+        "jam": "11:34:10",
+        "tanggal": "12/05/2024"
+      },
+      "barang": "1x qyt Free Fire 512 Diamonds"
+    }
+  ]
+}

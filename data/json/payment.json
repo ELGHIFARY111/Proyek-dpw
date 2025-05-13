@@ -1,0 +1,62 @@
+{
+  "payment": {
+    "qris": {
+      "nama": "QRIS (All Payment)",
+      "logo": "/data/payment/qris/qris.png"
+    },
+    "e_wallet": [
+      {
+        "nama": "DANA",
+        "logo": "/data/payment/e-wallet/dana.png"
+      },
+      {
+        "nama": "OVO",
+        "logo": "/data/payment/e-wallet/ovo.png"
+      },
+      {
+        "nama": "GoPay",
+        "logo": "/data/payment/e-wallet/gopay.png"
+      },
+      {
+        "nama": "ShopeePay",
+        "logo": "/data/payment/e-wallet/shopay.png"
+      }
+    ],
+    "bank": [
+      {
+        "nama": "BCA Virtual Account",
+        "logo": "/data/payment/bank/bca.png"
+      },
+      {
+        "nama": "Mandiri Virtual Account",
+        "logo": "/data/payment/bank/mandiri.png"
+      },
+      {
+        "nama": "BRI Virtual Account",
+        "logo": "/data/payment/bank/bri.png"
+      },
+      {
+        "nama": "BNI Virtual Account",
+        "logo": "/data/payment/bank/bri.png"
+      },
+      {
+        "nama": "BSI Virtual Account",
+        "logo": "/data/payment/bank/bri.png"
+      },
+      {
+        "nama": "CIMB Virtual Account",
+        "logo": "/data/payment/bank/bri.png"
+      }
+    ],
+    "merchant": [
+      {
+        "nama": "Alfamart",
+        "logo": "/data/payment/gerai-ritel/alfamart.png"
+      },
+      {
+        "nama": "Indomaret",
+        "logo": "/data/payment/gerai-ritel/indomaret.png"
+      }
+    ]
+  }
+}

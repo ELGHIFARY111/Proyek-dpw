@@ -1,0 +1,134 @@
+{
+  "game": [
+    {
+      "id": "mlbb",
+      "nama": "Mobile Legends",
+      "dev": "Moonton",
+      "deskripsi": "Mobile Legends: Bang Bang adalah game MOBA (Multiplayer Online Battle Arena) yang dikembangkan oleh Moonton, dan telah menjadi salah satu game mobile paling populer di dunia, termasuk di Indonesia. Game ini menawarkan pertarungan 5v5 yang intens, di mana dua tim saling berhadapan untuk menghancurkan base musuh sambil mempertahankan base mereka sendiri. Dalam Mobile Legends, pemain dapat memilih dari berbagai hero dengan keterampilan dan peran yang unik, seperti Tank, Mage, Assassin, Marksman, dan Support. Setiap hero memiliki kekuatan dan strategi tersendiri, memberikan banyak variasi dan kedalaman taktik dalam setiap pertandingan. Tim yang mampu bekerja sama dengan baik dan merencanakan strategi yang tepat akan keluar sebagai pemenang. Game ini menampilkan peta klasik dengan tiga jalur (lanes), yaitu Top, Mid, dan Bottom, serta hutan (jungle) yang penuh dengan monster dan buff. Koordinasi tim, pengambilan keputusan cepat, dan eksekusi strategi yang matang sangat penting untuk menguasai medan perang dan meraih kemenangan. Selain gameplay yang seru dan kompetitif, Mobile Legends juga menawarkan berbagai fitur menarik seperti Ranked Matches, Classic Matches, dan mode permainan lainnya yang menantang. Dengan grafis yang memukau dan kontrol yang responsif, game ini memberikan pengalaman bermain yang memuaskan bagi para penggemar MOBA. Mobile Legends juga dikenal dengan komunitasnya yang besar dan aktif, serta sering mengadakan turnamen dan kompetisi eSports tingkat nasional dan internasional. Ini memberikan kesempatan bagi pemain untuk menunjukkan keterampilan mereka di tingkat yang lebih tinggi dan meraih pengakuan global. Game ini juga terus diperbarui dengan hero-hero baru, skin eksklusif, dan event spesial, yang membuat pemain selalu tertarik dan kembali bermain. Dengan berbagai keunggulan dan aksi yang mendebarkan, Mobile Legends: Bang Bang telah menjadi pilihan utama bagi para penggemar MOBA di seluruh dunia. Jika Anda mencari game dengan strategi, kerja sama tim, dan tantangan yang seru, Mobile Legends adalah game yang wajib Anda coba. Unduh sekarang dan buktikan kemampuan Anda di medan perang!",
+      "tutor": [
+        "Masukkan ID dan Server (Zone ID) Mobile Legends kamu",
+        "Pilih jumlah Diamond yang ingin kamu beli",
+        "Pilih metode pembayaran sesuai preferensimu",
+        "Masukkan kode promo kalau kamu punya!",
+        "Isi nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 2,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          },
+          {
+            "label": "Zone ID",
+            "placeholder": "Masukkan Zone ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "86 Diamonds",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "172 Diamonds",
+            "harga": 40000
+          },
+          {
+            "id": 3,
+            "nama_item": "258 Diamonds",
+            "harga": 60000
+          }
+        ],
+        "diamonds": [
+          {
+            "id": 1,
+            "nama_item": "86 Diamonds",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "172 Diamonds",
+            "harga": 40000
+          },
+          {
+            "id": 3,
+            "nama_item": "258 Diamonds",
+            "harga": 60000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/mobile legend.png",
+        "background": "/data/list-game/mobile legend.png",
+        "petunjuk": "/data/list-game/mobile legend.png"
+      }
+    },
+    {
+      "id": "ff",
+      "nama": "Free Fire",
+      "dev": "Garena",
+      "deskripsi": "Free Fire adalah game battle royale yang dikembangkan oleh Garena. Dalam game ini, 50 pemain diterjunkan ke sebuah pulau terpencil untuk bertarung dan menjadi yang terakhir bertahan hidup. Pemain bisa memilih titik pendaratan mereka sendiri, mengumpulkan senjata dan peralatan, serta menghadapi lawan di medan tempur yang terus menyusut. Dengan durasi pertandingan yang relatif singkat, sekitar 10 menit, Free Fire menawarkan aksi cepat dan menegangkan. Selain mode solo, pemain juga bisa bermain dalam duo atau squad, yang membuat permainan menjadi lebih seru dan strategis. Game ini memiliki berbagai karakter unik dengan kemampuan spesial masing-masing, serta koleksi skin senjata, bundle pakaian, dan kendaraan yang dapat dikustomisasi. Garena Free Fire juga secara rutin mengadakan event, update konten, dan kolaborasi dengan franchise terkenal, yang menjaga komunitas tetap aktif dan antusias. Game ini sangat populer di kalangan pemain mobile, khususnya di Asia Tenggara dan Amerika Latin, karena optimisasi yang baik untuk perangkat dengan spesifikasi rendah. Jika kamu mencari game battle royale dengan gameplay cepat dan penuh aksi, Free Fire adalah pilihan tepat.",
+      "tutor": [
+        "Masukkan User ID Free Fire kamu",
+        "Pilih jumlah Diamond atau item yang ingin kamu beli",
+        "Pilih metode pembayaran sesuai preferensimu",
+        "Masukkan kode promo kalau kamu punya!",
+        "Isi nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "86 Diamonds",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "172 Diamonds",
+            "harga": 40000
+          },
+          {
+            "id": 3,
+            "nama_item": "258 Diamonds",
+            "harga": 60000
+          }
+        ],
+        "diamonds": [
+          {
+            "id": 1,
+            "nama_item": "86 Diamonds",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "172 Diamonds",
+            "harga": 40000
+          },
+          {
+            "id": 3,
+            "nama_item": "258 Diamonds",
+            "harga": 60000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/free fire.png",
+        "background": "/data/list-game/free fire.png",
+        "petunjuk": "/data/list-game/free fire.png"
+      }
+    }
+  ]
+}
