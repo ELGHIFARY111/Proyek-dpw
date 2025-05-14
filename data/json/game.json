@@ -68,6 +68,510 @@
       }
     },
     {
+      "id": "8ballpool",
+      "nama": "8 Ball Pool",
+      "dev": "Miniclip",
+      "deskripsi": "8 Ball Pool adalah game biliar online yang dikembangkan oleh Miniclip. Game ini memungkinkan pemain bermain game biliar klasik secara multiplayer, dengan visual yang realistis dan kontrol sentuh yang intuitif. Pemain bisa bertanding dalam turnamen, tantangan harian, dan pertandingan santai dengan pemain dari seluruh dunia. Dengan fitur kustomisasi stik biliar dan meja, serta sistem ranking yang kompetitif, 8 Ball Pool menjadi salah satu game biliar mobile paling populer.",
+      "tutor": [
+        "Masukkan ID pemain 8 Ball Pool kamu",
+        "Pilih jumlah koin yang ingin kamu beli",
+        "Pilih metode pembayaran",
+        "Gunakan kode promo jika ada",
+        "Isi nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "Coins 1000",
+            "harga": 15000
+          },
+          {
+            "id": 2,
+            "nama_item": "Coins 2500",
+            "harga": 35000
+          },
+          {
+            "id": 3,
+            "nama_item": "Coins 5000",
+            "harga": 60000
+          }
+        ],
+        "coins": [
+          {
+            "id": 1,
+            "nama_item": "Coins 1000",
+            "harga": 15000
+          },
+          {
+            "id": 2,
+            "nama_item": "Coins 2500",
+            "harga": 35000
+          },
+          {
+            "id": 3,
+            "nama_item": "Coins 5000",
+            "harga": 60000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/8 ball pool.png",
+        "background": "/data/list-game/8 ball pool.png",
+        "petunjuk": "/data/list-game/8 ball pool.png"
+      }
+    },
+    {
+      "id": "arenabreakout",
+      "nama": "Arena Breakout",
+      "dev": "Tencent Games",
+      "deskripsi": "Arena Breakout adalah game FPS battle royale yang menawarkan pengalaman bertempur yang intens. Pemain dapat bertempur secara solo atau tim dalam peta besar dengan berbagai senjata dan perlengkapan. Game ini mengedepankan grafis berkualitas tinggi dan kontrol responsif, serta berbagai mode permainan yang menantang dan kompetitif.",
+      "tutor": [
+        "Masukkan User ID Arena Breakout kamu",
+        "Pilih paket item atau diamond yang ingin dibeli",
+        "Pilih metode pembayaran yang tersedia",
+        "Masukkan kode promo jika punya",
+        "Isi nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "100 Diamonds",
+            "harga": 30000
+          },
+          {
+            "id": 2,
+            "nama_item": "250 Diamonds",
+            "harga": 70000
+          },
+          {
+            "id": 3,
+            "nama_item": "500 Diamonds",
+            "harga": 130000
+          }
+        ],
+        "diamonds": [
+          {
+            "id": 1,
+            "nama_item": "100 Diamonds",
+            "harga": 30000
+          },
+          {
+            "id": 2,
+            "nama_item": "250 Diamonds",
+            "harga": 70000
+          },
+          {
+            "id": 3,
+            "nama_item": "500 Diamonds",
+            "harga": 130000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/arena breakout.png",
+        "background": "/data/list-game/arena breakout.png",
+        "petunjuk": "/data/list-game/arena breakout.png"
+      }
+    },
+    {
+      "id": "brawlstars",
+      "nama": "Brawl Stars",
+      "dev": "Supercell",
+      "deskripsi": "Brawl Stars adalah game mobile action multiplayer yang dikembangkan oleh Supercell. Pemain bertarung dalam berbagai mode game cepat dan seru, menggunakan karakter unik yang disebut Brawlers dengan kemampuan khusus masing-masing. Game ini menawarkan gameplay yang menyenangkan dengan grafis kartun yang cerah dan komunitas pemain yang besar.",
+      "tutor": [
+        "Masukkan ID Pengguna Brawl Stars kamu",
+        "Pilih jumlah Gems yang ingin dibeli",
+        "Pilih metode pembayaran sesuai preferensi",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif untuk proses konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "100 Gems",
+            "harga": 25000
+          },
+          {
+            "id": 2,
+            "nama_item": "350 Gems",
+            "harga": 70000
+          },
+          {
+            "id": 3,
+            "nama_item": "750 Gems",
+            "harga": 140000
+          }
+        ],
+        "gems": [
+          {
+            "id": 1,
+            "nama_item": "100 Gems",
+            "harga": 25000
+          },
+          {
+            "id": 2,
+            "nama_item": "350 Gems",
+            "harga": 70000
+          },
+          {
+            "id": 3,
+            "nama_item": "750 Gems",
+            "harga": 140000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/brawl stars.png",
+        "background": "/data/list-game/brawl stars.png",
+        "petunjuk": "/data/list-game/brawl stars.png"
+      }
+    },
+    {
+      "id": "cod",
+      "nama": "Call of Duty",
+      "dev": "Activision",
+      "deskripsi": "Call of Duty adalah franchise game FPS yang sangat populer, menawarkan mode multiplayer dan campaign yang intens. Pada versi mobile-nya, pemain dapat bertempur dalam berbagai mode seperti Team Deathmatch, Battle Royale, dan more dengan grafis yang impresif serta kontrol yang dioptimalkan untuk perangkat mobile.",
+      "tutor": [
+        "Masukkan ID akun Call of Duty kamu",
+        "Pilih paket COD Points yang diinginkan",
+        "Pilih metode pembayaran sesuai pilihan",
+        "Gunakan kode promo jika ada",
+        "Masukkan nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "100 COD Points",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "500 COD Points",
+            "harga": 90000
+          },
+          {
+            "id": 3,
+            "nama_item": "1000 COD Points",
+            "harga": 170000
+          }
+        ],
+        "cod_points": [
+          {
+            "id": 1,
+            "nama_item": "100 COD Points",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "500 COD Points",
+            "harga": 90000
+          },
+          {
+            "id": 3,
+            "nama_item": "1000 COD Points",
+            "harga": 170000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/call of duty.png",
+        "background": "/data/list-game/call of duty.png",
+        "petunjuk": "/data/list-game/call of duty.png"
+      }
+    },
+    {
+      "id": "clashroyale",
+      "nama": "Clash Royale",
+      "dev": "Supercell",
+      "deskripsi": "Clash Royale adalah game strategi real-time yang menggabungkan elemen dari tower defense, card collecting, dan battle arena. Pemain mengumpulkan kartu berbagai pasukan, mantra dan bangunan, dan bertempur melawan pemain lain dalam pertandingan 1v1 atau 2v2 untuk menghancurkan menara lawan.",
+      "tutor": [
+        "Masukkan ID akun Clash Royale kamu",
+        "Pilih jumlah Gems yang ingin dibeli",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif untuk proses konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "50 Gems",
+            "harga": 15000
+          },
+          {
+            "id": 2,
+            "nama_item": "200 Gems",
+            "harga": 55000
+          },
+          {
+            "id": 3,
+            "nama_item": "500 Gems",
+            "harga": 120000
+          }
+        ],
+        "gems": [
+          {
+            "id": 1,
+            "nama_item": "50 Gems",
+            "harga": 15000
+          },
+          {
+            "id": 2,
+            "nama_item": "200 Gems",
+            "harga": 55000
+          },
+          {
+            "id": 3,
+            "nama_item": "500 Gems",
+            "harga": 120000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/clash royale.png",
+        "background": "/data/list-game/clash royale.png",
+        "petunjuk": "/data/list-game/clash royale.png"
+      }
+    },
+    {
+      "id": "coc",
+      "nama": "Clash of Clans",
+      "dev": "Supercell",
+      "deskripsi": "Clash of Clans adalah game strategi dan manajemen desa, dimana pemain membangun desa, melatih pasukan, dan menyerang desa pemain lain. Game ini populer karena gameplaynya yang mendalam dan komunitas yang aktif.",
+      "tutor": [
+        "Masukkan ID pemain Clash of Clans kamu",
+        "Pilih jumlah Gems yang ingin dibeli",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Masukkan nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "100 Gems",
+            "harga": 25000
+          },
+          {
+            "id": 2,
+            "nama_item": "500 Gems",
+            "harga": 110000
+          },
+          {
+            "id": 3,
+            "nama_item": "1200 Gems",
+            "harga": 230000
+          }
+        ],
+        "gems": [
+          {
+            "id": 1,
+            "nama_item": "100 Gems",
+            "harga": 25000
+          },
+          {
+            "id": 2,
+            "nama_item": "500 Gems",
+            "harga": 110000
+          },
+          {
+            "id": 3,
+            "nama_item": "1200 Gems",
+            "harga": 230000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/coc.png",
+        "background": "/data/list-game/coc.png",
+        "petunjuk": "/data/list-game/coc.png"
+      }
+    },
+    {
+      "id": "dragonnest2",
+      "nama": "Dragon Nest 2",
+      "dev": "Eyedentity Games",
+      "deskripsi": "Dragon Nest 2 adalah game action RPG dengan grafis 3D yang memukau dan gameplay yang cepat. Pemain dapat memilih kelas karakter unik dan berpetualang dalam dunia fantasi melawan monster serta mengikuti misi dan raid bersama teman.",
+      "tutor": [
+        "Masukkan ID pemain Dragon Nest 2 kamu",
+        "Pilih paket item yang ingin dibeli",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo bila ada",
+        "Berikan nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "300 Diamonds",
+            "harga": 70000
+          },
+          {
+            "id": 2,
+            "nama_item": "800 Diamonds",
+            "harga": 160000
+          },
+          {
+            "id": 3,
+            "nama_item": "1500 Diamonds",
+            "harga": 280000
+          }
+        ],
+        "diamonds": [
+          {
+            "id": 1,
+            "nama_item": "300 Diamonds",
+            "harga": 70000
+          },
+          {
+            "id": 2,
+            "nama_item": "800 Diamonds",
+            "harga": 160000
+          },
+          {
+            "id": 3,
+            "nama_item": "1500 Diamonds",
+            "harga": 280000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/dragon nest 2.png",
+        "background": "/data/list-game/dragon nest 2.png",
+        "petunjuk": "/data/list-game/dragon nest 2.png"
+      }
+    },
+    {
+      "id": "footballmaster2",
+      "nama": "Football Master 2",
+      "dev": "X-Dream Sports",
+      "deskripsi": "Football Master 2 adalah game simulasi manajemen sepak bola yang memungkinkan pemain membangun dan mengelola tim impian mereka. Game ini menawarkan mode kompetitif, transfer pemain, serta tata letak dan strategi permainan yang realistis.",
+      "tutor": [
+        "Masukkan ID akun Football Master 2 kamu",
+        "Pilih paket koin atau item",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif untuk mengonfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "1000 Coins",
+            "harga": 15000
+          },
+          {
+            "id": 2,
+            "nama_item": "3750 Coins",
+            "harga": 45000
+          },
+          {
+            "id": 3,
+            "nama_item": "8000 Coins",
+            "harga": 95000
+          }
+        ],
+        "coins": [
+          {
+            "id": 1,
+            "nama_item": "1000 Coins",
+            "harga": 15000
+          },
+          {
+            "id": 2,
+            "nama_item": "3750 Coins",
+            "harga": 45000
+          },
+          {
+            "id": 3,
+            "nama_item": "8000 Coins",
+            "harga": 95000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/football master 2.png",
+        "background": "/data/list-game/football master 2.png",
+        "petunjuk": "/data/list-game/football master 2.png"
+      }
+    },
+    {
       "id": "ff",
       "nama": "Free Fire",
       "dev": "Garena",
@@ -128,6 +632,1077 @@
         "logo": "/data/list-game/free fire.png",
         "background": "/data/list-game/free fire.png",
         "petunjuk": "/data/list-game/free fire.png"
+      }
+    },
+    {
+      "id": "garenaundown",
+      "nama": "Garena Undown",
+      "dev": "Garena",
+      "deskripsi": "Garena Undown adalah platform hiburan digital yang menyediakan layanan seperti game, streaming, dan layanan komunitas yang terintegrasi. Platform ini memberikan pengalaman menarik untuk para gamer dengan berbagai konten eksklusif dan acara yang interaktif.",
+      "tutor": [
+        "Masukkan ID pengguna Garena Undown kamu",
+        "Pilih layanan yang ingin digunakan",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo bila ada",
+        "Isi nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "Paket Premium 1 Bulan",
+            "harga": 50000
+          },
+          {
+            "id": 2,
+            "nama_item": "Paket Premium 3 Bulan",
+            "harga": 130000
+          },
+          {
+            "id": 3,
+            "nama_item": "Paket Premium 6 Bulan",
+            "harga": 250000
+          }
+        ],
+        "premium": [
+          {
+            "id": 1,
+            "nama_item": "Paket Premium 1 Bulan",
+            "harga": 50000
+          },
+          {
+            "id": 2,
+            "nama_item": "Paket Premium 3 Bulan",
+            "harga": 130000
+          },
+          {
+            "id": 3,
+            "nama_item": "Paket Premium 6 Bulan",
+            "harga": 250000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/garena undown.png",
+        "background": "/data/list-game/garena undown.png",
+        "petunjuk": "/data/list-game/garena undown.png"
+      }
+    },
+    {
+      "id": "genshin",
+      "nama": "Genshin Impact",
+      "dev": "miHoYo",
+      "deskripsi": "Genshin Impact adalah game action RPG open-world dengan grafis memukau yang menawarkan eksplorasi dunia fantastis dan pertarungan menggunakan elemen elemental. Pemain dapat mengumpulkan karakter berbeda dengan kemampuan unik dan menikmati cerita menarik serta event rutin.",
+      "tutor": [
+        "Masukkan UID Genshin Impact kamu",
+        "Pilih paket gem yang ingin kamu beli",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "UID",
+            "placeholder": "Masukkan UID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "Diamonds 60",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "Diamonds 300",
+            "harga": 90000
+          },
+          {
+            "id": 3,
+            "nama_item": "Diamonds 980",
+            "harga": 270000
+          }
+        ],
+        "diamonds": [
+          {
+            "id": 1,
+            "nama_item": "Diamonds 60",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "Diamonds 300",
+            "harga": 90000
+          },
+          {
+            "id": 3,
+            "nama_item": "Diamonds 980",
+            "harga": 270000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/genshin.png",
+        "background": "/data/list-game/genshin.png",
+        "petunjuk": "/data/list-game/genshin.png"
+      }
+    },
+    {
+      "id": "growtopia",
+      "nama": "Growtopia",
+      "dev": "Ubisoft",
+      "deskripsi": "Growtopia adalah game sandbox multiplayer yang memungkinkan pemain membangun dunia virtual, bertani, berdagang, dan berinteraksi dengan pemain lain. Game ini menonjolkan kreativitas dan sosialiasi antar pemain dalam dunia pixel yang unik.",
+      "tutor": [
+        "Masukkan username Growtopia kamu",
+        "Pilih item atau koin yang ingin dibeli",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Masukkan nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Username",
+            "placeholder": "Masukkan Username"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "1000 Gems",
+            "harga": 40000
+          },
+          {
+            "id": 2,
+            "nama_item": "2500 Gems",
+            "harga": 90000
+          },
+          {
+            "id": 3,
+            "nama_item": "5000 Gems",
+            "harga": 160000
+          }
+        ],
+        "gems": [
+          {
+            "id": 1,
+            "nama_item": "1000 Gems",
+            "harga": 40000
+          },
+          {
+            "id": 2,
+            "nama_item": "2500 Gems",
+            "harga": 90000
+          },
+          {
+            "id": 3,
+            "nama_item": "5000 Gems",
+            "harga": 160000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/growtopia.png",
+        "background": "/data/list-game/growtopia.png",
+        "petunjuk": "/data/list-game/growtopia.png"
+      }
+    },
+    {
+      "id": "hayday",
+      "nama": "Hay Day",
+      "dev": "Supercell",
+      "deskripsi": "Hay Day adalah game simulasi pertanian yang dikembangkan oleh Supercell, di mana pemain dapat menanam tanaman, memelihara hewan, dan mengelola peternakan mereka sendiri. Game ini menekankan aspek sosial dengan fitur bertukar barang antar pemain.",
+      "tutor": [
+        "Masukkan ID pengguna Hay Day kamu",
+        "Pilih jumlah koin/gem yang ingin dibeli",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Masukkan nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "1000 Coins",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "5000 Coins",
+            "harga": 80000
+          },
+          {
+            "id": 3,
+            "nama_item": "12000 Coins",
+            "harga": 180000
+          }
+        ],
+        "coins": [
+          {
+            "id": 1,
+            "nama_item": "1000 Coins",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "5000 Coins",
+            "harga": 80000
+          },
+          {
+            "id": 3,
+            "nama_item": "12000 Coins",
+            "harga": 180000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/hayday.png",
+        "background": "/data/list-game/hayday.png",
+        "petunjuk": "/data/list-game/hayday.png"
+      }
+    },
+    {
+      "id": "leagueoflegends",
+      "nama": "League of Legends",
+      "dev": "Riot Games",
+      "deskripsi": "League of Legends adalah game MOBA legendaris yang dikembangkan oleh Riot Games. Pemain bertarung dalam tim 5v5 dengan tujuan menghancurkan Nexus lawan menggunakan strategi dan keterampilan karakter dengan kemampuan berbeda.",
+      "tutor": [
+        "Masukkan ID Riot Games kamu",
+        "Pilih paket RP (Riot Points) yang diinginkan",
+        "Pilih metode pembayaran",
+        "Gunakan kode promo jika ada",
+        "Isi nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Riot ID",
+            "placeholder": "Masukkan Riot ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "Rp 13800",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "Rp 28500",
+            "harga": 40000
+          },
+          {
+            "id": 3,
+            "nama_item": "Rp 57000",
+            "harga": 70000
+          }
+        ],
+        "riot_points": [
+          {
+            "id": 1,
+            "nama_item": "Rp 13800",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "Rp 28500",
+            "harga": 40000
+          },
+          {
+            "id": 3,
+            "nama_item": "Rp 57000",
+            "harga": 70000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/league of legends.png",
+        "background": "/data/list-game/league of legends.png",
+        "petunjuk": "/data/list-game/league of legends.png"
+      }
+    },
+    {
+      "id": "lordsmobile",
+      "nama": "Lords Mobile",
+      "dev": "IGG",
+      "deskripsi": "Lords Mobile adalah game strategi real-time yang menggabungkan pembangunan kerajaan, pertempuran PvP, dan elemen RPG. Pemain membangun kerajaan, melatih pasukan, dan bertarung untuk menguasai dunia game secara global.",
+      "tutor": [
+        "Masukkan ID pemain Lords Mobile kamu",
+        "Pilih paket gems atau item",
+        "Pilih metode pembayaran",
+        "Gunakan kode promo bila ada",
+        "Masukkan nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "100 Gems",
+            "harga": 25000
+          },
+          {
+            "id": 2,
+            "nama_item": "500 Gems",
+            "harga": 110000
+          },
+          {
+            "id": 3,
+            "nama_item": "1200 Gems",
+            "harga": 230000
+          }
+        ],
+        "gems": [
+          {
+            "id": 1,
+            "nama_item": "100 Gems",
+            "harga": 25000
+          },
+          {
+            "id": 2,
+            "nama_item": "500 Gems",
+            "harga": 110000
+          },
+          {
+            "id": 3,
+            "nama_item": "1200 Gems",
+            "harga": 230000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/lords mobile.png",
+        "background": "/data/list-game/lords mobile.png",
+        "petunjuk": "/data/list-game/lords mobile.png"
+      }
+    },
+    {
+      "id": "marvelsnap",
+      "nama": "Marvel Snap",
+      "dev": "Second Dinner",
+      "deskripsi": "Marvel Snap adalah game kartu digital cepat dengan karakter-karakter Marvel yang ikonik. Pemain bertarung dalam pertandingan singkat menggunakan deck yang terdiri dari karakter favorit dan strategi cerdas.",
+      "tutor": [
+        "Masukkan ID pemain Marvel Snap kamu",
+        "Pilih paket kartu atau gems",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "100 Gems",
+            "harga": 30000
+          },
+          {
+            "id": 2,
+            "nama_item": "300 Gems",
+            "harga": 85000
+          },
+          {
+            "id": 3,
+            "nama_item": "750 Gems",
+            "harga": 180000
+          }
+        ],
+        "gems": [
+          {
+            "id": 1,
+            "nama_item": "100 Gems",
+            "harga": 30000
+          },
+          {
+            "id": 2,
+            "nama_item": "300 Gems",
+            "harga": 85000
+          },
+          {
+            "id": 3,
+            "nama_item": "750 Gems",
+            "harga": 180000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/marvel snap.png",
+        "background": "/data/list-game/marvel snap.png",
+        "petunjuk": "/data/list-game/marvel snap.png"
+      }
+    },
+    {
+      "id": "pointblank",
+      "nama": "Point Blank",
+      "dev": "Zepetto",
+      "deskripsi": "Point Blank adalah game FPS online yang sangat populer di Indonesia dan Asia Tenggara. Game ini menawarkan berbagai mode permainan dan senjata unik dengan gameplay cepat dan kompetitif.",
+      "tutor": [
+        "Masukkan ID akun Point Blank kamu",
+        "Pilih paket Cash atau item",
+        "Pilih metode pembayaran",
+        "Gunakan kode promo jika ada",
+        "Masukkan nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "500 Cash",
+            "harga": 25000
+          },
+          {
+            "id": 2,
+            "nama_item": "1200 Cash",
+            "harga": 55000
+          },
+          {
+            "id": 3,
+            "nama_item": "2500 Cash",
+            "harga": 110000
+          }
+        ],
+        "cash": [
+          {
+            "id": 1,
+            "nama_item": "500 Cash",
+            "harga": 25000
+          },
+          {
+            "id": 2,
+            "nama_item": "1200 Cash",
+            "harga": 55000
+          },
+          {
+            "id": 3,
+            "nama_item": "2500 Cash",
+            "harga": 110000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/point blank.png",
+        "background": "/data/list-game/point blank.png",
+        "petunjuk": "/data/list-game/point blank.png"
+      }
+    },
+    {
+      "id": "pubg",
+      "nama": "PUBG Mobile",
+      "dev": "Tencent Games",
+      "deskripsi": "PUBG Mobile adalah game battle royale yang sangat populer, di mana 100 pemain terjun ke sebuah pulau dan bertarung dengan berbagai senjata untuk bertahan hidup hingga akhir. Game menawarkan mode solo, duo, dan squad dengan grafis realistis dan gameplay intens.",
+      "tutor": [
+        "Masukkan User ID PUBG Mobile kamu",
+        "Pilih paket UC (Unknown Cash) yang ingin dibeli",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "60 UC",
+            "harga": 15000
+          },
+          {
+            "id": 2,
+            "nama_item": "300 UC",
+            "harga": 70000
+          },
+          {
+            "id": 3,
+            "nama_item": "600 UC",
+            "harga": 130000
+          }
+        ],
+        "uc": [
+          {
+            "id": 1,
+            "nama_item": "60 UC",
+            "harga": 15000
+          },
+          {
+            "id": 2,
+            "nama_item": "300 UC",
+            "harga": 70000
+          },
+          {
+            "id": 3,
+            "nama_item": "600 UC",
+            "harga": 130000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/pubg.png",
+        "background": "/data/list-game/pubg.png",
+        "petunjuk": "/data/list-game/pubg.png"
+      }
+    },
+    {
+      "id": "ragnarokx",
+      "nama": "Ragnarok X",
+      "dev": "Gravity",
+      "deskripsi": "Ragnarok X adalah game MMORPG mobile yang diadaptasi dari Ragnarok Online klasik. Pemain dapat memilih berbagai job, menjelajahi dunia fantasi yang luas, serta berinteraksi dan bertarung bersama pemain lain.",
+      "tutor": [
+        "Masukkan User ID Ragnarok X kamu",
+        "Pilih paket Zeny atau item",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "10000 Zeny",
+            "harga": 25000
+          },
+          {
+            "id": 2,
+            "nama_item": "30000 Zeny",
+            "harga": 70000
+          },
+          {
+            "id": 3,
+            "nama_item": "70000 Zeny",
+            "harga": 150000
+          }
+        ],
+        "zeny": [
+          {
+            "id": 1,
+            "nama_item": "10000 Zeny",
+            "harga": 25000
+          },
+          {
+            "id": 2,
+            "nama_item": "30000 Zeny",
+            "harga": 70000
+          },
+          {
+            "id": 3,
+            "nama_item": "70000 Zeny",
+            "harga": 150000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/ragnarok x.png",
+        "background": "/data/list-game/ragnarok x.png",
+        "petunjuk": "/data/list-game/ragnarok x.png"
+      }
+    },
+    {
+      "id": "riseofkingdom",
+      "nama": "Rise of Kingdoms",
+      "dev": "Lilith Games",
+      "deskripsi": "Rise of Kingdoms adalah game strategi real-time yang memungkinkan pemain membangun peradaban, menjelajah dunia, serta berperang dengan pemain lain atau bergabung dalam aliansi.",
+      "tutor": [
+        "Masukkan ID pemain Rise of Kingdoms kamu",
+        "Pilih paket gems atau item",
+        "Pilih metode pembayaran",
+        "Gunakan kode promo bila ada",
+        "Isi nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "100 Gems",
+            "harga": 22000
+          },
+          {
+            "id": 2,
+            "nama_item": "550 Gems",
+            "harga": 110000
+          },
+          {
+            "id": 3,
+            "nama_item": "1200 Gems",
+            "harga": 210000
+          }
+        ],
+        "gems": [
+          {
+            "id": 1,
+            "nama_item": "100 Gems",
+            "harga": 22000
+          },
+          {
+            "id": 2,
+            "nama_item": "550 Gems",
+            "harga": 110000
+          },
+          {
+            "id": 3,
+            "nama_item": "1200 Gems",
+            "harga": 210000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/rise of kingdom.png",
+        "background": "/data/list-game/rise of kingdom.png",
+        "petunjuk": "/data/list-game/rise of kingdom.png"
+      }
+    },
+    {
+      "id": "saintseiya",
+      "nama": "Saint Seiya",
+      "dev": "Bandai Namco",
+      "deskripsi": "Saint Seiya adalah game action RPG yang diadaptasi dari anime populer dengan karakter-karakter legendaris yang berjuang dalam pertarungan epik. Game ini menampilkan grafis 3D dan skill unik untuk setiap karakter.",
+      "tutor": [
+        "Masukkan User ID Saint Seiya kamu",
+        "Pilih paket item atau gems",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "300 Gems",
+            "harga": 60000
+          },
+          {
+            "id": 2,
+            "nama_item": "750 Gems",
+            "harga": 130000
+          },
+          {
+            "id": 3,
+            "nama_item": "1600 Gems",
+            "harga": 260000
+          }
+        ],
+        "gems": [
+          {
+            "id": 1,
+            "nama_item": "300 Gems",
+            "harga": 60000
+          },
+          {
+            "id": 2,
+            "nama_item": "750 Gems",
+            "harga": 130000
+          },
+          {
+            "id": 3,
+            "nama_item": "1600 Gems",
+            "harga": 260000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/saint seiya.png",
+        "background": "/data/list-game/saint seiya.png",
+        "petunjuk": "/data/list-game/saint seiya.png"
+      }
+    },
+    {
+      "id": "saugeman",
+      "nama": "Sauge Man",
+      "dev": "Sauge Games",
+      "deskripsi": "Sauge Man adalah game action adventure dengan gameplay yang seru dan grafis menarik. Pemain menjalankan misi untuk melawan musuh dan menyelesaikan tantangan dalam dunia yang terbuka dan penuh aksi.",
+      "tutor": [
+        "Masukkan ID pengguna Sauge Man kamu",
+        "Pilih paket item yang ingin dibeli",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo bila ada",
+        "Isi nomor WhatsApp untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "500 Coins",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "1200 Coins",
+            "harga": 45000
+          },
+          {
+            "id": 3,
+            "nama_item": "2500 Coins",
+            "harga": 90000
+          }
+        ],
+        "coins": [
+          {
+            "id": 1,
+            "nama_item": "500 Coins",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "1200 Coins",
+            "harga": 45000
+          },
+          {
+            "id": 3,
+            "nama_item": "2500 Coins",
+            "harga": 90000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/sauge man.png",
+        "background": "/data/list-game/sauge man.png",
+        "petunjuk": "/data/list-game/sauge man.png"
+      }
+    },
+    {
+      "id": "sealm",
+      "nama": "Seal M",
+      "dev": "Yoozoo Games",
+      "deskripsi": "Seal M adalah game MMORPG fantasy dengan desain imut dan gameplay yang menyenangkan. Pemain dapat menjelajah dunia luas dan bertarung melawan monster serta pemain lain dalam berbagai mode.",
+      "tutor": [
+        "Masukkan User ID Seal M kamu",
+        "Pilih paket gems atau item yang diinginkan",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "300 Gems",
+            "harga": 65000
+          },
+          {
+            "id": 2,
+            "nama_item": "750 Gems",
+            "harga": 130000
+          },
+          {
+            "id": 3,
+            "nama_item": "1600 Gems",
+            "harga": 260000
+          }
+        ],
+        "gems": [
+          {
+            "id": 1,
+            "nama_item": "300 Gems",
+            "harga": 65000
+          },
+          {
+            "id": 2,
+            "nama_item": "750 Gems",
+            "harga": 130000
+          },
+          {
+            "id": 3,
+            "nama_item": "1600 Gems",
+            "harga": 260000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/seal m.png",
+        "background": "/data/list-game/seal m.png",
+        "petunjuk": "/data/list-game/seal m.png"
+      }
+    },
+    {
+      "id": "stateofsurvival",
+      "nama": "State of Survival",
+      "dev": "KingsGroup",
+      "deskripsi": "State of Survival adalah game strategi dan survival dengan tema dunia pasca-apokaliptik. Pemain harus membangun markas, bertahan melawan zombie, dan bekerjasama dengan pemain lain dalam aliansi.",
+      "tutor": [
+        "Masukkan ID pemain State of Survival kamu",
+        "Pilih paket gems atau item yang ingin dibeli",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif untuk proses konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "150 Gems",
+            "harga": 35000
+          },
+          {
+            "id": 2,
+            "nama_item": "600 Gems",
+            "harga": 140000
+          },
+          {
+            "id": 3,
+            "nama_item": "1300 Gems",
+            "harga": 270000
+          }
+        ],
+        "gems": [
+          {
+            "id": 1,
+            "nama_item": "150 Gems",
+            "harga": 35000
+          },
+          {
+            "id": 2,
+            "nama_item": "600 Gems",
+            "harga": 140000
+          },
+          {
+            "id": 3,
+            "nama_item": "1300 Gems",
+            "harga": 270000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/state of survival.png",
+        "background": "/data/list-game/state of survival.png",
+        "petunjuk": "/data/list-game/state of survival.png"
+      }
+    },
+    {
+      "id": "stumble",
+      "nama": "Stumble Guys",
+      "dev": "Kitka Games",
+      "deskripsi": "Stumble Guys adalah game battle royale party dengan gameplay yang lucu dan ringan. Pemain berlomba melewati rintangan aneh dan lucu untuk menjadi yang terakhir bertahan dalam pertandingan multipemain yang seru.",
+      "tutor": [
+        "Masukkan ID pemain Stumble Guys kamu",
+        "Pilih paket skins atau item",
+        "Pilih metode pembayaran",
+        "Gunakan kode promo jika ada",
+        "Isi nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Player ID",
+            "placeholder": "Masukkan Player ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "Skin Paket Basic",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "Skin Paket Premium",
+            "harga": 65000
+          },
+          {
+            "id": 3,
+            "nama_item": "Bundle Spesial",
+            "harga": 120000
+          }
+        ],
+        "skins": [
+          {
+            "id": 1,
+            "nama_item": "Skin Paket Basic",
+            "harga": 20000
+          },
+          {
+            "id": 2,
+            "nama_item": "Skin Paket Premium",
+            "harga": 65000
+          },
+          {
+            "id": 3,
+            "nama_item": "Bundle Spesial",
+            "harga": 120000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/stumble guys.png",
+        "background": "/data/list-game/stumble guys.png",
+        "petunjuk": "/data/list-game/stumble guys.png"
+      }
+    },
+    {
+      "id": "valorant",
+      "nama": "Valorant",
+      "dev": "Riot Games",
+      "deskripsi": "Valorant adalah game FPS taktis 5v5 yang menggabungkan kemampuan agen unik dengan gameplay berbasis tembakan. Pemain bekerja sama strategis untuk mengalahkan tim lawan dalam berbagai mode kompetitif dan non-kompetitif.",
+      "tutor": [
+        "Masukkan Riot ID Valorant kamu",
+        "Pilih paket Valorant Points (VP)",
+        "Pilih metode pembayaran",
+        "Masukkan kode promo jika ada",
+        "Isi nomor WhatsApp aktif untuk konfirmasi"
+      ],
+      "input": {
+        "jumlah_input": 1,
+        "inputan": [
+          {
+            "label": "Riot ID",
+            "placeholder": "Masukkan Riot ID"
+          }
+        ]
+      },
+      "list_item": {
+        "spesial_item": [
+          {
+            "id": 1,
+            "nama_item": "500 VP",
+            "harga": 90000
+          },
+          {
+            "id": 2,
+            "nama_item": "1100 VP",
+            "harga": 185000
+          },
+          {
+            "id": 3,
+            "nama_item": "2250 VP",
+            "harga": 360000
+          }
+        ],
+        "valorant_points": [
+          {
+            "id": 1,
+            "nama_item": "500 VP",
+            "harga": 90000
+          },
+          {
+            "id": 2,
+            "nama_item": "1100 VP",
+            "harga": 185000
+          },
+          {
+            "id": 3,
+            "nama_item": "2250 VP",
+            "harga": 360000
+          }
+        ]
+      },
+      "gambar": {
+        "logo": "/data/list-game/valorant.png",
+        "background": "/data/list-game/valorant.png",
+        "petunjuk": "/data/list-game/valorant.png"
       }
     }
   ]
