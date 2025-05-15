@@ -41,11 +41,11 @@
       },
       {
         "nama": "BSI Virtual Account",
-        "logo": "/data/payment/bank/bri.png"
+        "logo": "/data/payment/bank/bsi.png"
       },
       {
         "nama": "CIMB Virtual Account",
-        "logo": "/data/payment/bank/bri.png"
+        "logo": "/data/payment/bank/cimb.png"
       }
     ],
     "merchant": [

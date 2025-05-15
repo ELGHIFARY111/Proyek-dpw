@@ -29,35 +29,95 @@
         "spesial_item": [
           {
             "id": 1,
-            "nama_item": "86 Diamonds",
-            "harga": 20000
+            "nama_item": "MOBILE LEGENDS Weekly Diamond Pass",
+            "harga": 26851
           },
           {
             "id": 2,
-            "nama_item": "172 Diamonds",
-            "harga": 40000
+            "nama_item": "MOBILE LEGENDS Twilight Pass",
+            "harga": 144834
           },
           {
             "id": 3,
-            "nama_item": "258 Diamonds",
-            "harga": 60000
+            "nama_item": "MOBILE LEGENDS Coupon Pass",
+            "harga": 69542
+          },
+          {
+            "id": 4,
+            "nama_item": "MOBILE LEGENDS Weekly Diamond 2x",
+            "harga": 53854
+          },
+          {
+            "id": 5,
+            "nama_item": "MOBILE LEGENDS Weekly Diamond 3x",
+            "harga": 80743
+          },
+          {
+            "id": 6,
+            "nama_item": "MOBILE LEGENDS Weekly Diamond 4x",
+            "harga": 107683
           }
         ],
         "diamonds": [
           {
             "id": 1,
-            "nama_item": "86 Diamonds",
-            "harga": 20000
+            "nama_item": "MOBILELEGEND - 15 Diamonds",
+            "harga": 4543
           },
           {
             "id": 2,
-            "nama_item": "172 Diamonds",
-            "harga": 40000
+            "nama_item": "MOBILELEGEND - 46 Diamonds",
+            "harga": 1265
           },
           {
             "id": 3,
-            "nama_item": "258 Diamonds",
-            "harga": 60000
+            "nama_item": "MOBILELEGEND - 85 Diamonds",
+            "harga": 22466
+          },
+          {
+            "id": 4,
+            "nama_item": "MOBILELEGEND - 148 Diamonds",
+            "harga": 38354
+          },
+          {
+            "id": 5,
+            "nama_item": "MOBILELEGEND - 277 Diamonds",
+            "harga": 73678
+          },
+          {
+            "id": 6,
+            "nama_item": "MOBILELEGEND - 406 Diamonds",
+            "harga": 105976
+          },
+          {
+            "id": 7,
+            "nama_item": "MOBILELEGEND - 750 Diamonds",
+            "harga": 192329
+          },
+          {
+            "id": 8,
+            "nama_item": "MOBILELEGEND - 1136 Diamonds",
+            "harga": 287383
+          },
+          {
+            "id": 9,
+            "nama_item": "MOBILELEGEND 1704 Diamonds",
+            "harga": 434518
+          },
+          {
+            "id": 10,
+            "nama_item": "MOBILELEGEND - 3423 Diamonds",
+            "harga": 845746
+          },
+          {
+            "id": 11,
+            "nama_item": "MOBILELEGEND - 6030 Diamonds",
+            "harga": 1447635
+          },
+          {
+            "id": 12,
+            "nama_item": "MOBILELEGEND - 10050 Diamonds",
+            "harga": 2412678
           }
         ]
       },
@@ -68,70 +128,7 @@
       }
     },
     {
-      "id": "8ballpool",
-      "nama": "8 Ball Pool",
-      "dev": "Miniclip",
-      "deskripsi": "8 Ball Pool adalah game biliar online yang dikembangkan oleh Miniclip. Game ini memungkinkan pemain bermain game biliar klasik secara multiplayer, dengan visual yang realistis dan kontrol sentuh yang intuitif. Pemain bisa bertanding dalam turnamen, tantangan harian, dan pertandingan santai dengan pemain dari seluruh dunia. Dengan fitur kustomisasi stik biliar dan meja, serta sistem ranking yang kompetitif, 8 Ball Pool menjadi salah satu game biliar mobile paling populer.",
-      "tutor": [
-        "Masukkan ID pemain 8 Ball Pool kamu",
-        "Pilih jumlah koin yang ingin kamu beli",
-        "Pilih metode pembayaran",
-        "Gunakan kode promo jika ada",
-        "Isi nomor WhatsApp aktif untuk konfirmasi"
-      ],
-      "input": {
-        "jumlah_input": 1,
-        "inputan": [
-          {
-            "label": "Player ID",
-            "placeholder": "Masukkan Player ID"
-          }
-        ]
-      },
-      "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "Coins 1000",
-            "harga": 15000
-          },
-          {
-            "id": 2,
-            "nama_item": "Coins 2500",
-            "harga": 35000
-          },
-          {
-            "id": 3,
-            "nama_item": "Coins 5000",
-            "harga": 60000
-          }
-        ],
-        "coins": [
-          {
-            "id": 1,
-            "nama_item": "Coins 1000",
-            "harga": 15000
-          },
-          {
-            "id": 2,
-            "nama_item": "Coins 2500",
-            "harga": 35000
-          },
-          {
-            "id": 3,
-            "nama_item": "Coins 5000",
-            "harga": 60000
-          }
-        ]
-      },
-      "gambar": {
-        "logo": "/data/list-game/8 ball pool.png",
-        "background": "/data/list-game/8 ball pool.png",
-        "petunjuk": "/data/list-game/8 ball pool.png"
-      }
-    },
-    {
-      "id": "arenabreakout",
+      "id": "ab",
       "nama": "Arena Breakout",
       "dev": "Tencent Games",
       "deskripsi": "Arena Breakout adalah game FPS battle royale yang menawarkan pengalaman bertempur yang intens. Pemain dapat bertempur secara solo atau tim dalam peta besar dengan berbagai senjata dan perlengkapan. Game ini mengedepankan grafis berkualitas tinggi dan kontrol responsif, serta berbagai mode permainan yang menantang dan kompetitif.",
@@ -152,38 +149,37 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
+        "spesial_item": [],
+        "bonds": [
           {
             "id": 1,
-            "nama_item": "100 Diamonds",
-            "harga": 30000
+            "nama_item": "ARENABREAKOUT - 66 Bonds",
+            "harga": 14205
           },
           {
             "id": 2,
-            "nama_item": "250 Diamonds",
-            "harga": 70000
+            "nama_item": "ARENABREAKOUT - 335 Bonds",
+            "harga": 69354
           },
           {
             "id": 3,
-            "nama_item": "500 Diamonds",
-            "harga": 130000
-          }
-        ],
-        "diamonds": [
-          {
-            "id": 1,
-            "nama_item": "100 Diamonds",
-            "harga": 30000
+            "nama_item": "ARENABREAKOUT - 675 Bonds",
+            "harga": 138795
           },
           {
-            "id": 2,
-            "nama_item": "250 Diamonds",
-            "harga": 70000
+            "id": 4,
+            "nama_item": "ARENABREAKOUT - 1690 Bonds",
+            "harga": 346345
           },
           {
-            "id": 3,
-            "nama_item": "500 Diamonds",
-            "harga": 130000
+            "id": 5,
+            "nama_item": "ARENABREAKOUT - 3400 Bonds",
+            "harga": 693453
+          },
+          {
+            "id": 6,
+            "nama_item": "ARENABREAKOUT - 6820 Bonds",
+            "harga": 1386207
           }
         ]
       },
@@ -215,38 +211,12 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "100 Gems",
-            "harga": 25000
-          },
-          {
-            "id": 2,
-            "nama_item": "350 Gems",
-            "harga": 70000
-          },
-          {
-            "id": 3,
-            "nama_item": "750 Gems",
-            "harga": 140000
-          }
-        ],
+        "spesial_item": [],
         "gems": [
           {
             "id": 1,
-            "nama_item": "100 Gems",
-            "harga": 25000
-          },
-          {
-            "id": 2,
-            "nama_item": "350 Gems",
-            "harga": 70000
-          },
-          {
-            "id": 3,
-            "nama_item": "750 Gems",
-            "harga": 140000
+            "nama_item": "Brawl Stars - Pass",
+            "harga": 124951
           }
         ]
       },
@@ -258,8 +228,8 @@
     },
     {
       "id": "cod",
-      "nama": "Call of Duty",
-      "dev": "Activision",
+      "nama": "Call of Duty: Mobile",
+      "dev": "Garena",
       "deskripsi": "Call of Duty adalah franchise game FPS yang sangat populer, menawarkan mode multiplayer dan campaign yang intens. Pada versi mobile-nya, pemain dapat bertempur dalam berbagai mode seperti Team Deathmatch, Battle Royale, dan more dengan grafis yang impresif serta kontrol yang dioptimalkan untuk perangkat mobile.",
       "tutor": [
         "Masukkan ID akun Call of Duty kamu",
@@ -278,38 +248,52 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "100 COD Points",
-            "harga": 20000
-          },
-          {
-            "id": 2,
-            "nama_item": "500 COD Points",
-            "harga": 90000
-          },
-          {
-            "id": 3,
-            "nama_item": "1000 COD Points",
-            "harga": 170000
-          }
-        ],
+        "spesial_item": [],
         "cod_points": [
           {
             "id": 1,
-            "nama_item": "100 COD Points",
-            "harga": 20000
+            "nama_item": "Call of Duty: Mobile - 31 CP",
+            "harga": 4295
           },
           {
             "id": 2,
-            "nama_item": "500 COD Points",
-            "harga": 90000
+            "nama_item": "Call of Duty: Mobile - 63 CP",
+            "harga": 8583
           },
           {
             "id": 3,
-            "nama_item": "1000 COD Points",
-            "harga": 170000
+            "nama_item": "Call of Duty: Mobile - 128 CP",
+            "harga": 171165
+          },
+          {
+            "id": 4,
+            "nama_item": "Call of Duty: Mobile - 321 CP",
+            "harga": 42833
+          },
+          {
+            "id": 5,
+            "nama_item": "Call of Duty: Mobile - 645 CP",
+            "harga": 85797
+          },
+          {
+            "id": 6,
+            "nama_item": "Call of Duty: Mobile - 800 CP",
+            "harga": 102951
+          },
+          {
+            "id": 7,
+            "nama_item": "Call of Duty: Mobile - 1373 CP",
+            "harga": 171165
+          },
+          {
+            "id": 8,
+            "nama_item": "Call of Duty: Mobile - 3564 CP",
+            "harga": 428884
+          },
+          {
+            "id": 9,
+            "nama_item": "Call of Duty: Mobile - 7656 CP",
+            "harga": 857743
           }
         ]
       },
@@ -320,7 +304,7 @@
       }
     },
     {
-      "id": "clashroyale",
+      "id": "cr",
       "nama": "Clash Royale",
       "dev": "Supercell",
       "deskripsi": "Clash Royale adalah game strategi real-time yang menggabungkan elemen dari tower defense, card collecting, dan battle arena. Pemain mengumpulkan kartu berbagai pasukan, mantra dan bangunan, dan bertempur melawan pemain lain dalam pertandingan 1v1 atau 2v2 untuk menghancurkan menara lawan.",
@@ -344,35 +328,45 @@
         "spesial_item": [
           {
             "id": 1,
-            "nama_item": "50 Gems",
-            "harga": 15000
+            "nama_item": "Clash Royale - Diamond Pass",
+            "harga": 149999
           },
           {
             "id": 2,
-            "nama_item": "200 Gems",
-            "harga": 55000
-          },
-          {
-            "id": 3,
-            "nama_item": "500 Gems",
-            "harga": 120000
+            "nama_item": "Clash Royale - Gold Pass",
+            "harga": 74871
           }
         ],
         "gems": [
           {
             "id": 1,
-            "nama_item": "50 Gems",
-            "harga": 15000
+            "nama_item": "Clash Royale - 88 Gems",
+            "harga": 12298
           },
           {
             "id": 2,
-            "nama_item": "200 Gems",
-            "harga": 55000
+            "nama_item": "Clash Royale - 550 Gems",
+            "harga": 62350
           },
           {
             "id": 3,
-            "nama_item": "500 Gems",
-            "harga": 120000
+            "nama_item": "Clash Royale - 1320 Gems",
+            "harga": 124765
+          },
+          {
+            "id": 4,
+            "nama_item": "Clash Royale - 2750 Gems",
+            "harga": 250153
+          },
+          {
+            "id": 5,
+            "nama_item": "Clash Royale - 7150 Gems",
+            "harga": 623505
+          },
+          {
+            "id": 6,
+            "nama_item": "Clash Royale - 15400 Gems",
+            "harga": 1249513
           }
         ]
       },
@@ -407,35 +401,35 @@
         "spesial_item": [
           {
             "id": 1,
-            "nama_item": "100 Gems",
-            "harga": 25000
-          },
-          {
-            "id": 2,
-            "nama_item": "500 Gems",
-            "harga": 110000
-          },
-          {
-            "id": 3,
-            "nama_item": "1200 Gems",
-            "harga": 230000
+            "nama_item": "Clash of Clans - Gold Pass",
+            "harga": 87390
           }
         ],
         "gems": [
           {
             "id": 1,
-            "nama_item": "100 Gems",
-            "harga": 25000
+            "nama_item": "Clash of Clans - 88 Gems",
+            "harga": 12269
           },
           {
             "id": 2,
-            "nama_item": "500 Gems",
-            "harga": 110000
+            "nama_item": "Clash of Clans - 550 Gems",
+            "harga": 62350
           },
           {
             "id": 3,
-            "nama_item": "1200 Gems",
-            "harga": 230000
+            "nama_item": "Clash of Clans - 1320 Gems",
+            "harga": 124951
+          },
+          {
+            "id": 4,
+            "nama_item": "Clash of Clans - 2750 Gems",
+            "harga": 250153
+          },
+          {
+            "id": 5,
+            "nama_item": "Clash of Clans - 7150 Gems",
+            "harga": 623505
           }
         ]
       },
@@ -446,72 +440,9 @@
       }
     },
     {
-      "id": "dragonnest2",
-      "nama": "Dragon Nest 2",
-      "dev": "Eyedentity Games",
-      "deskripsi": "Dragon Nest 2 adalah game action RPG dengan grafis 3D yang memukau dan gameplay yang cepat. Pemain dapat memilih kelas karakter unik dan berpetualang dalam dunia fantasi melawan monster serta mengikuti misi dan raid bersama teman.",
-      "tutor": [
-        "Masukkan ID pemain Dragon Nest 2 kamu",
-        "Pilih paket item yang ingin dibeli",
-        "Pilih metode pembayaran",
-        "Masukkan kode promo bila ada",
-        "Berikan nomor WhatsApp aktif"
-      ],
-      "input": {
-        "jumlah_input": 1,
-        "inputan": [
-          {
-            "label": "Player ID",
-            "placeholder": "Masukkan Player ID"
-          }
-        ]
-      },
-      "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "300 Diamonds",
-            "harga": 70000
-          },
-          {
-            "id": 2,
-            "nama_item": "800 Diamonds",
-            "harga": 160000
-          },
-          {
-            "id": 3,
-            "nama_item": "1500 Diamonds",
-            "harga": 280000
-          }
-        ],
-        "diamonds": [
-          {
-            "id": 1,
-            "nama_item": "300 Diamonds",
-            "harga": 70000
-          },
-          {
-            "id": 2,
-            "nama_item": "800 Diamonds",
-            "harga": 160000
-          },
-          {
-            "id": 3,
-            "nama_item": "1500 Diamonds",
-            "harga": 280000
-          }
-        ]
-      },
-      "gambar": {
-        "logo": "/data/list-game/dragon nest 2.png",
-        "background": "/data/list-game/dragon nest 2.png",
-        "petunjuk": "/data/list-game/dragon nest 2.png"
-      }
-    },
-    {
-      "id": "footballmaster2",
+      "id": "fm2",
       "nama": "Football Master 2",
-      "dev": "X-Dream Sports",
+      "dev": "GALA Sports",
       "deskripsi": "Football Master 2 adalah game simulasi manajemen sepak bola yang memungkinkan pemain membangun dan mengelola tim impian mereka. Game ini menawarkan mode kompetitif, transfer pemain, serta tata letak dan strategi permainan yang realistis.",
       "tutor": [
         "Masukkan ID akun Football Master 2 kamu",
@@ -530,38 +461,47 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
+        "spesial_item": [],
+        "fmp": [
           {
             "id": 1,
-            "nama_item": "1000 Coins",
-            "harga": 15000
+            "nama_item": "Football Master 2 - 18 FMP",
+            "harga": 3656
           },
           {
             "id": 2,
-            "nama_item": "3750 Coins",
-            "harga": 45000
+            "nama_item": "Football Master 2 - 95 FMP",
+            "harga": 18284
           },
           {
             "id": 3,
-            "nama_item": "8000 Coins",
-            "harga": 95000
-          }
-        ],
-        "coins": [
-          {
-            "id": 1,
-            "nama_item": "1000 Coins",
-            "harga": 15000
+            "nama_item": "Football Master 2 - 191 FMP",
+            "harga": 36564
           },
           {
-            "id": 2,
-            "nama_item": "3750 Coins",
-            "harga": 45000
+            "id": 4,
+            "nama_item": "Football Master 2 - 382 FMP",
+            "harga": 73129
           },
           {
-            "id": 3,
-            "nama_item": "8000 Coins",
-            "harga": 95000
+            "id": 5,
+            "nama_item": "Football Master 2 - 972 FMP",
+            "harga": 182.822
+          },
+          {
+            "id": 6,
+            "nama_item": "Football Master 2 - 1944 FMP",
+            "harga": 365654
+          },
+          {
+            "id": 7,
+            "nama_item": "Football Master 2 - 3888 FMP",
+            "harga": 731288
+          },
+          {
+            "id": 8,
+            "nama_item": "Football Master 2 - 9900 FMP",
+            "harga": 1828221
           }
         ]
       },
@@ -596,35 +536,70 @@
         "spesial_item": [
           {
             "id": 1,
-            "nama_item": "86 Diamonds",
-            "harga": 20000
+            "nama_item": "Free Fire Membership Mingguan",
+            "harga": 27432
           },
           {
             "id": 2,
-            "nama_item": "172 Diamonds",
-            "harga": 40000
+            "nama_item": "Free Fire BP Card",
+            "harga": 41135
           },
           {
             "id": 3,
-            "nama_item": "258 Diamonds",
-            "harga": 60000
+            "nama_item": "Free Fire Level Up Pass",
+            "harga": 13714
+          },
+          {
+            "id": 4,
+            "nama_item": "Free Fire Membership Bulanan",
+            "harga": 82244
           }
         ],
         "diamonds": [
           {
             "id": 1,
-            "nama_item": "86 Diamonds",
-            "harga": 20000
+            "nama_item": "Free Fire - 10 Diamonds",
+            "harga": 1682
           },
           {
             "id": 2,
-            "nama_item": "172 Diamonds",
-            "harga": 40000
+            "nama_item": "Free Fire - 55 Diamonds",
+            "harga": 7543
           },
           {
             "id": 3,
-            "nama_item": "258 Diamonds",
-            "harga": 60000
+            "nama_item": "Free Fire - 120 Diamonds",
+            "harga": 15287
+          },
+          {
+            "id": 4,
+            "nama_item": "Free Fire - 190 Diamonds",
+            "harga": 23865
+          },
+          {
+            "id": 5,
+            "nama_item": "Free Fire - 355 Diamonds",
+            "harga": 42922
+          },
+          {
+            "id": 6,
+            "nama_item": "Free Fire - 510 Diamonds",
+            "harga": 62582
+          },
+          {
+            "id": 7,
+            "nama_item": "Free Fire - 800 Diamonds",
+            "harga": 104234
+          },
+          {
+            "id": 8,
+            "nama_item": "Free Fire - 1450 Diamonds",
+            "harga": 171569
+          },
+          {
+            "id": 9,
+            "nama_item": "Free Fire - 7290 Diamonds",
+            "harga": 857734
           }
         ]
       },
@@ -635,8 +610,8 @@
       }
     },
     {
-      "id": "garenaundown",
-      "nama": "Garena Undown",
+      "id": "gu",
+      "nama": "Undawn",
       "dev": "Garena",
       "deskripsi": "Garena Undown adalah platform hiburan digital yang menyediakan layanan seperti game, streaming, dan layanan komunitas yang terintegrasi. Platform ini memberikan pengalaman menarik untuk para gamer dengan berbagai konten eksklusif dan acara yang interaktif.",
       "tutor": [
@@ -659,35 +634,75 @@
         "spesial_item": [
           {
             "id": 1,
-            "nama_item": "Paket Premium 1 Bulan",
-            "harga": 50000
+            "nama_item": "Garena Undawn Card Mingguan",
+            "harga": 27146
           },
           {
             "id": 2,
-            "nama_item": "Paket Premium 3 Bulan",
-            "harga": 130000
+            "nama_item": "Garena Undawn Card Bulanan",
+            "harga": 44969
           },
           {
             "id": 3,
-            "nama_item": "Paket Premium 6 Bulan",
-            "harga": 250000
+            "nama_item": "Garena Undawn Growth Fund",
+            "harga": 90195
+          },
+          {
+            "id": 4,
+            "nama_item": "Garena Undawn Glory Pass Premium",
+            "harga": 124275
+          },
+          {
+            "id": 5,
+            "nama_item": "Garena Undawn Dana Elit Rebate Lv 80",
+            "harga": 119593
           }
         ],
-        "premium": [
+        "Top_Up_Instant": [
           {
             "id": 1,
-            "nama_item": "Paket Premium 1 Bulan",
-            "harga": 50000
+            "nama_item": "Garena Undawn - 80 RC",
+            "harga": 13654
           },
           {
             "id": 2,
-            "nama_item": "Paket Premium 3 Bulan",
-            "harga": 130000
+            "nama_item": "Garena Undawn - 250 RC",
+            "harga": 40058
           },
           {
             "id": 3,
-            "nama_item": "Paket Premium 6 Bulan",
-            "harga": 250000
+            "nama_item": "Garena Undawn - 450 RC",
+            "harga": 67233
+          },
+          {
+            "id": 4,
+            "nama_item": "Garena Undawn - 920 RC",
+            "harga": 133.06
+          },
+          {
+            "id": 5,
+            "nama_item": "Garena Undawn - 1.850 RC",
+            "harga": 264036
+          },
+          {
+            "id": 6,
+            "nama_item": "Garena Undawn - 2.800 RC",
+            "harga": 396024
+          },
+          {
+            "id": 7,
+            "nama_item": "Garena Undawn - 4.750 RC",
+            "harga": 659999
+          },
+          {
+            "id": 8,
+            "nama_item": "Garena Undawn - 9.600 RC",
+            "harga": 1319937
+          },
+          {
+            "id": 9,
+            "nama_item": "Garena Undawn - 33.000 RC",
+            "harga": 4399646
           }
         ]
       },
@@ -710,8 +725,12 @@
         "Isi nomor WhatsApp aktif untuk konfirmasi"
       ],
       "input": {
-        "jumlah_input": 1,
+        "jumlah_input": 2,
         "inputan": [
+          {
+            "label": "UID",
+            "placeholder": "Masukkan User ID"
+          },
           {
             "label": "UID",
             "placeholder": "Masukkan UID"
@@ -722,35 +741,50 @@
         "spesial_item": [
           {
             "id": 1,
-            "nama_item": "Diamonds 60",
-            "harga": 20000
+            "nama_item": "Ghensin Impact Blessing of the Welkin Moon",
+            "harga": 59304
           },
           {
             "id": 2,
-            "nama_item": "Diamonds 300",
-            "harga": 90000
+            "nama_item": "Ghensin Impact Blessing of the Welkin Moon 2x",
+            "harga": 118583
           },
           {
             "id": 3,
-            "nama_item": "Diamonds 980",
-            "harga": 270000
+            "nama_item": "Ghensin Impact Blessing of the Welkin Moon 3x",
+            "harga": 177862
           }
         ],
         "diamonds": [
           {
             "id": 1,
-            "nama_item": "Diamonds 60",
-            "harga": 20000
+            "nama_item": "Ghensin Impact - 60 Genesis Crystal",
+            "harga": 11615
           },
           {
             "id": 2,
-            "nama_item": "Diamonds 300",
-            "harga": 90000
+            "nama_item": "Ghensin Impact - 300+30 Genesis Crystal",
+            "harga": 59304
           },
           {
             "id": 3,
-            "nama_item": "Diamonds 980",
-            "harga": 270000
+            "nama_item": "Ghensin Impact - 980+110 Genesis Crystal",
+            "harga": 178492
+          },
+          {
+            "id": 4,
+            "nama_item": "Ghensin Impact - 1980+260 Genesis Crystal",
+            "harga": 387070
+          },
+          {
+            "id": 5,
+            "nama_item": "Ghensin Impact - 3280+600 Genesis Crystal",
+            "harga": 595650
+          },
+          {
+            "id": 6,
+            "nama_item": "Ghensin Impact - 6480+1600 Genesis Crystal",
+            "harga": 1191589
           }
         ]
       },
@@ -758,69 +792,6 @@
         "logo": "/data/list-game/genshin.png",
         "background": "/data/list-game/genshin.png",
         "petunjuk": "/data/list-game/genshin.png"
-      }
-    },
-    {
-      "id": "growtopia",
-      "nama": "Growtopia",
-      "dev": "Ubisoft",
-      "deskripsi": "Growtopia adalah game sandbox multiplayer yang memungkinkan pemain membangun dunia virtual, bertani, berdagang, dan berinteraksi dengan pemain lain. Game ini menonjolkan kreativitas dan sosialiasi antar pemain dalam dunia pixel yang unik.",
-      "tutor": [
-        "Masukkan username Growtopia kamu",
-        "Pilih item atau koin yang ingin dibeli",
-        "Pilih metode pembayaran",
-        "Masukkan kode promo jika ada",
-        "Masukkan nomor WhatsApp aktif"
-      ],
-      "input": {
-        "jumlah_input": 1,
-        "inputan": [
-          {
-            "label": "Username",
-            "placeholder": "Masukkan Username"
-          }
-        ]
-      },
-      "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "1000 Gems",
-            "harga": 40000
-          },
-          {
-            "id": 2,
-            "nama_item": "2500 Gems",
-            "harga": 90000
-          },
-          {
-            "id": 3,
-            "nama_item": "5000 Gems",
-            "harga": 160000
-          }
-        ],
-        "gems": [
-          {
-            "id": 1,
-            "nama_item": "1000 Gems",
-            "harga": 40000
-          },
-          {
-            "id": 2,
-            "nama_item": "2500 Gems",
-            "harga": 90000
-          },
-          {
-            "id": 3,
-            "nama_item": "5000 Gems",
-            "harga": 160000
-          }
-        ]
-      },
-      "gambar": {
-        "logo": "/data/list-game/growtopia.png",
-        "background": "/data/list-game/growtopia.png",
-        "petunjuk": "/data/list-game/growtopia.png"
       }
     },
     {
@@ -848,35 +819,40 @@
         "spesial_item": [
           {
             "id": 1,
-            "nama_item": "1000 Coins",
-            "harga": 20000
-          },
-          {
-            "id": 2,
-            "nama_item": "5000 Coins",
-            "harga": 80000
-          },
-          {
-            "id": 3,
-            "nama_item": "12000 Coins",
-            "harga": 180000
+            "nama_item": "Hayday - Farm Pass",
+            "harga": 62350
           }
         ],
-        "coins": [
+        "diamonds": [
           {
             "id": 1,
-            "nama_item": "1000 Coins",
-            "harga": 20000
+            "nama_item": "Hay Day - 55 Diamonds",
+            "harga": 24790
           },
           {
             "id": 2,
-            "nama_item": "5000 Coins",
-            "harga": 80000
+            "nama_item": "Hay Day - 143 Diamonds",
+            "harga": 62350
           },
           {
             "id": 3,
-            "nama_item": "12000 Coins",
-            "harga": 180000
+            "nama_item": "Hay Day - 303 Diamonds",
+            "harga": 124951
+          },
+          {
+            "id": 4,
+            "nama_item": "Hay Day - 627 Diamonds",
+            "harga": 250153
+          },
+          {
+            "id": 5,
+            "nama_item": "Hay Day - 1650 Diamonds",
+            "harga": 498302
+          },
+          {
+            "id": 6,
+            "nama_item": "Hay Day -  4400 Diamonds",
+            "harga": 1249513
           }
         ]
       },
@@ -887,8 +863,8 @@
       }
     },
     {
-      "id": "leagueoflegends",
-      "nama": "League of Legends",
+      "id": "lol",
+      "nama": "League of Legends: Wild Rift",
       "dev": "Riot Games",
       "deskripsi": "League of Legends adalah game MOBA legendaris yang dikembangkan oleh Riot Games. Pemain bertarung dalam tim 5v5 dengan tujuan menghancurkan Nexus lawan menggunakan strategi dan keterampilan karakter dengan kemampuan berbeda.",
       "tutor": [
@@ -908,38 +884,37 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "Rp 13800",
-            "harga": 20000
-          },
-          {
-            "id": 2,
-            "nama_item": "Rp 28500",
-            "harga": 40000
-          },
-          {
-            "id": 3,
-            "nama_item": "Rp 57000",
-            "harga": 70000
-          }
-        ],
+        "spesial_item": [],
         "riot_points": [
           {
             "id": 1,
-            "nama_item": "Rp 13800",
-            "harga": 20000
+            "nama_item": "105 Wild Cores",
+            "harga": 14240
           },
           {
             "id": 2,
-            "nama_item": "Rp 28500",
-            "harga": 40000
+            "nama_item": "350 Wild Cores",
+            "harga": 47476
           },
           {
             "id": 3,
-            "nama_item": "Rp 57000",
-            "harga": 70000
+            "nama_item": "585 Wild Cores",
+            "harga": 75946
+          },
+          {
+            "id": 4,
+            "nama_item": "1135 Wild Cores",
+            "harga": 114240
+          },
+          {
+            "id": 5,
+            "nama_item": "1660 Wild Cores",
+            "harga": 199358
+          },
+          {
+            "id": 6,
+            "nama_item": "3010 Wild Cores",
+            "harga": 341765
           }
         ]
       },
@@ -950,7 +925,7 @@
       }
     },
     {
-      "id": "lordsmobile",
+      "id": "lm",
       "nama": "Lords Mobile",
       "dev": "IGG",
       "deskripsi": "Lords Mobile adalah game strategi real-time yang menggabungkan pembangunan kerajaan, pertempuran PvP, dan elemen RPG. Pemain membangun kerajaan, melatih pasukan, dan bertarung untuk menguasai dunia game secara global.",
@@ -971,38 +946,52 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "100 Gems",
-            "harga": 25000
-          },
-          {
-            "id": 2,
-            "nama_item": "500 Gems",
-            "harga": 110000
-          },
-          {
-            "id": 3,
-            "nama_item": "1200 Gems",
-            "harga": 230000
-          }
-        ],
+        "spesial_item": [],
         "gems": [
           {
             "id": 1,
-            "nama_item": "100 Gems",
-            "harga": 25000
+            "nama_item": "Lords Mobile - 39 Diamonds",
+            "harga": 8055
           },
           {
             "id": 2,
-            "nama_item": "500 Gems",
-            "harga": 110000
+            "nama_item": "Lords Mobile - 79 Diamonds",
+            "harga": 16026
           },
           {
             "id": 3,
-            "nama_item": "1200 Gems",
-            "harga": 230000
+            "nama_item": "Lords Mobile - 195 Diamonds",
+            "harga": 33771
+          },
+          {
+            "id": 4,
+            "nama_item": "Lords Mobile - 395 Diamonds",
+            "harga": 67749
+          },
+          {
+            "id": 5,
+            "nama_item": "Lords Mobile - 785 Diamonds",
+            "harga": 135394
+          },
+          {
+            "id": 6,
+            "nama_item": "Lords Mobile - 1179 Diamonds",
+            "harga": 203038
+          },
+          {
+            "id": 7,
+            "nama_item": "Lords Mobile - 1964 Diamonds",
+            "harga": 337669
+          },
+          {
+            "id": 8,
+            "nama_item": "Lords Mobile - 3928 Diamonds",
+            "harga": 676651
+          },
+          {
+            "id": 9,
+            "nama_item": "Lords Mobile - 7857 Diamonds",
+            "harga": 1353199
           }
         ]
       },
@@ -1013,7 +1002,7 @@
       }
     },
     {
-      "id": "marvelsnap",
+      "id": "ms",
       "nama": "Marvel Snap",
       "dev": "Second Dinner",
       "deskripsi": "Marvel Snap adalah game kartu digital cepat dengan karakter-karakter Marvel yang ikonik. Pemain bertarung dalam pertandingan singkat menggunakan deck yang terdiri dari karakter favorit dan strategi cerdas.",
@@ -1034,40 +1023,8 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "100 Gems",
-            "harga": 30000
-          },
-          {
-            "id": 2,
-            "nama_item": "300 Gems",
-            "harga": 85000
-          },
-          {
-            "id": 3,
-            "nama_item": "750 Gems",
-            "harga": 180000
-          }
-        ],
-        "gems": [
-          {
-            "id": 1,
-            "nama_item": "100 Gems",
-            "harga": 30000
-          },
-          {
-            "id": 2,
-            "nama_item": "300 Gems",
-            "harga": 85000
-          },
-          {
-            "id": 3,
-            "nama_item": "750 Gems",
-            "harga": 180000
-          }
-        ]
+        "spesial_item": [],
+        "gems": []
       },
       "gambar": {
         "logo": "/data/list-game/marvel snap.png",
@@ -1076,7 +1033,7 @@
       }
     },
     {
-      "id": "pointblank",
+      "id": "pb",
       "nama": "Point Blank",
       "dev": "Zepetto",
       "deskripsi": "Point Blank adalah game FPS online yang sangat populer di Indonesia dan Asia Tenggara. Game ini menawarkan berbagai mode permainan dan senjata unik dengan gameplay cepat dan kompetitif.",
@@ -1097,38 +1054,63 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
+        "instan": [
           {
             "id": 1,
-            "nama_item": "500 Cash",
-            "harga": 25000
+            "nama_item": "1.200 PB Cash",
+            "harga": 8973
           },
           {
             "id": 2,
-            "nama_item": "1200 Cash",
-            "harga": 55000
+            "nama_item": "2.400 PB Cash",
+            "harga": 17955
           },
           {
             "id": 3,
-            "nama_item": "2500 Cash",
-            "harga": 110000
+            "nama_item": "6000 PB Cash",
+            "harga": 44892
+          },
+          {
+            "id": 4,
+            "nama_item": "12.000 PB Cash",
+            "harga": 89688
+          },
+          {
+            "id": 5,
+            "nama_item": "24.000 PB Cash",
+            "harga": 181497
+          },
+          {
+            "id": 6,
+            "nama_item": "36.000 PB Cash",
+            "harga": 270680
           }
         ],
-        "cash": [
+        "voucher": [
           {
             "id": 1,
-            "nama_item": "500 Cash",
-            "harga": 25000
+            "nama_item": "Voucher 1.200 PB Cash",
+            "harga": 9045
           },
           {
             "id": 2,
-            "nama_item": "1200 Cash",
-            "harga": 55000
+            "nama_item": "Voucher 2.400 PB Cash",
+            "harga": 18089
           },
           {
             "id": 3,
-            "nama_item": "2500 Cash",
-            "harga": 110000
+            "nama_item": "Voucher 24.000 PB Cash",
+            "harga": 180815
+          },
+          {
+            "id": 4,
+            "nama_item": "Voucher 36.000 PB Cash",
+            "harga": 271210
+          },
+          {
+            "id": 5,
+            "nama_item": "Voucher 60.000 PB Cash",
+            "harga": 452000
           }
         ]
       },
@@ -1163,33 +1145,90 @@
         "spesial_item": [
           {
             "id": 1,
-            "nama_item": "60 UC",
-            "harga": 15000
+            "nama_item": "Pubg Elite Pass Plus",
+            "harga": 361455
           },
           {
             "id": 2,
-            "nama_item": "300 UC",
-            "harga": 70000
+            "nama_item": "Pubg Royale Pass",
+            "harga": 141565
+          }
+        ],
+        "indo": [
+          {
+            "id": 1,
+            "nama_item": "PUBG MOBILE 30 UC",
+            "harga": 6947
+          },
+          {
+            "id": 2,
+            "nama_item": "PUBG MOBILE 60 UC",
+            "harga": 14160
+          },
+          {
+            "id": 3,
+            "nama_item": "PUBG MOBILE 240 UC",
+            "harga": 56985
+          },
+          {
+            "id": 4,
+            "nama_item": "PUBG MOBILE 445 UC",
+            "harga": 100395
+          },
+          {
+            "id": 5,
+            "nama_item": "PUBG MOBILE 660 UC",
+            "harga": 140409
+          },
+          {
+            "id": 6,
+            "nama_item": "PUBG MOBILE 840 UC",
+            "harga": 186699
+          },
+          {
+            "id": 7,
+            "nama_item": "PUBG MOBILE 1105 UC",
+            "harga": 244348
+          },
+          {
+            "id": 8,
+            "nama_item": "PUBG MOBILE 1500 UC",
+            "harga": 330652
+          },
+          {
+            "id": 9,
+            "nama_item": "PUBG MOBILE 2785 UC",
+            "harga": 566232
+          }
+        ],
+        "global": [
+          {
+            "id": 1,
+            "nama_item": "600 UC",
+            "harga": 130000
+          },
+          {
+            "id": 2,
+            "nama_item": "600 UC",
+            "harga": 130000
           },
           {
             "id": 3,
             "nama_item": "600 UC",
             "harga": 130000
-          }
-        ],
-        "uc": [
-          {
-            "id": 1,
-            "nama_item": "60 UC",
-            "harga": 15000
           },
           {
-            "id": 2,
-            "nama_item": "300 UC",
-            "harga": 70000
+            "id": 4,
+            "nama_item": "600 UC",
+            "harga": 130000
           },
           {
-            "id": 3,
+            "id": 5,
+            "nama_item": "600 UC",
+            "harga": 130000
+          },
+          {
+            "id": 6,
             "nama_item": "600 UC",
             "harga": 130000
           }
@@ -1202,9 +1241,9 @@
       }
     },
     {
-      "id": "ragnarokx",
-      "nama": "Ragnarok X",
-      "dev": "Gravity",
+      "id": "rx",
+      "nama": "RAGNAROK X: NEXT GENERATION",
+      "dev": "PIPO (HK) Limited",
       "deskripsi": "Ragnarok X adalah game MMORPG mobile yang diadaptasi dari Ragnarok Online klasik. Pemain dapat memilih berbagai job, menjelajahi dunia fantasi yang luas, serta berinteraksi dan bertarung bersama pemain lain.",
       "tutor": [
         "Masukkan User ID Ragnarok X kamu",
@@ -1223,38 +1262,63 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
+        "package": [
           {
             "id": 1,
-            "nama_item": "10000 Zeny",
-            "harga": 25000
+            "nama_item": "Oath Of Bond (Kafra Clairice)",
+            "harga": 585935
           },
           {
             "id": 2,
-            "nama_item": "30000 Zeny",
-            "harga": 70000
-          },
-          {
-            "id": 3,
-            "nama_item": "70000 Zeny",
-            "harga": 150000
+            "nama_item": "Assurance Of Exclusivity (Kafra Telling)",
+            "harga": 367800
           }
         ],
-        "zeny": [
+        "diamonds": [
           {
             "id": 1,
-            "nama_item": "10000 Zeny",
-            "harga": 25000
+            "nama_item": "2080 Diamonds",
+            "harga": 64062
           },
           {
             "id": 2,
-            "nama_item": "30000 Zeny",
-            "harga": 70000
+            "nama_item": "4150 Diamonds",
+            "harga": 128655
           },
           {
             "id": 3,
-            "nama_item": "70000 Zeny",
-            "harga": 150000
+            "nama_item": "6910 Diamonds",
+            "harga": 214865
+          },
+          {
+            "id": 4,
+            "nama_item": "10540 Diamonds",
+            "harga": 325475
+          },
+          {
+            "id": 5,
+            "nama_item": "19380 Diamonds",
+            "harga": 504764
+          },
+          {
+            "id": 6,
+            "nama_item": "32180 Diamonds",
+            "harga": 976704
+          },
+          {
+            "id": 7,
+            "nama_item": "53050 Diamonds",
+            "harga": 1627654
+          },
+          {
+            "id": 8,
+            "nama_item": "98100 Diamonds",
+            "harga": 2522745
+          },
+          {
+            "id": 9,
+            "nama_item": "172190 Diamonds",
+            "harga": 5111073
           }
         ]
       },
@@ -1265,7 +1329,7 @@
       }
     },
     {
-      "id": "riseofkingdom",
+      "id": "rok",
       "nama": "Rise of Kingdoms",
       "dev": "Lilith Games",
       "deskripsi": "Rise of Kingdoms adalah game strategi real-time yang memungkinkan pemain membangun peradaban, menjelajah dunia, serta berperang dengan pemain lain atau bergabung dalam aliansi.",
@@ -1286,40 +1350,8 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "100 Gems",
-            "harga": 22000
-          },
-          {
-            "id": 2,
-            "nama_item": "550 Gems",
-            "harga": 110000
-          },
-          {
-            "id": 3,
-            "nama_item": "1200 Gems",
-            "harga": 210000
-          }
-        ],
-        "gems": [
-          {
-            "id": 1,
-            "nama_item": "100 Gems",
-            "harga": 22000
-          },
-          {
-            "id": 2,
-            "nama_item": "550 Gems",
-            "harga": 110000
-          },
-          {
-            "id": 3,
-            "nama_item": "1200 Gems",
-            "harga": 210000
-          }
-        ]
+        "spesial_item": [],
+        "gems": []
       },
       "gambar": {
         "logo": "/data/list-game/rise of kingdom.png",
@@ -1328,8 +1360,8 @@
       }
     },
     {
-      "id": "saintseiya",
-      "nama": "Saint Seiya",
+      "id": "ss",
+      "nama": "Saint Seiya: Awakening",
       "dev": "Bandai Namco",
       "deskripsi": "Saint Seiya adalah game action RPG yang diadaptasi dari anime populer dengan karakter-karakter legendaris yang berjuang dalam pertarungan epik. Game ini menampilkan grafis 3D dan skill unik untuk setiap karakter.",
       "tutor": [
@@ -1340,47 +1372,50 @@
         "Isi nomor WhatsApp aktif"
       ],
       "input": {
-        "jumlah_input": 1,
+        "jumlah_input": 2,
         "inputan": [
           {
             "label": "User ID",
+            "placeholder": "Masukkan User ID"
+          },
+          {
+            "label": "serevr",
             "placeholder": "Masukkan User ID"
           }
         ]
       },
       "list_item": {
-        "spesial_item": [
+        "spesial_item": [],
+        "coupon": [
           {
             "id": 1,
-            "nama_item": "300 Gems",
-            "harga": 60000
+            "nama_item": "Saint Seiya - 60 Coupon",
+            "harga": 13986
           },
           {
             "id": 2,
-            "nama_item": "750 Gems",
-            "harga": 130000
+            "nama_item": "Saint Seiya - 300 Coupon",
+            "harga": 67935
           },
           {
             "id": 3,
-            "nama_item": "1600 Gems",
-            "harga": 260000
-          }
-        ],
-        "gems": [
-          {
-            "id": 1,
-            "nama_item": "300 Gems",
-            "harga": 60000
+            "nama_item": "Saint Seiya - 600 Coupon",
+            "harga": 136745
           },
           {
-            "id": 2,
-            "nama_item": "750 Gems",
-            "harga": 130000
+            "id": 4,
+            "nama_item": "Saint Seiya - 1200 Coupon",
+            "harga": 272072
           },
           {
-            "id": 3,
-            "nama_item": "1600 Gems",
-            "harga": 260000
+            "id": 5,
+            "nama_item": "Saint Seiya - 1800 Coupon",
+            "harga": 408108
+          },
+          {
+            "id": 6,
+            "nama_item": "Saint Seiya - 3000 Coupon",
+            "harga": 680180
           }
         ]
       },
@@ -1391,7 +1426,7 @@
       }
     },
     {
-      "id": "saugeman",
+      "id": "sm",
       "nama": "Sauge Man",
       "dev": "Sauge Games",
       "deskripsi": "Sauge Man adalah game action adventure dengan gameplay yang seru dan grafis menarik. Pemain menjalankan misi untuk melawan musuh dan menyelesaikan tantangan dalam dunia yang terbuka dan penuh aksi.",
@@ -1412,38 +1447,47 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "500 Coins",
-            "harga": 20000
-          },
-          {
-            "id": 2,
-            "nama_item": "1200 Coins",
-            "harga": 45000
-          },
-          {
-            "id": 3,
-            "nama_item": "2500 Coins",
-            "harga": 90000
-          }
-        ],
+        "spesial_item": [],
         "coins": [
           {
             "id": 1,
-            "nama_item": "500 Coins",
-            "harga": 20000
+            "nama_item": "Sausage Man - 61 Candies",
+            "harga": 12407
           },
           {
             "id": 2,
-            "nama_item": "1200 Coins",
-            "harga": 45000
+            "nama_item": "Sausage Man - 186 Candies",
+            "harga": 37743
           },
           {
             "id": 3,
-            "nama_item": "2500 Coins",
-            "harga": 90000
+            "nama_item": "Sausage Man - 318 Candies",
+            "harga": 62872
+          },
+          {
+            "id": 4,
+            "nama_item": "Sausage Man - 686 Candies",
+            "harga": 126080
+          },
+          {
+            "id": 5,
+            "nama_item": "Sausage Man - 1378 Candies",
+            "harga": 252635
+          },
+          {
+            "id": 6,
+            "nama_item": "Sausage Man - 2118 Candies",
+            "harga": 376730
+          },
+          {
+            "id": 7,
+            "nama_item": "Sausage Man - 3548 Candies",
+            "harga": 629572
+          },
+          {
+            "id": 8,
+            "nama_item": "Sausage Man - 7108 Candies",
+            "harga": 1261626
           }
         ]
       },
@@ -1454,9 +1498,9 @@
       }
     },
     {
-      "id": "sealm",
-      "nama": "Seal M",
-      "dev": "Yoozoo Games",
+      "id": "seal",
+      "nama": "Seal Online : Blade of Desnity",
+      "dev": "Grigon Entertainment, YNK Games",
       "deskripsi": "Seal M adalah game MMORPG fantasy dengan desain imut dan gameplay yang menyenangkan. Pemain dapat menjelajah dunia luas dan bertarung melawan monster serta pemain lain dalam berbagai mode.",
       "tutor": [
         "Masukkan User ID Seal M kamu",
@@ -1466,47 +1510,31 @@
         "Isi nomor WhatsApp aktif"
       ],
       "input": {
-        "jumlah_input": 1,
-        "inputan": [
-          {
-            "label": "User ID",
-            "placeholder": "Masukkan User ID"
-          }
-        ]
+        "jumlah_input": 0,
+        "inputan": []
       },
       "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "300 Gems",
-            "harga": 65000
-          },
-          {
-            "id": 2,
-            "nama_item": "750 Gems",
-            "harga": 130000
-          },
-          {
-            "id": 3,
-            "nama_item": "1600 Gems",
-            "harga": 260000
-          }
-        ],
+        "spesial_item": [],
         "gems": [
           {
             "id": 1,
-            "nama_item": "300 Gems",
-            "harga": 65000
+            "nama_item": "PLAYWITH 500 RPs",
+            "harga": 90000
           },
           {
             "id": 2,
-            "nama_item": "750 Gems",
-            "harga": 130000
+            "nama_item": "PLAYWITH 1000 RPs",
+            "harga": 179000
           },
           {
             "id": 3,
-            "nama_item": "1600 Gems",
-            "harga": 260000
+            "nama_item": "PLAYWITH 2500 RPs",
+            "harga": 447500
+          },
+          {
+            "id": 4,
+            "nama_item": "PLAYWITH 5000 RPs",
+            "harga": 895000
           }
         ]
       },
@@ -1517,9 +1545,9 @@
       }
     },
     {
-      "id": "stateofsurvival",
+      "id": "sof",
       "nama": "State of Survival",
-      "dev": "KingsGroup",
+      "dev": "FunPlus International AG",
       "deskripsi": "State of Survival adalah game strategi dan survival dengan tema dunia pasca-apokaliptik. Pemain harus membangun markas, bertahan melawan zombie, dan bekerjasama dengan pemain lain dalam aliansi.",
       "tutor": [
         "Masukkan ID pemain State of Survival kamu",
@@ -1538,38 +1566,52 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "150 Gems",
-            "harga": 35000
-          },
-          {
-            "id": 2,
-            "nama_item": "600 Gems",
-            "harga": 140000
-          },
-          {
-            "id": 3,
-            "nama_item": "1300 Gems",
-            "harga": 270000
-          }
-        ],
+        "spesial_item": [],
         "gems": [
           {
             "id": 1,
-            "nama_item": "150 Gems",
-            "harga": 35000
+            "nama_item": "State of Survival - 100 Diamonds",
+            "harga": 17790
           },
           {
             "id": 2,
-            "nama_item": "600 Gems",
-            "harga": 140000
+            "nama_item": "State of Survival - 500 Diamonds",
+            "harga": 87680
           },
           {
             "id": 3,
-            "nama_item": "1300 Gems",
-            "harga": 270000
+            "nama_item": "State of Survival - 1000 Diamonds",
+            "harga": 178567
+          },
+          {
+            "id": 4,
+            "nama_item": "State of Survival - 2000 Diamonds",
+            "harga": 365190
+          },
+          {
+            "id": 5,
+            "nama_item": "State of Survival - 5000 Diamonds",
+            "harga": 886890
+          },
+          {
+            "id": 6,
+            "nama_item": "State of Survival - 10000 Diamonds",
+            "harga": 1774890
+          },
+          {
+            "id": 7,
+            "nama_item": "State of Survival - 20000 Diamonds",
+            "harga": 3651900
+          },
+          {
+            "id": 8,
+            "nama_item": "State of Survival - 50000 Diamonds",
+            "harga": 8868900
+          },
+          {
+            "id": 9,
+            "nama_item": "State of Survival - 100000 Diamonds",
+            "harga": 17749999
           }
         ]
       },
@@ -1604,35 +1646,35 @@
         "spesial_item": [
           {
             "id": 1,
-            "nama_item": "Skin Paket Basic",
-            "harga": 20000
+            "nama_item": "Crate of Gems (1600 Gems + 75 Tokens)",
+            "harga": 50000
           },
           {
             "id": 2,
-            "nama_item": "Skin Paket Premium",
-            "harga": 65000
+            "nama_item": "Vault of Gems (5000 Gems + 275 Tokens)",
+            "harga": 125874
           },
           {
             "id": 3,
-            "nama_item": "Bundle Spesial",
-            "harga": 120000
+            "nama_item": "Vault of Stumble Tokens (1300)",
+            "harga": 238745
           }
         ],
-        "skins": [
+        "gems_&_token": [
           {
             "id": 1,
-            "nama_item": "Skin Paket Basic",
-            "harga": 20000
+            "nama_item": "Pile of Gems 250",
+            "harga": 10735
           },
           {
             "id": 2,
-            "nama_item": "Skin Paket Premium",
-            "harga": 65000
+            "nama_item": "Bag of Gems 800",
+            "harga": 28645
           },
           {
             "id": 3,
-            "nama_item": "Bundle Spesial",
-            "harga": 120000
+            "nama_item": "Pile of Stumble Tokens 120",
+            "harga": 34634
           }
         ]
       },
@@ -1643,7 +1685,7 @@
       }
     },
     {
-      "id": "valorant",
+      "id": "valo",
       "nama": "Valorant",
       "dev": "Riot Games",
       "deskripsi": "Valorant adalah game FPS taktis 5v5 yang menggabungkan kemampuan agen unik dengan gameplay berbasis tembakan. Pemain bekerja sama strategis untuk mengalahkan tim lawan dalam berbagai mode kompetitif dan non-kompetitif.",
@@ -1664,38 +1706,52 @@
         ]
       },
       "list_item": {
-        "spesial_item": [
-          {
-            "id": 1,
-            "nama_item": "500 VP",
-            "harga": 90000
-          },
-          {
-            "id": 2,
-            "nama_item": "1100 VP",
-            "harga": 185000
-          },
-          {
-            "id": 3,
-            "nama_item": "2250 VP",
-            "harga": 360000
-          }
-        ],
+        "spesial_item": [],
         "valorant_points": [
           {
             "id": 1,
-            "nama_item": "500 VP",
-            "harga": 90000
+            "nama_item": "Valorant 475 VP",
+            "harga": 52279
           },
           {
             "id": 2,
-            "nama_item": "1100 VP",
-            "harga": 185000
+            "nama_item": "Valorant 1.000 VP",
+            "harga": 104512
           },
           {
             "id": 3,
-            "nama_item": "2250 VP",
-            "harga": 360000
+            "nama_item": "Valorant 2.050 VP",
+            "harga": 208999
+          },
+          {
+            "id": 4,
+            "nama_item": "Valorant 3.050 VP",
+            "harga": 313799
+          },
+          {
+            "id": 5,
+            "nama_item": "Valorant 5.350 VP",
+            "harga": 522846
+          },
+          {
+            "id": 6,
+            "nama_item": "Valorant 8.990 VP",
+            "harga": 885197
+          },
+          {
+            "id": 7,
+            "nama_item": "Valorant 11.000 VP",
+            "harga": 1055892
+          },
+          {
+            "id": 8,
+            "nama_item": "Valorant 14.650 VP",
+            "harga": 1400635
+          },
+          {
+            "id": 9,
+            "nama_item": "Valorant 22.000 VP",
+            "harga": 2060735
           }
         ]
       },
