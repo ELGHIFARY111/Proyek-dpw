@@ -198,7 +198,7 @@ main {
   font-weight: 900;
   gap: 0.1rem;
 }
-.left .container-detail-game p span {
+.left .container-detail-game .deskripsi-game p span {
   background-color: black;
   color: white;
 }
@@ -333,6 +333,44 @@ main {
   color: orange;
 }
 
-.dropdown-content {
+/* PAYMENT */
+/* .dropdown-content {
   display: none;
+} */
+.dropdown-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+.dropdown-content img {
+  width: 80px;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+.dropdown-content .pay {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.pay .top-payment {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.dropdown-content hr {
+  border: 1px solid white;
+  margin: 0;
+}
+.dropdown-content .top-payment {
+  display: flex;
+  align-items: center;
+}
+.dropdown-content p {
+  text-transform: uppercase;
 }

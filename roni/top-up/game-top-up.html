@@ -57,20 +57,7 @@
                 <p>Langkah-langkah Transaksi: <span> </span></p>
               </div>
               <div class="deskripsi">
-                <ol>
-                  <li>Masukkan ID dan Server (Zone ID) Mobile Legends kamu</li>
-                  <li>Pilih jumlah Diamond yang ingin kamu beli</li>
-                  <li>Pilih metode pembayaran sesuai preferensimu</li>
-                  <li>Masukkan kode promo kalau kamu punya!</li>
-                  <li>Isi nomor WhatsApp aktif untuk konfirmasi</li>
-                  <li>
-                    Tekan tombol "Pesan Sekarang", lalu lanjutkan pembayaran
-                  </li>
-                  <li>
-                    Selesai! Diamond akan langsung dikirim ke akun kamu secara
-                    otomatis
-                  </li>
-                </ol>
+                <ol id="listTutor"></ol>
               </div>
             </div>
             <div class="slogan">
@@ -83,47 +70,7 @@
               <p>Deskripsi Game</p>
             </div>
             <hr />
-            <p>
-              <span>Mobile Legends: Bang Bang</span> adalah game MOBA
-              (Multiplayer Online Battle Arena) yang dikembangkan oleh Moonton,
-              dan telah menjadi salah satu game mobile paling populer di dunia,
-              termasuk di Indonesia. Game ini menawarkan pertarungan 5v5 yang
-              intens, di mana dua tim saling berhadapan untuk menghancurkan base
-              musuh sambil mempertahankan base mereka sendiri. <br />
-              Dalam <span>Mobile Legends</span>, pemain dapat memilih dari
-              berbagai hero dengan keterampilan dan peran yang unik, seperti
-              Tank, Mage, Assassin, Marksman, dan Support. Setiap hero memiliki
-              kekuatan dan strategi tersendiri, memberikan banyak variasi dan
-              kedalaman taktik dalam setiap pertandingan. Tim yang mampu bekerja
-              sama dengan baik dan merencanakan strategi yang tepat akan keluar
-              sebagai pemenang. <br />
-              Game ini menampilkan peta klasik dengan tiga jalur (lanes), yaitu
-              Top, Mid, dan Bottom, serta hutan (jungle) yang penuh dengan
-              monster dan buff. Koordinasi tim, pengambilan keputusan cepat, dan
-              eksekusi strategi yang matang sangat penting untuk menguasai medan
-              perang dan meraih kemenangan. <br />
-              Selain gameplay yang seru dan kompetitif,
-              <span>Mobile Legends</span> juga menawarkan berbagai fitur menarik
-              seperti Ranked Matches, Classic Matches, dan mode permainan
-              lainnya yang menantang. Dengan grafis yang memukau dan kontrol
-              yang responsif, game ini memberikan pengalaman bermain yang
-              memuaskan bagi para penggemar MOBA. <br />
-              <span>Mobile Legends</span> juga dikenal dengan komunitasnya yang
-              besar dan aktif, serta sering mengadakan turnamen dan kompetisi
-              eSports tingkat nasional dan internasional. Ini memberikan
-              kesempatan bagi pemain untuk menunjukkan keterampilan mereka di
-              tingkat yang lebih tinggi dan meraih pengakuan global. <br />
-              Game ini juga terus diperbarui dengan hero-hero baru, skin
-              eksklusif, dan event spesial, yang membuat pemain selalu tertarik
-              dan kembali bermain. <br />
-              Dengan berbagai keunggulan dan aksi yang mendebarkan,
-              <span>Mobile Legends: Bang Bang</span>
-              telah menjadi pilihan utama bagi para penggemar MOBA di seluruh
-              dunia. Jika Anda mencari game dengan strategi, kerja sama tim, dan
-              tantangan yang seru, <span>Mobile Legends</span> adalah game yang
-              wajib Anda coba. Unduh sekarang dan buktikan kemampuan Anda di
-              medan perang!
-            </p>
+            <div id="deskripsi-game"></div>
           </div>
           <div class="testimonial">
             <div class="judul">
@@ -203,31 +150,9 @@
               <div class="angka">2</div>
               <div class="alert">Pilih Nominal Yang Ingin dibeli</div>
             </div>
-            <div class="container-list-item">
-              <div class="list-top-up" id="list-top-up">
-                <div class="nama">Mobile Legends - <span>5 Diamonds</span></div>
-                <div class="Harga">Rp. 1.495</div>
-              </div>
-              <div class="list-top-up" id="list-top-up">
-                <div class="nama">Mobile Legends - <span>5 Diamonds</span></div>
-                <div class="Harga">Rp. 1.495</div>
-              </div>
-              <div class="list-top-up" id="list-top-up">
-                <div class="nama">Mobile Legends - <span>5 Diamonds</span></div>
-                <div class="Harga">Rp. 1.495</div>
-              </div>
-              <div class="list-top-up" id="list-top-up">
-                <div class="nama">Mobile Legends - <span>5 Diamonds</span></div>
-                <div class="Harga">Rp. 1.495</div>
-              </div>
-              <div class="list-top-up" id="list-top-up">
-                <div class="nama">Mobile Legends - <span>5 Diamonds</span></div>
-                <div class="Harga">Rp. 1.495</div>
-              </div>
-              <div class="list-top-up" id="list-top-up">
-                <div class="nama">Mobile Legends - <span>5 Diamonds</span></div>
-                <div class="Harga">Rp. 1.495</div>
-              </div>
+            <div class="container-list-item" id="container-list-item">
+              <div id="item-special"></div>
+              <div id="item-biasa"></div>
             </div>
           </div>
 
@@ -237,9 +162,10 @@
               <div class="alert">Pilih Nominal Yang Ingin dibeli</div>
             </div>
             <div class="qris">
-              <button class="kiri">
-                <div class="judul">QRIS (All Payment)</div>
-                <img src="/data/payment/qris/qris.png" alt="" />
+              <button class="dropdown-button">
+                <div class="left">
+                  <div class="nama">QRIS (All Payment)</div>
+                  <img src="/data/payment/qris/qris.png" alt="" />
                 <div class="right">
                   <div class="harga">Rp 38.996</div>
                 </div>
@@ -250,35 +176,35 @@
                 <i class="bi bi-wallet2"></i>
                 <p>E-Wallet</p>
               </button>
-              <div class="dropdown-content">
-                <div class="dana">
+              <div class="dropdown-content" id="dropdown-content">
+                <div class="dana pay">
                   <div class="top-payment">
                     <img src="/data/payment/e-wallet/dana.png" alt="" />
-                    <p>DANA</p>
+                    <p class="nama">DANA</p>
                   </div>
                   <hr />
                   <div class="harga">Rp. 40.421</div>
                 </div>
-                <div class="shopay">
+                <div class="shopay pay">
                   <div class="top-payment">
                     <img src="/data/payment/e-wallet/shopay.png" alt="" />
-                    <p>Shopee pay</p>
+                    <p class="nama">Shopee pay</p>
                   </div>
                   <hr />
                   <div class="harga">Rp. 40.421</div>
                 </div>
-                <div class="ovo">
+                <div class="ovo pay">
                   <div class="top-payment">
                     <img src="/data/payment/e-wallet/ovo.png" alt="" />
-                    <p>ovo</p>
+                    <p class="nama">ovo</p>
                   </div>
                   <hr />
                   <div class="harga">Rp. 40.421</div>
                 </div>
-                <div class="gopay">
+                <div class="gopay pay">
                   <div class="top-payment">
                     <img src="/data/payment/e-wallet/gopay.png" alt="" />
-                    <p>gopay</p>
+                    <p class="nama">gopay</p>
                   </div>
                   <hr />
                   <div class="harga">Rp. 40.421</div>
@@ -290,8 +216,8 @@
                 <i class="bi bi-shop"></i>
                 <p>convenience store</p>
               </button>
-              <div class="dropdown-content">
-                <div class="alfamart">
+              <div class="dropdown-content" id="dropdown-content">
+                <div class="alfamart pay">
                   <div class="top-payment">
                     <img src="/data/payment/gerai-ritel/alfamart.png" alt="" />
                     <p>alfamart</p>
@@ -299,7 +225,7 @@
                   <hr />
                   <div class="harga">Rp. 40.421</div>
                 </div>
-                <div class="indomart">
+                <div class="indomart pay">
                   <div class="top-payment">
                     <img src="/data/payment/gerai-ritel/indomart.png" alt="" />
                     <p>Indomart</p>
@@ -314,8 +240,8 @@
                 <i class="bi bi-credit-card"></i>
                 <p>virtual account</p>
               </button>
-              <div class="dropdown-content">
-                <div class="bca">
+              <div class="dropdown-content" id="dropdown-content">
+                <div class="bca pay">
                   <div class="top-payment">
                     <img src="/data/payment/bank/bca.png" alt="" />
                     <p>BCA Virtual Account</p>
@@ -323,7 +249,7 @@
                   <hr />
                   <div class="harga">Rp. 40.421</div>
                 </div>
-                <div class="bni">
+                <div class="bni pay">
                   <div class="top-payment">
                     <img src="/data/payment/bank/bni.png" alt="" />
                     <p>BNI Virtual Account</p>
@@ -331,7 +257,7 @@
                   <hr />
                   <div class="harga">Rp. 40.421</div>
                 </div>
-                <div class="bri">
+                <div class="bri pay">
                   <div class="top-payment">
                     <img src="/data/payment/bank/bri.png" alt="" />
                     <p>BRIVA</p>
@@ -339,7 +265,7 @@
                   <hr />
                   <div class="harga">Rp. 40.421</div>
                 </div>
-                <div class="cimb">
+                <div class="cimb pay">
                   <div class="top-payment">
                     <img src="/data/payment/bank/cimb.png" alt="" />
                     <p>CIMB Niaga Virtual Account</p>
@@ -347,7 +273,7 @@
                   <hr />
                   <div class="harga">Rp. 40.421</div>
                 </div>
-                <div class="bsi">
+                <div class="bsi pay">
                   <div class="top-payment">
                     <img src="/data/payment/bank/bsi.png" alt="" />
                     <p>BSI Virtual Account</p>
@@ -355,7 +281,7 @@
                   <hr />
                   <div class="harga">Rp. 40.421</div>
                 </div>
-                <div class="mandiri">
+                <div class="mandiri pay">
                   <div class="top-payment">
                     <img src="/data/payment/bank/mandiri.png" alt="" />
                     <p>Mandiri Virtual Account</p>

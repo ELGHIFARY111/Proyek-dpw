@@ -1,26 +1,79 @@
+// membuat element
+function createElement(
+  tagName,
+  container,
+  content = "",
+  className = "",
+  id = ""
+) {
+  const el = document.createElement(tagName);
+  el.textContent = content;
+  if (className) el.className = className;
+  if (id) el.id = id;
+  container.appendChild(el);
+  return el;
+}
+
+// game
 fetch("/data/json/game.json")
-  .then((ress) => ress.json())
+  .then((res) => res.json())
   .then((data) => {
-    data.game.forEach((game) => {
-      console.log(`Id Unik: ${game.id}`);
-      console.log(`Nama Game: ${game.nama}`);
-      console.log(`Developer: ${game.dev}`);
-      console.log(game.deskripsi);
-      console.log(`Direktori Gambar: ${game.gambar.logo}`);
-      console.log(`Direktori Gambar: ${game.gambar.background}`);
-      game.tutor.forEach((tutorial) => {
-        console.log(tutorial);
-      });
-      game.input.inputan.forEach((input) => {
-        console.log(`Jumlah inputan: ${game.input.jumlah_input}`);
-        console.log(`Input yang diperlukan: ${input.label}`);
-      });
-      game.list_item.forEach((items) => {
-        console.log(`Item: ${items.nama_item}`);
-        console.log(`Harga: ${items.harga}`);
-      });
-      game.payment_method.forEach((pay) => {
-        console.log(`Metode Pembayaran: ${pay}`);
-      });
+    const listTutor = document.getElementById("listTutor");
+    const deskripsi = document.getElementById("deskripsi-game");
+    const itemSpecl = document.getElementById("item-special");
+    const itemBasc = document.getElementById("item-biasa");
+
+    const game = data.find((item) => item.id === "mlbb");
+
+    // list item
+    game.list_item.spesial_item.forEach((itemSpesial) => {
+      createElement(
+        "div",
+        itemSpecl,
+        itemSpesial.nama_item,
+        "list-top-up",
+        "list-top-up"
+      );
     });
+    game.list_item.diamonds.forEach((basicItem) => {
+      createElement(
+        "div",
+        itemBasc,
+        basicItem.nama_item,
+        "list-top-up",
+        "list-top-up"
+      );
+    });
+
+    // deskrisi
+    createElement("p", deskripsi, game.deskripsi);
+
+    // tutor
+    game.tutor.forEach((step) => {
+      createElement("li", listTutor, step);
+    });
+  })
+  .catch((error) => {
+    console.error("Gagal mengambil data:", error);
+  });
+
+// =================payment===================
+fetch("/data/json/payment.json")
+  .then((res) => res.json())
+  .then((data) => {
+    data.payment.forEach((pay) => {
+      console.log("Kategori:", pay.kategori);
+      console.log("Logo Kategori:", pay.logo);
+
+      // Cek apakah ada list di dalam kategori
+      if (pay.list) {
+        pay.list.forEach((lstPay) => {
+          console.log("  -", lstPay.nama);
+          console.log("    Logo:", lstPay.logo);
+        });
+      }
+    });
+  })
+  .catch((err) => {
+    console.error("Gagal fetch:", err);
   });
