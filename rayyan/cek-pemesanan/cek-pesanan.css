@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: var(--font-poppins);
+  background-color: var(--biru1);
+  color: var(--putih);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: var(--biru2);
+  padding: 20px;
+  border: 5px double var(--kuning);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+  padding: 8px;
+  width: 250px;
+  font-family: var(--font-pixel);
+  font-weight: bold;
+  border: 2px solid #000;
+  border-radius: 5px;
+}
+
+.search-box button {
+  padding: 8px 16px;
+  background-color: var(--kuning);
+  color: var(--biru3);
+  font-weight: bold;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.table {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid var(--putih);
+  align-items: center;
+}
+
+.row.header {
+  font-weight: bold;
+  background-color: var(--biru2);
+}
+
+.row div {
+  flex: 1;
+  padding: 5px;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.status.success {
+  background-color: var(--hijau1);
+  color: var(--putih);
+}
+
+
