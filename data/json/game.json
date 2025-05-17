@@ -15,11 +15,9 @@
       "jumlah_input": 2,
       "inputan": [
         {
-          "label": "User ID",
           "placeholder": "Masukkan User ID"
         },
         {
-          "label": "Zone ID",
           "placeholder": "Masukkan Zone ID"
         }
       ]
@@ -142,7 +140,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "User ID",
           "placeholder": "Masukkan User ID"
         }
       ]
@@ -204,7 +201,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Player ID",
           "placeholder": "Masukkan Player ID"
         }
       ]
@@ -241,7 +237,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "User ID",
           "placeholder": "Masukkan User ID"
         }
       ]
@@ -318,7 +313,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Player ID",
           "placeholder": "Masukkan Player ID"
         }
       ]
@@ -391,7 +385,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Player ID",
           "placeholder": "Masukkan Player ID"
         }
       ]
@@ -454,7 +447,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "User ID",
           "placeholder": "Masukkan User ID"
         }
       ]
@@ -526,7 +518,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "User ID",
           "placeholder": "Masukkan User ID"
         }
       ]
@@ -624,7 +615,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "User ID",
           "placeholder": "Masukkan User ID"
         }
       ]
@@ -727,11 +717,9 @@
       "jumlah_input": 2,
       "inputan": [
         {
-          "label": "UID",
           "placeholder": "Masukkan User ID"
         },
         {
-          "label": "UID",
           "placeholder": "Masukkan UID"
         }
       ]
@@ -809,7 +797,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Player ID",
           "placeholder": "Masukkan Player ID"
         }
       ]
@@ -877,7 +864,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Riot ID",
           "placeholder": "Masukkan Riot ID"
         }
       ]
@@ -939,7 +925,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Player ID",
           "placeholder": "Masukkan Player ID"
         }
       ]
@@ -1016,7 +1001,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Player ID",
           "placeholder": "Masukkan Player ID"
         }
       ]
@@ -1047,7 +1031,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "User ID",
           "placeholder": "Masukkan User ID"
         }
       ]
@@ -1135,7 +1118,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "User ID",
           "placeholder": "Masukkan User ID"
         }
       ]
@@ -1255,7 +1237,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "User ID",
           "placeholder": "Masukkan User ID"
         }
       ]
@@ -1343,7 +1324,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Player ID",
           "placeholder": "Masukkan Player ID"
         }
       ]
@@ -1374,11 +1354,9 @@
       "jumlah_input": 2,
       "inputan": [
         {
-          "label": "User ID",
           "placeholder": "Masukkan User ID"
         },
         {
-          "label": "serevr",
           "placeholder": "Masukkan User ID"
         }
       ]
@@ -1440,7 +1418,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Player ID",
           "placeholder": "Masukkan Player ID"
         }
       ]
@@ -1559,7 +1536,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Player ID",
           "placeholder": "Masukkan Player ID"
         }
       ]
@@ -1636,7 +1612,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Player ID",
           "placeholder": "Masukkan Player ID"
         }
       ]
@@ -1699,7 +1674,6 @@
       "jumlah_input": 1,
       "inputan": [
         {
-          "label": "Riot ID",
           "placeholder": "Masukkan Riot ID"
         }
       ]

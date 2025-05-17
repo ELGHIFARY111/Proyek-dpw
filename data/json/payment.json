@@ -1,12 +1,8 @@
 {
   "payment": [
     {
-      "kategori": "QRIS",
-      "logo": "/data/payment/qris/qris.png"
-    },
-    {
       "kategori": "E WALLET",
-      "logo": "/data/payment/e-wallet/ewallet.png",
+      "ikon": "bi bi-wallet2",
       "list": [
         {
           "nama": "DANA",
@@ -28,7 +24,7 @@
     },
     {
       "kategori": "BANK",
-      "logo": "/data/payment/bank/bank.png",
+      "ikon": "bi bi-credit-card",
       "list": [
         {
           "nama": "CIMB",
@@ -58,7 +54,7 @@
     },
     {
       "kategori": "MERCHANT",
-      "logo": "/data/payment/gerai-ritel/merchant.png",
+      "ikon": "bi bi-shop",
       "list": [
         {
           "nama": "Alfamart",

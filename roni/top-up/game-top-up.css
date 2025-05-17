@@ -116,15 +116,7 @@ main {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
-}
-
-.inp-user > :not(.top),
-.nominal > :not(.top),
-.payment > :not(.top),
-.voucher > :not(.top),
-.kontak > :not(.top) {
-  padding: 0 1rem;
-  margin: 0.5rem;
+  padding: 1rem;
 }
 
 .service-features {
@@ -202,33 +194,37 @@ main {
   background-color: black;
   color: white;
 }
-
-.left .testimonial .container-testimonial {
+.container-testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.left .testimonial .container-testimonial .testi {
   background-color: black;
   color: white;
   border-radius: 10px;
   padding: 1rem;
 }
-.left .testimonial .container-testimonial hr {
+.left .testimonial .container-testimonial .testi hr {
   border: 2px solid white;
 }
-.left .testimonial .container-testimonial .top,
-.left .testimonial .container-testimonial .bottom {
+.left .testimonial .container-testimonial .testi .top,
+.left .testimonial .container-testimonial .testi .bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.left .testimonial .container-testimonial .top .nama-game,
+.left .testimonial .container-testimonial .testi .top .nama-game,
 .rate {
   border: 1px dashed white;
   padding: 8px;
   border-radius: 5px;
 }
-.left .testimonial .container-testimonial .bottom {
-  gap: 1rem;
+.left .testimonial .container-testimonial .testi .bottom {
+  gap: 3rem;
   white-space: nowrap;
 }
-.left .testimonial .container-testimonial .bottom .histori {
+.left .testimonial .container-testimonial .testi .bottom .histori {
   width: 190px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -287,20 +283,25 @@ main {
   flex-direction: column;
 }
 .right .nominal .container-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.right .nominal #item-special,
+.right .nominal #item-biasa {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
 }
-.right .nominal .container-list-item .list-top-up {
+
+.right .nominal .container-list-item .list-topUp {
   background-color: black;
   color: white;
   padding: 1rem;
   border-radius: 8px;
   text-transform: uppercase;
   cursor: pointer;
-}
-.right .nominal .container-list-item .list-top-up span {
-  text-transform: lowercase;
 }
 
 .right .payment button {

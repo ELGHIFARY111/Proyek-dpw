@@ -65,6 +65,7 @@
               <p>Main makin seru bareng SixFussion — Top Up Tanpa Drama!</p>
             </div>
           </div>
+
           <div class="container-detail-game">
             <div class="judul">
               <p>Deskripsi Game</p>
@@ -72,37 +73,13 @@
             <hr />
             <div id="deskripsi-game"></div>
           </div>
+
           <div class="testimonial">
             <div class="judul">
               <p>Testimonial</p>
             </div>
             <hr />
-            <div class="container-testimonial">
-              <div class="testi1">
-                <div class="top">
-                  <div class="nama-game">Mobile Legends</div>
-                  <div class="rate">
-                    <i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i>
-                  </div>
-                </div>
-                <hr />
-                <div class="detail">
-                  <!-- <div class="nomor">087796407790</div> -->
-                  <div class="deskripsi">
-                    <i>"berkali-kali topup disini, aman ygy no phising2"</i>
-                  </div>
-                </div>
-                <hr />
-                <div class="bottom">
-                  <div class="histori">1x qty Free Fire 425 Diamond</div>
-                  <div class="date">10/05/2025 05:37:31</div>
-                </div>
-              </div>
-            </div>
+            <div class="container-testimonial" id="container-testimonial"></div>
           </div>
         </div>
 
@@ -112,20 +89,7 @@
               <div class="angka">1</div>
               <div class="alert">Lengkapi Data</div>
             </div>
-            <div class="input">
-              <input
-                type="text"
-                name="id"
-                id="id"
-                placeholder="Masukkan User ID"
-              />
-              <input
-                type="text"
-                name="zone"
-                id="zone"
-                placeholder="Masukkan Zone ID"
-              />
-            </div>
+            <div class="input" id="input"></div>
             <div class="instruction">
               Untuk mengetahui User ID Anda, silahkan klik menu profile dibagian
               kiri atas pada menu utama game. User ID akan terlihat dibagian
@@ -161,136 +125,7 @@
               <div class="angka">3</div>
               <div class="alert">Pilih Nominal Yang Ingin dibeli</div>
             </div>
-            <div class="qris">
-              <button class="dropdown-button">
-                <div class="left">
-                  <div class="nama">QRIS (All Payment)</div>
-                  <img src="/data/payment/qris/qris.png" alt="" />
-                <div class="right">
-                  <div class="harga">Rp 38.996</div>
-                </div>
-              </button>
-            </div>
-            <div class="e-wallet">
-              <button class="dropdown-button">
-                <i class="bi bi-wallet2"></i>
-                <p>E-Wallet</p>
-              </button>
-              <div class="dropdown-content" id="dropdown-content">
-                <div class="dana pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/e-wallet/dana.png" alt="" />
-                    <p class="nama">DANA</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-                <div class="shopay pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/e-wallet/shopay.png" alt="" />
-                    <p class="nama">Shopee pay</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-                <div class="ovo pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/e-wallet/ovo.png" alt="" />
-                    <p class="nama">ovo</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-                <div class="gopay pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/e-wallet/gopay.png" alt="" />
-                    <p class="nama">gopay</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-              </div>
-            </div>
-            <div class="convenience">
-              <button class="dropdown-button">
-                <i class="bi bi-shop"></i>
-                <p>convenience store</p>
-              </button>
-              <div class="dropdown-content" id="dropdown-content">
-                <div class="alfamart pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/gerai-ritel/alfamart.png" alt="" />
-                    <p>alfamart</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-                <div class="indomart pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/gerai-ritel/indomart.png" alt="" />
-                    <p>Indomart</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-              </div>
-            </div>
-            <div class="va">
-              <button class="dropdown-button">
-                <i class="bi bi-credit-card"></i>
-                <p>virtual account</p>
-              </button>
-              <div class="dropdown-content" id="dropdown-content">
-                <div class="bca pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/bank/bca.png" alt="" />
-                    <p>BCA Virtual Account</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-                <div class="bni pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/bank/bni.png" alt="" />
-                    <p>BNI Virtual Account</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-                <div class="bri pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/bank/bri.png" alt="" />
-                    <p>BRIVA</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-                <div class="cimb pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/bank/cimb.png" alt="" />
-                    <p>CIMB Niaga Virtual Account</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-                <div class="bsi pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/bank/bsi.png" alt="" />
-                    <p>BSI Virtual Account</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-                <div class="mandiri pay">
-                  <div class="top-payment">
-                    <img src="/data/payment/bank/mandiri.png" alt="" />
-                    <p>Mandiri Virtual Account</p>
-                  </div>
-                  <hr />
-                  <div class="harga">Rp. 40.421</div>
-                </div>
-              </div>
-            </div>
+            <div id="container-pay"></div>
           </div>
 
           <div class="voucher">
