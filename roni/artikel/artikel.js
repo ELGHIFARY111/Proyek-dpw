@@ -9,35 +9,31 @@ function createElement(tag, parent, options = {}) {
   if (parent) parent.appendChild(el);
   return el;
 }
-
 fetch("/data/json/artikel.json")
   .then((res) => res.json())
   .then((data) => {
     const container = document.getElementById("container");
+
     data.artikel.forEach((artikel) => {
-      const section = createElement("section", container, {
+      const artkl = createElement("section", container, {
         className: "artikel-card",
       });
 
-      createElement("img", section, {
+      createElement("img", artkl, {
         src: artikel.gambar,
         alt: "Gambar artikel",
       });
-      createElement("div", section, {
-        className: "kategori",
-        text: artikel.kategori,
-      });
-      createElement("div", section, {
+      createElement("div", artkl, {
         className: "judul",
         text: artikel.judul,
       });
-      createElement("div", section, {
+      createElement("div", artkl, {
         className: "deskripsi",
         text: artikel.deskripsi,
       });
-      createElement("div", section, {
+      createElement("div", artkl, {
         className: "publish",
-        text: artikel.publish,
+        text: artikel.publikasi,
       });
     });
   })

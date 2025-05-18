@@ -12,15 +12,7 @@
     />
   </head>
   <body>
-    <header>
-      <div class="foto">
-        <img src="/data/list-game/mobile legend.png" alt="" />
-      </div>
-      <div class="nama">
-        <div class="judul">Mobile Legends</div>
-        <div class="dev">Moontoon</div>
-      </div>
-    </header>
+    <header></header>
     <main>
       <section class="service-features">
         <div class="proses">
@@ -54,7 +46,7 @@
             </div>
             <div class="tutor">
               <div class="judul">
-                <p>Langkah-langkah Transaksi: <span> </span></p>
+                <p>Langkah-langkah Transaksi: <span></span></p>
               </div>
               <div class="deskripsi">
                 <ol id="listTutor"></ol>
@@ -62,7 +54,7 @@
             </div>
             <div class="slogan">
               <i class="bi bi-stars"></i>
-              <p>Main makin seru bareng SixFussion — Top Up Tanpa Drama!</p>
+              <p>Main makin seru dan Top Up Tanpa Drama!</p>
             </div>
           </div>
 
@@ -94,10 +86,11 @@
               Untuk mengetahui User ID Anda, silahkan klik menu profile dibagian
               kiri atas pada menu utama game. User ID akan terlihat dibagian
               bawah Nama karakter game Anda. Silahkan masukan User ID dan Server
-              ID Anda untuk menyelesaikan transaksi. Contoh: 12345678(1234).
+              ID Anda untuk menyelesaikan transaksi.
+              <span>Contoh: 12345678(1234)</span>.
             </div>
-            <div class="container-petunjuk">
-              <div class="petunjuk">
+            <div class="container-petunjuk" id="container-petunjuk">
+              <div class="petunjuk" id="petunjuk">
                 <i class="bi bi-info-circle-fill"></i>
                 <p>Petunjuk</p>
               </div>
@@ -114,21 +107,22 @@
               <div class="angka">2</div>
               <div class="alert">Pilih Nominal Yang Ingin dibeli</div>
             </div>
-            <div class="container-list-item" id="container-list-item">
-              <div id="item-special"></div>
-              <div id="item-biasa"></div>
-            </div>
+            <a href="#payment">
+              <div class="container-list-item" id="container-list-item"></div>
+            </a>
           </div>
 
-          <div class="payment">
+          <div class="payment" id="payment">
             <div class="top">
               <div class="angka">3</div>
               <div class="alert">Pilih Nominal Yang Ingin dibeli</div>
             </div>
-            <div id="container-pay"></div>
+            <a href="#voucher">
+              <div id="container-pay"></div>
+            </a>
           </div>
 
-          <div class="voucher">
+          <div class="voucher" id="voucher">
             <div class="top">
               <div class="angka">4</div>
               <div class="alert">Punya Kode Promo? Masukkan Disini!</div>

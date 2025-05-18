@@ -1,192 +1,278 @@
-// membuat element non void
-function createElement(
-  tagName,
-  container,
-  content = "",
-  className = "",
-  id = ""
-) {
-  const el = document.createElement(tagName);
-  el.textContent = content;
-  if (className) el.className = className;
-  if (id) el.id = id;
-  container.appendChild(el);
-  return el;
+class Methd {
+  createElement(tagName, container, content = "", className = "", id = "") {
+    const el = document.createElement(tagName);
+    el.textContent = content;
+    if (className) el.className = className; // kasih class kalau ada
+    if (id) el.id = id; // sama ini buat id-nya
+    container.appendChild(el); // tempelin ke container
+    return el;
+  }
+
+  hr(container) {
+    this.createElement("hr", container); // bikin garis pemisah, biar rapi dikit
+  }
+
+  cleanAndUppercaseKey(key) {
+    return key.replace(/[_\-=+]/g, " ").toUpperCase(); // ganti simbol jadi spasi terus di-uppercase
+  }
 }
 
-// agar bisa akses id ml di game.json
 const gameData = fetch("/data/json/game.json").then((res) => res.json());
+const fungsi = new Methd();
 
-function hr(container) {
-  createElement("hr", container);
-}
-
-//====================GAME=======================//
 gameData
   .then((data) => {
     const listTutor = document.getElementById("listTutor");
     const deskripsi = document.getElementById("deskripsi-game");
     const containerInp = document.getElementById("input");
+    const contPetunjk = document.getElementById("container-petunjuk");
+    const klikPtnjk = document.getElementById("petunjuk");
+    const headerCont = document.querySelector("header");
 
-    // selet 1 game saja utnuk styling sementara
-    const selectedGame = data.find((item) => item.id === "mlbb");
+    const selectedGame = data.find((item) => item.id === "mlbb"); // ambil data MLBB
 
-    // list item
+    // --- tampilin logo + nama game
+    const contLogo = fungsi.createElement("div", headerCont, "", "foto");
+    const logo = fungsi.createElement("img", contLogo);
+    logo.src = selectedGame.gambar.logo;
+
+    const contNameH = fungsi.createElement("div", headerCont, "", "nama");
+    fungsi.createElement("div", contNameH, selectedGame.nama, "judul");
+    fungsi.createElement("div", contNameH, selectedGame.dev, "dev");
+
     const containerItem = document.getElementById("container-list-item");
-    createElement("p", containerItem, "judul");
-    const itemSpecl = document.getElementById("item-special");
-    const itemBasc = document.getElementById("item-biasa");
+    const itemKeys = Object.keys(selectedGame.list_item);
+
+    // --- buat list spesial item
+    fungsi.createElement(
+      "p",
+      containerItem,
+      fungsi.cleanAndUppercaseKey(itemKeys[0]),
+      "judul"
+    );
+    const itemSpecl = fungsi.createElement(
+      "div",
+      containerItem,
+      "",
+      "item-special",
+      "itemSpecial"
+    );
+
+    // --- lanjut ke item biasa
+    fungsi.createElement(
+      "p",
+      containerItem,
+      fungsi.cleanAndUppercaseKey(itemKeys[1]),
+      "judul"
+    );
+    const itemBasc = fungsi.createElement(
+      "div",
+      containerItem,
+      "",
+      "item-biasa",
+      "itemBiasa"
+    );
+
+    // masukin item-itemnya
     selectedGame.list_item.spesial_item.forEach((itemSpesial) => {
-      createElement(
+      fungsi.createElement(
         "div",
         itemSpecl,
-        `${itemSpesial.nama_item}\n${itemSpesial.harga}`,
-        "item-special list-topUp",
-        "itemSpecial"
+        `${itemSpesial.nama_item}`,
+        "list-topUp",
+        "listTopUp"
       );
     });
     selectedGame.list_item.diamonds.forEach((basicItem) => {
-      createElement(
+      fungsi.createElement(
         "div",
         itemBasc,
-        `${basicItem.nama_item}\n${basicItem.harga}`,
-        "item-biasa list-topUp",
-        "itemBiasa"
+        `${basicItem.nama_item}`,
+        "list-topUp",
+        "listTopUp"
       );
     });
 
-    // input
+    // --- inputan buat user, biasanya ID user atau username
     selectedGame.input.inputan.forEach((input, index) => {
-      const inp = createElement("input", containerInp);
+      const inp = fungsi.createElement(
+        "input",
+        containerInp,
+        "",
+        "input-field",
+        `input-${index}`
+      );
       inp.type = "text";
       inp.placeholder = input.placeholder;
-      inp.id = "input-" + index;
-      input.className = "input-field";
     });
 
-    // petunjuk
-    // console.log(selectedGame.gambar.petunjuk);
+    // --- petunjuk gambar kalau butuh bantuan
+    const ptnjk = fungsi.createElement(
+      "img",
+      contPetunjk,
+      "",
+      "img-petunjuk",
+      "imgPetunjuk"
+    );
+    ptnjk.src = selectedGame.gambar.petunjuk;
+    ptnjk.style.display = "none";
+    klikPtnjk.addEventListener("click", () => {
+      ptnjk.style.display =
+        ptnjk.style.display === "none" || ptnjk.style.display === ""
+          ? "block"
+          : "none";
+      setTimeout(() => {
+        ptnjk.style.display = "none"; // otomatis ilang lagi setelah 10 detik
+      }, 10000);
+    });
 
-    // deskrisi
-    createElement("p", deskripsi, selectedGame.deskripsi);
+    // --- biar paragraf panjangnya nggak numpuk, dibagi-bagi pake <br>
+    let count = 0;
+    let filterDesk = selectedGame.deskripsi.replace(/\./g, (match) => {
+      count++;
+      return count % 3 === 0 ? ".<br>" : match;
+    });
+    deskripsi.innerHTML = `<p>${filterDesk}</p>`;
 
-    // tutor
+    // highlight nama game dalam deskripsi, biar stand out
+    const namaGame = selectedGame.nama.toLowerCase();
+    let spanDeskripsi = document.querySelector("#deskripsi-game").innerHTML;
+    if (typeof namaGame === "string" && namaGame.trim() !== "") {
+      const regex = new RegExp(`\\b(${namaGame})\\b`, "gi");
+      spanDeskripsi = spanDeskripsi.replace(regex, `<span>$1</span>`);
+    }
+    document.querySelector("#deskripsi-game").innerHTML = spanDeskripsi;
+
+    // --- bagian tutorial cara top up
     selectedGame.tutor.forEach((step) => {
-      createElement("li", listTutor, step);
+      fungsi.createElement("li", listTutor, step);
     });
   })
   .catch((error) => {
-    console.error("Gagal mengambil data:", error);
+    console.error("Gagal mengambil data:", error); // kalau gagal fetch
   });
 
-// =================PAYMENT===================//
+// --- bagian dropdown metode pembayaran
 const containerPay = document.getElementById("container-pay");
+let openDropdown = null;
+
 fetch("/data/json/payment.json")
   .then((res) => res.json())
   .then((data) => {
     data.payment.forEach((item) => {
-      // gabung ke pembungkus utama
-      const divKategori = createElement("div", containerPay, "", item.kategori);
+      const divKategori = fungsi.createElement(
+        "div",
+        containerPay,
+        "",
+        `${item.kategori.toLowerCase().replace(/\s+/g, "-")} btn`
+      );
 
-      // button
-      const btn = createElement("button", divKategori, "", "dropdown-button");
-      // ikon button
-      const icn = createElement("i", btn, "", item.ikon);
-      // juddul button
-      const pKategori = createElement("p", btn, item.kategori);
+      const btn = fungsi.createElement(
+        "button",
+        divKategori,
+        "",
+        "dropdown-button"
+      );
+      fungsi.createElement("i", btn, "", item.ikon); // ikon pembayaran
+      fungsi.createElement("p", btn, item.kategori); // label kategorinya
 
-      // jika list
       if (item.list && item.list.length > 0) {
-        const dropdown = createElement(
+        const dropdown = fungsi.createElement(
           "div",
-          containerPay,
+          divKategori,
           "",
           "dropdown-content"
         );
 
+        dropdown.style.display = "none";
+        btn.addEventListener("click", () => {
+          // logic biar cuma satu dropdown yang kebuka
+          if (openDropdown && openDropdown !== dropdown) {
+            openDropdown.style.display = "none";
+          }
+          if (dropdown.style.display === "none") {
+            dropdown.style.display = "grid";
+            openDropdown = dropdown;
+          } else {
+            dropdown.style.display = "none";
+            openDropdown = null;
+          }
+        });
+
+        // masukin metode bayar ke dropdown
         item.list.forEach((payMethod) => {
-          const payDiv = createElement(
+          const payDiv = fungsi.createElement(
             "div",
             dropdown,
             "",
             `pay ${payMethod.nama.toLowerCase()}`
           );
 
-          // pembungkus bagian atas card
-          const topPayment = createElement("div", payDiv, "", "top-payment");
-          // tidak menggunakn func karena void
+          const topPayment = fungsi.createElement(
+            "div",
+            payDiv,
+            "",
+            "top-payment"
+          );
+
           const logo = document.createElement("img");
           logo.src = payMethod.logo;
           logo.id = "active";
           logo.className = "active";
           topPayment.appendChild(logo);
 
-          const namaPay = createElement(
-            "p",
-            topPayment,
-            payMethod.nama,
-            "nama"
-          );
+          fungsi.createElement("p", topPayment, payMethod.nama, "nama");
 
-          // const hr = createElement("hr", payDiv);
-          hr(payDiv);
+          fungsi.hr(payDiv); // pemisah bawah
 
-          const harga = createElement("div", payDiv, "Rp. 40.421", "harga");
+          fungsi.createElement("div", payDiv, "Rp. 40.421", "harga");
         });
       }
     });
   })
   .catch((err) => console.error("Error fetching payment data:", err));
 
-//======================TESTIMONIAL=========================//
+// --- Testimoni dari user
 const containerTesti = document.getElementById("container-testimonial");
 fetch("/data/json/testimonial.json")
   .then((data) => data.json())
   .then((game) => {
     game.forEach((testi, i) => {
       gameData.then((dataGame) => {
-        const cardTesti = createElement(
+        const cardTesti = fungsi.createElement(
           "div",
           containerTesti,
           "",
           `testi ${i + 1}`
         );
-        const cardTop = createElement("div", cardTesti, "", "top");
+
+        const cardTop = fungsi.createElement("div", cardTesti, "", "top");
         const selectedGame = dataGame.find((item) => item.id === "mlbb");
 
-        // nama game
         if (testi.id == selectedGame.id) {
-          createElement("div", cardTop, selectedGame.nama, "nama-game");
+          fungsi.createElement("div", cardTop, selectedGame.nama, "nama-game");
         }
-        // bintang
-        const containerStar = createElement("div", cardTop, "", "rate");
+
+        const containerStar = fungsi.createElement("div", cardTop, "", "rate");
         for (let i = 0; i < testi.rating; i++) {
-          createElement("i", containerStar, "", "bi bi-star-fill");
+          fungsi.createElement("i", containerStar, "", "bi bi-star-fill");
         }
 
-        hr(cardTesti);
+        fungsi.hr(cardTesti);
 
-        // commentar testi
-        const cardDetail = createElement("div", cardTesti, "", "detail");
-        cardDetail.innerHTML = `<i>${testi.comment}</i>`;
+        const cardDetail = fungsi.createElement("div", cardTesti, "", "detail");
+        cardDetail.innerHTML = `<i>${testi.comment}</i>`; // isi komen testinya
 
-        hr(cardTesti);
+        fungsi.hr(cardTesti);
 
-        // history and date
-        const cardBottom = createElement("div", cardTesti, "", "bottom");
-        createElement("div", cardBottom, testi.product, "histori");
-        createElement(
+        const cardBottom = fungsi.createElement("div", cardTesti, "", "bottom");
+        fungsi.createElement("div", cardBottom, testi.product, "histori");
+        fungsi.createElement(
           "div",
           cardBottom,
-          testi.time.hour + " | " + testi.time.date,
+          testi.time.hour + " - " + testi.time.date,
           "date"
         );
       });
-      // console.log(testi.id);
-      // console.log(testi.rating);
-      // console.log(testi.comment);
-      // console.log(testi.time.hour);
-      // console.log(testi.time.date);
-      // console.log(testi.product);
     });
   });

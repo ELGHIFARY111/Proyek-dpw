@@ -25,7 +25,7 @@ section {
   font-family: var(--font-depixelklein);
   color: var(--putih);
   text-shadow: 3px 3px 1px var(--biru3);
-  font-size: 38px;
+  font-size: 50px;
   font-weight: 900;
 }
 .judul-status span {
@@ -298,7 +298,7 @@ hr {
   justify-content: center;
   background-color: var(--biru3);
   color: var(--biru1);
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 15px;
   font-family: var(--font-kemco);
   text-transform: capitalize;
@@ -307,7 +307,7 @@ hr {
 .bayar {
   border: 2px dashed var(--biru1);
   border-radius: 10px;
-  padding: 0.8rem 6rem;
+  padding: 0.5rem 7.5rem;
   cursor: pointer;
   background-color: var(--biru3);
   transition: 0.3s ease;
