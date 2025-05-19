@@ -1,6 +1,7 @@
-*{
+* {
     font-family: "Pixelify Sans";
 }
+
 header {
     width: 400px;
     height: 70px;
@@ -12,24 +13,28 @@ header {
     top: 8px;          
     left: 8px;             
     right: 0;
-    color:white;
+    color: white;
 }
-h1{
+
+h1 {
     text-align: center;
-    margin:17px;
+    margin: 17px;
 }
-main{
-    display: absolute;
+
+main {
+    display: block;
     width: 400px;
-    height: 700px;
+    height: 600px;
     background-color: whitesmoke;
     border: 5px solid var(--biru2);
     border-top-right-radius: 10%;
     border-top-left-radius: 10%;
-
+    overflow-y: auto; 
+    padding-top: 10px; 
 }
-footer{
-    display: absolut;
+
+footer {
+    display: block;
     width: 400px;
     height: 40px;
     background-color: var(--biru2);
@@ -37,21 +42,41 @@ footer{
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
 }
-#chat{
+
+#chat {
     width: 300px;
     height: 30px;
-    margin-left: 25px;
+    margin-left: 15px;
     border-radius: 10%;
-    border: 3px solid;
-    border-color: var(--biru1);
+    border: 4px solid;
+    border-color:white;
+    resize: none;
 }
-#kirim{
+
+#kirim {
     width: 50px;
     height: 30px;
     margin-left: 5px;
     border-radius: 10%;
     background-color: var(--biru1);
     color: aliceblue;
-    border-color: white;
+    border-color: white; 
+}
 
+.message {
+    padding: 10px;
+    border-bottom: 1px solid var(--biru2);
+    margin: 5px; 
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    max-width: 70%;
+    float: right;
+    clear: both;
+    text-align: left; 
+    word-wrap: break-word;
+}
+
+#chatArea {
+    overflow: auto;
+    padding: 10px; 
 }
