@@ -44,7 +44,7 @@ body {
   color: var(--biru1);
 }
 header {
-  background: url(/data/list-game/mobile\ legend.png);
+  /* background: url(/data/list-game/mobile\ legend.png); */
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -63,12 +63,15 @@ header::before {
   background: linear-gradient(to top, var(--biru3), transparent);
   z-index: 1;
 }
-/* .foto {
-} */
+.foto {
+  background-color: var(--biru3);
+  padding: 0.5rem;
+  border-radius: 40%;
+  box-shadow: 0px 0px 10px var(--biru3);
+}
 .foto img {
   position: relative;
-  box-shadow: 0px 0px 10px var(--biru1);
-  border: 2px dashed var(--hijau1);
+  border: 2px dashed var(--biru1);
   width: 230px;
   border-radius: 40%;
   filter: opacity(1);
@@ -76,17 +79,21 @@ header::before {
 }
 header .nama {
   color: var(--putih);
-  text-shadow: 1px 1px 10px var(--biru1);
+  text-shadow: 1px 1px 6px var(--biru2);
   line-height: 45px;
   z-index: 1;
+  box-shadow: 0px 0px 10px var(--biru3);
 }
 .nama .judul {
   font-size: 70px;
   font-weight: 900;
+  background-color: var(--biru1);
+  box-shadow: 0px 0px 10px var(--biru3);
 }
 .nama .dev {
   font-size: 35px;
   font-weight: 700;
+  background-color: var(--biru2);
 }
 main {
   margin: 1rem 8rem;
@@ -124,6 +131,9 @@ main {
   gap: 0.5rem;
   font-size: 20px;
   font-weight: 900;
+  background-color: var(--biru1);
+  padding: 0.1rem 0.5rem;
+  border-radius: 1px;
 }
 
 .container {
@@ -140,13 +150,20 @@ main {
   gap: 1rem;
 }
 .left .judul {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 900;
+  background-color: rgba(66, 66, 66, 0.308);
+  border-bottom: 2px dashed var(--biru1);
+  margin-bottom: 1rem;
+  border-radius: 5px 20px 0 0;
+  padding: 1rem 0.7rem;
 }
 .left .tutor .judul {
   font-size: 20px;
   font-weight: 500;
   position: relative;
+  margin: 1rem 0 0.5rem 0;
+  padding: 0;
 }
 .left .tutor .judul p {
   display: flex;
@@ -155,7 +172,7 @@ main {
 }
 .left .tutor .judul p span {
   flex: 1;
-  background-color: var(--biru1);
+  background-color: var(--biru2);
   height: 2px;
   margin-left: 10px;
 }
@@ -177,9 +194,7 @@ main {
   background-color: var(--biru1);
   color: var(--putih);
 }
-.left .tutor .judul {
-  margin: 1rem 0 0.5rem 0;
-}
+
 .left .tutor .deskripsi {
   padding-left: 1rem;
 }
@@ -199,12 +214,12 @@ main {
   gap: 1rem;
 }
 .left .testimonial .container-testimonial .testi {
-  background-color: var(--biru1);
+  background-color: var(--biru3);
   border-radius: 10px;
   padding: 1rem;
 }
 .left .testimonial .container-testimonial .testi hr {
-  border: 1px solid var(--biru2);
+  border: 1px solid var(--biru1);
   margin: 2rem 0;
 }
 .left .testimonial .container-testimonial .testi .top,
@@ -215,7 +230,7 @@ main {
 }
 .left .testimonial .container-testimonial .testi .top .nama-game,
 .rate {
-  border: 1px dashed var(--biru3);
+  border: 1px dashed var(--biru1);
   padding: 8px;
   border-radius: 5px;
 }
@@ -278,20 +293,24 @@ main {
 .right .inp-user .container-petunjuk .petunjuk {
   font-size: 14px;
   gap: 0.3rem;
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 7px;
   display: flex;
-
-  background-color: var(--biru3);
+  background-color: var(--biru1);
   color: var(--putih);
   transition: 0.3s ease-in-out;
   cursor: pointer;
   margin-top: 0.5rem;
   position: relative;
+  border: 2px solid var(--biru1);
+}
+.right .inp-user .container-petunjuk .petunjuk:hover {
+  background-color: var(--biru2);
+  color: var(--putih);
 }
 .img-petunjuk {
   position: absolute;
-  top: 93.5%;
+  top: 75%;
   background-color: var(--biru1);
   padding: 5px;
   border-radius: 6px;
@@ -316,11 +335,6 @@ main {
   }
 }
 
-.right .inp-user .container-petunjuk .petunjuk:hover {
-  background-color: var(--biru1);
-  color: var(--hitam);
-}
-
 .right .nominal {
   display: flex;
   flex-direction: column;
@@ -330,10 +344,12 @@ main {
   flex-direction: column;
   gap: 1rem;
 }
-.right .nominal .container-list-item p {
-  font-size: 20px;
+.right .nominal .container-list-item .judul {
+  font-size: 25px;
   margin-top: 0.5rem;
+  border-left: 4px solid var(--biru1);
   font-weight: 900;
+  padding-left: 0.5rem;
 }
 
 .right .nominal .item-special,
@@ -351,11 +367,39 @@ main {
   cursor: pointer;
   height: 80px;
   font-size: 15px;
+  border: 2px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.right .nominal .container-list-item .list-topUp:hover {
+  border: 2px solid var(--biru1);
 }
 
+#container-pay {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .right .payment button {
   width: 100%;
-  height: 5rem;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 10px;
+  background-color: var(--biru1);
+  color: var(--putih);
+  gap: 0.5rem;
+  font-size: 20px;
+  font-weight: 900;
+  transition: 0.3s ease-in-out;
+  border: 2px dashed var(--biru2);
+}
+/* .right .payment button:hover {
+  box-shadow: inset 0 0 5px var(--hitam);
+  border: 1px solid var(--hitam);
+} */
+.right .payment button i {
+  font-size: 25px;
 }
 
 .voucher .inp-voucher {
@@ -367,21 +411,31 @@ main {
 }
 .voucher .inp-voucher button {
   width: 20%;
+  border: 2px solid var(--biru1);
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  background-color: var(--biru1);
 }
-
+.voucher .inp-voucher button:hover {
+  background-color: var(--biru2);
+}
 .kontak .inp-no #no {
-  width: 97%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .right .kontak p span a {
   all: unset;
-  color: var(--kuning);
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease;
   cursor: pointer;
-  border-bottom: 1px solid black;
+  color: var(--biru1);
+  border-bottom: 1px solid var(--biru1);
 }
 .right .kontak p span a:hover {
-  color: var(--hijau1);
+  border-bottom: 1px solid var(--kuning);
+  color: var(--kuning);
 }
 
 /* PAYMENT */
@@ -398,11 +452,30 @@ main {
   cursor: pointer;
 }
 .dropdown-content {
+  width: 100%;
   cursor: pointer;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
+  background-color: var(--biru1);
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.1s ease-in-out,
+    padding 0.3s ease-in-out;
+  padding-top: 0;
+  padding-bottom: 0;
 }
+
+.dropdown-content.show {
+  max-height: 500px;
+  opacity: 1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .dropdown-content img {
   width: 80px;
   height: 30px;
@@ -418,6 +491,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  border: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.dropdown-content .pay:hover {
+  border: 3px solid var(--biru1);
 }
 .pay .top-payment {
   display: flex;
@@ -434,4 +512,24 @@ main {
 }
 .dropdown-content p {
   text-transform: uppercase;
+}
+
+.button {
+  background-color: var(--biru1);
+  padding: 0.7rem 1rem;
+  text-align: center;
+  border-radius: 10px 0 10px 0;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--putih);
+  box-shadow: 3px 3px 10px var(--biru2);
+  transition: 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+.button:hover {
+  text-shadow: none;
+  border: 2px solid var(--biru3);
+  color: var(--hitam);
+  background-color: var(--biru1);
 }

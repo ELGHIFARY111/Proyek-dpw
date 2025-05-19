@@ -34,7 +34,7 @@
 
       fetch("/data/json/game.json")
         .then((res) => res.json())
-        .then((json) => (data = json.game));
+        .then((json) => (data = json));
 
       document.getElementById("cari").addEventListener("input", function () {
         const hasil = data.filter((item) =>

@@ -7,11 +7,9 @@ class Methd {
     container.appendChild(el); // tempelin ke container
     return el;
   }
-
   hr(container) {
     this.createElement("hr", container); // bikin garis pemisah, biar rapi dikit
   }
-
   cleanAndUppercaseKey(key) {
     return key.replace(/[_\-=+]/g, " ").toUpperCase(); // ganti simbol jadi spasi terus di-uppercase
   }
@@ -155,6 +153,7 @@ gameData
 // --- bagian dropdown metode pembayaran
 const containerPay = document.getElementById("container-pay");
 let openDropdown = null;
+let oldBtn = null;
 
 fetch("/data/json/payment.json")
   .then((res) => res.json())
@@ -184,18 +183,24 @@ fetch("/data/json/payment.json")
           "dropdown-content"
         );
 
-        dropdown.style.display = "none";
+        btn.style.borderRadius = "10px";
+        dropdown.classList.remove("show");
+
         btn.addEventListener("click", () => {
-          // logic biar cuma satu dropdown yang kebuka
           if (openDropdown && openDropdown !== dropdown) {
-            openDropdown.style.display = "none";
+            openDropdown.classList.remove("show");
+            oldBtn.style.borderRadius = "10px";
           }
-          if (dropdown.style.display === "none") {
-            dropdown.style.display = "grid";
+          if (!dropdown.classList.contains("show")) {
+            dropdown.classList.add("show");
+            btn.style.borderRadius = "10px 10px 0 0";
             openDropdown = dropdown;
+            oldBtn = btn;
           } else {
-            dropdown.style.display = "none";
+            dropdown.classList.remove("show");
+            btn.style.borderRadius = "10px";
             openDropdown = null;
+            oldBtn = null;
           }
         });
 

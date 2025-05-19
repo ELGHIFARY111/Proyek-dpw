@@ -776,9 +776,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/genshin.png",
-      "background": "/data/list-game/genshin.png",
-      "petunjuk": "/data/list-game/genshin.png"
+      "logo": "/data/list-game/genshin.jpg",
+      "background": "/data/list-game/genshin.jpg",
+      "petunjuk": "/data/list-game/genshin.jpg"
     }
   },
   {
