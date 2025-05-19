@@ -1,62 +1,70 @@
 {
-  "payment": {
-    "qris": {
-      "nama": "QRIS (All Payment)",
-      "logo": "/data/payment/qris/qris.png"
+  "payment": [
+    {
+      "kategori": "E WALLET",
+      "ikon": "bi bi-wallet2",
+      "list": [
+        {
+          "nama": "DANA",
+          "logo": "/data/payment/e-wallet/dana.png"
+        },
+        {
+          "nama": "OVO",
+          "logo": "/data/payment/e-wallet/ovo.png"
+        },
+        {
+          "nama": "GoPay",
+          "logo": "/data/payment/e-wallet/gopay.png"
+        },
+        {
+          "nama": "ShopeePay",
+          "logo": "/data/payment/e-wallet/shopay.png"
+        }
+      ]
     },
-    "e_wallet": [
-      {
-        "nama": "DANA",
-        "logo": "/data/payment/e-wallet/dana.png"
-      },
-      {
-        "nama": "OVO",
-        "logo": "/data/payment/e-wallet/ovo.png"
-      },
-      {
-        "nama": "GoPay",
-        "logo": "/data/payment/e-wallet/gopay.png"
-      },
-      {
-        "nama": "ShopeePay",
-        "logo": "/data/payment/e-wallet/shopay.png"
-      }
-    ],
-    "bank": [
-      {
-        "nama": "BCA Virtual Account",
-        "logo": "/data/payment/bank/bca.png"
-      },
-      {
-        "nama": "Mandiri Virtual Account",
-        "logo": "/data/payment/bank/mandiri.png"
-      },
-      {
-        "nama": "BRI Virtual Account",
-        "logo": "/data/payment/bank/bri.png"
-      },
-      {
-        "nama": "BNI Virtual Account",
-        "logo": "/data/payment/bank/bri.png"
-      },
-      {
-        "nama": "BSI Virtual Account",
-        "logo": "/data/payment/bank/bsi.png"
-      },
-      {
-        "nama": "CIMB Virtual Account",
-        "logo": "/data/payment/bank/cimb.png"
-      }
-    ],
-    "merchant": [
-      {
-        "nama": "Alfamart",
-        "logo": "/data/payment/gerai-ritel/alfamart.png"
-      },
-      {
-        "nama": "Indomaret",
-        "logo": "/data/payment/gerai-ritel/indomaret.png"
-      }
-    ]
-  }
+    {
+      "kategori": "BANK",
+      "ikon": "bi bi-credit-card",
+      "list": [
+        {
+          "nama": "CIMB",
+          "logo": "/data/payment/bank/cimb.png"
+        },
+        {
+          "nama": "BCA",
+          "logo": "/data/payment/bank/bca.png"
+        },
+        {
+          "nama": "Mandiri",
+          "logo": "/data/payment/bank/mandiri.png"
+        },
+        {
+          "nama": "BRI",
+          "logo": "/data/payment/bank/bri.png"
+        },
+        {
+          "nama": "BNI",
+          "logo": "/data/payment/bank/bni.png"
+        },
+        {
+          "nama": "BSI",
+          "logo": "/data/payment/bank/bsi.png"
+        }
+      ]
+    },
+    {
+      "kategori": "MERCHANT",
+      "ikon": "bi bi-shop",
+      "list": [
+        {
+          "nama": "Alfamart",
+          "logo": "/data/payment/gerai-ritel/alfamart.png"
+        },
+        {
+          "nama": "Indomaret",
+          "logo": "/data/payment/gerai-ritel/indomaret.png"
+        }
+      ]
+    }
+  ]
 }
