@@ -47,6 +47,7 @@ gameData
     } else {
       document.querySelector("header").style.display = "none";
       document.querySelector("main").style.display = "none";
+      document.title = "SixFussion | Page Not Found";
     }
 
     //tampilin logo + nama game
