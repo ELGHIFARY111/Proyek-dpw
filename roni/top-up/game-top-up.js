@@ -26,6 +26,7 @@ gameData
     const contPetunjk = document.getElementById("container-petunjuk");
     const klikPtnjk = document.getElementById("petunjuk");
     const headerCont = document.querySelector("header");
+    const deskTrnsk = document.getElementById("deskripsiTransaksi");
 
     // Ambil ID dari URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -58,8 +59,11 @@ gameData
     const contNameH = fungsi.createElement("div", headerCont, "", "nama");
     fungsi.createElement("div", contNameH, selectedGame.nama, "judul");
     fungsi.createElement("div", contNameH, selectedGame.dev, "dev");
-
     headerCont.style.backgroundImage = `url('${selectedGame.gambar.background}')`;
+
+    // deskripsi Cara transaksi
+    const spanTrnsk = document.getElementById("spnTRnsk");
+    spanTrnsk.textContent = selectedGame.nama;
 
     const containerItem = document.getElementById("container-list-item");
     const itemKeys = Object.keys(selectedGame.list_item);
@@ -167,14 +171,13 @@ gameData
     });
   })
   .catch((error) => {
-    console.error("Gagal mengambil data:", error); // kalo gagal fetch
+    console.error("Gagal mengambil data game:", error); // kalo gagal fetch
   });
 
 //bagian dropdown metode pembayaran
 const containerPay = document.getElementById("container-pay");
 let openDropdown = null;
 let oldBtn = null;
-
 fetch("/data/json/payment.json")
   .then((res) => res.json())
   .then((data) => {
@@ -245,7 +248,7 @@ fetch("/data/json/payment.json")
 
           fungsi.createElement("p", topPayment, payMethod.nama, "nama");
 
-          fungsi.hr(payDiv); // pemisah bawah
+          fungsi.hr(payDiv);
 
           fungsi.createElement("div", payDiv, "Rp. 40.421", "harga");
         });
@@ -254,47 +257,72 @@ fetch("/data/json/payment.json")
   })
   .catch((err) => console.error("Error fetching payment data:", err));
 
-//Testimoni dari user
 const containerTesti = document.getElementById("container-testimonial");
+
 fetch("/data/json/testimonial.json")
-  .then((data) => data.json())
-  .then((game) => {
-    game.forEach((testi, i) => {
-      gameData.then((dataGame) => {
-        const cardTesti = fungsi.createElement(
-          "div",
-          containerTesti,
-          "",
-          `testi ${i + 1}`
-        );
+  .then((res) => res.json())
+  .then((testimonialList) => {
+    gameData.then((dataGame) => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const gameId = urlParams.get("id");
 
-        const cardTop = fungsi.createElement("div", cardTesti, "", "top");
-        const selectedGame = dataGame.find((item) => item.id === "mlbb");
+      testimonialList.forEach((testi, index) => {
+        const selectedGame = dataGame.find((game) => game.id === testi.id);
+        console.log("Testi ID:", testi.id);
+        console.log("Selected Game:", selectedGame);
 
-        if (testi.id == selectedGame.id) {
+        // Jika game ditemukan dan id game di url sesuai, tampilkan testimoni
+        if (selectedGame && selectedGame.id === gameId) {
+          const cardTesti = fungsi.createElement(
+            "div",
+            containerTesti,
+            "",
+            `testi ${index + 1}`
+          );
+
+          const cardTop = fungsi.createElement("div", cardTesti, "", "top");
           fungsi.createElement("div", cardTop, selectedGame.nama, "nama-game");
+
+          const containerStar = fungsi.createElement(
+            "div",
+            cardTop,
+            "",
+            "rate"
+          );
+          for (let star = 0; star < testi.rating; star++) {
+            fungsi.createElement("i", containerStar, "", "bi bi-star-fill");
+          }
+
+          fungsi.hr(cardTesti);
+
+          const cardDetail = fungsi.createElement(
+            "div",
+            cardTesti,
+            "",
+            "detail"
+          );
+          cardDetail.innerHTML = `<i>${testi.comment}</i>`;
+
+          fungsi.hr(cardTesti);
+          document.getElementById("no-testi").style.display = "none";
+
+          const cardBottom = fungsi.createElement(
+            "div",
+            cardTesti,
+            "",
+            "bottom"
+          );
+          fungsi.createElement("div", cardBottom, testi.product, "histori");
+          fungsi.createElement(
+            "div",
+            cardBottom,
+            `${testi.time.hour} - ${testi.time.date}`,
+            "date"
+          );
+        } else {
+          document.getElementById("no-testi").style.display = "flex";
         }
-
-        const containerStar = fungsi.createElement("div", cardTop, "", "rate");
-        for (let i = 0; i < testi.rating; i++) {
-          fungsi.createElement("i", containerStar, "", "bi bi-star-fill");
-        }
-
-        fungsi.hr(cardTesti);
-
-        const cardDetail = fungsi.createElement("div", cardTesti, "", "detail");
-        cardDetail.innerHTML = `<i>${testi.comment}</i>`; // isi komen testinya
-
-        fungsi.hr(cardTesti);
-
-        const cardBottom = fungsi.createElement("div", cardTesti, "", "bottom");
-        fungsi.createElement("div", cardBottom, testi.product, "histori");
-        fungsi.createElement(
-          "div",
-          cardBottom,
-          testi.time.hour + " - " + testi.time.date,
-          "date"
-        );
       });
     });
-  });
+  })
+  .catch((err) => console.log(`Gagal fetch data testimonial: ${err}`));

@@ -549,7 +549,7 @@ main {
   background-color: var(--biru2);
 }
 .not-found i {
-  color: var(--biru3);
+  color: var(--kuning);
   font-size: 90px;
 }
 
@@ -621,4 +621,24 @@ main {
   font-size: 200px;
   color: var(--hijau1);
   text-shadow: 1px 1px 30px var(--hijau1);
+}
+
+#no-testi {
+  background-color: var(--biru3);
+  padding: 1rem;
+  border-radius: 0 0 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 18px;
+}
+#no-testi p {
+  margin: 0.5rem;
+  color: var(--putih);
+  background-color: var(--biru3);
+}
+#no-testi i {
+  color: var(--kuning);
+  font-size: 50px;
 }
