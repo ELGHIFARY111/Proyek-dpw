@@ -26,7 +26,6 @@ gameData
     const contPetunjk = document.getElementById("container-petunjuk");
     const klikPtnjk = document.getElementById("petunjuk");
     const headerCont = document.querySelector("header");
-    const deskTrnsk = document.getElementById("deskripsiTransaksi");
 
     // Ambil ID dari URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -105,12 +104,22 @@ gameData
 
         // Tampilkan semua item dalam key
         itemsArr.forEach((item) => {
-          fungsi.createElement(
+          const itm = fungsi.createElement(
             "div",
             containerItems,
-            item.nama_item,
+            "",
             "list-topUp"
           );
+          // tambah harga list item
+          itm.innerHTML = `${item.nama_item} <br>`;
+          fungsi.createElement("span", itm, item.harga);
+
+          itm.addEventListener("click", () => {
+            document.querySelectorAll(".list-topUp").forEach((el) => {
+              el.classList.remove("active");
+            });
+            itm.classList.add("active");
+          });
         });
       });
     }
@@ -235,6 +244,14 @@ fetch("/data/json/payment.json")
             "",
             `pay ${payMethod.nama.toLowerCase()}`
           );
+
+          payDiv.addEventListener("click", () => {
+            document.querySelectorAll(".pay").forEach((el) => {
+              el.classList.remove("active");
+            });
+
+            payDiv.classList.add("active");
+          });
 
           const topPayment = fungsi.createElement(
             "div",
