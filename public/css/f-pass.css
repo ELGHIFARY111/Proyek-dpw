@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-pixel);
+    background: var(--biru1);
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-panel {
+    flex: 1;
+    text-align: center;
+}
+
+.left-panel h1 {
+    margin-top: -135px;
+    margin-left: -50px;
+    font-size: 50px; 
+    letter-spacing: 5px;
+}
+
+.ninja_minum {
+    width: 600px;
+    height: 550px;
+    margin-top: -200px;
+    margin-left: -150px;
+    image-rendering: pixelated;
+}
+
+.forgot-password {
+    margin-right: 100px;
+    background-color: var(--biru3);
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 250px;
+}
+
+.forgot-password label {
+    color: white;
+    font-size: 15px;
+    border-bottom: 2px dotted var(--biru1);
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.forgot-password input {
+    padding: 10px;
+    font-size: 13px;
+    background-color: #222;
+    border: 1px solid #884dff;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+    font-family: var(--font-pixel);
+}
+
+.button-f {
+    font-family: var(--font-pixel);
+    padding: 12px;
+    font-size: 15px;
+    background-color: var(--biru2);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,191 @@
+body{
+    background-color: var(--biru1);
+    font-family: var(--font-kemco);
+
+}
+h1{
+    font-family: var(--font-pixel);
+    color: var(--putih);
+}
+.kotak1{
+    display: flex;
+    flex-direction: column;
+    outline:2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: var(--biru2)
+}
+.container-1atas{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--biru2);
+
+}
+.kiri{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--biru2);
+}
+.kiri .foto{
+    background-color: var(--biru2);
+
+}
+.kiri .foto img{
+    width: 60px; /* Sesuaikan ukuran sesuai kebutuhan */
+    height: 60px;
+    border: 2px solid white;
+    margin: 10px;
+    object-fit: cover; /* Membuat gambar tetap proporsional */
+    border-radius: 50%; /* Agar gambar berbentuk lingkaran */
+}
+
+.kiri .info{
+    color: var(--putih);
+    width: auto;
+    max-width: 120px;
+    background-color: var(--biru2);
+}
+.kiri .info p{
+    margin-bottom: 3px;
+    background-color: var(--biru2);
+}
+.kiri .info .member{
+    line-height: 0.8;
+    display: inline-block;
+    background-color: var(--biru2);  
+    padding: 5px;
+    border-radius: 10px;
+}
+.kanan{
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--biru2);
+
+}
+.icongear{
+    color: var(--putih);
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.icongear:hover {
+    color: var(--kuning); 
+    transform: scale(1.1);
+}
+
+.kanan i{
+    font-size: 30px;
+    color: var(--putih);
+    background-color: var(--biru2);
+
+}
+hr {
+    width: 90%;
+    margin: auto;
+    border: 2px solid var(--kuning);
+}
+.container-1bawah{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 100%;
+    background-color: var(--biru2);
+}
+.container-1bawah i{
+    margin-left: 20px;
+    font-size: 30px;
+    background-color: var(--biru2);
+    color: var(--putih);
+
+}
+.container-1bawah p{
+    color: var(--putih);
+    background-color: var(--biru2);
+
+}
+
+/* ini kotak ke 2 */
+.kotak2{
+    display: flex;
+    outline: 2px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: var(--biru2);
+}
+.container-2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--biru2);
+}
+.box {
+    flex: 1;
+    padding: 15px; /* Padding lebih besar */
+    text-align: center;
+    background-color: var(--putih); /* Pastikan warna kontras */
+    border-radius: 10px; /* Sudut kotak lebih halus */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+.box h1{
+    color: black;
+    background-color: var(--putih);
+}
+.box p{
+    font-family: var(--font-kemco);
+    background-color: var(--putih);
+}
+
+/* ini kotak 3 */
+.kotak3{
+    display: flex;
+    flex-direction: column;
+    padding: 40px 10px;
+    width: 100%;
+    border-radius: 20px;
+    outline:2px solid black;
+    background-color: var(--biru2);
+}
+.container-3{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.atas{
+    flex: 1;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--putih);
+}
+.container-3bawah{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: var(--biru2);
+}
+.container-3bawah i{
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 80px;
+    color: var(--putih);
+}
+.container-3bawah p{
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--putih);
+}
+
+

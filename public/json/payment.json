@@ -1,0 +1,70 @@
+{
+  "payment": [
+    {
+      "kategori": "E WALLET",
+      "ikon": "bi bi-wallet2",
+      "list": [
+        {
+          "nama": "DANA",
+          "logo": "/assets/payment/e-wallet/dana.png"
+        },
+        {
+          "nama": "OVO",
+          "logo": "/assets/payment/e-wallet/ovo.png"
+        },
+        {
+          "nama": "GoPay",
+          "logo": "/assets/payment/e-wallet/gopay.png"
+        },
+        {
+          "nama": "ShopeePay",
+          "logo": "/assets/payment/e-wallet/shopay.png"
+        }
+      ]
+    },
+    {
+      "kategori": "BANK",
+      "ikon": "bi bi-credit-card",
+      "list": [
+        {
+          "nama": "CIMB",
+          "logo": "/assets/payment/bank/cimb.png"
+        },
+        {
+          "nama": "BCA",
+          "logo": "/assets/payment/bank/bca.png"
+        },
+        {
+          "nama": "Mandiri",
+          "logo": "/assets/payment/bank/mandiri.png"
+        },
+        {
+          "nama": "BRI",
+          "logo": "/assets/payment/bank/bri.png"
+        },
+        {
+          "nama": "BNI",
+          "logo": "/assets/payment/bank/bni.png"
+        },
+        {
+          "nama": "BSI",
+          "logo": "/assets/payment/bank/bsi.png"
+        }
+      ]
+    },
+    {
+      "kategori": "MERCHANT",
+      "ikon": "bi bi-shop",
+      "list": [
+        {
+          "nama": "Alfamart",
+          "logo": "/assets/payment/gerai-ritel/alfamart.png"
+        },
+        {
+          "nama": "Indomaret",
+          "logo": "/assets/payment/gerai-ritel/indomaret.png"
+        }
+      ]
+    }
+  ]
+}

@@ -18,11 +18,14 @@
 
 ### ⚙️ Backend
 
+- **Express js**→ Untuk routing dan crud
+  - instalasi: `npm install express`
+
 ---
 
 ## 🔧 Tools Development
 
 ## 👥 Author
 
-- Nama: ["Rehan","Elgi","Rayyan"."Rendi","Iman","Roni"]
-- Tanggal mulai: Mei 2025
+- Nama: `"Rehan","Elgi","Rayyan"."Rendi","Iman","Roni"`
+- Tanggal mulai: 27 April 2025

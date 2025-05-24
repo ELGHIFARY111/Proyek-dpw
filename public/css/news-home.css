@@ -1,0 +1,67 @@
+body {
+  background-color: var(--biru3);
+  color: var(--putih);
+  padding: 0 10rem;
+  font-family: var(--font-pixel);
+}
+header p {
+  font-family: var(--font-kemco);
+  color: var(--putih);
+  text-shadow: 5px 5px 3px var(--biru1);
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+header span {
+  border-top: 5px dashed var(--putih);
+  box-shadow: 3px 3px 0 var(--biru1);
+  flex-grow: 1;
+  margin-left: 10px;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+section {
+  position: relative;
+  background-color: var(--biru1);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--biru1);
+  border: 2px dashed var(--putih);
+}
+section img {
+  width: 100%;
+  min-height: 450px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s ease;
+}
+section img:hover {
+  transform: scale(1.1);
+}
+section div.judul {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: rgba(6, 27, 83, 0.5);
+  color: var(--putih);
+  font-weight: 900;
+  text-align: left;
+  text-shadow: 2px 2px 2px var(--biru3);
+  transition: 0.5s ease;
+  min-height: 50px;
+}
+section .judul:hover {
+  color: var(--kuning);
+  text-decoration: underline;
+  text-decoration-color: var(--kuning);
+  text-decoration-thickness: 2px;
+}
