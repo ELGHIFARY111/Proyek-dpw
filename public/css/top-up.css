@@ -84,10 +84,11 @@ header .nama {
   box-shadow: 0px 0px 10px var(--biru3);
 }
 .nama .judul {
-  font-size: 70px;
+  font-size: 45px;
   font-weight: 900;
   background-color: var(--biru1);
   box-shadow: 0px 0px 10px var(--biru3);
+  font-family: var(--font-kemco);
 }
 .nama .dev {
   font-size: 35px;
@@ -98,7 +99,7 @@ main {
   margin: 0 8rem 5rem 8rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .inp-user,
 .nominal,
@@ -110,6 +111,7 @@ main {
   overflow: hidden;
   padding: 1.5rem;
   border-radius: 30px 5px 30px 0;
+  box-shadow: 0 10px 0px var(--biru1), 0 0 10px var(--biru2);
 }
 
 .service-features {
@@ -121,6 +123,11 @@ main {
   background-color: var(--biru2);
   color: var(--putih);
   border-radius: 25px 25px 0 0;
+  box-shadow: 0 10px 0px var(--biru1), 0 0 10px var(--biru2);
+  font-family: var(--font-kemco);
+}
+.service-features p {
+  font-size: 15px;
 }
 .proses,
 .layanan,
@@ -133,6 +140,7 @@ main {
   background-color: var(--biru1);
   padding: 0.1rem 0.5rem;
   border-radius: 1px;
+  text-shadow: 1px 1px 5px var(--biru2);
 }
 
 .container {
@@ -145,20 +153,21 @@ main {
   color: var(--putih);
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
   /* grid-template-rows: repeat(5, 1fr); */
-  gap: 1rem;
 }
 .left .judul {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 900;
   background-color: rgba(66, 66, 66, 0.308);
   border-bottom: 2px dashed var(--biru1);
   margin-bottom: 1rem;
   border-radius: 5px 20px 0 0;
   padding: 1rem 0.7rem;
+  font-family: var(--font-kemco);
+  box-shadow: 0 0 3px var(--biru3);
 }
 .left .tutor .judul {
-  font-size: 20px;
   font-weight: 500;
   position: relative;
   margin: 1rem 0 0.5rem 0;
@@ -168,10 +177,11 @@ main {
   display: flex;
   align-items: center;
   background-color: var(--biru1);
+  font-size: 15px;
 }
 .left .tutor .judul p span {
   flex: 1;
-  background-color: var(--biru2);
+  background-color: var(--biru3);
   height: 2px;
   margin-left: 10px;
 }
@@ -182,6 +192,7 @@ main {
   /* border-radius: 10px 20px 0 0; */
   padding: 1.5rem;
   border-radius: 5px 30px 0 30px;
+  box-shadow: 0 10px 0px var(--biru1), 0 0 10px var(--biru2);
 }
 /* .container-transaksi {
 } */
@@ -192,6 +203,7 @@ main {
 .container-transaksi .deskripsi span {
   background-color: var(--biru1);
   color: var(--putih);
+  font-weight: 900;
 }
 
 .left .tutor .deskripsi {
@@ -202,10 +214,12 @@ main {
   margin-top: 1rem;
   font-weight: 900;
   gap: 0.1rem;
+  background-color: var(--biru1);
 }
 .left .container-detail-game #deskripsi-game p span {
   background-color: var(--biru1);
   font-size: 18px;
+  font-weight: 900;
 }
 .container-testimonial {
   display: flex;
@@ -216,16 +230,24 @@ main {
   background-color: var(--biru3);
   border-radius: 10px;
   padding: 1rem;
+  box-shadow: 0 0 3px var(--biru1);
+}
+.left .testimonial .container-testimonial .testi .detail {
+  font-size: 15px;
+  font-family: var(--font-depixelklein);
 }
 .left .testimonial .container-testimonial .testi hr {
   border: 1px solid var(--biru1);
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 .left .testimonial .container-testimonial .testi .top,
 .left .testimonial .container-testimonial .testi .bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 900;
+  font-family: var(--font-depixelklein);
+  font-size: 13px;
 }
 .left .testimonial .container-testimonial .testi .top .nama-game,
 .rate {
@@ -234,7 +256,7 @@ main {
   border-radius: 5px;
 }
 .left .testimonial .container-testimonial .testi .bottom {
-  gap: 3rem;
+  gap: 1.5rem;
   white-space: nowrap;
 }
 .left .testimonial .container-testimonial .testi .bottom .histori {
@@ -247,7 +269,7 @@ main {
   grid-column: span 2;
   color: var(--putih);
   /* display: grid; */
-  gap: 1rem;
+  gap: 1.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -255,7 +277,7 @@ main {
 .right .top {
   display: flex;
   gap: 1rem;
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 900;
   display: flex;
   align-items: center;
@@ -263,6 +285,8 @@ main {
   margin-bottom: 1rem;
   background-color: rgba(66, 66, 66, 0.308);
   border-radius: 25px 5px 0 0;
+  font-family: var(--font-kemco);
+  box-shadow: 0 0 3px var(--biru3);
 }
 .right .top .angka {
   background-color: var(--biru1);
@@ -271,6 +295,7 @@ main {
   text-align: center;
   width: 70px;
   border-radius: 25px 0 0 0;
+  font-size: 28px;
 }
 
 .right .inp-user .input {
@@ -284,6 +309,7 @@ main {
 }
 .right .inp-user .instruction span {
   background-color: var(--biru1);
+  font-weight: 900;
 }
 
 .right .inp-user .container-petunjuk {
@@ -291,6 +317,7 @@ main {
 }
 .right .inp-user .container-petunjuk .petunjuk {
   font-size: 14px;
+  font-weight: 900;
   gap: 0.3rem;
   padding: 0.5rem 1rem;
   border-radius: 7px;
@@ -347,11 +374,12 @@ main {
   gap: 1rem;
 }
 .right .nominal .container-list-item .judul {
-  font-size: 25px;
+  font-size: 20px;
   margin-top: 0.5rem;
   border-left: 4px solid var(--biru1);
   font-weight: 900;
   padding-left: 0.5rem;
+  font-family: var(--font-kemco);
 }
 
 .right .nominal .item {
@@ -373,6 +401,7 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
+  font-weight: 900;
 }
 .right .nominal .container-list-item .list-topUp:hover {
   border: 2px solid var(--biru1);
@@ -382,12 +411,16 @@ main {
   color: var(--biru1);
   background-color: transparent;
   text-align: end;
-  text-shadow: 0 0 1px var(--biru3);
   display: inline-block;
   margin-top: auto;
+  font-family: var(--font-kemco);
 }
 .right .nominal .container-list-item .list-topUp.active {
   border: 2px solid var(--biru1);
+  text-shadow: 0 0 2px var(--putih);
+}
+.right .nominal .container-list-item .list-topUp.active span {
+  text-shadow: 0 0 5px var(--biru2);
 }
 
 #container-pay {
@@ -433,6 +466,10 @@ main {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   background-color: var(--biru1);
+  font-weight: 900;
+  font-size: 15px;
+  text-shadow: 0 0 3px var(--biru3);
+  font-family: var(--font-kemco);
 }
 .voucher .inp-voucher button:hover {
   background-color: var(--biru2);
@@ -446,12 +483,13 @@ main {
   all: unset;
   transition: 0.3s ease;
   cursor: pointer;
-  color: var(--biru1);
-  border-bottom: 1px solid var(--biru1);
+  color: var(--kuning);
+  border-bottom: 1px solid var(--kuning);
+  font-weight: 900;
 }
 .right .kontak p span a:hover {
-  border-bottom: 1px solid var(--kuning);
-  color: var(--kuning);
+  border-bottom: 1px solid var(--biru1);
+  color: var(--biru1);
 }
 
 /* PAYMENT */
@@ -466,7 +504,13 @@ main {
   display: flex;
   background-color: var(--hitam);
   cursor: pointer;
+  font-family: var(--font-kemco);
+  text-shadow: 0 0 5px var(--biru2);
 }
+.dropdown-button p {
+  font-size: 15px;
+}
+
 .dropdown-content {
   width: 100%;
   cursor: pointer;
@@ -483,6 +527,7 @@ main {
     padding 0.3s ease-in-out;
   padding-top: 0;
   padding-bottom: 0;
+  font-family: var(--font-kemco);
 }
 
 .dropdown-content.show {
@@ -498,12 +543,14 @@ main {
   background-color: var(--putih);
   border-radius: 5px;
   padding: 0.5rem 1rem;
+  object-fit: contain;
 }
 .dropdown-content .pay {
   padding: 1rem;
   background-color: var(--biru3);
   color: var(--putih);
   border-radius: 10px;
+  font-size: 13px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -546,9 +593,12 @@ main {
   box-shadow: 3px 3px 10px var(--biru2);
   transition: 0.3s ease-in-out;
   border: 2px solid transparent;
+  font-family: var(--font-kemco);
+  text-shadow: 0 0 3px var(--biru3);
 }
 .button:hover {
   text-shadow: none;
+  box-shadow: none;
   border: 2px solid var(--biru3);
   color: var(--hitam);
   background-color: var(--biru1);
@@ -662,4 +712,47 @@ main {
 #no-testi i {
   color: var(--kuning);
   font-size: 50px;
+}
+
+/* =====================poipup============== */
+#popUp {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+#popUp section {
+  animation: slideOpen 0.6s ease-in-out forwards,
+    slideClose 0.6s ease-in-out backwards;
+}
+
+/* Tambahkan 'from' agar animasi punya titik awal */
+#popUp section {
+  animation: slideOpen 0.5s ease forwards;
+}
+@keyframes slideOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideClose {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
 }

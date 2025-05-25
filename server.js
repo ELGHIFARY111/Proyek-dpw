@@ -26,9 +26,10 @@ app.get("/list-game", (req, res) => {
 app.get("/artikel-home", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
 });
-app.get("/news", (req, res) => {
+app.get("/news-home", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "news-home.html"));
 });
+<<<<<<< HEAD
 app.get("/HALAMAN_UTAMA", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
 });
@@ -37,6 +38,11 @@ app.get("/cek", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
 });
 
+=======
+app.get("/news", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "news.html"));
+});
+>>>>>>> c7392b55941dc68bd534e4313fe18d9f778e50bd
 
 app.listen(PORT, () => {
   console.log(`Server nyala di http://localhost:${PORT}`);

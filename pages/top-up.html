@@ -6,6 +6,7 @@
     <title></title>
     <link rel="stylesheet" href="/css/global.css" />
     <link rel="stylesheet" href="/css/top-up.css" />
+    <link rel="stylesheet" href="/css/konfirmasi-pembayaran.css" />
     <link
       rel="stylesheet"
       href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
@@ -83,7 +84,7 @@
         <div class="right">
           <div class="inp-user">
             <div class="top">
-              <div class="angka" id="1">1</div>
+              <div class="angka">1</div>
               <div class="alert">Lengkapi Data</div>
             </div>
             <div class="input" id="input"></div>
@@ -109,17 +110,15 @@
 
           <div class="nominal">
             <div class="top">
-              <div class="angka" id="2">2</div>
+              <div class="angka">2</div>
               <div class="alert">Pilih Nominal Yang Ingin dibeli</div>
             </div>
-            <a href="#3">
-              <div class="container-list-item" id="container-list-item"></div>
-            </a>
+            <div class="container-list-item" id="container-list-item"></div>
           </div>
 
           <div class="payment" id="payment">
             <div class="top">
-              <div class="angka" id="3">3</div>
+              <div class="angka">3</div>
               <div class="alert">Pilih Metode Pembayaran</div>
             </div>
             <!-- <a href="#voucher"> -->
@@ -129,7 +128,7 @@
 
           <div class="voucher" id="voucher">
             <div class="top">
-              <div class="angka" id="4">4</div>
+              <div class="angka">4</div>
               <div class="alert">Punya Kode Promo? Masukkan Disini!</div>
             </div>
             <div class="inp-voucher">
@@ -140,7 +139,7 @@
 
           <div class="kontak">
             <div class="top">
-              <div class="angka" id="5">5</div>
+              <div class="angka">5</div>
               <div class="alert">Detail Kontak Anda</div>
             </div>
             <div class="inp-no">
@@ -158,6 +157,9 @@
         </div>
       </section>
     </main>
+
+    <!-- popup confirm -->
+    <div id="popUp"></div>
 
     <!-- ====================== not found ======================-->
     <div id="game-not-found">

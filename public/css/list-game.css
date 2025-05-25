@@ -6,7 +6,7 @@ body {
   font-size: 10px; /* 1rem = 10px */
 }
 body {
-  font-family: var(--font-pixel);
+  font-family: var(--font-depixelklein);
   background-color: var(--biru3);
   margin: 0;
   padding: 0;
@@ -88,7 +88,7 @@ body {
   text-overflow: ellipsis; /* agat teks berubah menjadi titik titik */
   padding: 0 1rem;
   margin-top: 4px;
-  text-shadow: 2px 2px 5px var(--biru3);
+  text-shadow: 1px 1px 3px var(--biru3);
 }
 .dev {
   white-space: nowrap;

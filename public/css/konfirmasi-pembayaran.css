@@ -1,37 +1,37 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+} */
 
-body {
+/* #popUp body {
   background: transparent;
   font-size: 16px;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+  inset: 0;
+} */
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#popUp main {
+  all: unset;
 }
-section {
+#popUp section {
   position: relative;
   overflow: hidden;
   width: 25rem;
-  height: 30rem;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: var(--biru3);
   padding: 2rem 1rem 1rem 1rem;
   border-radius: 15px;
-  box-shadow: 5px 10px 20px var(--biru3), 0 0 50px var(--biru3);
+  box-shadow: 5px 5px 10px var(--biru3), -5px -5px 10px var(--biru3);
 }
-.judul {
-  font-family: var(--font-depixelklein);
+#popUp .judul {
+  font-family: var(--font-kemco);
   position: absolute;
   top: 0;
   left: 0;
@@ -43,91 +43,92 @@ section {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1rem 0;
-  font-size: 24px;
+  padding: 1.3rem 0;
+  font-size: 22px;
   font-weight: 900;
   border-bottom: 3px dashed var(--biru3);
 }
-.isi {
+#popUp .isi {
   margin-top: 2.5rem;
 }
-.disclaimer {
+#popUp .disclaimer {
   /* margin: 1rem 0; */
   font-family: var(--font-pixel);
   margin-bottom: 0.5rem;
   color: var(--putih);
 }
-.disclaimer i {
+#popUp .disclaimer i {
   color: var(--merah);
 }
-.informasi {
+#popUp .informasi {
   padding: 1rem;
   border-radius: 10px;
   border: 3px dashed var(--biru1);
 }
-.informasi p:first-child {
+#popUp .informasi p:first-child {
   margin: 0;
 }
-.informasi p {
+#popUp .informasi p {
   color: var(--biru1);
   margin: 1rem 0 0 0;
-  font-family: var(--font-depixelklein);
+  font-family: var(--font-kemco);
   display: flex;
   gap: 0.5rem;
   font-weight: 700;
 }
-.informasi p span {
+#popUp .informasi p span {
   display: flex;
   flex-grow: 1;
   border-top: 4px groove var(--biru2);
   margin-top: 0.5rem;
 }
-table {
+#popUp table {
   color: var(--putih);
   font-family: var(--font-pixel);
   width: 100%;
   border-collapse: collapse;
 }
-td {
+#popUp td {
   padding: 5px 0;
 }
-table td:first-child {
+#popUp table td:first-child {
   text-align: left;
 }
-table td:last-child {
+#popUp table td:last-child {
   text-align: right;
 }
-.tombol {
+#popUp .tombol {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
   text-align: center;
 }
-button {
+#popUp button {
   all: unset;
   background-color: var(--biru2);
   color: var(--putih);
   text-shadow: 1px 1px 1px var(--biru3);
   padding: 1rem;
+  font-size: 13px;
   font-family: var(--font-kemco);
   cursor: pointer;
   transition: 0.5s ease;
 }
-a {
+#popUp a {
   all: unset;
 }
-.cancel {
+#popUp .cancel {
   border-radius: 5px;
   width: 10rem;
 }
-.cancel:hover {
+#popUp .cancel:hover {
   background-color: var(--merah);
 }
-.pay {
+#popUp .pay {
   border-radius: 5px;
   width: 10rem;
 }
-.pay:hover {
+#popUp .pay:hover {
   background-color: var(--biru1);
 }

@@ -1,0 +1,83 @@
+body{
+    background-color: var(--biru1);
+}
+h2{
+    font-family: var(--font-pixel);
+    color: var(--kuning);
+    text-align: center;
+}
+h1{
+    color: var(--putih);
+    font-weight: bolder;
+    text-align: center;
+}
+.testimoni{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    max-width: 1000px; /* Atur ukuran sesuai kebutuhan */
+    margin: auto;
+}
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--putih);
+    background-color: var(--biru2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Pastikan elemen menyesuaikan grid */
+    max-width: 100%;
+}
+.testimonial:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    transform: rotate(2deg);
+    transition: transform 0.3s ease-in-out;
+}
+.testimonial-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonial-header h3{
+    color: var(--putih);
+    font-weight: bold;
+    font-family: var(--font-pixel);
+}
+.rating span {
+    color: #f1c40f; /* warna emas untuk bintang */
+    font-size: 20px;
+     margin-right: 2px;
+}
+
+hr{
+    border: none;               /* Hilangkan border default */
+    border-top: 2px solid var(--kuning); /* Buat garis atas dengan ketebalan 2px */
+    margin: 5px 0;
+}
+
+.phone,
+.purchase,
+.date {
+  margin: 5px 0;
+  font-size: 14px;
+  color: var(--putih);
+}
+
+.purchase-container {
+  display: flex;
+  justify-content: space-between; /* Membuat purchase di kiri dan date di kanan */
+  align-items: center; /* Pastikan sejajar secara vertikal */
+}
+.purchase {
+  font-weight: bold;
+}
+
+blockquote {
+  font-style: italic;
+  font-family: var(--font-poppins);
+  color: var(--putih);
+  border-left: 4px solid #ddd;
+  padding-left: 10px;
+  margin: 10px 0;
+}

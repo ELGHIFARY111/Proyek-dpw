@@ -13,10 +13,94 @@ class Methd {
   cleanAndUppercaseKey(key) {
     return key.replace(/[_\-=+]/g, " ").toUpperCase(); // ganti simbol jadi spasi terus di-uppercase
   }
+  showPopup({
+    username,
+    userId,
+    kategori,
+    produk,
+    wa,
+    voucher,
+    metode,
+    harga,
+  }) {
+    popup.innerHTML = `
+      <main>
+      <section>
+        <div class="judul">
+          <p>Konfirmasi Pesanan</p>
+        </div>
+        <div class="isi">
+          <div class="disclaimer">
+            <i class="bi bi-info-circle-fill"></i>&nbsp;&nbsp;Periksa kembali
+            informasi pesanan Anda dengan teliti. Kesalahan dapat menyebabkan
+            pengiriman yang tidak tepat atau tertunda
+          </div>
+          <div class="informasi">
+            <p>Informasi Akun<span></span></p>
+            <table>
+              <tr>
+                <td>Username:</td>
+                <td>${username}</td>
+                </tr>
+                <tr>
+                <td>User ID:</td>
+                <td>${userId}</td>
+                </tr>
+                </table>
+                <p>Ringkasan Pesanan <span></span></p>
+                <table>
+                <tr>
+                <td>Kategori:</td>
+                <td>${kategori}</td>
+                </tr>
+                <tr>
+                <td>Produk:</td>
+                <td>${produk}</td>
+                </tr>
+                <tr>
+                <td>No. WhatsApp:</td>
+                <td>${wa}</td>
+                </tr>
+                <tr>
+                <td>Voucher:</td>
+                <td>${voucher}</td>
+                </tr>
+                <tr>
+                <td>Metode Pembayaran:</td>
+                <td>${metode}</td>
+                </tr>
+                <tr>
+                <td>Harga:</td>
+                <td>${harga}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="tombol">
+          <button class="cancel">Batalkan</button>
+          <button class="pay"><a href="">Bayar Sekarang</a></button>
+        </div>
+      </section>
+    </main>
+  `;
+    // clocse card
+    popup.style.display = "flex";
+    document.querySelector(".cancel").addEventListener("click", () => {
+      const section = document.querySelector("#popUp section");
+      section.style.animation = "slideClose 0.5s ease forwards";
+      setTimeout(() => {
+        popup.style.display = "none";
+      }, 500);
+    });
+  }
 }
-
+const dataPay = fetch("/json/payment.json").then((res) => res.json());
 const gameData = fetch("/json/game.json").then((res) => res.json());
 const fungsi = new Methd();
+
+// reset popup konfirmasi pembayaran
+const popup = document.getElementById("popUp");
+popup.style.display = "none";
 
 gameData
   .then((data) => {
@@ -41,8 +125,6 @@ gameData
 
     // not found
     if (selectedGame) {
-      console.log("Nama game:", selectedGame.nama);
-      console.log("Deskripsi:", selectedGame.deskripsi);
       document.getElementById("game-not-found").style.display = "none";
     } else {
       document.querySelector("header").style.display = "none";
@@ -96,11 +178,12 @@ gameData
 
         // Container isi item
         const containerItems = fungsi.createElement(
-          "div",
+          "a",
           containerItem,
           "",
           `item ${key}`
         );
+        containerItems.href = "#payment";
 
         // Tampilkan semua item dalam key
         itemsArr.forEach((item) => {
@@ -115,6 +198,67 @@ gameData
           fungsi.createElement("span", itm, item.harga);
 
           itm.addEventListener("click", () => {
+            // Hapus semua harga yang ada sebelumnya dari SEMUA elemen .pay
+            document.querySelectorAll(".pay .harga").forEach((hargaEl) => {
+              hargaEl.remove();
+            });
+            // Tambahkan harga baru ke SEMUA elemen .pay yang ada
+            document.querySelectorAll(".pay").forEach((payEl) => {
+              fungsi.createElement("div", payEl, item.harga, "harga");
+            });
+
+            // CARD POPUP
+            // totalPay = parseInt(item.harga);
+            // console.log(totalPay);
+            let totalPayment = item.harga;
+            const produkPopUp = item.harga;
+            // console.log(item.nama_item);
+            // console.log(item.harga);
+            // hargaPay(totalPayment);
+            const kategoriPopUp = selectedGame.nama;
+            gameData.then((data) => {
+              data.forEach((game, gameIndex) => {
+                // console.log(game.input.inputan[0]);
+                // console.log(gameIndex);
+
+                document.querySelectorAll(".button").forEach((button) => {
+                  button.addEventListener("click", () => {
+                    const usrInput1 = document.getElementById(`input-0`);
+                    const usrInput2 = document.getElementById(`input-1`);
+
+                    const wa = document.querySelector("#no").value;
+                    const vchr =
+                      document.querySelector("#voucher").value || "-";
+
+                    // user id
+                    // perbaiki ini
+                    const usrId1 = usrInput1 ? usrInput1.value : "";
+                    const usrId2 = usrInput2 ? usrInput2.value : "";
+                    const userIdInp = `${usrId1} (${usrId2})`;
+
+                    const itemPopUp = item.nama_item;
+                    dataPay.then((data) => {
+                      data.payment.forEach((item) => {
+                        item.list.forEach((dataList) => {
+                          fungsi.showPopup({
+                            username: "Devitaa",
+                            userId: userIdInp,
+                            kategori: kategoriPopUp,
+                            produk: itemPopUp,
+                            wa: wa,
+                            voucher: vchr,
+                            metode: dataList.nama,
+                            harga: totalPayment,
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+
+            // Set active ketika untuk item yang diklik
             document.querySelectorAll(".list-topUp").forEach((el) => {
               el.classList.remove("active");
             });
@@ -125,6 +269,7 @@ gameData
     }
 
     //inputan user
+    const jumlahInput = selectedGame.input.inputan.length;
     selectedGame.input.inputan.forEach((input, index) => {
       const inp = fungsi.createElement(
         "input",
@@ -135,6 +280,9 @@ gameData
       );
       inp.type = "text";
       inp.placeholder = input.placeholder;
+      if (jumlahInput === 1) {
+        inp.style.width = "200%";
+      }
     });
 
     //petunjuk gambar kalo butuh bantuan
@@ -165,7 +313,7 @@ gameData
     });
     deskripsi.innerHTML = `<p>${filterDesk}</p>`;
 
-    // highlight nama game dalam deskripsi, biar stand out
+    // highlight nama game dalam deskripsi
     const namaGame = selectedGame.nama.toLowerCase();
     let spanDeskripsi = document.querySelector("#deskripsi-game").innerHTML;
     if (typeof namaGame === "string" && namaGame.trim() !== "") {
@@ -187,8 +335,7 @@ gameData
 const containerPay = document.getElementById("container-pay");
 let openDropdown = null;
 let oldBtn = null;
-fetch("/json/payment.json")
-  .then((res) => res.json())
+dataPay
   .then((data) => {
     data.payment.forEach((item) => {
       const divKategori = fungsi.createElement(
@@ -218,6 +365,17 @@ fetch("/json/payment.json")
         btn.style.borderRadius = "10px";
         dropdown.classList.remove("show");
 
+        // pajak
+        // let ppnPay = 0;
+        // console.log(ppnPay);
+        // // console.log(item.kategori);
+        // const hargaPay = hargaPay(total);
+        // console.log(hargaPay);
+        // if (item.kategori) {
+        //   const ppn = 12;
+        //   ppnPay = hargaPay * 0.01 * ppn + hargaPay;
+        // }
+
         btn.addEventListener("click", () => {
           if (openDropdown && openDropdown !== dropdown) {
             openDropdown.classList.remove("show");
@@ -238,9 +396,11 @@ fetch("/json/payment.json")
 
         // masukin metode bayar ke dropdown
         item.list.forEach((payMethod) => {
+          const payA = fungsi.createElement("a", dropdown, "", "");
+          payA.href = "#voucher";
           const payDiv = fungsi.createElement(
             "div",
-            dropdown,
+            payA,
             "",
             `pay ${payMethod.nama.toLowerCase()}`
           );
@@ -249,7 +409,6 @@ fetch("/json/payment.json")
             document.querySelectorAll(".pay").forEach((el) => {
               el.classList.remove("active");
             });
-
             payDiv.classList.add("active");
           });
 
@@ -266,8 +425,6 @@ fetch("/json/payment.json")
           fungsi.createElement("p", topPayment, payMethod.nama, "nama");
 
           fungsi.hr(payDiv);
-
-          fungsi.createElement("div", payDiv, "Rp. 40.421", "harga");
         });
       }
     });
@@ -275,7 +432,6 @@ fetch("/json/payment.json")
   .catch((err) => console.error("Error fetching payment data:", err));
 
 const containerTesti = document.getElementById("container-testimonial");
-
 fetch("/json/testimonial.json")
   .then((res) => res.json())
   .then((testimonialList) => {
@@ -288,7 +444,6 @@ fetch("/json/testimonial.json")
         // console.log("Testi ID:", testi.id);
         // console.log("Selected Game:", selectedGame);
 
-        // Jika game ditemukan dan id game di url sesuai, tampilkan testimoni
         if (selectedGame && selectedGame.id === gameId) {
           const cardTesti = fungsi.createElement(
             "div",
@@ -318,7 +473,7 @@ fetch("/json/testimonial.json")
             "",
             "detail"
           );
-          cardDetail.innerHTML = `<i>${testi.comment}</i>`;
+          cardDetail.innerHTML = `<p>${testi.comment}</p>`;
 
           fungsi.hr(cardTesti);
           document.getElementById("no-testi").style.display = "none";
