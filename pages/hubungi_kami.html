@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi kami!</title>
+    <link rel="stylesheet" href="hubungi_kami.css">
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+<div class="container_atas">
+    <h1>Hubungi Kami!</h1>
+
+    <p>Mengalami masalah dengan waktu transaksi? Ingin memiliki bisnis permainan kredit? Silakan hubungi kami <br>
+        di bawah ini sesuai dengan kebutuhan Kamu!</p>
+
+    <p>Bangkalan, Jawa Timur, 69162</p>
+
+    <div class="container_email">
+        <span class="bi bi-envelope">
+            <p class="email">Email</p>
+        </span>
+        <span class="bi bi-telephone">
+            <p class="No">No telp</p>
+        </span>
+    </div>
+</div>
+<div class="container_form">
+    <h3>Formulir Laporan / Permintaan</h3>
+    <p>Silahkan isi formulir di bawah ini untuk melaporkan masalah yang Kamu alami. <br>
+         Tim kami akan segera menindaklanjuti laporan Kamu.</p>
+    <form action="#" method="get">
+        <table>
+            <tr>
+                <select id="kategori" onchange="toggleinput()">
+                    <option value="individu">Individu</option>
+                    <option value="perusahaan">Perusahaan</option>
+                </select>
+            </tr>
+            <tr>
+                <td><label for="tipe">Tipe</label></th>
+            </tr>
+            <tr>
+                <td><select name="tipe" id="tipe" onchange="tipetoggle()" required>
+                    <option value="pilihtipe">Pilih Tipe</option>
+                    <option value="layanan_chat">Pengaduan Pelayanan Chat</option>
+                    <option value="masalah_akun">Masalah Akun</option>
+                    <option value="masalah_transaksi">Masalah Transaksi</option>
+                    <option value="daftar_reseller">Daftar Reseller</option>
+                    <option value="kerja_sama">Penawaran Kerja Sama</option>
+                    <option value="saran_masukan">Saran Dan Masukan</option>
+                    <option value="refund">Permintaan refund</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td><label for="nama">Nama Kamu</label></td>
+            </tr>
+            <tr>
+                <td><input type="text" name="nama" id="nama" placeholder="Nama Kamu" ></td>
+            </tr>
+            <!-- ini untuk nama perusahaan js -->
+            <tr id="kategoriform" style="display:none;">
+                <td>
+                    <label for="namaperusahaan">Nama Perusahaan</label>
+                </td>
+            </tr>
+            <tr id="kategoriform_input" style="display: none;">
+                <td>
+                    <input type="text" id="namaperusahaan" name="namaperusahaan">
+                </td>
+            </tr>
+            <!-- batas bawah perusahaan -->
+            <tr>
+                <td><label for="nomer_wa">Nomor Whatsapp</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" name="nomer_wa" id="nomer_wa"></td>
+            </tr>
+            <!-- ini untuk nomer invoice untuk masalah transaksi -->
+            <tr id="transaksiform" style="display: none;">
+                <td>
+                    <label for="noTransaksi">Nomor Invoice </label>
+                </td>
+            </tr>
+            <tr id="transaksiform_input" style="display: none;">
+                <td>
+                    <input type="text" id="noTransaksi" name="noTransaksi">
+                </td>
+            </tr>
+            <!-- batas bawah transaksi -->
+           <!-- ini untuk refund -->
+            <tr id="notransform" style="display: none;">
+                <td><label for="nomortransaksi">Nomor Transaksi</label></td>
+            </tr>
+            <tr id="notransform_input" style="display: none;">
+                <td><input type="text" id="nomortransaksi" name="nomortransaksi"></td>
+            </tr>
+            <tr id="buktiform" style="display: none;">
+                <td><label for="bukti">Upload Bukti</label></td>
+            </tr>
+            <tr id="buktiform_input" style="display: none;">
+                <td><input type="file" id="bukti" name="bukti"></td>
+            </tr>
+            <!-- batas bawah refund -->
+             <tr>
+                <td><label for="deskripsi">Deskripsi</label></td>
+             </tr>
+             <tr>
+                <td><textarea name="deskripsi" id="deskripsi"></textarea></td>
+             </tr>
+        </table>
+    </form>
+</div>    
+<script src="hubungi_kami.js"></script>
+</body>
+</html>
