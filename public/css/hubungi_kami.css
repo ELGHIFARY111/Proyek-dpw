@@ -37,12 +37,23 @@ h1, h3{
     border: 1px solid var(--putih);
     border-radius: 8px;
 }
+.container_form p{
+    font-family: var(--font-depixelklein);
+    color: var(--putih);
+    text-align: left;
+    margin-bottom: 10px;
+}
 
-.container_form h3,
-.container_form p,
+.container_form h3 {
+    font-family: var(--font-pixel);
+    color: var(--putih);
+    text-align: left;
+    margin-bottom: 10px;
+}
 .container_form label {
     color: var(--putih);
     text-align: left;
+    font-family: var(--font-kemco);
     margin-bottom: 10px;
 }
 
@@ -70,6 +81,17 @@ input[type="file"] {
     font-size: 14px;
     border: 1px solid var(--putih);
     border-radius: 4px;
+}
+button[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 20px;
+    font-family: var(--font-pixel);
+    border: 1px solid var(--putih);
+    border-radius: 4px;
+    color: var(--hitam);
+    background-color: var(--kuning);
+    
 }
 
 textarea {
