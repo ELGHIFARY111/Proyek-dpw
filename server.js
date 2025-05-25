@@ -26,7 +26,7 @@ app.get("/list-game", (req, res) => {
 app.get("/artikel", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel.html"));
 });
-app.get("/news", (req, res) => {
+app.get("/news-home", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "news-home.html"));
 });
 app.get("/select-game", (req, res) => {
@@ -46,6 +46,9 @@ app.get("/tangkap_blok", (req, res) => {
 });
 app.get("/syaratDanKetentuan", (req, res) => {
   res.sendFile(path.join(__dirname, "pages","syaratKetentuan.html"));
+});
+app.get("/news", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "news.html"));
 });
 
 app.listen(PORT, () => {

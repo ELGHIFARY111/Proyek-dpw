@@ -6,19 +6,19 @@
       "list": [
         {
           "nama": "DANA",
-          "logo": "/assets/payment/e-wallet/dana.png"
+          "logo": "/assets/images/payment/e-wallet/dana.png"
         },
         {
           "nama": "OVO",
-          "logo": "/assets/payment/e-wallet/ovo.png"
+          "logo": "/assets/images/payment/e-wallet/ovo.png"
         },
         {
           "nama": "GoPay",
-          "logo": "/assets/payment/e-wallet/gopay.png"
+          "logo": "/assets/images/payment/e-wallet/gopay.png"
         },
         {
           "nama": "ShopeePay",
-          "logo": "/assets/payment/e-wallet/shopay.png"
+          "logo": "/assets/images/payment/e-wallet/shopay.png"
         }
       ]
     },
@@ -28,27 +28,27 @@
       "list": [
         {
           "nama": "CIMB",
-          "logo": "/assets/payment/bank/cimb.png"
+          "logo": "/assets/images/payment/bank/cimb.png"
         },
         {
           "nama": "BCA",
-          "logo": "/assets/payment/bank/bca.png"
+          "logo": "/assets/images/payment/bank/bca.png"
         },
         {
           "nama": "Mandiri",
-          "logo": "/assets/payment/bank/mandiri.png"
+          "logo": "/assets/images/payment/bank/mandiri.png"
         },
         {
           "nama": "BRI",
-          "logo": "/assets/payment/bank/bri.png"
+          "logo": "/assets/images/payment/bank/bri.png"
         },
         {
           "nama": "BNI",
-          "logo": "/assets/payment/bank/bni.png"
+          "logo": "/assets/images/payment/bank/bni.png"
         },
         {
           "nama": "BSI",
-          "logo": "/assets/payment/bank/bsi.png"
+          "logo": "/assets/images/payment/bank/bsi.png"
         }
       ]
     },
@@ -58,11 +58,11 @@
       "list": [
         {
           "nama": "Alfamart",
-          "logo": "/assets/payment/gerai-ritel/alfamart.png"
+          "logo": "/assets/images/payment/gerai-ritel/alfamart.png"
         },
         {
           "nama": "Indomaret",
-          "logo": "/assets/payment/gerai-ritel/indomaret.png"
+          "logo": "/assets/images/payment/gerai-ritel/indomart.png"
         }
       ]
     }
