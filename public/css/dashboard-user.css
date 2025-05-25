@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: var(--font-pixel);
+    background-color: var(--biru2);
+    color: white;
+    }
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    }
+
+.saldo-section {
+    background-color: var(--biru3);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    }
+
+.saldo-section h2 {
+    margin: 0;
+    font-size: 30px;
+    color: var(--kuning);
+    }
+
+.saldo-value {
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 10px;
+    }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--biru3);
+    border-radius: 10px;
+    }
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+    text-align: left;
+    font-size: 20px;
+    border-radius: 10px;
+    }
+
+th {
+    background-color: var(--biru3);
+    color: var(--kuning);
+    }
+
+tr:hover {
+    background-color: var(--biru3);
+    }
