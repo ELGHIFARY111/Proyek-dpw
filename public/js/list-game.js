@@ -7,7 +7,7 @@ fetch("/json/game.json")
       const card = document.createElement("div");
       card.classList.add("card");
       card.innerHTML = `
-      <a href="/roni/top-up/game-top-up.html?id=${dataGame.id}">
+      <a href="/top-up?id=${dataGame.id}">
         <img id="gambar" src="${dataGame.gambar.logo}" alt="${dataGame.nama}" />
         <h3 class="namaGame">${dataGame.nama} <span class="dev">${dataGame.dev}</span></h3>
       </a>
