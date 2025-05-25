@@ -1,0 +1,69 @@
+* {
+  font-family: "Pixelify Sans";
+}
+body {
+  background-color: var(--biru1);
+}
+#faq-container {
+  width: 90%;
+  min-height: 620px;
+  background-color: var(--biru2);
+  border-radius: 5%;
+  margin: 50px;
+  border: 1px dashed;
+  box-shadow: 10px 10px 0 var(--biru3);
+  position: relative;
+  overflow: hidden;
+}
+.judul {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+.faq {
+  margin-left: 100px;
+}
+.faqAnswer {
+  display: none;
+  padding-left: 20px;
+  color: white;
+}
+
+.faq.active .faqAnswer {
+  display: block;
+}
+
+.faqQuestion {
+  color: white;
+}
+.faqQuestion:hover {
+  color: aqua;
+}
+.pertanyaanlain {
+  display: block;
+  text-align: right;
+  margin: 50px 20px 0px auto;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  background-color: var(--biru3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: fit-content;
+  float: right;
+  margin-left: 0px;
+}
+.kiriLain {
+  display: block;
+  text-align: right;
+  margin: 50px auto;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  float: left;
+  margin-left: 53%;
+  right: 0px;
+}
+.pertanyaanlain:hover {
+  background-color: var(--biru1);
+}

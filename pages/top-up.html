@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/top-up.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="service-features">
+        <div class="proses">
+          <i class="bi bi-lightning"></i>
+          <p>Proses Cepat</p>
+        </div>
+        <div class="layanan">
+          <i class="bi bi-chat-dots"></i>
+          <p>Layanan Chat 24/7</p>
+        </div>
+        <div class="region">
+          <i class="bi bi-globe2"></i>
+          <p>Region Global</p>
+        </div>
+      </section>
+      <section class="container">
+        <div class="left">
+          <div class="container-transaksi">
+            <div class="transaksi">
+              <div class="judul">
+                <p>Cara Transaksi</p>
+              </div>
+              <div class="deskripsi" id="deskripsiTransaksi">
+                <span>sixFussion</span> adalah partner andalan untuk setiap
+                kebutuhan top up kamu! Kami menyediakan layanan top up resmi
+                <span id="spnTRnsk"></span> yang cepat, aman, dan mudah
+                digunakan. Gak perlu ribet — cukup beberapa langkah, diamond
+                langsung mendarat ke akunmu!
+              </div>
+            </div>
+            <div class="tutor">
+              <div class="judul">
+                <p>Langkah-langkah Transaksi: <span></span></p>
+              </div>
+              <div class="deskripsi">
+                <ol id="listTutor"></ol>
+              </div>
+            </div>
+            <div class="slogan">
+              <i class="bi bi-stars"></i>
+              <p>Main makin seru dan Top Up Tanpa Drama!</p>
+            </div>
+          </div>
+
+          <div class="container-detail-game">
+            <div class="judul">
+              <p>Deskripsi Game</p>
+            </div>
+            <div id="deskripsi-game"></div>
+          </div>
+
+          <div class="testimonial">
+            <div class="judul">
+              <p>Testimonial</p>
+            </div>
+            <div class="container-testimonial" id="container-testimonial">
+              <div id="no-testi">
+                <i class="bi bi-info-lg"></i>
+                <p>
+                  Belum ada testimoni untuk game ini. Jadilah yang pertama
+                  memberi ulasan!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="inp-user">
+            <div class="top">
+              <div class="angka" id="1">1</div>
+              <div class="alert">Lengkapi Data</div>
+            </div>
+            <div class="input" id="input"></div>
+            <div class="instruction">
+              Untuk mengetahui User ID Anda, silahkan klik menu profile dibagian
+              kiri atas pada menu utama game. User ID akan terlihat dibagian
+              bawah Nama karakter game Anda. Silahkan masukan User ID dan Server
+              ID Anda untuk menyelesaikan transaksi.
+              <span>Contoh: 12345678(1234)</span>.
+            </div>
+            <div class="container-petunjuk" id="container-petunjuk">
+              <div class="petunjuk" id="petunjuk">
+                <i class="bi bi-info-circle-fill"></i>
+                <p>Petunjuk</p>
+              </div>
+              <!-- <img
+                src="/data/list-game/mobile legend.png"
+                alt=""
+                class="petunjuk-img"
+              /> -->
+            </div>
+          </div>
+
+          <div class="nominal">
+            <div class="top">
+              <div class="angka" id="2">2</div>
+              <div class="alert">Pilih Nominal Yang Ingin dibeli</div>
+            </div>
+            <a href="#3">
+              <div class="container-list-item" id="container-list-item"></div>
+            </a>
+          </div>
+
+          <div class="payment" id="payment">
+            <div class="top">
+              <div class="angka" id="3">3</div>
+              <div class="alert">Pilih Metode Pembayaran</div>
+            </div>
+            <!-- <a href="#voucher"> -->
+            <div id="container-pay"></div>
+            <!-- </a> -->
+          </div>
+
+          <div class="voucher" id="voucher">
+            <div class="top">
+              <div class="angka" id="4">4</div>
+              <div class="alert">Punya Kode Promo? Masukkan Disini!</div>
+            </div>
+            <div class="inp-voucher">
+              <input type="text" name="voucher" id="voucher" />
+              <button type="submit">Gunakan</button>
+            </div>
+          </div>
+
+          <div class="kontak">
+            <div class="top">
+              <div class="angka" id="5">5</div>
+              <div class="alert">Detail Kontak Anda</div>
+            </div>
+            <div class="inp-no">
+              <input type="text" name="no" id="no" />
+            </div>
+            <p>
+              Dengan membeli otomatis saya menyutujui
+              <span><a href="#">Ketentuan Layanan</a>.</span>
+            </p>
+          </div>
+
+          <div class="button">
+            <button type="submit">Pesan Sekarang</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====================== not found ======================-->
+    <div id="game-not-found">
+      <div class="kiri">
+        <p>Oops!</p>
+        <p>Game tidak ditemukan</p>
+        <p>
+          Halaman yang kamu cari tidak ditemukan. Mungkin game yang kamu maksud
+          belum tersedia atau URL-nya salah. Silakan periksa kembali atau
+          kembali ke link dibawah:
+        </p>
+        <div class="link">
+          <a href="/">Home</a>
+          <a href="/list-game">Top-Up</a>
+          <a href="#">Main Game</a>
+          <a href="#">Testimonial</a>
+          <a href="#">Cek Pesanan</a>
+          <a href="/artikel">Artikel</a>
+          <a href="#">Hubungi Kami</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
+      <div class="kanan">
+        <i class="bi bi-controller"></i><i class="bi bi-question-lg"></i>
+      </div>
+    </div>
+    <script src="/js/top-up.js"></script>
+  </body>
+</html>

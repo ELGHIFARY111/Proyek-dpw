@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Typing Challenge</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: row;
+      position: relative;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      padding: 40px 50px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #333;
+    }
+    #word {
+      font-size: 32px;
+      margin: 20px 0;
+      color: #3c91e6;
+      font-weight: 600;
+      min-height: 42px;
+      user-select: none;
+    }
+    input {
+      padding: 12px;
+      font-size: 18px;
+      width: 300px;
+      border: 2px solid #d1d9e6;
+      border-radius: 8px;
+      text-align: center;
+      outline: none;
+      transition: border-color 0.25s ease;
+    }
+    input:focus {
+      border-color: #3c91e6;
+    }
+    input:disabled {
+      background-color: #f0f0f0;
+      color: #aaa;
+      cursor: not-allowed;
+    }
+    button {
+      margin-top: 25px;
+      padding: 12px 28px;
+      background-color: #3c91e6;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover:not(:disabled) {
+      background-color: #2f78c1;
+    }
+    button:disabled {
+      background-color: #a0bce8;
+      cursor: not-allowed;
+    }
+    .score-container {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      background: #fff;
+      padding: 16px 24px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      width: 160px;
+      color: #222;
+      user-select: none;
+    }
+    .label {
+      font-size: 14px;
+      color: #3c91e6;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    #top-score {
+      font-size: 28px;
+      color: #ef6c00;
+      margin-bottom: 20px;
+      text-align: center;
+      user-select: none;
+    }
+    #score {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #time {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      padding: 10px 25px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 22px;
+      color: #3c91e6;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      user-select: none;
+      min-width: 80px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="score-container">
+    <div class="label">Top Score</div>
+    <div id="top-score">0</div>
+    <div class="label">Current Score</div>
+    <div id="score">0</div>
+  </div>
+
+  <div class="container">
+    <h1>Typing Challenge</h1>
+    <div id="word">Klik "Mulai" untuk mulai!</div>
+    <input type="text" id="text-input" placeholder="Ketik di sini..." disabled />
+    <button id="start-btn">Mulai</button>
+  </div>
+
+  <div id="time">30</div>
+
+  <script>
+    const wordEl = document.getElementById('word');
+    const input = document.getElementById('text-input');
+    const scoreEl = document.getElementById('score');
+    const topScoreEl = document.getElementById('top-score');
+    const timeEl = document.getElementById('time');
+    const startBtn = document.getElementById('start-btn');
+
+    const words = [
+      "javascript", "challenge", "keyboard", "program", "function",
+      "variable", "object", "internet", "game", "browser",
+      "syntax", "react", "array", "debug", "script"
+    ];
+
+    let currentWord = "";
+    let score = 0;
+    let time = 30;
+    let timer;
+    let topScore = parseInt(localStorage.getItem('topScore')) || 0;
+    topScoreEl.textContent = topScore;
+
+    function getRandomWord() {
+      return words[Math.floor(Math.random() * words.length)];
+    }
+
+    function displayWord() {
+      currentWord = getRandomWord();
+      wordEl.textContent = currentWord;
+    }
+
+    function startGame() {
+      score = 0;
+      time = 30;
+      scoreEl.textContent = score;
+      timeEl.textContent = time;
+      input.value = "";
+      input.disabled = false;
+      input.focus();
+      startBtn.disabled = true;
+      wordEl.style.color = "#3c91e6";
+
+      displayWord();
+
+      timer = setInterval(() => {
+        time--;
+        timeEl.textContent = time;
+        if (time <= 0) {
+          clearInterval(timer);
+          input.disabled = true;
+          wordEl.textContent = "Waktu habis!";
+          wordEl.style.color = "#e53935";
+          startBtn.disabled = false;
+
+          if (score > topScore) {
+            topScore = score;
+            topScoreEl.textContent = topScore;
+            localStorage.setItem('topScore', topScore);
+          }
+        }
+      }, 1000);
+    }
+
+    input.addEventListener('input', () => {
+      if (input.value.trim().toLowerCase() === currentWord) {
+        score++;
+        scoreEl.textContent = score;
+        input.value = "";
+        displayWord();
+      }
+    });
+
+    startBtn.addEventListener('click', startGame);
+
+  </script>
+</body>
+</html>
+

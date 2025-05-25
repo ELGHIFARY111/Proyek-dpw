@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pencarian Realtime</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #121212;
+        color: white;
+        padding: 20px;
+      }
+      input {
+        padding: 10px;
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .hasil {
+        padding: 10px;
+        background: #1f1f1f;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      .hasil a {
+        color: #4fc3f7;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Cari Game</h2>
+    <input type="text" id="cari" placeholder="Tulis nama game..." />
+    <div id="hasil"></div>
+
+    <script>
+      let data = [];
+      fetch("/json/game.json")
+        .then((res) => res.json())
+        .then((json) => {
+          data = json;
+        });
+      document.getElementById("cari").addEventListener("input", function () {
+        const keyword = this.value.toLowerCase();
+        const hasil = data.filter((item) =>
+          item.nama.toLowerCase().includes(keyword)
+        );
+        const container = document.getElementById("hasil");
+        container.innerHTML = "";
+        if (hasil.length === 0) {
+          container.innerHTML = "<div class='hasil'>Tidak ada hasil.</div>";
+          return;
+        }
+        hasil.forEach((item) => {
+          const div = document.createElement("div");
+          div.className = "hasil";
+          const link = document.createElement("a");
+          link.href = `/roni/top-up/game-top-up.html?id=${item.id}`;
+          link.textContent = `${item.nama} - ${item.dev}`;
+          div.appendChild(link);
+          container.appendChild(div);
+        });
+      });
+    </script>
+  </body>
+</html>

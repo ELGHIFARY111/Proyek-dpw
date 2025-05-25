@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frequently Asked Questions (FAQ)</title>
+    <link rel="stylesheet" href="/css/laporkan.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="judul">REPORT</div>
+    <div class="container">
+      <div class="form-container">
+        <form>
+          <table>
+            <tr>
+              <td><label for="judul">Judul masalah:</label></td>
+              <td>
+                <input
+                  type="text"
+                  id="judul"
+                  placeholder="contoh: diamond tidak masuk"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="detail">Detail masalah:</label></td>
+              <td>
+                <textarea
+                  id="detail"
+                  placeholder="masukkan detail masalah"
+                  required
+                ></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="bukti">Bukti foto (opsional):</label></td>
+              <td><input type="file" id="bukti" accept="image/*" /></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email:</label></td>
+              <td>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="masukkan email"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center">
+                <button
+                  type="submit"
+                  class="submit-button"
+                  onclick="window.open('./popup.html', '_blank', 'width=600,height=400')"
+                >
+                  Kirim
+                </button>
+                <button type="button" class="back-button">Kembali</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div>
+        <img
+          class="foto"
+          src="/assets/gif/burung.gif"
+          alt="Burung"
+          style="max-width: 100%; height: auto"
+        />
+        <a class="bawahFoto">LAPORAN ANDA AKAN SAYA KIRIM</a>
+      </div>
+    </div>
+  </body>
+</html>

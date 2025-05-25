@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: var(--font-kemco);
+  background-color: var(--biru1);
+  color: var(--putih);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: var(--biru2);
+  padding: 20px;
+  border: 5px double var(--kuning);
+  border-radius: 10px;
+  text-align: center;
+}
+
+h1, h3 {
+  color: var(--kuning);
+  border-bottom: 1px solid var(--kuning);
+  padding-bottom: 5px;
+}
+
+.saldo {
+  margin: 15px ;
+  font-size: 1.2em;
+  color: var(--putih);
+  font-family: var(--font-kemco);
+}
+  
+.topup input[type="text"] {
+  padding: 8px;
+  width: 250px;
+  font-family: var(--font-kemco);
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 5px;
+  justify-content: center;
+
+}
+
+.topup button {
+  background: var(--kuning);
+  border: none;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.table {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.success {
+  background: var(--hijau1);
+  color: var(--putih);
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.row.header {
+  font-weight: bold;
+  background-color: var(--biru3);
+}
+
+.row {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid var(--putih);
+  align-items: center;
+}
+
+.row div {
+  flex: 1;
+  padding: 5px;
+}
+
+
+footer {
+  text-align: left;
+  padding: 15px;
+  color: var(--putih);
+  font-size: 0.9em;
+  margin-top: 40px;
+}

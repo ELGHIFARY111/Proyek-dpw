@@ -1,0 +1,70 @@
+*{
+    font-family: "Pixelify Sans";
+}
+body {
+    margin: 0;
+    background-color: var(--biru2);
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--biru1);
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    border-bottom: 10px dashed var(--biru2);
+}
+
+main {
+    display: flex;
+    padding: 40px;
+}
+
+.game-card {
+    background-color:blue;
+    border-radius: 16px;
+    padding: 16px;
+    height: 140px;
+    text-align: center;
+    box-shadow: 5px 5px 0 #000;
+    width: 120px;
+    color: white;
+    margin-left: 20px;
+}
+.linkGame{
+    text-decoration: none;
+}
+.game-card:hover{
+    background-color: var(--hijau1);
+}
+
+.game-card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 8px;
+}
+
+footer {
+    margin-bottom: 40px;
+}
+
+.back-button {
+    background-color: #0000ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 40px;
+
+}
+.back-button:hover{
+    background-color: var(--biru1);
+}
