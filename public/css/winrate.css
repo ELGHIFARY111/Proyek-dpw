@@ -1,0 +1,114 @@
+body {
+  background-color: var(--biru1);
+  font-family: var(--font-pixel);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Container utama */
+.pembungkus {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--putih);
+    background-color: var(--biru2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header dan informasi */
+.kotakAtas {
+  padding-bottom: 20px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.judul {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--kuning);
+  margin-top: 10px;
+}
+
+.deskripsi {
+  font-size: 15px;
+  color: var(--putih);
+  font-family: var(--font-poppins);
+  line-height: 1.6;
+}
+
+/* Garis pemisah */
+hr {
+  border: none;
+  height: 1px;
+  border-top: 2px solid var(--kuning);
+  margin: 20px 0;
+}
+
+/* Kotak untuk kalkulasi */
+.kotakBawah {
+  padding: 20px;
+}
+
+.hitung {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form input */
+.totalPertandingan,
+.totalWinrate,
+.winrateImpian {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.totalPertandingan p,
+.totalWinrate p,
+.winrateImpian p {
+  font-size: 18px;
+  font-family: var(--font-poppins);
+  font-weight: bold;
+  color: var(--putih);
+}
+
+input[type="number"] {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--putih);
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Tombol hasil */
+.hasil button {
+  background-color: var(--kuning);
+  color: var(--hitam);
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.hasil button:hover {
+  background-color: var(--merah);
+}
+
+/* Hasil output */
+.hasilOutput {
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: var(--font-poppins);
+  font-weight: bold;
+  color: var(--putih);
+}
+
