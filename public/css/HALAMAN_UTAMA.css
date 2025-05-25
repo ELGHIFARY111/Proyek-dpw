@@ -1,0 +1,310 @@
+/* Global Styles */
+body {
+
+    padding: 0;
+    background-color: var(--biru1);
+    color: #ffffff;
+    margin-left: 0px;
+    margin-right: 0px
+}
+* {
+  box-sizing: border-box;
+  font-family: var(--font-pixel); 
+}
+
+html, body {
+  overflow-x: hidden; 
+}
+.container {
+    width: 100%;
+    margin: auto;
+    text-align: right;
+    padding: 20px;
+}
+
+.container-isi {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 20%;
+}
+
+/* Header */
+
+
+.header a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* Judul dan Paragraf */
+h1 {
+    font-size: 48px;
+    margin: 20px 0;
+    font-weight: bold;
+    animation: fadeIn 2s;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Tombol Login & Register */
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button-hijau {
+    background-image: url(/assets/foto/tombol.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--biru1);
+    width: 200px;
+    height: 50px;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.button-hijau:hover {
+  background-color: darkgreen;
+}
+
+
+
+/* Game List */
+.game-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px;
+    scrollbar-width: none;
+    background-color: #5c7aad;
+}
+
+.game-list::-webkit-scrollbar {
+    height: 8px;
+}
+.game-list::-webkit-scrollbar-thumb {
+    background: #4b3e70;
+    border-radius: 10px;
+}
+
+.game-item {
+    min-width: 150px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: #4b4b99;
+    padding: 10px;
+    border-radius: 10%;
+    box-shadow: 0 10px 0 black;
+    margin-bottom: 10px;
+}
+
+.game-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.game-item p {
+    margin-top: 10px;
+}
+
+/* Background Gambar */
+.bg-gambar {
+    background-image: url(/assets/foto/gambar.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+
+.teksdibawahbg {
+    color: black;
+    font-size: 40px;
+    width: 100%;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-top: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--kuning);
+    border-top: 5px solid var(--kuning);
+}
+
+/* Gambar-Gambar Tambahan */
+.bg-gambar2,
+.bg-gambar3,
+.bg-gambar4,
+.bg-gambar5,
+.bg-gambar6 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 10;
+    margin-bottom: 0px;
+}
+
+.bg-gambar2 {
+    width: 20%;
+    height: 35%;
+    top: 159%;
+    left: 32%;
+}
+
+.bg-gambar3 {
+    width: 6%;
+    height: 10%;
+    top: 178%;
+    left: 45%;
+}
+
+.bg-gambar4 {
+    width: 30%;
+    height: 34%;
+    top: 40%;
+    left: 75%;
+}
+
+.bg-gambar5 {
+    width: 30%;
+    height: 34%;
+    top: 10%;
+    left: 15%;
+}
+
+.bg-gambar6 {
+    width: 30%;
+    height: 34%;
+    top: 45%;
+    left: 3%;
+    
+}
+
+
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Brand Section */
+.brand {
+    flex: 2;
+    margin-right: 200px;
+}
+
+.brand h1 {
+    font-size: 2.5rem;
+    color: #f1c40f; /* Brand color */
+}
+
+.brand p {
+    margin: 10px 0;
+}
+
+/* Social Links */
+.socials a {
+    margin-right: 15px;
+    margin-top: 200px;
+    color: #ffffff;
+    text-decoration: none;
+
+    /* Add hover effect */
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #f1c40f; /* Hover color */
+}
+
+/* Links Section */
+.links, .legal, .help {
+    flex: 1;
+}
+
+.links h2, .legal h2, .help h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f1c40f; /* Header color */
+}
+
+.links ul, .legal ul {
+    list-style: none;
+    padding: 0; /* Remove default padding */
+}
+
+.links li, .legal li {
+    margin-bottom: 5px;
+}
+
+.links a, .legal a {
+    color: #ffffff;
+    text-decoration: none;
+
+    /* Add hover effect */
+    transition: color 0.3s;
+}
+
+.links a:hover, .legal a:hover {
+    color: #f1c40f; /* Hover color */
+}
+
+/* Help Section */
+.help .contact-btn {
+    background-color: #f39c12; /* Button color */
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+
+    /* Add transition for smooth hover effect */
+    transition: background-color 0.3s;
+}
+
+.help .contact-btn:hover {
+    background-color: #e67e22; /* Button hover color */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: #aaaaaa;
+}
+
+
+td{
+    border: 5px dashed var(--kuning);
+
+}
