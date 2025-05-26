@@ -3,7 +3,7 @@
     "id": "mlbb",
     "nama": "Mobile Legends",
     "dev": "Moonton",
-    "deskripsi": "Mobile Legends: Bang Bang adalah game MOBA (Multiplayer Online Battle Arena) yang dikembangkan oleh Moonton, dan telah menjadi salah satu game mobile paling populer di dunia, termasuk di Indonesia. Game ini menawarkan pertarungan 5v5 yang intens, di mana dua tim saling berhadapan untuk menghancurkan base musuh sambil mempertahankan base mereka sendiri. Dalam Mobile Legends, pemain dapat memilih dari berbagai hero dengan keterampilan dan peran yang unik, seperti Tank, Mage, Assassin, Marksman, dan Support. Setiap hero memiliki kekuatan dan strategi tersendiri, memberikan banyak variasi dan kedalaman taktik dalam setiap pertandingan. Tim yang mampu bekerja sama dengan baik dan merencanakan strategi yang tepat akan keluar sebagai pemenang. Game ini menampilkan peta klasik dengan tiga jalur (lanes), yaitu Top, Mid, dan Bottom, serta hutan (jungle) yang penuh dengan monster dan buff. Koordinasi tim, pengambilan keputusan cepat, dan eksekusi strategi yang matang sangat penting untuk menguasai medan perang dan meraih kemenangan. Selain gameplay yang seru dan kompetitif, Mobile Legends juga menawarkan berbagai fitur menarik seperti Ranked Matches, Classic Matches, dan mode permainan lainnya yang menantang. Dengan grafis yang memukau dan kontrol yang responsif, game ini memberikan pengalaman bermain yang memuaskan bagi para penggemar MOBA. Mobile Legends juga dikenal dengan komunitasnya yang besar dan aktif, serta sering mengadakan turnamen dan kompetisi eSports tingkat nasional dan internasional. Ini memberikan kesempatan bagi pemain untuk menunjukkan keterampilan mereka di tingkat yang lebih tinggi dan meraih pengakuan global. Game ini juga terus diperbarui dengan hero-hero baru, skin eksklusif, dan event spesial, yang membuat pemain selalu tertarik dan kembali bermain. Dengan berbagai keunggulan dan aksi yang mendebarkan, Mobile Legends: Bang Bang telah menjadi pilihan utama bagi para penggemar MOBA di seluruh dunia. Jika Anda mencari game dengan strategi, kerja sama tim, dan tantangan yang seru, Mobile Legends adalah game yang wajib Anda coba. Unduh sekarang dan buktikan kemampuan Anda di medan perang!",
+    "deskripsi": "Mobile Legends: Bang Bang adalah game MOBA 5v5 populer buatan Moonton. Dalam game ini, dua tim saling bertarung untuk menghancurkan base lawan, sambil memilih hero dengan peran unik seperti Tank, Mage, Assassin, Marksman, dan Support. Kerja sama tim dan strategi jadi kunci kemenangan. Game ini menghadirkan peta klasik dengan tiga jalur (Top, Mid, Bottom) dan jungle penuh buff. Mode permainan bervariasi seperti Ranked dan Classic, serta grafis yang memukau membuat pengalaman bermain semakin seru. Dengan komunitas besar, update rutin, dan turnamen eSports aktif, Mobile Legends terus jadi favorit pemain MOBA di seluruh dunia.",
     "tutor": [
       "Masukkan ID dan Server (Zone ID) Mobile Legends kamu",
       "Pilih jumlah Diamond yang ingin kamu beli",
@@ -64,7 +64,7 @@
         {
           "id": 2,
           "nama_item": "MOBILELEGEND - 46 Diamonds",
-          "harga": 1265
+          "harga": 12653
         },
         {
           "id": 3,
@@ -119,9 +119,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/mobile legend.png",
-      "background": "/data/list-game/mobile legend.png",
-      "petunjuk": "/data/list-game/mobile legend.png"
+      "logo": "/data/list-game/mobile-legend.png",
+      "background": "/data/list-game/mobile-legend.png",
+      "petunjuk": "/data/list-game/mobile-legend.png"
     }
   },
   {
@@ -180,13 +180,13 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/arena breakout.png",
-      "background": "/data/list-game/arena breakout.png",
-      "petunjuk": "/data/list-game/arena breakout.png"
+      "logo": "/data/list-game/arena-breakout.jpg",
+      "background": "/data/list-game/arena-breakout.jpg",
+      "petunjuk": "/data/list-game/arena-breakout.jpg"
     }
   },
   {
-    "id": "brawlstars",
+    "id": "bs",
     "nama": "Brawl Stars",
     "dev": "Supercell",
     "deskripsi": "Brawl Stars adalah game mobile action multiplayer yang dikembangkan oleh Supercell. Pemain bertarung dalam berbagai mode game cepat dan seru, menggunakan karakter unik yang disebut Brawlers dengan kemampuan khusus masing-masing. Game ini menawarkan gameplay yang menyenangkan dengan grafis kartun yang cerah dan komunitas pemain yang besar.",
@@ -216,13 +216,13 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/brawl stars.png",
-      "background": "/data/list-game/brawl stars.png",
-      "petunjuk": "/data/list-game/brawl stars.png"
+      "logo": "/data/list-game/brawl-stars.jpg",
+      "background": "/data/list-game/brawl-stars.jpg",
+      "petunjuk": "/data/list-game/brawl-stars.jpg"
     }
   },
   {
-    "id": "cod",
+    "id": "codm",
     "nama": "Call of Duty: Mobile",
     "dev": "Garena",
     "deskripsi": "Call of Duty adalah franchise game FPS yang sangat populer, menawarkan mode multiplayer dan campaign yang intens. Pada versi mobile-nya, pemain dapat bertempur dalam berbagai mode seperti Team Deathmatch, Battle Royale, dan more dengan grafis yang impresif serta kontrol yang dioptimalkan untuk perangkat mobile.",
@@ -292,9 +292,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/call of duty.png",
-      "background": "/data/list-game/call of duty.png",
-      "petunjuk": "/data/list-game/call of duty.png"
+      "logo": "/data/list-game/call-of-duty.jpeg",
+      "background": "/data/list-game/call-of-duty.jpeg",
+      "petunjuk": "/data/list-game/call-of-duty.jpeg"
     }
   },
   {
@@ -364,9 +364,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/clash royale.png",
-      "background": "/data/list-game/clash royale.png",
-      "petunjuk": "/data/list-game/clash royale.png"
+      "logo": "/data/list-game/clash-royale.jpg",
+      "background": "/data/list-game/clash-royale.jpg",
+      "petunjuk": "/data/list-game/clash-royale.jpg"
     }
   },
   {
@@ -497,9 +497,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/football master 2.png",
-      "background": "/data/list-game/football master 2.png",
-      "petunjuk": "/data/list-game/football master 2.png"
+      "logo": "/data/list-game/football-master-2.jpg",
+      "background": "/data/list-game/football-master-2.jpg",
+      "petunjuk": "/data/list-game/football-master-2.jpg"
     }
   },
   {
@@ -594,14 +594,14 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/free fire.png",
-      "background": "/data/list-game/free fire.png",
-      "petunjuk": "/data/list-game/free fire.png"
+      "logo": "/data/list-game/free-fire.png",
+      "background": "/data/list-game/free-fire.png",
+      "petunjuk": "/data/list-game/free-fire.png"
     }
   },
   {
     "id": "gu",
-    "nama": "Undawn",
+    "nama": "Garena Undawn",
     "dev": "Garena",
     "deskripsi": "Garena Undown adalah platform hiburan digital yang menyediakan layanan seperti game, streaming, dan layanan komunitas yang terintegrasi. Platform ini memberikan pengalaman menarik untuk para gamer dengan berbagai konten eksklusif dan acara yang interaktif.",
     "tutor": [
@@ -696,9 +696,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/garena undown.png",
-      "background": "/data/list-game/garena undown.png",
-      "petunjuk": "/data/list-game/garena undown.png"
+      "logo": "/data/list-game/garena-undown.png",
+      "background": "/data/list-game/garena-undown.png",
+      "petunjuk": "/data/list-game/garena-undown.png"
     }
   },
   {
@@ -843,9 +843,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/hayday.png",
-      "background": "/data/list-game/hayday.png",
-      "petunjuk": "/data/list-game/hayday.png"
+      "logo": "/data/list-game/hay-day.jpg",
+      "background": "/data/list-game/hay-day.jpg",
+      "petunjuk": "/data/list-game/hay-day.jpg"
     }
   },
   {
@@ -904,9 +904,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/league of legends.png",
-      "background": "/data/list-game/league of legends.png",
-      "petunjuk": "/data/list-game/league of legends.png"
+      "logo": "/data/list-game/league-of-legends.png",
+      "background": "/data/list-game/league-of-legends.png",
+      "petunjuk": "/data/list-game/league-of-legends.png"
     }
   },
   {
@@ -980,9 +980,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/lords mobile.png",
-      "background": "/data/list-game/lords mobile.png",
-      "petunjuk": "/data/list-game/lords mobile.png"
+      "logo": "/data/list-game/lords-mobile.png",
+      "background": "/data/list-game/lords-mobile.png",
+      "petunjuk": "/data/list-game/lords-mobile.png"
     }
   },
   {
@@ -1010,9 +1010,9 @@
       "gems": []
     },
     "gambar": {
-      "logo": "/data/list-game/marvel snap.png",
-      "background": "/data/list-game/marvel snap.png",
-      "petunjuk": "/data/list-game/marvel snap.png"
+      "logo": "/data/list-game/marvel-snap.jpg",
+      "background": "/data/list-game/marvel-snap.jpg",
+      "petunjuk": "/data/list-game/marvel-snap.jpg"
     }
   },
   {
@@ -1097,13 +1097,13 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/point blank.png",
-      "background": "/data/list-game/point blank.png",
-      "petunjuk": "/data/list-game/point blank.png"
+      "logo": "/data/list-game/point-blank.jpg",
+      "background": "/data/list-game/point-blank.jpg",
+      "petunjuk": "/data/list-game/point-blank.jpg"
     }
   },
   {
-    "id": "pubg",
+    "id": "pubgm",
     "nama": "PUBG Mobile",
     "dev": "Tencent Games",
     "deskripsi": "PUBG Mobile adalah game battle royale yang sangat populer, di mana 100 pemain terjun ke sebuah pulau dan bertarung dengan berbagai senjata untuk bertahan hidup hingga akhir. Game menawarkan mode solo, duo, dan squad dengan grafis realistis dan gameplay intens.",
@@ -1216,9 +1216,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/pubg.png",
-      "background": "/data/list-game/pubg.png",
-      "petunjuk": "/data/list-game/pubg.png"
+      "logo": "/data/list-game/pubg.jpg",
+      "background": "/data/list-game/pubg.jpg",
+      "petunjuk": "/data/list-game/pubg.jpg"
     }
   },
   {
@@ -1303,9 +1303,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/ragnarok x.png",
-      "background": "/data/list-game/ragnarok x.png",
-      "petunjuk": "/data/list-game/ragnarok x.png"
+      "logo": "/data/list-game/ragnarok-x.jpg",
+      "background": "/data/list-game/ragnarok-x.jpg",
+      "petunjuk": "/data/list-game/ragnarok-x.jpg"
     }
   },
   {
@@ -1333,9 +1333,9 @@
       "gems": []
     },
     "gambar": {
-      "logo": "/data/list-game/rise of kingdom.png",
-      "background": "/data/list-game/rise of kingdom.png",
-      "petunjuk": "/data/list-game/rise of kingdom.png"
+      "logo": "/data/list-game/rise-of-kingdom.jpg",
+      "background": "/data/list-game/rise-of-kingdom.jpg",
+      "petunjuk": "/data/list-game/rise-of-kingdom.jpg"
     }
   },
   {
@@ -1397,9 +1397,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/saint seiya.png",
-      "background": "/data/list-game/saint seiya.png",
-      "petunjuk": "/data/list-game/saint seiya.png"
+      "logo": "/data/list-game/saint-seiya.jpg",
+      "background": "/data/list-game/saint-seiya.jpg",
+      "petunjuk": "/data/list-game/saint-seiya.jpg"
     }
   },
   {
@@ -1468,9 +1468,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/sauge man.png",
-      "background": "/data/list-game/sauge man.png",
-      "petunjuk": "/data/list-game/sauge man.png"
+      "logo": "/data/list-game/sauge-man.jpeg",
+      "background": "/data/list-game/sauge-man.jpeg",
+      "petunjuk": "/data/list-game/sauge-man.jpeg"
     }
   },
   {
@@ -1515,9 +1515,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/seal m.png",
-      "background": "/data/list-game/seal m.png",
-      "petunjuk": "/data/list-game/seal m.png"
+      "logo": "/data/list-game/seal-m.png",
+      "background": "/data/list-game/seal-m.png",
+      "petunjuk": "/data/list-game/seal-m.png"
     }
   },
   {
@@ -1591,9 +1591,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/state of survival.png",
-      "background": "/data/list-game/state of survival.png",
-      "petunjuk": "/data/list-game/state of survival.png"
+      "logo": "/data/list-game/state-of-survival.png",
+      "background": "/data/list-game/state-of-survival.png",
+      "petunjuk": "/data/list-game/state-of-survival.png"
     }
   },
   {
@@ -1653,9 +1653,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/stumble guys.png",
-      "background": "/data/list-game/stumble guys.png",
-      "petunjuk": "/data/list-game/stumble guys.png"
+      "logo": "/data/list-game/stumble.png",
+      "background": "/data/list-game/stumble.png",
+      "petunjuk": "/data/list-game/stumble.png"
     }
   },
   {
@@ -1729,9 +1729,9 @@
       ]
     },
     "gambar": {
-      "logo": "/data/list-game/valorant.png",
-      "background": "/data/list-game/valorant.png",
-      "petunjuk": "/data/list-game/valorant.png"
+      "logo": "/data/list-game/valorant.jpg",
+      "background": "/data/list-game/valorant.jpg",
+      "petunjuk": "/data/list-game/valorant.jpg"
     }
   }
 ]

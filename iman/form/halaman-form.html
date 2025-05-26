@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form pengaturan</title>
+    <link rel="stylesheet" href="./halaman-form.css" />
+    <link rel="stylesheet" href="/global.css" />
+    <script defer src="halaman-form.js"></script>
+  </head>
+  <body>
+    <h1>Settings</h1>
+    <h3>profil</h3>
+    <p>This information is confidential so be careful what you share.</p>
+    <section>
+      <form action="#" method="post" class="form-container">
+        <table class="formtable">
+          <tr>
+            <td><label for="nama" class="formlabel">Nama</label></td>
+            <td><label for="username" class="formlabel">Username</label></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" id="nama" name="nama" class="forminput" />
+            </td>
+            <td>
+              <input type="text" name="username" id="username" placeholder="Arsaa" class="readonly" readonly/>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email" class="formlabel">Email Adress</label></td>
+            <td><label for="wa" class="formlabel">Whatsapp</label></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" name="email" id="email" class="forminput" />
+            </td>
+            <td>
+              <input
+                type="text"
+                name="wa"
+                id="wa"
+                placeholder="08776407790"
+                class="readonly"
+                readonly
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><button type="submit">Simpan</button></td>
+          </tr>
+        </table>
+      </form>
+      <hr />
+      <h1>Change password</h1>
+      <form class="form-container-1">
+        <table class="formtable-1">
+          <tr>
+            <td><label for="pwlama" class="formlabel">Password Lama</label></td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" id="pwlama" name="pwlama" class="forminputfull"/>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pwbaru" class="formlabel">Password Baru</label></td>
+            <td>
+              <label for="ulangpwbaru" class="formlabel"
+                >Ulangi Password Baru</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="text" id="pwbaru" name="pwbaru" class="forminput" />
+            </td>
+            <td>
+              <input type="text" id="ulangpwbaru" name="ulangpwbaru" class="forminput"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="button-container">
+              <button type="reset" class="buttonbatal">Batal</button>
+              <button type="submit">Simpan</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </section>
+  </body>
+</html>
