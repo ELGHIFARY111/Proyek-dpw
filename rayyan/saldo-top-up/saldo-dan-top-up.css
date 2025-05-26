@@ -15,6 +15,35 @@ body {
   text-align: center;
 }
 
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.tabs label {
+  padding: 10px 20px;
+  background: var(--kuning);
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.content-tab {
+  display: none;
+}
+
+#tab1:checked ~ .tab-content #content1,
+#tab2:checked ~ .tab-content #content2 {
+  display: block;
+}
+
 h1, h3 {
   color: var(--kuning);
   border-bottom: 1px solid var(--kuning);
@@ -22,22 +51,17 @@ h1, h3 {
 }
 
 .saldo {
-  margin: 15px ;
+  margin: 15px;
   font-size: 1.2em;
-  color: var(--putih);
-  font-family: var(--font-kemco);
 }
-  
+
 .topup input[type="text"] {
   padding: 8px;
   width: 250px;
-  font-family: var(--font-kemco);
   font-weight: bold;
   text-align: center;
   border: 2px solid #000;
   border-radius: 5px;
-  justify-content: center;
-
 }
 
 .topup button {
@@ -54,7 +78,6 @@ h1, h3 {
   border-radius: 10px;
   overflow: hidden;
 }
-
 
 .success {
   background: var(--hijau1);
@@ -80,11 +103,48 @@ h1, h3 {
   padding: 5px;
 }
 
+.detail-row summary {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid var(--putih);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.detail-row summary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.detail-row summary div {
+  flex: 1;
+  padding: 5px;
+}
+
+.detail-row summary::-webkit-details-marker {
+  display: none;
+}
+
+.detail-transaksi {
+  background-color: var(--biru3);
+  padding: 15px 20px;
+  text-align: left;
+  border-left: 4px solid var(--kuning);
+  font-size: 14px;
+  font-family: var(--font-kemco);
+}
+
+.detail-transaksi p {
+  margin: 4px 0;
+}
+
+.detail-row {
+  margin-bottom: 5px;
+}
 
 footer {
   text-align: left;
   padding: 15px;
-  color: var(--putih);
   font-size: 0.9em;
   margin-top: 40px;
 }
