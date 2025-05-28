@@ -1,0 +1,155 @@
+*{
+    font-family: "Pixelify Sans";
+}
+body {
+    margin: 0;
+    background-color: var(--biru2);
+    color: white;
+}
+
+header {
+    background-color: var(--biru1);
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    border-bottom: 10px dashed var(--biru2);
+}
+footer {
+    margin-bottom: 40px;
+}
+main{
+    margin:35px;
+}
+.back-button {
+    background-color: #0000ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 40px;
+
+}
+.back-button:hover{
+    background-color: var(--biru1);
+}
+.info1,
+.info4,
+.info5{
+    background-color: var(--kuning);
+    color: var(--biru2);
+    padding: 10px;
+    border: 10px dashed var(--biru2);
+}
+.info2,
+.info3,
+.info6{
+    background-color: var(--biru2);
+    color: white;
+    padding: 10px;
+    border: 10px dashed var(--kuning);
+}
+.judul{
+    color: var(--hijau1);
+    text-align: center;
+    font-size: 130px;
+    -webkit-text-stroke: 0.01px var(--biru2);
+}
+.team{
+    padding: 15px;
+    margin-right: 40px;
+    width: 140px;
+    border: 2px solid var(--kuning);
+    border-radius: 20px;
+    background-color: white;
+}
+.name{
+    font-size: 15px;
+    color: black;
+}
+.foto{
+    width: 140px;
+    border: 1px solid var(--kuning);
+    border-radius: 20px;
+}
+.wrapper-team{
+    display: flex;
+}
+.icon{
+    width: 20px;
+}
+.top{
+    margin-bottom: 0px;
+    margin-top: 5px;
+    color: black;
+    margin-left: 4px;
+}
+.iconb{
+    width: 20px;
+    transform: rotate(180deg);
+    float: right;
+    margin-top: 0px;
+}
+.bottom{
+    margin-bottom: 0px;
+    margin-top: 5px;
+    color: black;
+    margin-right: 4px;
+    transform: rotate(180deg);
+    margin-top: 0px;
+}
+.team1,
+.team2,
+.team3,
+.team4,
+.team5,
+.team6{
+    display: none;
+}
+
+.heart1,
+.heart2,
+.heart3,
+.heart4,
+.heart5,
+.heart6{
+    width: 135px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.heart1:hover,
+.heart2:hover,
+.heart3:hover,
+.heart4:hover,
+.heart5:hover,
+.heart6:hover{
+    cursor: pointer;
+}
+.team1:hover,
+.team2:hover,
+.team3:hover,
+.team4:hover,
+.team5:hover,
+.team6:hover{
+    cursor: pointer;
+}
+#tutorial{
+    font-size: 70px;
+    position: absolute;
+    background-color: gray;
+    margin-top: 100px;
+    margin-left: 420px;
+}
+.deskripsi{
+    font-size: 20px;
+    text-align: center;
+}
+.ourteam{
+    margin: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+.wrapper-team{
+    margin-left: 80px;
+}
