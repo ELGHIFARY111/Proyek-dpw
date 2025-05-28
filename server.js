@@ -35,6 +35,7 @@ app.get("/detail", (req, res) => {
 app.get("/promo", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "promo.html"));
 });
+<<<<<<< HEAD
 app.get("/refreal", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "refreal.html"));
 });
@@ -42,6 +43,8 @@ app.get("/saldo-dan-top-up", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "saldo-dan-top-up.html"));
 });
 <<<<<<< HEAD
+=======
+>>>>>>> d3e98ac24747cbb22886bbe6705203ebe23ccc09
 app.get("/HALAMAN_UTAMA", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
 });
@@ -50,7 +53,6 @@ app.get("/cek", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
 });
 
-=======
 app.get("/select-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "select-game.html"));
 });
@@ -72,7 +74,9 @@ app.get("/syaratDanKetentuan", (req, res) => {
 app.get("/news", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "news.html"));
 });
->>>>>>> c7392b55941dc68bd534e4313fe18d9f778e50bd
+app.get("/about-us", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "aboutUs.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`Server nyala di http://localhost:${PORT}`);
