@@ -29,38 +29,41 @@ app.get("/artikel-home", (req, res) => {
 app.get("/news-home", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "news-home.html"));
 });
-<<<<<<< HEAD
-app.get("/HALAMAN_UTAMA", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
+app.get("/detail", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "detail.html"));
 });
+// <<<<<<< HEAD
+// app.get("/HALAMAN_UTAMA", (req, res) => {
+//   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
+// });
 
-app.get("/cek", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
-});
+// app.get("/cek", (req, res) => {
+//   res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
+// });
 
-=======
-app.get("/select-game", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "select-game.html"));
-});
-app.get("/flappy", (req, res) => {
-  res.sendFile(path.join(__dirname, "game","flappy bird","index.html"));
-});
-app.get("/mengetik_cepat", (req, res) => {
-  res.sendFile(path.join(__dirname, "game","game mengetik cepat","index.html"));
-});
-app.get("/game_reacttion_time", (req, res) => {
-  res.sendFile(path.join(__dirname, "game","game reaction time","index.html"));
-});
-app.get("/tangkap_blok", (req, res) => {
-  res.sendFile(path.join(__dirname, "game","game tangkap blok","index.html"));
-});
-app.get("/syaratDanKetentuan", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages","syaratKetentuan.html"));
-});
-app.get("/news", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "news.html"));
-});
->>>>>>> c7392b55941dc68bd534e4313fe18d9f778e50bd
+// =======
+// app.get("/select-game", (req, res) => {
+//   res.sendFile(path.join(__dirname, "pages", "select-game.html"));
+// });
+// app.get("/flappy", (req, res) => {
+//   res.sendFile(path.join(__dirname, "game","flappy bird","index.html"));
+// });
+// app.get("/mengetik_cepat", (req, res) => {
+//   res.sendFile(path.join(__dirname, "game","game mengetik cepat","index.html"));
+// });
+// app.get("/game_reacttion_time", (req, res) => {
+//   res.sendFile(path.join(__dirname, "game","game reaction time","index.html"));
+// });
+// app.get("/tangkap_blok", (req, res) => {
+//   res.sendFile(path.join(__dirname, "game","game tangkap blok","index.html"));
+// });
+// app.get("/syaratDanKetentuan", (req, res) => {
+//   res.sendFile(path.join(__dirname, "pages","syaratKetentuan.html"));
+// });
+// app.get("/news", (req, res) => {
+//   res.sendFile(path.join(__dirname, "pages", "news.html"));
+// });
+// >>>>>>> c7392b55941dc68bd534e4313fe18d9f778e50bd
 
 app.listen(PORT, () => {
   console.log(`Server nyala di http://localhost:${PORT}`);
