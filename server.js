@@ -42,9 +42,7 @@ app.get("/refreal", (req, res) => {
 app.get("/saldo-dan-top-up", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "saldo-dan-top-up.html"));
 });
-app.get("/cek-pesanan", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
-});
+
 <<<<<<< HEAD
 =======
 >>>>>>> d3e98ac24747cbb22886bbe6705203ebe23ccc09
@@ -52,7 +50,7 @@ app.get("/HALAMAN_UTAMA", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
 });
 
-app.get("/cek", (req, res) => {
+app.get("/cek-pesanan", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
 });
 
