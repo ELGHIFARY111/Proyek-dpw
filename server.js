@@ -29,6 +29,12 @@ app.get("/artikel-home", (req, res) => {
 app.get("/news-home", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "news-home.html"));
 });
+app.get("/detail", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "detail.html"));
+});
+app.get("/promo", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "promo.html"));
+});
 app.get("/HALAMAN_UTAMA", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
 });

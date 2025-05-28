@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: var(--font-kemco);
@@ -6,85 +8,74 @@ body {
 }
 
 .container {
-  max-width: 1000px;
-  margin: 30px auto;
-  background-color: var(--biru2);
-  padding: 20px;
-  border: 5px double var(--kuning);
-  border-radius: 10px;
+  max-width: 400px;
+  margin: 60px auto;
+  background: var(--biru2);
+  border: 3px solid var(--kuning);
+  border-radius: 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
-h1, h3 {
+.title {
+  font-size: 28px;
+  margin-bottom: 30px;
   color: var(--kuning);
-  border-bottom: 1px solid var(--kuning);
-  padding-bottom: 5px;
+  font-family: var(--font-kemco);
+}
+
+.saldo-box {
+  background-color: var(--biru3);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px var(--hitam);
+  margin-bottom: 25px;
+}
+
+.saldo-box p {
+  margin: 0;
+  font-size: 16px;;
 }
 
 .saldo {
-  margin: 15px ;
-  font-size: 1.2em;
-  color: var(--putih);
+  font-size: 32px;
+  margin-top: 10px;
+  color: var(--hijau1);
   font-family: var(--font-kemco);
 }
-  
-.topup input[type="text"] {
-  padding: 8px;
-  width: 250px;
-  font-family: var(--font-kemco);
-  font-weight: bold;
-  text-align: center;
-  border: 2px solid #000;
-  border-radius: 5px;
-  justify-content: center;
 
-}
-
-.topup button {
-  background: var(--kuning);
-  border: none;
-  padding: 8px 12px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.table {
-  margin-top: 20px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-
-.success {
-  background: var(--hijau1);
-  color: var(--putih);
-  padding: 3px 6px;
-  border-radius: 4px;
-}
-
-.row.header {
-  font-weight: bold;
-  background-color: var(--biru3);
-}
-
-.row {
-  display: flex;
-  padding: 10px;
-  border-bottom: 1px solid var(--putih);
-  align-items: center;
-}
-
-.row div {
-  flex: 1;
-  padding: 5px;
-}
-
-
-footer {
+.topup-form label {
+  display: block;
   text-align: left;
-  padding: 15px;
+  margin-bottom: 8px;
+  font-family: var(--font-poppins);
+}
+
+input {
+  width: 95%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: var(--biru4);
   color: var(--putih);
-  font-size: 0.9em;
-  margin-top: 40px;
+  font-family: var(--font-depixelklein);
+}
+
+
+button.btn,
+a.btn {
+  background-color: var(--kuning);
+  border: none;
+  padding: 12px 25px;
+  color: var(--hitam);
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  font-family: var(--font-pixel);
 }
