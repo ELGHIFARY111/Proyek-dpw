@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: var(--font-kemco);
@@ -14,33 +15,56 @@ body {
   border-radius: 10px;
 }
 
-h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
+.tabs {
+  margin-top: 20px;
 }
 
-.search-box {
-  margin-top: 10px;
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tab-labels {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
 }
 
-.search-box input[type="text"] {
-  padding: 8px;
-  width: 250px;
-  font-family: var(--font-pixel);
-  font-weight: bold;
-  border: 2px solid #000;
-  border-radius: 5px;
+.tab-labels label {
+  padding: 10px 20px;
+  background-color: var(--biru3);
+  color: var(--putih);
+  cursor: pointer;
+  font-family: var(--font-kemco);
+  border: 2px solid var(--kuning);
+  border-bottom: none;
+  transition: 0.3s;
 }
 
-.search-box button {
-  padding: 8px 16px;
-  background-color: var(--kuning);
-  color: var(--biru3);
+.tab-labels label:hover {
+  background-color: var(--biru2);
+}
+
+#tab-pesanan:checked ~ .tab-labels label[for="tab-pesanan"],
+#tab-saldo:checked ~ .tab-labels label[for="tab-saldo"] {
+  background-color: var(--biru2);
+  color: var(--kuning);
   font-weight: bold;
-  border: 2px solid #000;
-  border-radius: 5px;
-  cursor: pointer;
+}
+
+.tab-content .content {
+  display: none;
+  background-color: var(--biru2);
+  padding: 20px;
+  border: 2px solid var(--kuning);
+  border-radius: 0 0 10px 10px;
+}
+
+#tab-pesanan:checked ~ .tab-content .content-pesanan {
+  display: block;
+}
+
+#tab-saldo:checked ~ .tab-content .content-saldo {
+  display: block;
 }
 
 .table {
@@ -58,7 +82,7 @@ h1 {
 
 .row.header {
   font-weight: bold;
-  background-color: var(--biru2);
+  background-color: var(--biru3);
 }
 
 .row div {
@@ -66,16 +90,31 @@ h1 {
   padding: 5px;
 }
 
-.status {
-  padding: 4px 10px;
+.row div:last-child {
+  border-bottom: none;
+}
+
+/* Tombol Detail */
+.detail {
+  padding: 6px 12px;
+  background-color: var(--kuning);
+  color: var(--biru3);
   border-radius: 5px;
   font-weight: bold;
+  cursor: pointer;
+  text-align: center;
   display: inline-block;
+  border: none;
 }
 
-.status.success {
-  background-color: var(--hijau1);
+.detail:hover {
+  background-color: #cddb2f;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9em;
   color: var(--putih);
 }
-
-

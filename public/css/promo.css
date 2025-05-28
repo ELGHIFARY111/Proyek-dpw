@@ -1,0 +1,70 @@
+.promo-page {
+  font-family: var(--font-kemco);
+  background-color: var(--biru1);
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: var(--kuning);
+  font-family: var(--font-kemco);
+}
+
+.promo-section {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: var(--kuning);
+  border-radius: 5px;
+  color: var(--hitam);
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-kemco);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--kuning);
+
+}
+
+.promo-card {
+  background-color: var(--biru2);
+  border: 2px solid var(--kuning);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.promo-card h3 {
+  margin: 0 0 10px 0;
+  color: var(--kuning);
+}
+
+.promo-card p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: var(--putih);
+}
+
+.promo-toggle:checked + .btn + .notif {
+  display: block;
+}
+
+.notif {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--hijau1);
+  color: var(--hitam);
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: var(--font-kemco);
+  text-align: center;
+}

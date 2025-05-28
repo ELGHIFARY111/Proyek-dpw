@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: var(--font-kemco);
+  background-color:var(--biru1);
+  color: var(--putih);
+  
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background-color: var(--biru2);
+  border: 3px solid var(--kuning);
+  border-radius: 16px;
+  padding: 20px 30px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--kuning);
+}
+
+.detail-box {
+  background-color: var(--biru3);
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid var(--hijau1);
+  margin-top: 20px;
+}
+
+.detail-box p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.status.success {
+  background-color: var(--hijau1);
+  color: var(--putih);
+}
+
+.btn-kembali {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: var(--kuning);
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+
+

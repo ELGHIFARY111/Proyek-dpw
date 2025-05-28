@@ -33,10 +33,19 @@ app.get("/artikel-home", (req, res) => {
 app.get("/news-home", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "news-home.html"));
 });
-app.get("/HALAMAN_UTAMA", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
+app.get("/detail", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "detail.html"));
 });
-app.get("/cek", (req, res) => {
+app.get("/promo", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "promo.html"));
+});
+app.get("/referal", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "refreal.html"));
+});
+app.get("/saldo-dan-top-up", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "saldo-dan-top-up.html"));
+});
+app.get("/cek-pesanan", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
 });
 app.get("/select-game", (req, res) => {
@@ -63,6 +72,9 @@ app.get("/syaratDanKetentuan", (req, res) => {
 });
 app.get("/news", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "news.html"));
+});
+app.get("/about-us", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "aboutUs.html"));
 });
 
 // Endpoint transaksi baru

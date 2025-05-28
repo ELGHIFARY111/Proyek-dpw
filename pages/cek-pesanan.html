@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cek Status Pesanan</title>
-    <link rel="stylesheet" href="/css/cek-pesanan.css" />
-    <link rel="stylesheet" href="/css/global.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Riwayat Pesanan</h1>
-      <p>
-        Perlu diingat bahwa sistem kami membutuhkan waktu beberapa menit untuk
-        memproses pesanan.<br />
-        Jika pesanan Anda belum muncul dalam waktu 1-5 menit, silakan hubungi
-        kami untuk bantuan.
-      </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cek Status Pesanan</title>
+  <link rel="stylesheet" href="/cek-pemesanan/cek-pesanan.css">
+  <link rel="stylesheet" href="/global.css">
+</head>
+<body>
 
-      <label for="invoice">Masukkan Invoice Kamu</label>
-      <div class="search-box">
-        <input
-          type="text"
-          id="invoice"
-          placeholder="Masukkan Nomor Transaksi"
-        />
-        <button>Cari</button>
-      </div>
+<div class="tabs">
+  <input type="radio" id="tab-saldo" name="tab">
+  <input type="radio" id="tab-pesanan" name="tab" checked>
+
+  <div class="tab-labels">
+    <label for="tab-saldo">Riwayat Penggunaan Saldo</label>
+    <label for="tab-pesanan">Riwayat Pesanan</label>
+  </div>
+
+  <div class="tab-content">
+  
+    <div class="content content-pesanan">
 
       <h3>Riwayat Transaksi</h3>
-
       <div class="table">
         <div class="row header">
           <div>Tanggal</div>
@@ -36,32 +30,61 @@
           <div>No. Handphone</div>
           <div>Product</div>
           <div>Harga</div>
-          <div>Status</div>
+          <div>Metode</div>
+          <div>Detail Transaksi</div>
         </div>
 
         <div class="row">
-          <div>16/03/2025 <br />08:43:02</div>
-          <div>-</div>
+          <div>16/03/2025 <br>08:43:02</div>
+          <div>INV--</div>
           <div>08**</div>
           <div>1x qty Call of Duty</div>
           <div>Rp17.320</div>
-          <div><span class="status success">Success</span></div>
+          <div>OVO</div>
+          <div><span class="detail clickable" onclick="location.href='/detail/detail.html';">Detail</span></div>
         </div>
+
         <div class="row">
-          <div>16/03/2025 <br />20:01:32</div>
-          <div>-</div>
+          <div>16/03/2025 <br>20:01:32</div>
+          <div>INV--</div>
           <div>08**</div>
           <div>1x qty Mobile Legends</div>
           <div>Rp43.460</div>
-          <div><span class="status success">Success</span></div>
+          <div>OVO</div>
+          <div><span class="detail clickable" onclick="location.href='/detail/detail.html';">Detail</span></div>
         </div>
-        <footer>
-          <p>
-            © 2025 TopUpCenter. Semua hak dilindungi. | Bantuan:
-            sixfusion@gmail.com
-          </p>
-        </footer>
       </div>
     </div>
-  </body>
+
+    <div class="content content-saldo">
+      <h3>Riwayat Penggunaan Saldo</h3>
+      <div class="table">
+        <div class="row header">
+          <div>Tanggal</div>
+          <div>Deskripsi</div>
+          <div>Jumlah</div>
+          <div>Saldo Tersisa</div>
+          <div>Metode</div>
+        </div>
+
+        <div class="row">
+          <div>17/03/2025 <br>10:15:00</div>
+          <div>Top Up Game Mobile Legends</div>
+          <div>-Rp500.00</div>
+          <div>Rp100.540</div>
+          <div>OVO</div>
+        </div>
+
+        <div class="row">
+          <div>17/03/2025 <br>09:00:00</div>
+          <div>Top Up Saldo</div>
+          <div>+Rp100.000</div>
+          <div>Rp144.000</div>
+          <div>DANA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 </html>
