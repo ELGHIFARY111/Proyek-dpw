@@ -35,6 +35,12 @@ app.get("/detail", (req, res) => {
 app.get("/promo", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "promo.html"));
 });
+app.get("/refreal", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "refreal.html"));
+});
+app.get("/saldo-dan-top-up", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "saldo-dan-top-up.html"));
+});
 <<<<<<< HEAD
 app.get("/HALAMAN_UTAMA", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
