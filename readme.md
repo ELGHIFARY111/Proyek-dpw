@@ -27,6 +27,18 @@ Go to the project directory
   cd Proyek-dpw
 ```
 
+Install package
+
+```bash
+  npm install
+```
+
+Run Project
+
+```bash
+  npm run dev
+```
+
 ## Demo
 
 Coming Soon

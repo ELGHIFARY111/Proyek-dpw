@@ -26,94 +26,94 @@
       "spesial_item": [
         {
           "id": 1,
-          "nama_item": "MOBILE LEGENDS Weekly Diamond Pass",
+          "nama_item": "Weekly Diamond Pass",
           "harga": 26851
         },
         {
           "id": 2,
-          "nama_item": "MOBILE LEGENDS Twilight Pass",
+          "nama_item": "Twilight Pass",
           "harga": 144834
         },
         {
           "id": 3,
-          "nama_item": "MOBILE LEGENDS Coupon Pass",
+          "nama_item": "Coupon Pass",
           "harga": 69542
         },
         {
           "id": 4,
-          "nama_item": "MOBILE LEGENDS Weekly Diamond 2x",
+          "nama_item": "Weekly Diamond 2x",
           "harga": 53854
         },
         {
           "id": 5,
-          "nama_item": "MOBILE LEGENDS Weekly Diamond 3x",
+          "nama_item": "Weekly Diamond 3x",
           "harga": 80743
         },
         {
           "id": 6,
-          "nama_item": "MOBILE LEGENDS Weekly Diamond 4x",
+          "nama_item": "Weekly Diamond 4x",
           "harga": 107683
         }
       ],
       "diamonds": [
         {
           "id": 1,
-          "nama_item": "MOBILELEGEND - 15 Diamonds",
+          "nama_item": "15 Diamonds",
           "harga": 4543
         },
         {
           "id": 2,
-          "nama_item": "MOBILELEGEND - 46 Diamonds",
+          "nama_item": "46 Diamonds",
           "harga": 12653
         },
         {
           "id": 3,
-          "nama_item": "MOBILELEGEND - 85 Diamonds",
+          "nama_item": "85 Diamonds",
           "harga": 22466
         },
         {
           "id": 4,
-          "nama_item": "MOBILELEGEND - 148 Diamonds",
+          "nama_item": "148 Diamonds",
           "harga": 38354
         },
         {
           "id": 5,
-          "nama_item": "MOBILELEGEND - 277 Diamonds",
+          "nama_item": "277 Diamonds",
           "harga": 73678
         },
         {
           "id": 6,
-          "nama_item": "MOBILELEGEND - 406 Diamonds",
+          "nama_item": "406 Diamonds",
           "harga": 105976
         },
         {
           "id": 7,
-          "nama_item": "MOBILELEGEND - 750 Diamonds",
+          "nama_item": "750 Diamonds",
           "harga": 192329
         },
         {
           "id": 8,
-          "nama_item": "MOBILELEGEND - 1136 Diamonds",
+          "nama_item": "1136 Diamonds",
           "harga": 287383
         },
         {
           "id": 9,
-          "nama_item": "MOBILELEGEND 1704 Diamonds",
+          "nama_item": "04 Diamonds",
           "harga": 434518
         },
         {
           "id": 10,
-          "nama_item": "MOBILELEGEND - 3423 Diamonds",
+          "nama_item": "3423 Diamonds",
           "harga": 845746
         },
         {
           "id": 11,
-          "nama_item": "MOBILELEGEND - 6030 Diamonds",
+          "nama_item": "6030 Diamonds",
           "harga": 1447635
         },
         {
           "id": 12,
-          "nama_item": "MOBILELEGEND - 10050 Diamonds",
+          "nama_item": "10050 Diamonds",
           "harga": 2412678
         }
       ]
@@ -149,32 +149,32 @@
       "bonds": [
         {
           "id": 1,
-          "nama_item": "ARENABREAKOUT - 66 Bonds",
+          "nama_item": "66 Bonds",
           "harga": 14205
         },
         {
           "id": 2,
-          "nama_item": "ARENABREAKOUT - 335 Bonds",
+          "nama_item": "335 Bonds",
           "harga": 69354
         },
         {
           "id": 3,
-          "nama_item": "ARENABREAKOUT - 675 Bonds",
+          "nama_item": "675 Bonds",
           "harga": 138795
         },
         {
           "id": 4,
-          "nama_item": "ARENABREAKOUT - 1690 Bonds",
+          "nama_item": "1690 Bonds",
           "harga": 346345
         },
         {
           "id": 5,
-          "nama_item": "ARENABREAKOUT - 3400 Bonds",
+          "nama_item": "3400 Bonds",
           "harga": 693453
         },
         {
           "id": 6,
-          "nama_item": "ARENABREAKOUT - 6820 Bonds",
+          "nama_item": "6820 Bonds",
           "harga": 1386207
         }
       ]
@@ -210,7 +210,7 @@
       "gems": [
         {
           "id": 1,
-          "nama_item": "Brawl Stars - Pass",
+          "nama_item": "Pass",
           "harga": 124951
         }
       ]
@@ -246,47 +246,47 @@
       "cod_points": [
         {
           "id": 1,
-          "nama_item": "Call of Duty: Mobile - 31 CP",
+          "nama_item": "31 CP",
           "harga": 4295
         },
         {
           "id": 2,
-          "nama_item": "Call of Duty: Mobile - 63 CP",
+          "nama_item": "63 CP",
           "harga": 8583
         },
         {
           "id": 3,
-          "nama_item": "Call of Duty: Mobile - 128 CP",
+          "nama_item": "128 CP",
           "harga": 171165
         },
         {
           "id": 4,
-          "nama_item": "Call of Duty: Mobile - 321 CP",
+          "nama_item": "321 CP",
           "harga": 42833
         },
         {
           "id": 5,
-          "nama_item": "Call of Duty: Mobile - 645 CP",
+          "nama_item": "645 CP",
           "harga": 85797
         },
         {
           "id": 6,
-          "nama_item": "Call of Duty: Mobile - 800 CP",
+          "nama_item": "800 CP",
           "harga": 102951
         },
         {
           "id": 7,
-          "nama_item": "Call of Duty: Mobile - 1373 CP",
+          "nama_item": "1373 CP",
           "harga": 171165
         },
         {
           "id": 8,
-          "nama_item": "Call of Duty: Mobile - 3564 CP",
+          "nama_item": "3564 CP",
           "harga": 428884
         },
         {
           "id": 9,
-          "nama_item": "Call of Duty: Mobile - 7656 CP",
+          "nama_item": "7656 CP",
           "harga": 857743
         }
       ]
@@ -321,44 +321,44 @@
       "spesial_item": [
         {
           "id": 1,
-          "nama_item": "Clash Royale - Diamond Pass",
+          "nama_item": "Diamond Pass",
           "harga": 149999
         },
         {
           "id": 2,
-          "nama_item": "Clash Royale - Gold Pass",
+          "nama_item": "Gold Pass",
           "harga": 74871
         }
       ],
       "gems": [
         {
           "id": 1,
-          "nama_item": "Clash Royale - 88 Gems",
+          "nama_item": "88 Gems",
           "harga": 12298
         },
         {
           "id": 2,
-          "nama_item": "Clash Royale - 550 Gems",
+          "nama_item": "550 Gems",
           "harga": 62350
         },
         {
           "id": 3,
-          "nama_item": "Clash Royale - 1320 Gems",
+          "nama_item": "1320 Gems",
           "harga": 124765
         },
         {
           "id": 4,
-          "nama_item": "Clash Royale - 2750 Gems",
+          "nama_item": "2750 Gems",
           "harga": 250153
         },
         {
           "id": 5,
-          "nama_item": "Clash Royale - 7150 Gems",
+          "nama_item": "7150 Gems",
           "harga": 623505
         },
         {
           "id": 6,
-          "nama_item": "Clash Royale - 15400 Gems",
+          "nama_item": "15400 Gems",
           "harga": 1249513
         }
       ]
@@ -393,34 +393,34 @@
       "spesial_item": [
         {
           "id": 1,
-          "nama_item": "Clash of Clans - Gold Pass",
+          "nama_item": "Gold Pass",
           "harga": 87390
         }
       ],
       "gems": [
         {
           "id": 1,
-          "nama_item": "Clash of Clans - 88 Gems",
+          "nama_item": "88 Gems",
           "harga": 12269
         },
         {
           "id": 2,
-          "nama_item": "Clash of Clans - 550 Gems",
+          "nama_item": "550 Gems",
           "harga": 62350
         },
         {
           "id": 3,
-          "nama_item": "Clash of Clans - 1320 Gems",
+          "nama_item": "1320 Gems",
           "harga": 124951
         },
         {
           "id": 4,
-          "nama_item": "Clash of Clans - 2750 Gems",
+          "nama_item": "2750 Gems",
           "harga": 250153
         },
         {
           "id": 5,
-          "nama_item": "Clash of Clans - 7150 Gems",
+          "nama_item": "7150 Gems",
           "harga": 623505
         }
       ]
@@ -456,42 +456,42 @@
       "fmp": [
         {
           "id": 1,
-          "nama_item": "Football Master 2 - 18 FMP",
+          "nama_item": "18 FMP",
           "harga": 3656
         },
         {
           "id": 2,
-          "nama_item": "Football Master 2 - 95 FMP",
+          "nama_item": "95 FMP",
           "harga": 18284
         },
         {
           "id": 3,
-          "nama_item": "Football Master 2 - 191 FMP",
+          "nama_item": "191 FMP",
           "harga": 36564
         },
         {
           "id": 4,
-          "nama_item": "Football Master 2 - 382 FMP",
+          "nama_item": "382 FMP",
           "harga": 73129
         },
         {
           "id": 5,
-          "nama_item": "Football Master 2 - 972 FMP",
+          "nama_item": "972 FMP",
           "harga": 182.822
         },
         {
           "id": 6,
-          "nama_item": "Football Master 2 - 1944 FMP",
+          "nama_item": "1944 FMP",
           "harga": 365654
         },
         {
           "id": 7,
-          "nama_item": "Football Master 2 - 3888 FMP",
+          "nama_item": "3888 FMP",
           "harga": 731288
         },
         {
           "id": 8,
-          "nama_item": "Football Master 2 - 9900 FMP",
+          "nama_item": "9900 FMP",
           "harga": 1828221
         }
       ]
@@ -526,69 +526,69 @@
       "spesial_item": [
         {
           "id": 1,
-          "nama_item": "Free Fire Membership Mingguan",
+          "nama_item": "Membership Mingguan",
           "harga": 27432
         },
         {
           "id": 2,
-          "nama_item": "Free Fire BP Card",
+          "nama_item": "BP Card",
           "harga": 41135
         },
         {
           "id": 3,
-          "nama_item": "Free Fire Level Up Pass",
+          "nama_item": "Level Up Pass",
           "harga": 13714
         },
         {
           "id": 4,
-          "nama_item": "Free Fire Membership Bulanan",
+          "nama_item": "Membership Bulanan",
           "harga": 82244
         }
       ],
       "diamonds": [
         {
           "id": 1,
-          "nama_item": "Free Fire - 10 Diamonds",
+          "nama_item": "10 Diamonds",
           "harga": 1682
         },
         {
           "id": 2,
-          "nama_item": "Free Fire - 55 Diamonds",
+          "nama_item": "55 Diamonds",
           "harga": 7543
         },
         {
           "id": 3,
-          "nama_item": "Free Fire - 120 Diamonds",
+          "nama_item": "120 Diamonds",
           "harga": 15287
         },
         {
           "id": 4,
-          "nama_item": "Free Fire - 190 Diamonds",
+          "nama_item": "190 Diamonds",
           "harga": 23865
         },
         {
           "id": 5,
-          "nama_item": "Free Fire - 355 Diamonds",
+          "nama_item": "355 Diamonds",
           "harga": 42922
         },
         {
           "id": 6,
-          "nama_item": "Free Fire - 510 Diamonds",
+          "nama_item": "510 Diamonds",
           "harga": 62582
         },
         {
           "id": 7,
-          "nama_item": "Free Fire - 800 Diamonds",
+          "nama_item": "800 Diamonds",
           "harga": 104234
         },
         {
           "id": 8,
-          "nama_item": "Free Fire - 1450 Diamonds",
+          "nama_item": "1450 Diamonds",
           "harga": 171569
         },
         {
           "id": 9,
-          "nama_item": "Free Fire - 7290 Diamonds",
+          "nama_item": "7290 Diamonds",
           "harga": 857734
         }
       ]
@@ -623,74 +623,74 @@
       "spesial_item": [
         {
           "id": 1,
-          "nama_item": "Garena Undawn Card Mingguan",
+          "nama_item": "Card Mingguan",
           "harga": 27146
         },
         {
           "id": 2,
-          "nama_item": "Garena Undawn Card Bulanan",
+          "nama_item": "Card Bulanan",
           "harga": 44969
         },
         {
           "id": 3,
-          "nama_item": "Garena Undawn Growth Fund",
+          "nama_item": "Growth Fund",
           "harga": 90195
         },
         {
           "id": 4,
-          "nama_item": "Garena Undawn Glory Pass Premium",
+          "nama_item": "Glory Pass Premium",
           "harga": 124275
         },
         {
           "id": 5,
-          "nama_item": "Garena Undawn Dana Elit Rebate Lv 80",
+          "nama_item": "Dana Elit Rebate Lv 80",
           "harga": 119593
         }
       ],
       "Top_Up_Instant": [
         {
           "id": 1,
-          "nama_item": "Garena Undawn - 80 RC",
+          "nama_item": "80 RC",
           "harga": 13654
         },
         {
           "id": 2,
-          "nama_item": "Garena Undawn - 250 RC",
+          "nama_item": "250 RC",
           "harga": 40058
         },
         {
           "id": 3,
-          "nama_item": "Garena Undawn - 450 RC",
+          "nama_item": "450 RC",
           "harga": 67233
         },
         {
           "id": 4,
-          "nama_item": "Garena Undawn - 920 RC",
+          "nama_item": "920 RC",
           "harga": 133.06
         },
         {
           "id": 5,
-          "nama_item": "Garena Undawn - 1.850 RC",
+          "nama_item": "1.850 RC",
           "harga": 264036
         },
         {
           "id": 6,
-          "nama_item": "Garena Undawn - 2.800 RC",
+          "nama_item": "2.800 RC",
           "harga": 396024
         },
         {
           "id": 7,
-          "nama_item": "Garena Undawn - 4.750 RC",
+          "nama_item": "4.750 RC",
           "harga": 659999
         },
         {
           "id": 8,
-          "nama_item": "Garena Undawn - 9.600 RC",
+          "nama_item": "9.600 RC",
           "harga": 1319937
         },
         {
           "id": 9,
-          "nama_item": "Garena Undawn - 33.000 RC",
+          "nama_item": "33.000 RC",
           "harga": 4399646
         }
       ]
@@ -728,49 +728,49 @@
       "spesial_item": [
         {
           "id": 1,
-          "nama_item": "Ghensin Impact Blessing of the Welkin Moon",
+          "nama_item": "Blessing of the Welkin Moon",
           "harga": 59304
         },
         {
           "id": 2,
-          "nama_item": "Ghensin Impact Blessing of the Welkin Moon 2x",
+          "nama_item": "Blessing of the Welkin Moon 2x",
           "harga": 118583
         },
         {
           "id": 3,
-          "nama_item": "Ghensin Impact Blessing of the Welkin Moon 3x",
+          "nama_item": "Blessing of the Welkin Moon 3x",
           "harga": 177862
         }
       ],
       "diamonds": [
         {
           "id": 1,
-          "nama_item": "Ghensin Impact - 60 Genesis Crystal",
+          "nama_item": "60 Genesis Crystal",
           "harga": 11615
         },
         {
           "id": 2,
-          "nama_item": "Ghensin Impact - 300+30 Genesis Crystal",
+          "nama_item": "300+30 Genesis Crystal",
           "harga": 59304
         },
         {
           "id": 3,
-          "nama_item": "Ghensin Impact - 980+110 Genesis Crystal",
+          "nama_item": "980+110 Genesis Crystal",
           "harga": 178492
         },
         {
           "id": 4,
-          "nama_item": "Ghensin Impact - 1980+260 Genesis Crystal",
+          "nama_item": "1980+260 Genesis Crystal",
           "harga": 387070
         },
         {
           "id": 5,
-          "nama_item": "Ghensin Impact - 3280+600 Genesis Crystal",
+          "nama_item": "3280+600 Genesis Crystal",
           "harga": 595650
         },
         {
           "id": 6,
-          "nama_item": "Ghensin Impact - 6480+1600 Genesis Crystal",
+          "nama_item": "6480+1600 Genesis Crystal",
           "harga": 1191589
         }
       ]
@@ -805,39 +805,39 @@
       "spesial_item": [
         {
           "id": 1,
-          "nama_item": "Hayday - Farm Pass",
+          "nama_item": "Farm Pass",
           "harga": 62350
         }
       ],
       "diamonds": [
         {
           "id": 1,
-          "nama_item": "Hay Day - 55 Diamonds",
+          "nama_item": "55 Diamonds",
           "harga": 24790
         },
         {
           "id": 2,
-          "nama_item": "Hay Day - 143 Diamonds",
+          "nama_item": "143 Diamonds",
           "harga": 62350
         },
         {
           "id": 3,
-          "nama_item": "Hay Day - 303 Diamonds",
+          "nama_item": "303 Diamonds",
           "harga": 124951
         },
         {
           "id": 4,
-          "nama_item": "Hay Day - 627 Diamonds",
+          "nama_item": "627 Diamonds",
           "harga": 250153
         },
         {
           "id": 5,
-          "nama_item": "Hay Day - 1650 Diamonds",
+          "nama_item": "1650 Diamonds",
           "harga": 498302
         },
         {
           "id": 6,
-          "nama_item": "Hay Day -  4400 Diamonds",
+          "nama_item": "4400 Diamonds",
           "harga": 1249513
         }
       ]
@@ -934,47 +934,47 @@
       "gems": [
         {
           "id": 1,
-          "nama_item": "Lords Mobile - 39 Diamonds",
+          "nama_item": "39 Diamonds",
           "harga": 8055
         },
         {
           "id": 2,
-          "nama_item": "Lords Mobile - 79 Diamonds",
+          "nama_item": "79 Diamonds",
           "harga": 16026
         },
         {
           "id": 3,
-          "nama_item": "Lords Mobile - 195 Diamonds",
+          "nama_item": "195 Diamonds",
           "harga": 33771
         },
         {
           "id": 4,
-          "nama_item": "Lords Mobile - 395 Diamonds",
+          "nama_item": "395 Diamonds",
           "harga": 67749
         },
         {
           "id": 5,
-          "nama_item": "Lords Mobile - 785 Diamonds",
+          "nama_item": "785 Diamonds",
           "harga": 135394
         },
         {
           "id": 6,
-          "nama_item": "Lords Mobile - 1179 Diamonds",
+          "nama_item": "1179 Diamonds",
           "harga": 203038
         },
         {
           "id": 7,
-          "nama_item": "Lords Mobile - 1964 Diamonds",
+          "nama_item": "1964 Diamonds",
           "harga": 337669
         },
         {
           "id": 8,
-          "nama_item": "Lords Mobile - 3928 Diamonds",
+          "nama_item": "3928 Diamonds",
           "harga": 676651
         },
         {
           "id": 9,
-          "nama_item": "Lords Mobile - 7857 Diamonds",
+          "nama_item": "7857 Diamonds",
           "harga": 1353199
         }
       ]
@@ -1126,59 +1126,59 @@
       "spesial_item": [
         {
           "id": 1,
-          "nama_item": "Pubg Elite Pass Plus",
+          "nama_item": "Elite Pass Plus",
           "harga": 361455
         },
         {
           "id": 2,
-          "nama_item": "Pubg Royale Pass",
+          "nama_item": "Royale Pass",
           "harga": 141565
         }
       ],
       "indo": [
         {
           "id": 1,
-          "nama_item": "PUBG MOBILE 30 UC",
+          "nama_item": "30 UC",
           "harga": 6947
         },
         {
           "id": 2,
-          "nama_item": "PUBG MOBILE 60 UC",
+          "nama_item": "60 UC",
           "harga": 14160
         },
         {
           "id": 3,
-          "nama_item": "PUBG MOBILE 240 UC",
+          "nama_item": "240 UC",
           "harga": 56985
         },
         {
           "id": 4,
-          "nama_item": "PUBG MOBILE 445 UC",
+          "nama_item": "445 UC",
           "harga": 100395
         },
         {
           "id": 5,
-          "nama_item": "PUBG MOBILE 660 UC",
+          "nama_item": "660 UC",
           "harga": 140409
         },
         {
           "id": 6,
-          "nama_item": "PUBG MOBILE 840 UC",
+          "nama_item": "840 UC",
           "harga": 186699
         },
         {
           "id": 7,
-          "nama_item": "PUBG MOBILE 1105 UC",
+          "nama_item": "1105 UC",
           "harga": 244348
         },
         {
           "id": 8,
-          "nama_item": "PUBG MOBILE 1500 UC",
+          "nama_item": "1500 UC",
           "harga": 330652
         },
         {
           "id": 9,
-          "nama_item": "PUBG MOBILE 2785 UC",
+          "nama_item": "2785 UC",
           "harga": 566232
         }
       ],
@@ -1366,32 +1366,32 @@
       "coupon": [
         {
           "id": 1,
-          "nama_item": "Saint Seiya - 60 Coupon",
+          "nama_item": "60 Coupon",
           "harga": 13986
         },
         {
           "id": 2,
-          "nama_item": "Saint Seiya - 300 Coupon",
+          "nama_item": "300 Coupon",
           "harga": 67935
         },
         {
           "id": 3,
-          "nama_item": "Saint Seiya - 600 Coupon",
+          "nama_item": "600 Coupon",
           "harga": 136745
         },
         {
           "id": 4,
-          "nama_item": "Saint Seiya - 1200 Coupon",
+          "nama_item": "1200 Coupon",
           "harga": 272072
         },
         {
           "id": 5,
-          "nama_item": "Saint Seiya - 1800 Coupon",
+          "nama_item": "1800 Coupon",
           "harga": 408108
         },
         {
           "id": 6,
-          "nama_item": "Saint Seiya - 3000 Coupon",
+          "nama_item": "3000 Coupon",
           "harga": 680180
         }
       ]
@@ -1427,42 +1427,42 @@
       "coins": [
         {
           "id": 1,
-          "nama_item": "Sausage Man - 61 Candies",
+          "nama_item": "61 Candies",
           "harga": 12407
         },
         {
           "id": 2,
-          "nama_item": "Sausage Man - 186 Candies",
+          "nama_item": "186 Candies",
           "harga": 37743
         },
         {
           "id": 3,
-          "nama_item": "Sausage Man - 318 Candies",
+          "nama_item": "318 Candies",
           "harga": 62872
         },
         {
           "id": 4,
-          "nama_item": "Sausage Man - 686 Candies",
+          "nama_item": "686 Candies",
           "harga": 126080
         },
         {
           "id": 5,
-          "nama_item": "Sausage Man - 1378 Candies",
+          "nama_item": "1378 Candies",
           "harga": 252635
         },
         {
           "id": 6,
-          "nama_item": "Sausage Man - 2118 Candies",
+          "nama_item": "2118 Candies",
           "harga": 376730
         },
         {
           "id": 7,
-          "nama_item": "Sausage Man - 3548 Candies",
+          "nama_item": "3548 Candies",
           "harga": 629572
         },
         {
           "id": 8,
-          "nama_item": "Sausage Man - 7108 Candies",
+          "nama_item": "7108 Candies",
           "harga": 1261626
         }
       ]
@@ -1545,47 +1545,47 @@
       "gems": [
         {
           "id": 1,
-          "nama_item": "State of Survival - 100 Diamonds",
+          "nama_item": "100 Diamonds",
           "harga": 17790
         },
         {
           "id": 2,
-          "nama_item": "State of Survival - 500 Diamonds",
+          "nama_item": "500 Diamonds",
           "harga": 87680
         },
         {
           "id": 3,
-          "nama_item": "State of Survival - 1000 Diamonds",
+          "nama_item": "1000 Diamonds",
           "harga": 178567
         },
         {
           "id": 4,
-          "nama_item": "State of Survival - 2000 Diamonds",
+          "nama_item": "2000 Diamonds",
           "harga": 365190
         },
         {
           "id": 5,
-          "nama_item": "State of Survival - 5000 Diamonds",
+          "nama_item": "5000 Diamonds",
           "harga": 886890
         },
         {
           "id": 6,
-          "nama_item": "State of Survival - 10000 Diamonds",
+          "nama_item": "10000 Diamonds",
           "harga": 1774890
         },
         {
           "id": 7,
-          "nama_item": "State of Survival - 20000 Diamonds",
+          "nama_item": "20000 Diamonds",
           "harga": 3651900
         },
         {
           "id": 8,
-          "nama_item": "State of Survival - 50000 Diamonds",
+          "nama_item": "50000 Diamonds",
           "harga": 8868900
         },
         {
           "id": 9,
-          "nama_item": "State of Survival - 100000 Diamonds",
+          "nama_item": "100000 Diamonds",
           "harga": 17749999
         }
       ]
@@ -1683,47 +1683,47 @@
       "valorant_points": [
         {
           "id": 1,
-          "nama_item": "Valorant 475 VP",
+          "nama_item": "475 VP",
           "harga": 52279
         },
         {
           "id": 2,
-          "nama_item": "Valorant 1.000 VP",
+          "nama_item": "1.000 VP",
           "harga": 104512
         },
         {
           "id": 3,
-          "nama_item": "Valorant 2.050 VP",
+          "nama_item": "2.050 VP",
           "harga": 208999
         },
         {
           "id": 4,
-          "nama_item": "Valorant 3.050 VP",
+          "nama_item": "3.050 VP",
           "harga": 313799
         },
         {
           "id": 5,
-          "nama_item": "Valorant 5.350 VP",
+          "nama_item": "5.350 VP",
           "harga": 522846
         },
         {
           "id": 6,
-          "nama_item": "Valorant 8.990 VP",
+          "nama_item": "8.990 VP",
           "harga": 885197
         },
         {
           "id": 7,
-          "nama_item": "Valorant 11.000 VP",
+          "nama_item": "11.000 VP",
           "harga": 1055892
         },
         {
           "id": 8,
-          "nama_item": "Valorant 14.650 VP",
+          "nama_item": "14.650 VP",
           "harga": 1400635
         },
         {
           "id": 9,
-          "nama_item": "Valorant 22.000 VP",
+          "nama_item": "22.000 VP",
           "harga": 2060735
         }
       ]

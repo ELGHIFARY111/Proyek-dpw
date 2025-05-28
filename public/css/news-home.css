@@ -2,7 +2,6 @@ body {
   background-color: var(--biru3);
   color: var(--putih);
   padding: 0 10rem;
-  font-family: var(--font-pixel);
 }
 header p {
   font-family: var(--font-kemco);
@@ -51,17 +50,12 @@ section div.judul {
   left: 0;
   right: 0;
   padding: 1rem;
-  background: rgba(6, 27, 83, 0.5);
+  background: linear-gradient(to bottom, transparent, var(--biru3));
   color: var(--putih);
   font-weight: 900;
   text-align: left;
   text-shadow: 2px 2px 2px var(--biru3);
   transition: 0.5s ease;
   min-height: 50px;
-}
-section .judul:hover {
-  color: var(--kuning);
-  text-decoration: underline;
-  text-decoration-color: var(--kuning);
-  text-decoration-thickness: 2px;
+  font-family: var(--font-depixelklein);
 }

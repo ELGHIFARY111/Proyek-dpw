@@ -13,7 +13,16 @@ class Methd {
   cleanAndUppercaseKey(key) {
     return key.replace(/[_\-=+]/g, " ").toUpperCase(); // ganti simbol jadi spasi terus di-uppercase
   }
+  generateShortCode() {
+    const timestamp = Date.now();
+    const random = Math.floor(1000 + Math.random() * 9000);
+    return `INV-${timestamp}-${random}`;
+  }
+  timeUnderNine(value) {
+    return value < 10 ? "0" + value : value;
+  }
   showPopup({
+    id,
     username,
     userId,
     kategori,
@@ -78,7 +87,7 @@ class Methd {
         </div>
         <div class="tombol">
           <button class="cancel">Batalkan</button>
-          <button class="pay"><a href="">Bayar Sekarang</a></button>
+          <button class="payNow">Bayar Sekarang</button>
         </div>
       </section>
     </main>
@@ -92,6 +101,50 @@ class Methd {
         popup.style.display = "none";
       }, 500);
     });
+
+    // send ke endpoint
+    const now = new Date();
+    document.querySelector(".payNow").addEventListener("click", () => {
+      const sendData = {
+        id,
+        invoice: this.generateShortCode(),
+        username,
+        userId,
+        kategori,
+        produk,
+        wa,
+        voucher,
+        metode,
+        harga,
+        status: {
+          pesanan: false,
+          pembayaran: false,
+        },
+        time: {
+          waktu: `${this.timeUnderNine(now.getHours())}:${this.timeUnderNine(
+            now.getMinutes()
+          )}:${this.timeUnderNine(now.getSeconds())}`,
+          tanggal: `${this.timeUnderNine(now.getDate())}/${this.timeUnderNine(
+            now.getMonth()
+          )}/${now.getFullYear()}`,
+        },
+      };
+
+      fetch("/simpan-transaksi", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(sendData),
+      })
+        .then((res) => res.text())
+        .then((msg) => {
+          console.log(msg);
+          popup.style.display = "none";
+          window.location.href = "/payment";
+        })
+        .catch((err) => console.error("Gagal kirim data:", err));
+    });
   }
 }
 const dataPay = fetch("/json/payment.json").then((res) => res.json());
@@ -101,6 +154,27 @@ const fungsi = new Methd();
 // reset popup konfirmasi pembayaran
 const popup = document.getElementById("popUp");
 popup.style.display = "none";
+
+let selectPay = ""; //biar bisa dipake card confirmnya
+let userIdInp = "";
+let itemPopUp = "";
+let wa = "";
+const vchr = document.querySelector("#voucher").value || "-";
+let totalPayment = "";
+let kategoriPopUp = "";
+
+// voucher
+fetch("/api/voucher.json")
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((dataVoucher) => {
+      document.getElementById("addVchr").addEventListener("click", () => {
+        if (dataVoucher.includes(vchr)) {
+          console.log("bisa");
+        }
+      });
+    });
+  });
 
 gameData
   .then((data) => {
@@ -123,13 +197,8 @@ gameData
       document.title = `SixFussion | Top Up ${selectedGame.nama}`;
     }
 
-    // not found
-    if (selectedGame) {
-      document.getElementById("game-not-found").style.display = "none";
-    } else {
-      document.querySelector("header").style.display = "none";
-      document.querySelector("main").style.display = "none";
-      document.title = "SixFussion | Page Not Found";
+    if (!selectedGame) {
+      window.location.href = "/notfound";
     }
 
     //tampilin logo + nama game
@@ -195,7 +264,7 @@ gameData
           );
           // tambah harga list item
           itm.innerHTML = `${item.nama_item} <br>`;
-          fungsi.createElement("span", itm, item.harga);
+          fungsi.createElement("span", itm, item.harga.toLocaleString("id-ID"));
 
           itm.addEventListener("click", () => {
             // Hapus semua harga yang ada sebelumnya dari SEMUA elemen .pay
@@ -204,57 +273,63 @@ gameData
             });
             // Tambahkan harga baru ke SEMUA elemen .pay yang ada
             document.querySelectorAll(".pay").forEach((payEl) => {
-              fungsi.createElement("div", payEl, item.harga, "harga");
+              fungsi.createElement(
+                "div",
+                payEl,
+                item.harga.toLocaleString("id-ID"),
+                "harga"
+              );
             });
 
-            // CARD POPUP
-            // totalPay = parseInt(item.harga);
-            // console.log(totalPay);
-            let totalPayment = item.harga;
-            const produkPopUp = item.harga;
-            // console.log(item.nama_item);
-            // console.log(item.harga);
-            // hargaPay(totalPayment);
-            const kategoriPopUp = selectedGame.nama;
-            gameData.then((data) => {
-              data.forEach((game, gameIndex) => {
-                // console.log(game.input.inputan[0]);
-                // console.log(gameIndex);
+            document.querySelectorAll(".button").forEach((button) => {
+              button.addEventListener("click", () => {
+                const usrInput1 = document.getElementById(`input-0`);
+                const usrInput2 = document.getElementById(`input-1`);
 
-                document.querySelectorAll(".button").forEach((button) => {
-                  button.addEventListener("click", () => {
-                    const usrInput1 = document.getElementById(`input-0`);
-                    const usrInput2 = document.getElementById(`input-1`);
+                wa = document.querySelector("#no").value || "-";
+                const vchr = document.querySelector("#voucher").value || "-";
 
-                    const wa = document.querySelector("#no").value;
-                    const vchr =
-                      document.querySelector("#voucher").value || "-";
+                let totalPayment = item.harga;
+                const kategoriPopUp = selectedGame.nama;
+                // user id
+                // perbaiki ini
+                const usrId1 = usrInput1 ? usrInput1.value : "";
+                const usrId2 = usrInput2 ? usrInput2.value : "";
+                userIdInp = usrId2 ? `${usrId1} (${usrId2})` : usrId1;
+                itemPopUp = item.nama_item;
 
-                    // user id
-                    // perbaiki ini
-                    const usrId1 = usrInput1 ? usrInput1.value : "";
-                    const usrId2 = usrInput2 ? usrInput2.value : "";
-                    const userIdInp = `${usrId1} (${usrId2})`;
-
-                    const itemPopUp = item.nama_item;
-                    dataPay.then((data) => {
-                      data.payment.forEach((item) => {
-                        item.list.forEach((dataList) => {
-                          fungsi.showPopup({
-                            username: "Devitaa",
-                            userId: userIdInp,
-                            kategori: kategoriPopUp,
-                            produk: itemPopUp,
-                            wa: wa,
-                            voucher: vchr,
-                            metode: dataList.nama,
-                            harga: totalPayment,
-                          });
-                        });
-                      });
+                switch (true) {
+                  case !userIdInp:
+                    alert("Masukkan ID gamenya dulu ya");
+                    break;
+                  case !kategoriPopUp:
+                    alert(
+                      "Silakan pilih item dulu, biar kami bisa proses pesananmu!"
+                    );
+                    break;
+                  case !selectPay:
+                    alert(
+                      "Pilih metode pembayaran agar kamu segera memproses pesananmu!"
+                    );
+                    break;
+                  case !wa:
+                    alert(
+                      "Masukkan nomor WhatsApp untuk konfirmasi pesananmu yaa"
+                    );
+                    break;
+                  default:
+                    fungsi.showPopup({
+                      id: selectedGame.id,
+                      username: "Devitaa",
+                      userId: userIdInp,
+                      kategori: kategoriPopUp,
+                      produk: itemPopUp,
+                      wa: wa,
+                      voucher: vchr,
+                      metode: selectPay,
+                      harga: totalPayment.toLocaleString("id-ID"),
                     });
-                  });
-                });
+                }
               });
             });
 
@@ -352,7 +427,7 @@ dataPay
         "dropdown-button"
       );
       fungsi.createElement("i", btn, "", item.ikon); // ikon pembayaran
-      fungsi.createElement("p", btn, item.kategori); // label kategorinya
+      fungsi.createElement("p", btn, item.kategori); // label kategori
 
       if (item.list && item.list.length > 0) {
         const dropdown = fungsi.createElement(
@@ -365,21 +440,11 @@ dataPay
         btn.style.borderRadius = "10px";
         dropdown.classList.remove("show");
 
-        // pajak
-        // let ppnPay = 0;
-        // console.log(ppnPay);
-        // // console.log(item.kategori);
-        // const hargaPay = hargaPay(total);
-        // console.log(hargaPay);
-        // if (item.kategori) {
-        //   const ppn = 12;
-        //   ppnPay = hargaPay * 0.01 * ppn + hargaPay;
-        // }
-
         btn.addEventListener("click", () => {
           if (openDropdown && openDropdown !== dropdown) {
             openDropdown.classList.remove("show");
             oldBtn.style.borderRadius = "10px";
+            // openDropdown.remove()
           }
           if (!dropdown.classList.contains("show")) {
             dropdown.classList.add("show");
@@ -404,8 +469,11 @@ dataPay
             "",
             `pay ${payMethod.nama.toLowerCase()}`
           );
+          // return payDiv;
 
           payDiv.addEventListener("click", () => {
+            selectPay = payMethod.nama;
+            // console.log(selectPay);
             document.querySelectorAll(".pay").forEach((el) => {
               el.classList.remove("active");
             });
