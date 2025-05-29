@@ -76,6 +76,18 @@ app.get("/news", (req, res) => {
 app.get("/about-us", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "aboutUs.html"));
 });
+app.get("/register", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "register.html"));
+});
+app.get("/f-pass", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "f-pass.html"));
+});
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "login.html"));
+});
+app.get("/dashboard-user", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "dashboard-user.html"));
+});
 
 // Endpoint transaksi baru
 app.post("/simpan-transaksi", (req, res) => {
