@@ -28,7 +28,7 @@ app.get("/list-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "list-game.html"));
 });
 app.get("/artikel-home", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
+  res.sendFile(path.join(__dirname, "pages", "artikel.html"));
 });
 app.get("/news-home", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "news-home.html"));

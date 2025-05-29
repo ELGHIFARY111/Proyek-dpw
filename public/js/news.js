@@ -18,28 +18,27 @@ fetch("/json/news.json")
   .then((res) => res.json())
   .then((data) => {
     const filtered = data.find(
-      (news) => news.judul === "✨ SMAHATMA PROUDLY PRESENTS ✨"
+      (news) => news.judul === "TECHNOTAINMENT 2025 IS BACK!"
     );
 
     if (!filtered) return;
 
-    // Parse satu-satu field yang perlu markdown
+    document.title = `SixFussion | Top Up ${filtered.judul}`;
     const parsedJudul = marked.parse(filtered.judul);
-    const parsedDeskripsi = marked.parse(filtered.deskripsi);
+    const parsedDeskripsi = marked.parse(
+      filtered.deskripsi.replace(/\n/g, "<br>")
+    );
 
     createElement("p", container, parsedJudul, "judul");
-
-    const contImg = createElement("div", container, "", "container-img");
-    const mainImg = createElement("img", contImg, "", "main-img");
-    mainImg.src = filtered.gambar;
-    mainImg.alt = filtered.judul;
 
     const contInfo = createElement("div", container, "", "container-info");
     createElement("p", contInfo, filtered.penulis);
     createElement("p", contInfo, filtered.publikasi);
 
-    createElement("hr", container);
-
-    createElement("p", container, parsedDeskripsi, "main-desk");
+    const sec = createElement("section", container);
+    const mainImg = createElement("img", sec, "", "main-img");
+    mainImg.src = filtered.gambar;
+    mainImg.alt = filtered.judul;
+    createElement("p", sec, parsedDeskripsi, "main-desk");
   })
   .catch((err) => console.log(err));
