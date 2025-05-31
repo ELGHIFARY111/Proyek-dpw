@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kebijakan Privasi</title>
+        <link rel="stylesheet" href="/css/dashboard-admin.css">
+        <link rel="stylesheet" href="/css/global.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="left-bar">
+                <img class="foto" src="/assets/foto/fotoanonym.png">
+                <div class="nama"> raihan X arik</div>
+                <ol>
+                    <li class="side-dashboard">Dashboard</li>
+                    <li class="side-akun">account</li>
+                    <hr>
+                    <li class="side-games">Games</li>  
+                    <li class="side-topup">Topup</li>
+                    <li class="side-riwayat">Riwayat Transaksi</li>
+                    <li class="side-laporan">laporan</li>
+                <ol>
+            </div>
+            <div class="main">
+                <div id="dashboard">
+                    <div class="container-dashboard-top">
+                        <div class="totalPeng"><p class="styleP">Total Pengguna</p>10.000.000+ pengguna<p class="styleP"><br>Pengguna Bulan ini</p>100.000+ pengguna</div>
+                        <div class="order"><p class="styleP">Total Order</p>100.000+ order<br><p class="styleP">Order Bulan ini</p>14.000+ order</div>
+                        <div class="waktuMain"><p class="styleP">Total Game Di Mainkan</p>120.000 x dimainkan<p class="styleP">Game Di Mainkan bulan ini</p>2.000 x dimainkan</div>
+                        <div class="kanan-top">
+                            <div class="rating-top"><p class="styleP">Rating Bulan ini</p>200+</div>
+                            <div class="report-top"><p class="styleP">Report Bulan ini</p>34</div>
+                        </div>
+                    </div>
+                    <div class="container-dashboard-bottom">
+                        <div></div>
+                    </div>
+                </div>
+                <div id="akun">akun</div>
+                <div id="games">games</div>
+                <div id="topup">topup</div>
+                <div id="riwayat">riwayat</div>
+                <div id="laporan">laporan</div>
+            </div>
+        </div>
+    <script>
+        const pages = document.querySelectorAll(".main > div");
+        function showPage(id) {
+            pages.forEach(page => page.style.display = "none");
+            const target = document.getElementById(id);
+            if(target) target.style.display = "block";
+        }
+        document.querySelector(".side-dashboard").onclick = () => showPage("dashboard");
+        document.querySelector(".side-akun").onclick = () => showPage("akun");
+        document.querySelector(".side-games").onclick = () => showPage("games");
+        document.querySelector(".side-topup").onclick = () => showPage("topup");
+        document.querySelector(".side-riwayat").onclick = () => showPage("riwayat");
+        document.querySelector(".side-laporan").onclick = () => showPage("laporan");
+        window.onload = () => showPage("dashboard");
+    </script>
+    </body>
+</html>

@@ -97,6 +97,9 @@ app.get("/syarat&ketentuan", (req, res) => {
 app.get("/kebijakanPrivasi", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "kebijakanPrivasi.html"));
 });
+app.get("/dashboard-admin", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "dashboard-admin.html"));
+});
 
 
 // Endpoint transaksi baru
