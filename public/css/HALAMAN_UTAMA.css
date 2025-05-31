@@ -83,22 +83,6 @@ p {
 
 
 
-/* Game List */
-.game-list {
-    display: flex;
-    overflow-x: auto;
-    padding: 10px;
-    scrollbar-width: none;
-    background-color: #5c7aad;
-}
-
-.game-list::-webkit-scrollbar {
-    height: 8px;
-}
-.game-list::-webkit-scrollbar-thumb {
-    background: #4b3e70;
-    border-radius: 10px;
-}
 
 .game-item {
     min-width: 150px;
@@ -197,7 +181,22 @@ p {
     
 }
 
-
+.info1,
+.info4,
+.info5{
+    background-color: var(--kuning);
+    color: var(--biru2);
+    padding: 10px;
+    border: 10px dashed var(--biru2);
+}
+.info2,
+.info3,
+.info6{
+    background-color: var(--biru2);
+    color: white;
+    padding: 10px;
+    border: 10px dashed var(--kuning);
+}
 
 
 
@@ -254,6 +253,7 @@ footer {
 .links h2, .legal h2, .help h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    text-align: left;
     color: #f1c40f; /* Header color */
 }
 
