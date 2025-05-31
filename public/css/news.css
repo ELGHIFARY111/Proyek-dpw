@@ -20,6 +20,11 @@ main {
   font-family: var(--font-kemco);
   text-shadow: 5px 5px 0 var(--biru3);
   margin: 3rem 0;
+  text-align: center;
+}
+section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .container-info {
   font-family: var(--font-depixelklein);
@@ -28,23 +33,15 @@ main {
   margin-bottom: 10px;
   font-weight: 900;
   text-shadow: 1px 1px 1px var(--biru3);
-  margin-top: 0.5rem;
   font-size: 13px;
   font-family: var(--font-depixelklein);
 }
 .container-info p:last-child {
-  border-left: 3px solid var(--kuning);
+  border-left: 3px solid var(--biru3);
   padding-left: 1.2rem;
 }
-.container-img {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 1rem;
-}
 img {
-  width: auto;
+  width: 93%;
   object-fit: cover;
   height: auto;
   display: flex;
@@ -53,14 +50,11 @@ img {
   box-shadow: 10px 10px 0 var(--biru3);
 }
 .main-desk {
-  margin: 10px 0;
   font-size: 20px;
   color: var(--putih);
-  margin: 2rem 0;
   font-weight: 900;
-  font-family: var(--font-depixelklein);
+  line-height: 1.2;
+  font-family: var(--font-pixel);
   text-shadow: 1px 1px 1px var(--biru3);
-}
-hr {
-  border: 2px solid var(--kuning);
+  width: 100%;
 }

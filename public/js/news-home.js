@@ -5,7 +5,7 @@ fetch("/json/news.json")
     data.forEach((news) => {
       const card = document.createElement("section");
       card.innerHTML = `
-      <a href="#" target="__blank">
+      <a href="/news">
         <img src="${news.gambar}" alt="${news.judul}" />
         <div class="judul">${news.judul}</div>
       </a>

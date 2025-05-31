@@ -50,7 +50,7 @@ section div.judul {
   left: 0;
   right: 0;
   padding: 1rem;
-  background: linear-gradient(to bottom, transparent, var(--biru3));
+  background: linear-gradient(to bottom, transparent, var(--hitam));
   color: var(--putih);
   font-weight: 900;
   text-align: left;

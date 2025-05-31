@@ -28,7 +28,7 @@ app.get("/list-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "list-game.html"));
 });
 app.get("/artikel-home", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
+  res.sendFile(path.join(__dirname, "pages", "artikel.html"));
 });
 app.get("/news-home", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "news-home.html"));
@@ -91,6 +91,28 @@ app.get("/news", (req, res) => {
 app.get("/about-us", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "aboutUs.html"));
 });
+app.get("/register", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "register.html"));
+});
+app.get("/f-pass", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "f-pass.html"));
+});
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "login.html"));
+});
+app.get("/dashboard-user", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "dashboard-user.html"));
+});
+app.get("/laporkan", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "laporkan.html"));
+});
+app.get("/syarat&ketentuan", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "syaratKetentuan.html"));
+});
+app.get("/kebijakanPrivasi", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "kebijakanPrivasi.html"));
+});
+
 
 // Endpoint transaksi baru
 app.post("/simpan-transaksi", (req, res) => {
