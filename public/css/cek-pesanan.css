@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: var(--font-kemco);
@@ -11,8 +10,8 @@ body {
   margin: 30px auto;
   background-color: var(--biru2);
   padding: 20px;
-  border: 5px double var(--kuning);
   border-radius: 10px;
+  border: 1px solid var(--putih);
 }
 
 .tabs {
@@ -94,7 +93,6 @@ body {
   border-bottom: none;
 }
 
-/* Tombol Detail */
 .detail {
   padding: 6px 12px;
   background-color: var(--kuning);
@@ -105,13 +103,11 @@ body {
   text-align: center;
   display: inline-block;
   border: none;
+  text-decoration: none;
 }
 
-.detail:hover {
-  background-color: #cddb2f;
-}
 
-/* Footer */
+
 footer {
   margin-top: 20px;
   text-align: center;

@@ -9,82 +9,91 @@
 </head>
 <body>
 
-<div class="tabs">
-  <input type="radio" id="tab-saldo" name="tab">
-  <input type="radio" id="tab-pesanan" name="tab" checked>
+<div class="container">
+  <div class="tabs">
+    <input type="radio" id="tab-saldo" name="tab">
+    <input type="radio" id="tab-pesanan" name="tab" checked>
 
-  <div class="tab-labels">
-    <label for="tab-saldo">Riwayat Penggunaan Saldo</label>
-    <label for="tab-pesanan">Riwayat Pesanan</label>
-  </div>
-
-  <div class="tab-content">
-  
-    <div class="content content-pesanan">
-
-      <h3>Riwayat Transaksi</h3>
-      <div class="table">
-        <div class="row header">
-          <div>Tanggal</div>
-          <div>Nomor Invoice</div>
-          <div>No. Handphone</div>
-          <div>Product</div>
-          <div>Harga</div>
-          <div>Metode</div>
-          <div>Detail Transaksi</div>
-        </div>
-
-        <div class="row">
-          <div>16/03/2025 <br>08:43:02</div>
-          <div>INV--</div>
-          <div>08**</div>
-          <div>1x qty Call of Duty</div>
-          <div>Rp17.320</div>
-          <div>OVO</div>
-          <div><span class="detail clickable" onclick="location.href='/detail/detail.html';">Detail</span></div>
-        </div>
-
-        <div class="row">
-          <div>16/03/2025 <br>20:01:32</div>
-          <div>INV--</div>
-          <div>08**</div>
-          <div>1x qty Mobile Legends</div>
-          <div>Rp43.460</div>
-          <div>OVO</div>
-          <div><span class="detail clickable" onclick="location.href='/detail/detail.html';">Detail</span></div>
-        </div>
-      </div>
+    <div class="tab-labels">
+      <label for="tab-saldo">Riwayat Penggunaan Saldo</label>
+      <label for="tab-pesanan">Riwayat Pesanan</label>
     </div>
 
-    <div class="content content-saldo">
-      <h3>Riwayat Penggunaan Saldo</h3>
-      <div class="table">
-        <div class="row header">
-          <div>Tanggal</div>
-          <div>Deskripsi</div>
-          <div>Jumlah</div>
-          <div>Saldo Tersisa</div>
-          <div>Metode</div>
-        </div>
+    <div class="tab-content">
+    
+      <div class="content content-pesanan">
+        <h3>Riwayat Transaksi</h3>
+        <div class="table">
+          <div class="row header">
+            <div>Tanggal</div>
+            <div>Nomor Invoice</div>
+            <div>No. Handphone</div>
+            <div>Produk</div>
+            <div>Harga</div>
+            <div>Metode</div>
+            <div><a href="/pages/detail.html" class="detail">Detail</a></div>
+          </div>
 
-        <div class="row">
-          <div>17/03/2025 <br>10:15:00</div>
-          <div>Top Up Game Mobile Legends</div>
-          <div>-Rp500.00</div>
-          <div>Rp100.540</div>
-          <div>OVO</div>
-        </div>
+          <div class="row">
+            <div>16/03/2025 <br>08:43:02</div>
+            <div>INV--</div>
+            <div>08**</div>
+            <div>1x qty Call of Duty</div>
+            <div>Rp17.320</div>
+            <div>OVO</div>
+            <div></div>
+          </div>
 
-        <div class="row">
-          <div>17/03/2025 <br>09:00:00</div>
-          <div>Top Up Saldo</div>
-          <div>+Rp100.000</div>
-          <div>Rp144.000</div>
-          <div>DANA</div>
+          <div class="row">
+            <div>16/03/2025 <br>20:01:32</div>
+            <div>INV--</div>
+            <div>08**</div>
+            <div>1x qty Mobile Legends</div>
+            <div>Rp43.460</div>
+            <div>OVO</div>
+            <div></div>
+          </div>
         </div>
       </div>
+
+      <div class="content content-saldo">
+        <h3>Riwayat Penggunaan Saldo</h3>
+        <div class="table">
+          <div class="row header">
+            <div>Tanggal</div>
+            <div>Deskripsi</div>
+            <div>Jumlah</div>
+            <div>Saldo Tersisa</div>
+            <div>Metode</div>
+          </div>
+
+          <div class="row">
+            <div>17/03/2025 <br>10:15:00</div>
+            <div>Top Up Game Mobile Legends</div>
+            <div>-Rp500.00</div>
+            <div>Rp100.540</div>
+            <div>OVO</div>
+          </div>
+
+          <div class="row">
+            <div>17/03/2025 <br>09:00:00</div>
+            <div>Top Up Saldo</div>
+            <div>+Rp100.000</div>
+            <div>Rp144.000</div>
+            <div>DANA</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
+<footer>
+
+  <div class="footer-content">
+      <p>&copy; 2025 TopUpCenter. Semua hak dilindungi. | Bantuan: sixfusion@gmail.com</p>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -1,0 +1,123 @@
+body {
+  background-color: var(--hitam);
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-pixel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--hitam);
+  color: var(--putih);
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.not-found .kiri {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.not-found .kiri p:first-child {
+  font-size: 8rem;
+  font-weight: 900;
+  transform: rotate(-10deg);
+  margin: 0;
+}
+
+.not-found .kiri p:nth-child(2) {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--hijau1);
+  text-shadow: 1px 1px 20px var(--hijau1);
+  margin: 0;
+}
+
+.not-found .kiri p:nth-child(3) {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 500px;
+}
+
+.not-found .link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.not-found .link a {
+  text-decoration: none;
+  color: var(--hijau1);
+  background-color: transparent;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid var(--hijau1);
+  border-radius: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 15px var(--hijau1);
+}
+
+.not-found .link a:hover {
+  color: var(--hitam);
+  background-color: var(--hijau1);
+  box-shadow: 0 0 20px var(--hijau1);
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.not-found .kanan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.not-found .kanan i {
+  font-size: 150px;
+  color: var(--hijau1);
+  text-shadow: 1px 1px 20px var(--hijau1);
+}
+
+.not-found .kanan i:first-child {
+  transform: rotate(15deg);
+}
+
+.not-found .kanan i:last-child {
+  transform: rotate(-15deg);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .not-found {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .not-found .kanan {
+    flex-direction: column;
+  }
+
+  .not-found .kiri p:first-child {
+    font-size: 6rem;
+  }
+
+  .not-found .kanan i {
+    font-size: 100px;
+  }
+}

@@ -1,6 +1,6 @@
 # 📌 Project Notes
 
-## 🗂 Struktur Folder
+## 📁 Struktur Folder
 
 - `public/` → File statis (HTML, CSS, JS, images, videos)
 - `views/` → File HTML dinamis (jika pakai template engine)
@@ -14,7 +14,11 @@
 ### 🌐 Frontend
 
 - **Bootstrap Icons** → Untuk ikon SVG ringan
+
   - Instalasi: `npm install bootstrap-icons`
+
+- **marked js** → Untuk styling text seperti **Bold**
+  - Instalasi: `<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>`
 
 ### ⚙️ Backend
 
@@ -24,6 +28,10 @@
 ---
 
 ## 🔧 Tools Development
+
+- `VS Code`
+- `Postman`
+- `Git & GitHub`
 
 ## 👥 Author
 

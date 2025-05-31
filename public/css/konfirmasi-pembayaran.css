@@ -115,9 +115,6 @@
   cursor: pointer;
   transition: 0.5s ease;
 }
-#popUp a {
-  all: unset;
-}
 #popUp .cancel {
   border-radius: 5px;
   width: 10rem;
@@ -125,10 +122,10 @@
 #popUp .cancel:hover {
   background-color: var(--merah);
 }
-#popUp .pay {
+#popUp .payNow {
   border-radius: 5px;
   width: 10rem;
 }
-#popUp .pay:hover {
+#popUp .payNow:hover {
   background-color: var(--biru1);
 }
