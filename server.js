@@ -88,6 +88,13 @@ app.get("/login", (req, res) => {
 app.get("/dashboard-user", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "dashboard-user.html"));
 });
+app.get("/laporkan", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "laporkan.html"));
+});
+app.get("/syarat&ketentuan", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "syaratKetentuan.html"));
+});
+
 
 // Endpoint transaksi baru
 app.post("/simpan-transaksi", (req, res) => {
