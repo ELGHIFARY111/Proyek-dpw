@@ -1,0 +1,36 @@
+*{
+    font-family: "Pixelify Sans";
+}
+body {
+    margin: 0;
+    background-color: var(--biru2);
+    color: white;
+}
+
+header {
+    background-color: var(--biru1);
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 1.2rem;
+    border-bottom: 10px dashed var(--biru2);
+}
+footer {
+    margin-bottom: 40px;
+}
+main{
+    margin:35px;
+}
+.back-button {
+    background-color: #0000ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 40px;
+
+}
+.back-button:hover{
+    background-color: var(--biru1);
+}

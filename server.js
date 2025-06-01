@@ -43,9 +43,17 @@ app.get("/referal", (req, res) => {
 app.get("/saldo-dan-top-up", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "saldo-dan-top-up.html"));
 });
+
+app.get("/HALAMAN_UTAMA", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
+});
+
 app.get("/cek-pesanan", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
 });
+
+
+
 app.get("/select-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "select-game.html"));
 });
@@ -84,6 +92,23 @@ app.get("/login", (req, res) => {
 app.get("/dashboard-user", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "dashboard-user.html"));
 });
+app.get("/laporkan", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "laporkan.html"));
+});
+app.get("/syarat&ketentuan", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "syaratKetentuan.html"));
+});
+app.get("/kebijakanPrivasi", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "kebijakanPrivasi.html"));
+});
+app.get("/dashboard-admin", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "dashboard-admin.html"));
+});
+app.get("/testimonial", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "testimoni.html"));
+});
+
+
 
 app.get("/testi", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "testimoni.html"));
