@@ -14,16 +14,15 @@ function createElement(
 }
 
 const container = document.querySelector("main");
-fetch("/json/news.json")
+fetch("/api/news.json")
   .then((res) => res.json())
   .then((data) => {
-    const filtered = data.find(
-      (news) => news.judul === "TECHNOTAINMENT 2025 IS BACK!"
-    );
+    const newsId = window.location.pathname.split("/").pop();
+    const filtered = data.find((news) => news.id === newsId);
 
     if (!filtered) return;
 
-    document.title = `SixFussion | Top Up ${filtered.judul}`;
+    document.title = `SixFussion | News - ${filtered.judul}`;
     const parsedJudul = marked.parse(filtered.judul);
     const parsedDeskripsi = marked.parse(
       filtered.deskripsi.replace(/\n/g, "<br>")
