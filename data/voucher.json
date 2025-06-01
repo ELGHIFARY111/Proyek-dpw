@@ -1,5 +1,9 @@
 [
-  "SXF-9UZ1-FUSN",
+  {
+    "kode": "SXN-G4ME-2025",
+    "discount": 10,
+    "exp": "21-12-2025"
+  },
   "SXN-G4ME-2025",
   "6FN-RWDZ-BETA",
   "FUS-SX88-PLAY",

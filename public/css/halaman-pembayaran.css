@@ -73,6 +73,10 @@ section {
   gap: 1rem;
   border-radius: 15px;
 }
+.bungkus-waktu p:first-child {
+  text-shadow: 0 0 10px var(--biru3);
+  text-align: center;
+}
 .waktu {
   display: flex;
   gap: 0.8rem;

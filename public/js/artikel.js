@@ -1,40 +1,35 @@
-function createElement(tag, parent, options = {}) {
-  const el = document.createElement(tag);
-  if (options.text) el.textContent = options.text;
-  if (options.html) el.innerHTML = options.html;
-  if (options.className) el.className = options.className;
-  if (options.id) el.id = options.id;
-  if (options.src) el.src = options.src;
-  if (options.alt) el.alt = options.alt;
-  if (parent) parent.appendChild(el);
+function createElement(
+  tagName,
+  container,
+  content = "",
+  className = "",
+  id = ""
+) {
+  const el = document.createElement(tagName);
+  el.innerHTML = content;
+  if (className) el.className = className;
+  if (id) el.id = id;
+  container.appendChild(el);
   return el;
 }
-fetch("/json/artikel.json")
+
+const container = document.querySelector("main");
+fetch("/api/artikel.json")
   .then((res) => res.json())
   .then((data) => {
-    const container = document.getElementById("container");
-
-    data.artikel.forEach((artikel) => {
-      const artkl = createElement("section", container, {
-        className: "artikel-card",
-      });
-
-      createElement("img", artkl, {
-        src: artikel.gambar,
-        alt: "Gambar artikel",
-      });
-      createElement("div", artkl, {
-        className: "judul",
-        text: artikel.judul,
-      });
-      createElement("div", artkl, {
-        className: "deskripsi",
-        text: artikel.deskripsi,
-      });
-      createElement("div", artkl, {
-        className: "publish",
-        text: artikel.publikasi,
-      });
-    });
-  })
-  .catch((err) => console.error("Gagal load artikel:", err));
+    const filtered = data.find((a) => a.publikasi === "14 Mei 2025");
+    console.log(filtered);
+    createElement("p", container, filtered.publikasi);
+    const img1 = createElement("img", container);
+    img1.src = filtered.gambar1;
+    createElement("p", container, filtered.judul1);
+    createElement("p", container, filtered.deskripsi1);
+    const img2 = createElement("img", container);
+    img2.src = filtered.gambar2;
+    createElement("p", container, filtered.judul2);
+    createElement("p", container, filtered.deskripsi2);
+    const img3 = createElement("img", container);
+    img3.src = filtered.gambar3;
+    createElement("p", container, filtered.judul3);
+    createElement("p", container, filtered.deskripsi3);
+  });

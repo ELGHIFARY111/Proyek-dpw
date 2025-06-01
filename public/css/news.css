@@ -5,10 +5,10 @@
 }
 body {
   color: var(--putih);
-  background-color: var(--biru1);
+  background-color: var(--biru2);
 }
 main {
-  margin: 0 10rem;
+  margin: 3rem 10rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;

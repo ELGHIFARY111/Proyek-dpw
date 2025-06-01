@@ -1,3 +1,4 @@
+const { error } = require("console");
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
@@ -9,6 +10,7 @@ app.use(express.json());
 
 // Static files tanpa prefix
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/api", express.static(path.join(__dirname, "data")));
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 
 // Routing
@@ -18,21 +20,17 @@ app.get("/notfound", (req, res) => {
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "HALAMAN_UTAMA.html"));
 });
-app.get("/top-up", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "top-up.html"));
-});
-app.get("/payment", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "halaman-pembayaran.html"));
-});
 app.get("/list-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "list-game.html"));
 });
+
 app.get("/artikel-home", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
+});
+app.get("/artikel", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel.html"));
 });
-app.get("/news-home", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "news-home.html"));
-});
+
 app.get("/detail", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "detail.html"));
 });
@@ -70,9 +68,7 @@ app.get("/tangkap_blok", (req, res) => {
 app.get("/syaratDanKetentuan", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "syaratKetentuan.html"));
 });
-app.get("/news", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "news.html"));
-});
+
 app.get("/about-us", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "aboutUs.html"));
 });
@@ -89,15 +85,84 @@ app.get("/dashboard-user", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "dashboard-user.html"));
 });
 
+app.get("/testi", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "testimoni.html"));
+});
+app.get("/hubungi-kami", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "hubungi_kami.html"));
+});
+app.get("/halaman-form", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "halaman-form.html"));
+});
+app.get("/winrate", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "winrate.html"));
+});
+
+// ========================================================================
+
+// routing news
+app.get("/news-home", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "news-home.html"));
+});
+app.get("/news/:judulId", (req, res) => {
+  const judul = req.params.judulId;
+  const dataPath = path.join(__dirname, "data", "news.json");
+
+  fs.readFile(dataPath, "utf-8", (err, jsonData) => {
+    if (err)
+      return res.status(500).json({ error: `Gagal membaca data ${dataPath}` });
+
+    const data = JSON.parse(jsonData);
+    const found = data.find((j) => j.id === judul);
+    if (!found) {
+      return res.status(404).json({ error: "Data news tidak di temukan" });
+    }
+    res.sendFile(path.join(__dirname, "pages", "news.html"));
+  });
+});
+
+// routing list game => top-up
+app.get("/top-up/:idGame", (req, res) => {
+  const game = req.params.idGame;
+  const dataPath = path.join(__dirname, "data", "game.json");
+  console.log(dataPath);
+
+  fs.readFile(dataPath, "utf-8", (err, jsonData) => {
+    if (err)
+      return res.status(500).json({ error: `Gagal membaca data ${dataPath}` });
+
+    const data = JSON.parse(jsonData);
+    const found = data.find((g) => g.id === game);
+    if (!found) {
+      return res.status(404).json({ error: "Data game tidak di temukan" });
+    }
+    res.sendFile(path.join(__dirname, "pages", "top-up.html"));
+  });
+});
+
+// routing topup => pay
+app.get("/payment/:invoice", (req, res) => {
+  const invoice = req.params.invoice;
+  const dataPath = path.join(__dirname, "data", "transaksi.json");
+
+  fs.readFile(dataPath, "utf-8", (err, jsonData) => {
+    if (err) return res.status(500).json({ error: "Gagal membaca data Game" });
+
+    const data = JSON.parse(jsonData);
+    const found = data.find((x) => x.invoice === invoice);
+    if (!found)
+      return res.status(404).json({ error: "Invoice tidak ditemukan" });
+
+    res.sendFile(path.join(__dirname, "pages", "halaman-pembayaran.html"));
+  });
+});
+
 // Endpoint transaksi baru
 app.post("/simpan-transaksi", (req, res) => {
   const newData = req.body;
   console.log("Transaksi baru:", newData);
 
-  const folderPath = path.join(__dirname, "public/api");
-  if (!fs.existsSync(folderPath)) {
-    fs.mkdirSync(folderPath, { recursive: true });
-  }
+  const folderPath = path.join(__dirname, "data");
 
   const filePath = path.join(folderPath, "transaksi.json");
   fs.readFile(filePath, "utf8", (err, data) => {
