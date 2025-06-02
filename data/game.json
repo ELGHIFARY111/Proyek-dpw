@@ -2,7 +2,7 @@
   {
     "id": "mlbb",
     "nama": "Mobile Legends",
-    "dev": "Moonton",
+    "genre": "Fantasy",
     "deskripsi": "Mobile Legends: Bang Bang adalah game MOBA 5v5 populer buatan Moonton. Dalam game ini, dua tim saling bertarung untuk menghancurkan base lawan, sambil memilih hero dengan peran unik seperti Tank, Mage, Assassin, Marksman, dan Support. Kerja sama tim dan strategi jadi kunci kemenangan. Game ini menghadirkan peta klasik dengan tiga jalur (Top, Mid, Bottom) dan jungle penuh buff. Mode permainan bervariasi seperti Ranked dan Classic, serta grafis yang memukau membuat pengalaman bermain semakin seru. Dengan komunitas besar, update rutin, dan turnamen eSports aktif, Mobile Legends terus jadi favorit pemain MOBA di seluruh dunia.",
     "tutor": [
       "Masukkan ID dan Server (Zone ID) Mobile Legends kamu",
