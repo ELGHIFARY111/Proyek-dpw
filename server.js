@@ -50,9 +50,9 @@ app.get("/mengetik_cepat", (req, res) => {
     path.join(__dirname, "game", "game mengetik cepat", "index.html")
   );
 });
-app.get("/game_reacttion_time", (req, res) => {
+app.get("/game_reaction", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "game", "game reaction time", "index.html")
+    path.join(__dirname, "game", "game reaction", "index.html")
   );
 });
 app.get("/tangkap_blok", (req, res) => {

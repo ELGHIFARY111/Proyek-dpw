@@ -128,6 +128,7 @@
   {
     "id": "ab",
     "nama": "Arena Breakout",
+    "genre": "Survival",
     "dev": "Tencent Games",
     "deskripsi": "Arena Breakout adalah game FPS battle royale yang menawarkan pengalaman bertempur yang intens. Pemain dapat bertempur secara solo atau tim dalam peta besar dengan berbagai senjata dan perlengkapan. Game ini mengedepankan grafis berkualitas tinggi dan kontrol responsif, serta berbagai mode permainan yang menantang dan kompetitif.",
     "tutor": [
@@ -189,6 +190,7 @@
   {
     "id": "bs",
     "nama": "Brawl Stars",
+    "genre": "Fantasy",
     "dev": "Supercell",
     "deskripsi": "Brawl Stars adalah game mobile action multiplayer yang dikembangkan oleh Supercell. Pemain bertarung dalam berbagai mode game cepat dan seru, menggunakan karakter unik yang disebut Brawlers dengan kemampuan khusus masing-masing. Game ini menawarkan gameplay yang menyenangkan dengan grafis kartun yang cerah dan komunitas pemain yang besar.",
     "tutor": [
@@ -225,6 +227,7 @@
   {
     "id": "codm",
     "nama": "Call of Duty: Mobile",
+    "genre": "Survival",
     "dev": "Garena",
     "deskripsi": "Call of Duty adalah franchise game FPS yang sangat populer, menawarkan mode multiplayer dan campaign yang intens. Pada versi mobile-nya, pemain dapat bertempur dalam berbagai mode seperti Team Deathmatch, Battle Royale, dan more dengan grafis yang impresif serta kontrol yang dioptimalkan untuk perangkat mobile.",
     "tutor": [
@@ -301,6 +304,7 @@
   {
     "id": "cr",
     "nama": "Clash Royale",
+    "genre": "Strategy",
     "dev": "Supercell",
     "deskripsi": "Clash Royale adalah game strategi real-time yang menggabungkan elemen dari tower defense, card collecting, dan battle arena. Pemain mengumpulkan kartu berbagai pasukan, mantra dan bangunan, dan bertempur melawan pemain lain dalam pertandingan 1v1 atau 2v2 untuk menghancurkan menara lawan.",
     "tutor": [
@@ -373,6 +377,7 @@
   {
     "id": "coc",
     "nama": "Clash of Clans",
+    "genre": "Strategy",
     "dev": "Supercell",
     "deskripsi": "Clash of Clans adalah game strategi dan manajemen desa, dimana pemain membangun desa, melatih pasukan, dan menyerang desa pemain lain. Game ini populer karena gameplaynya yang mendalam dan komunitas yang aktif.",
     "tutor": [
@@ -435,6 +440,7 @@
   {
     "id": "fm2",
     "nama": "Football Master 2",
+    "genre": "Sport",
     "dev": "GALA Sports",
     "deskripsi": "Football Master 2 adalah game simulasi manajemen sepak bola yang memungkinkan pemain membangun dan mengelola tim impian mereka. Game ini menawarkan mode kompetitif, transfer pemain, serta tata letak dan strategi permainan yang realistis.",
     "tutor": [
@@ -507,6 +513,7 @@
     "id": "ff",
     "nama": "Free Fire",
     "dev": "Garena",
+    "genre": "Survival",
     "deskripsi": "Free Fire adalah game battle royale yang dikembangkan oleh Garena. Dalam game ini, 50 pemain diterjunkan ke sebuah pulau terpencil untuk bertarung dan menjadi yang terakhir bertahan hidup. Pemain bisa memilih titik pendaratan mereka sendiri, mengumpulkan senjata dan peralatan, serta menghadapi lawan di medan tempur yang terus menyusut. Dengan durasi pertandingan yang relatif singkat, sekitar 10 menit, Free Fire menawarkan aksi cepat dan menegangkan. Selain mode solo, pemain juga bisa bermain dalam duo atau squad, yang membuat permainan menjadi lebih seru dan strategis. Game ini memiliki berbagai karakter unik dengan kemampuan spesial masing-masing, serta koleksi skin senjata, bundle pakaian, dan kendaraan yang dapat dikustomisasi. Garena Free Fire juga secara rutin mengadakan event, update konten, dan kolaborasi dengan franchise terkenal, yang menjaga komunitas tetap aktif dan antusias. Game ini sangat populer di kalangan pemain mobile, khususnya di Asia Tenggara dan Amerika Latin, karena optimisasi yang baik untuk perangkat dengan spesifikasi rendah. Jika kamu mencari game battle royale dengan gameplay cepat dan penuh aksi, Free Fire adalah pilihan tepat.",
     "tutor": [
       "Masukkan User ID Free Fire kamu",
@@ -603,6 +610,7 @@
   {
     "id": "gu",
     "nama": "Garena Undawn",
+    "genre": "Survival",
     "dev": "Garena",
     "deskripsi": "Garena Undown adalah platform hiburan digital yang menyediakan layanan seperti game, streaming, dan layanan komunitas yang terintegrasi. Platform ini memberikan pengalaman menarik untuk para gamer dengan berbagai konten eksklusif dan acara yang interaktif.",
     "tutor": [
@@ -705,6 +713,7 @@
   {
     "id": "genshin",
     "nama": "Genshin Impact",
+    "genre": "Fantasy",
     "dev": "miHoYo",
     "deskripsi": "Genshin Impact adalah game action RPG open-world dengan grafis memukau yang menawarkan eksplorasi dunia fantastis dan pertarungan menggunakan elemen elemental. Pemain dapat mengumpulkan karakter berbeda dengan kemampuan unik dan menikmati cerita menarik serta event rutin.",
     "tutor": [
@@ -785,6 +794,7 @@
   {
     "id": "hayday",
     "nama": "Hay Day",
+    "genre": "Fantasy",
     "dev": "Supercell",
     "deskripsi": "Hay Day adalah game simulasi pertanian yang dikembangkan oleh Supercell, di mana pemain dapat menanam tanaman, memelihara hewan, dan mengelola peternakan mereka sendiri. Game ini menekankan aspek sosial dengan fitur bertukar barang antar pemain.",
     "tutor": [
@@ -852,6 +862,7 @@
   {
     "id": "lol",
     "nama": "League of Legends: Wild Rift",
+    "genre": "Fantasy",
     "dev": "Riot Games",
     "deskripsi": "League of Legends adalah game MOBA legendaris yang dikembangkan oleh Riot Games. Pemain bertarung dalam tim 5v5 dengan tujuan menghancurkan Nexus lawan menggunakan strategi dan keterampilan karakter dengan kemampuan berbeda.",
     "tutor": [
@@ -913,6 +924,7 @@
   {
     "id": "lm",
     "nama": "Lords Mobile",
+    "genre": "Strategy",
     "dev": "IGG",
     "deskripsi": "Lords Mobile adalah game strategi real-time yang menggabungkan pembangunan kerajaan, pertempuran PvP, dan elemen RPG. Pemain membangun kerajaan, melatih pasukan, dan bertarung untuk menguasai dunia game secara global.",
     "tutor": [
@@ -989,6 +1001,7 @@
   {
     "id": "ms",
     "nama": "Marvel Snap",
+    "genre": "Fantasy",
     "dev": "Second Dinner",
     "deskripsi": "Marvel Snap adalah game kartu digital cepat dengan karakter-karakter Marvel yang ikonik. Pemain bertarung dalam pertandingan singkat menggunakan deck yang terdiri dari karakter favorit dan strategi cerdas.",
     "tutor": [
@@ -1019,6 +1032,7 @@
   {
     "id": "pb",
     "nama": "Point Blank",
+    "genre": "Survival",
     "dev": "Zepetto",
     "deskripsi": "Point Blank adalah game FPS online yang sangat populer di Indonesia dan Asia Tenggara. Game ini menawarkan berbagai mode permainan dan senjata unik dengan gameplay cepat dan kompetitif.",
     "tutor": [
@@ -1106,6 +1120,7 @@
   {
     "id": "pubgm",
     "nama": "PUBG Mobile",
+    "genre": "Survival",
     "dev": "Tencent Games",
     "deskripsi": "PUBG Mobile adalah game battle royale yang sangat populer, di mana 100 pemain terjun ke sebuah pulau dan bertarung dengan berbagai senjata untuk bertahan hidup hingga akhir. Game menawarkan mode solo, duo, dan squad dengan grafis realistis dan gameplay intens.",
     "tutor": [
@@ -1225,6 +1240,7 @@
   {
     "id": "rx",
     "nama": "RAGNAROK X: NEXT GENERATION",
+    "genre": "Fantasy",
     "dev": "PIPO (HK) Limited",
     "deskripsi": "Ragnarok X adalah game MMORPG mobile yang diadaptasi dari Ragnarok Online klasik. Pemain dapat memilih berbagai job, menjelajahi dunia fantasi yang luas, serta berinteraksi dan bertarung bersama pemain lain.",
     "tutor": [
@@ -1312,6 +1328,7 @@
   {
     "id": "rok",
     "nama": "Rise of Kingdoms",
+    "genre": "Strategy",
     "dev": "Lilith Games",
     "deskripsi": "Rise of Kingdoms adalah game strategi real-time yang memungkinkan pemain membangun peradaban, menjelajah dunia, serta berperang dengan pemain lain atau bergabung dalam aliansi.",
     "tutor": [
@@ -1342,6 +1359,7 @@
   {
     "id": "ss",
     "nama": "Saint Seiya: Awakening",
+    "genre": "Fantasy",
     "dev": "Bandai Namco",
     "deskripsi": "Saint Seiya adalah game action RPG yang diadaptasi dari anime populer dengan karakter-karakter legendaris yang berjuang dalam pertarungan epik. Game ini menampilkan grafis 3D dan skill unik untuk setiap karakter.",
     "tutor": [
@@ -1406,6 +1424,7 @@
   {
     "id": "sm",
     "nama": "Sauge Man",
+    "genre": "Fantasy",
     "dev": "Sauge Games",
     "deskripsi": "Sauge Man adalah game action adventure dengan gameplay yang seru dan grafis menarik. Pemain menjalankan misi untuk melawan musuh dan menyelesaikan tantangan dalam dunia yang terbuka dan penuh aksi.",
     "tutor": [
@@ -1477,6 +1496,7 @@
   {
     "id": "seal",
     "nama": "Seal Online : Blade of Desnity",
+    "genre": "Fantasy",
     "dev": "Grigon Entertainment, YNK Games",
     "deskripsi": "Seal M adalah game MMORPG fantasy dengan desain imut dan gameplay yang menyenangkan. Pemain dapat menjelajah dunia luas dan bertarung melawan monster serta pemain lain dalam berbagai mode.",
     "tutor": [
@@ -1524,6 +1544,7 @@
   {
     "id": "sof",
     "nama": "State of Survival",
+    "genre": "Survival",
     "dev": "FunPlus International AG",
     "deskripsi": "State of Survival adalah game strategi dan survival dengan tema dunia pasca-apokaliptik. Pemain harus membangun markas, bertahan melawan zombie, dan bekerjasama dengan pemain lain dalam aliansi.",
     "tutor": [
@@ -1600,6 +1621,7 @@
   {
     "id": "stumble",
     "nama": "Stumble Guys",
+    "genre": "Survival",
     "dev": "Kitka Games",
     "deskripsi": "Stumble Guys adalah game battle royale party dengan gameplay yang lucu dan ringan. Pemain berlomba melewati rintangan aneh dan lucu untuk menjadi yang terakhir bertahan dalam pertandingan multipemain yang seru.",
     "tutor": [
@@ -1662,6 +1684,7 @@
   {
     "id": "valo",
     "nama": "Valorant",
+    "genre": "Survival",
     "dev": "Riot Games",
     "deskripsi": "Valorant adalah game FPS taktis 5v5 yang menggabungkan kemampuan agen unik dengan gameplay berbasis tembakan. Pemain bekerja sama strategis untuk mengalahkan tim lawan dalam berbagai mode kompetitif dan non-kompetitif.",
     "tutor": [
