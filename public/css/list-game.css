@@ -99,3 +99,16 @@ body {
   font-size: 12px;
   transition: color 0.1s ease;
 }
+label{
+  font-size: 30px;
+  margin-top: 15px;
+  margin-left: 30px;
+  color: white;
+}
+select{
+  margin-top: 15px;
+  font-size: 30px;
+  margin-left: 30px;
+  border-radius: 20px;
+  width: 260px;
+}

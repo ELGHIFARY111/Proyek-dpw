@@ -126,6 +126,14 @@
       min-width: 80px;
       text-align: center;
     }
+    #Livechat{
+        position: absolute;
+        top: 220px;
+        left:10px;
+        font-size: 20px;
+        color:white;
+        background-color: #28248c
+    }
   </style>
 </head>
 <body>
@@ -144,8 +152,24 @@
   </div>
 
   <div id="time">30</div>
-
+  <button id="Livechat">Live-chat</button>
+  <div id="popup" style="display:none; position:absolute;left: 70%; top:10px; width:610px; height:100vh; right:0px;">
+      <iframe src="/live-chat" style="width:100%; height:100%; border:none; right:0px"></iframe>
+  </div>
   <script>
+    const openBtn = document.getElementById('Livechat');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('close-popup');
+    var aktif=false;
+    openBtn.addEventListener('click', () => {
+        if (aktif == false){
+            popup.style.display = 'block';
+            aktif=true;
+        }else{
+            popup.style.display = 'none';
+            aktif=false;
+        }
+    });
     const wordEl = document.getElementById('word');
     const input = document.getElementById('text-input');
     const scoreEl = document.getElementById('score');

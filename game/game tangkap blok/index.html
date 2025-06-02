@@ -94,6 +94,14 @@
     background: #e60044;
     transform: scale(1.05);
   }
+  #Livechat{
+      position: absolute;
+      top: 220px;
+      left:10px;
+      font-size: 20px;
+      color:white;
+      background-color: #28248c
+  }
 </style>
 </head>
 <body>
@@ -108,164 +116,180 @@
     <div>GAME OVER</div>
     <button id="restartBtn">Restart</button>
   </div>
-
-<script>
-  const game = document.getElementById('game');
-  const player = document.getElementById('player');
-  const scoreboard = document.getElementById('scoreboard');
-  const missDisplay = document.getElementById('missDisplay');
-  const gameOverScreen = document.getElementById('gameOverScreen');
-  const restartBtn = document.getElementById('restartBtn');
-
-  const gameWidth = game.clientWidth;
-  const gameHeight = game.clientHeight;
-  const playerHeight = player.clientHeight;
-  const playerWidth = player.clientWidth;
-
-  let playerTop = 180;
-  let moveUp = false;
-  let moveDown = false;
-
-  const blocks = [];
-  const numBlocks = 3;
-  const maxMiss = 3;
-
-  let score = 0;
-  let missCount = 0;
-  let gameOver = false;
-
-  const baseSpeed = 4;
-
-  // Initialize blocks
-  for(let i = 0; i < numBlocks; i++) {
-    const block = document.createElement('div');
-    block.classList.add('block');
-    block.style.left = gameWidth + i * 250 + 'px';
-    block.style.top = 50 + Math.random() * 250 + 'px';
-    game.appendChild(block);
-    blocks.push({
-      el: block,
-      x: gameWidth + i * 250,
-      y: parseFloat(block.style.top),
-      speed: baseSpeed + Math.random() * 2,
-      height: 100,
-      width: 40,
-      active: true,
-    });
-  }
-
-  function updatePlayerPosition() {
-    if (moveUp) {
-      playerTop = Math.max(0, playerTop - 6);
-    }
-    if (moveDown) {
-      playerTop = Math.min(gameHeight - playerHeight, playerTop + 6);
-    }
-    player.style.top = playerTop + 'px';
-  }
-
-  function updateBlocks() {
-    blocks.forEach((block) => {
-      if (!block.active || gameOver) return;
-
-      block.x -= block.speed;
-
-      // Check if block moved off screen (missed)
-      if (block.x < -block.width) {
-        missCount++;
-        missDisplay.textContent = `Misses: ${missCount} / ${maxMiss}`;
-        if (missCount >= maxMiss) {
-          endGame();
-          return;
+  <button id="Livechat">Live-chat</button>
+  <div id="popup" style="display:none; position:absolute;left: 70%; top:10px; width:610px; height:100vh; right:0px;">
+      <iframe src="/live-chat" style="width:100%; height:100%; border:none; right:0px"></iframe>
+  </div>
+  <script>
+    const openBtn = document.getElementById('Livechat');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('close-popup');
+    var aktif=false;
+    openBtn.addEventListener('click', () => {
+        if (aktif == false){
+            popup.style.display = 'block';
+            aktif=true;
+        }else{
+            popup.style.display = 'none';
+            aktif=false;
         }
-        resetBlock(block);
-      }
-
-      block.el.style.left = block.x + 'px';
-      block.el.style.top = block.y + 'px';
-
-      if (checkCollision(playerTop, 50, playerWidth, playerHeight, block)) {
-        // Player touched block => increase score, hide block temporarily
-        score++;
-        scoreboard.textContent = 'Score: ' + score;
-        // Do NOT reset missCount or update missDisplay here (per user request)
-        block.active = false;
-        block.el.style.opacity = 0;
-        // Respawn block after delay
-        setTimeout(() => {
-          resetBlock(block);
-          block.active = true;
-          block.el.style.opacity = 1;
-        }, 1000);
-      }
     });
-  }
+    const game = document.getElementById('game');
+    const player = document.getElementById('player');
+    const scoreboard = document.getElementById('scoreboard');
+    const missDisplay = document.getElementById('missDisplay');
+    const gameOverScreen = document.getElementById('gameOverScreen');
+    const restartBtn = document.getElementById('restartBtn');
 
-  function resetBlock(block) {
-    block.x = gameWidth + Math.random() * 100;
-    block.y = 50 + Math.random() * (gameHeight - block.height - 50);
-    block.speed = baseSpeed + Math.random() * 2;
-  }
+    const gameWidth = game.clientWidth;
+    const gameHeight = game.clientHeight;
+    const playerHeight = player.clientHeight;
+    const playerWidth = player.clientWidth;
 
-  function checkCollision(py, px, pw, ph, block) {
-    const bx = block.x;
-    const by = block.y;
-    const bw = block.width;
-    const bh = block.height;
-    return px < bx + bw &&
-           px + pw > bx &&
-           py < by + bh &&
-           py + ph > by;
-  }
+    let playerTop = 180;
+    let moveUp = false;
+    let moveDown = false;
 
-  function gameLoop() {
-    if (gameOver) return;
-    updatePlayerPosition();
-    updateBlocks();
-    requestAnimationFrame(gameLoop);
-  }
+    const blocks = [];
+    const numBlocks = 3;
+    const maxMiss = 3;
 
-  function endGame() {
-    gameOver = true;
-    gameOverScreen.style.display = 'flex';
-  }
+    let score = 0;
+    let missCount = 0;
+    let gameOver = false;
 
-  restartBtn.addEventListener('click', () => {
-    // Reset all game variables
-    playerTop = 180;
-    score = 0;
-    missCount = 0;
-    scoreboard.textContent = 'Score: 0';
-    missDisplay.textContent = `Misses: 0 / ${maxMiss}`;
-    gameOverScreen.style.display = 'none';
+    const baseSpeed = 4;
 
-    // Reset blocks
-    blocks.forEach((block, i) => {
-      block.x = gameWidth + i * 250;
+    // Initialize blocks
+    for(let i = 0; i < numBlocks; i++) {
+      const block = document.createElement('div');
+      block.classList.add('block');
+      block.style.left = gameWidth + i * 250 + 'px';
+      block.style.top = 50 + Math.random() * 250 + 'px';
+      game.appendChild(block);
+      blocks.push({
+        el: block,
+        x: gameWidth + i * 250,
+        y: parseFloat(block.style.top),
+        speed: baseSpeed + Math.random() * 2,
+        height: 100,
+        width: 40,
+        active: true,
+      });
+    }
+
+    function updatePlayerPosition() {
+      if (moveUp) {
+        playerTop = Math.max(0, playerTop - 6);
+      }
+      if (moveDown) {
+        playerTop = Math.min(gameHeight - playerHeight, playerTop + 6);
+      }
+      player.style.top = playerTop + 'px';
+    }
+
+    function updateBlocks() {
+      blocks.forEach((block) => {
+        if (!block.active || gameOver) return;
+
+        block.x -= block.speed;
+
+        // Check if block moved off screen (missed)
+        if (block.x < -block.width) {
+          missCount++;
+          missDisplay.textContent = `Misses: ${missCount} / ${maxMiss}`;
+          if (missCount >= maxMiss) {
+            endGame();
+            return;
+          }
+          resetBlock(block);
+        }
+
+        block.el.style.left = block.x + 'px';
+        block.el.style.top = block.y + 'px';
+
+        if (checkCollision(playerTop, 50, playerWidth, playerHeight, block)) {
+          // Player touched block => increase score, hide block temporarily
+          score++;
+          scoreboard.textContent = 'Score: ' + score;
+          // Do NOT reset missCount or update missDisplay here (per user request)
+          block.active = false;
+          block.el.style.opacity = 0;
+          // Respawn block after delay
+          setTimeout(() => {
+            resetBlock(block);
+            block.active = true;
+            block.el.style.opacity = 1;
+          }, 1000);
+        }
+      });
+    }
+
+    function resetBlock(block) {
+      block.x = gameWidth + Math.random() * 100;
       block.y = 50 + Math.random() * (gameHeight - block.height - 50);
       block.speed = baseSpeed + Math.random() * 2;
-      block.el.style.top = block.y + 'px';
-      block.el.style.left = block.x + 'px';
-      block.active = true;
-      block.el.style.opacity = 1;
+    }
+
+    function checkCollision(py, px, pw, ph, block) {
+      const bx = block.x;
+      const by = block.y;
+      const bw = block.width;
+      const bh = block.height;
+      return px < bx + bw &&
+            px + pw > bx &&
+            py < by + bh &&
+            py + ph > by;
+    }
+
+    function gameLoop() {
+      if (gameOver) return;
+      updatePlayerPosition();
+      updateBlocks();
+      requestAnimationFrame(gameLoop);
+    }
+
+    function endGame() {
+      gameOver = true;
+      gameOverScreen.style.display = 'flex';
+    }
+
+    restartBtn.addEventListener('click', () => {
+      // Reset all game variables
+      playerTop = 180;
+      score = 0;
+      missCount = 0;
+      scoreboard.textContent = 'Score: 0';
+      missDisplay.textContent = `Misses: 0 / ${maxMiss}`;
+      gameOverScreen.style.display = 'none';
+
+      // Reset blocks
+      blocks.forEach((block, i) => {
+        block.x = gameWidth + i * 250;
+        block.y = 50 + Math.random() * (gameHeight - block.height - 50);
+        block.speed = baseSpeed + Math.random() * 2;
+        block.el.style.top = block.y + 'px';
+        block.el.style.left = block.x + 'px';
+        block.active = true;
+        block.el.style.opacity = 1;
+      });
+
+      gameOver = false;
+      requestAnimationFrame(gameLoop);
     });
 
-    gameOver = false;
-    requestAnimationFrame(gameLoop);
-  });
+    window.addEventListener('keydown', (e) => {
+      if (e.code === 'ArrowUp' || e.code === 'KeyW') moveUp = true;
+      if (e.code === 'ArrowDown' || e.code === 'KeyS') moveDown = true;
+    });
 
-  window.addEventListener('keydown', (e) => {
-    if (e.code === 'ArrowUp' || e.code === 'KeyW') moveUp = true;
-    if (e.code === 'ArrowDown' || e.code === 'KeyS') moveDown = true;
-  });
+    window.addEventListener('keyup', (e) => {
+      if (e.code === 'ArrowUp' || e.code === 'KeyW') moveUp = false;
+      if (e.code === 'ArrowDown' || e.code === 'KeyS') moveDown = false;
+    });
 
-  window.addEventListener('keyup', (e) => {
-    if (e.code === 'ArrowUp' || e.code === 'KeyW') moveUp = false;
-    if (e.code === 'ArrowDown' || e.code === 'KeyS') moveDown = false;
-  });
-
-  // Start game
-  gameLoop();
-</script>
+    // Start game
+    gameLoop();
+  </script>
 </body>
 </html>
