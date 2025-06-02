@@ -121,7 +121,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/mobile-legend.png",
       "background": "/assets/images/list-game/mobile-legend.png",
-      "petunjuk": "/assets/images/list-game/mobile-legend.png"
+      "petunjuk": "/assets/images/petunjuk/mlbb.png"
     }
   },
   {
@@ -182,7 +182,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/arena-breakout.jpg",
       "background": "/assets/images/list-game/arena-breakout.jpg",
-      "petunjuk": "/assets/images/list-game/arena-breakout.jpg"
+      "petunjuk": "/assets/images/petunjuk/ab.jpg"
     }
   },
   {
@@ -218,7 +218,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/brawl-stars.jpg",
       "background": "/assets/images/list-game/brawl-stars.jpg",
-      "petunjuk": "/assets/images/list-game/brawl-stars.jpg"
+      "petunjuk": "/assets/images/petunjuk/bs.jpg"
     }
   },
   {
@@ -294,7 +294,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/call-of-duty.jpeg",
       "background": "/assets/images/list-game/call-of-duty.jpeg",
-      "petunjuk": "/assets/images/list-game/call-of-duty.jpeg"
+      "petunjuk": "/assets/images/petunjuk/cod.jpg"
     }
   },
   {
@@ -366,7 +366,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/clash-royale.jpg",
       "background": "/assets/images/list-game/clash-royale.jpg",
-      "petunjuk": "/assets/images/list-game/clash-royale.jpg"
+      "petunjuk": "/assets/images/petunjuk/cr.jpg"
     }
   },
   {
@@ -428,7 +428,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/coc.png",
       "background": "/assets/images/list-game/coc.png",
-      "petunjuk": "/assets/images/list-game/coc.png"
+      "petunjuk": "/assets/images/petunjuk/coc.jpg"
     }
   },
   {
@@ -499,7 +499,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/football-master-2.jpg",
       "background": "/assets/images/list-game/football-master-2.jpg",
-      "petunjuk": "/assets/images/list-game/football-master-2.jpg"
+      "petunjuk": "/assets/images/petunjuk/fm2.png"
     }
   },
   {
@@ -596,7 +596,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/free-fire.png",
       "background": "/assets/images/list-game/free-fire.png",
-      "petunjuk": "/assets/images/list-game/free-fire.png"
+      "petunjuk": "/assets/images/petunjuk/ff.jpg"
     }
   },
   {
@@ -698,7 +698,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/garena-undown.png",
       "background": "/assets/images/list-game/garena-undown.png",
-      "petunjuk": "/assets/images/list-game/garena-undown.png"
+      "petunjuk": "/assets/images/petunjuk/undown.jpg"
     }
   },
   {
@@ -778,7 +778,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/genshin.jpg",
       "background": "/assets/images/list-game/genshin.jpg",
-      "petunjuk": "/assets/images/list-game/genshin.jpg"
+      "petunjuk": "/assets/images/petunjuk/genshin.jpg"
     }
   },
   {
@@ -845,7 +845,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/hay-day.jpg",
       "background": "/assets/images/list-game/hay-day.jpg",
-      "petunjuk": "/assets/images/list-game/hay-day.jpg"
+      "petunjuk": "/assets/images/petunjuk/hayday.jpg"
     }
   },
   {
@@ -906,7 +906,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/league-of-legends.png",
       "background": "/assets/images/list-game/league-of-legends.png",
-      "petunjuk": "/assets/images/list-game/league-of-legends.png"
+      "petunjuk": "/assets/images/petunjuk/lol.jpg"
     }
   },
   {
@@ -982,7 +982,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/lords-mobile.png",
       "background": "/assets/images/list-game/lords-mobile.png",
-      "petunjuk": "/assets/images/list-game/lords-mobile.png"
+      "petunjuk": "/assets/images/petunjuk/lm.jpg"
     }
   },
   {
@@ -1012,7 +1012,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/marvel-snap.jpg",
       "background": "/assets/images/list-game/marvel-snap.jpg",
-      "petunjuk": "/assets/images/list-game/marvel-snap.jpg"
+      "petunjuk": "/assets/images/petunjuk/ms.jpg"
     }
   },
   {
@@ -1099,7 +1099,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/point-blank.jpg",
       "background": "/assets/images/list-game/point-blank.jpg",
-      "petunjuk": "/assets/images/list-game/point-blank.jpg"
+      "petunjuk": "/assets/images/petunjuk/pb.png"
     }
   },
   {
@@ -1218,7 +1218,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/pubg.jpg",
       "background": "/assets/images/list-game/pubg.jpg",
-      "petunjuk": "/assets/images/list-game/pubg.jpg"
+      "petunjuk": "/assets/images/petunjuk/pubgm.png"
     }
   },
   {
@@ -1305,7 +1305,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/ragnarok-x.jpg",
       "background": "/assets/images/list-game/ragnarok-x.jpg",
-      "petunjuk": "/assets/images/list-game/ragnarok-x.jpg"
+      "petunjuk": "/assets/images/petunjuk/rx.jpg"
     }
   },
   {
@@ -1335,7 +1335,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/rise-of-kingdom.jpg",
       "background": "/assets/images/list-game/rise-of-kingdom.jpg",
-      "petunjuk": "/assets/images/list-game/rise-of-kingdom.jpg"
+      "petunjuk": "/assets/images/petunjuk/rok.jpg"
     }
   },
   {
@@ -1399,7 +1399,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/saint-seiya.jpg",
       "background": "/assets/images/list-game/saint-seiya.jpg",
-      "petunjuk": "/assets/images/list-game/saint-seiya.jpg"
+      "petunjuk": "/assets/images/petunjuk/ss.png"
     }
   },
   {
@@ -1470,7 +1470,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/sauge-man.jpeg",
       "background": "/assets/images/list-game/sauge-man.jpeg",
-      "petunjuk": "/assets/images/list-game/sauge-man.jpeg"
+      "petunjuk": "/assets/images/petunjuk/sm.jpg"
     }
   },
   {
@@ -1517,7 +1517,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/seal-m.png",
       "background": "/assets/images/list-game/seal-m.png",
-      "petunjuk": "/assets/images/list-game/seal-m.png"
+      "petunjuk": "/assets/images/petunjuk/so.jpg"
     }
   },
   {
@@ -1593,7 +1593,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/state-of-survival.png",
       "background": "/assets/images/list-game/state-of-survival.png",
-      "petunjuk": "/assets/images/list-game/state-of-survival.png"
+      "petunjuk": "/assets/images/petunjuk/sos.jpg"
     }
   },
   {
@@ -1655,7 +1655,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/stumble.png",
       "background": "/assets/images/list-game/stumble.png",
-      "petunjuk": "/assets/images/list-game/stumble.png"
+      "petunjuk": "/assets/images/petunjuk/sg.png"
     }
   },
   {
@@ -1731,7 +1731,7 @@
     "gambar": {
       "logo": "/assets/images/list-game/valorant.jpg",
       "background": "/assets/images/list-game/valorant.jpg",
-      "petunjuk": "/assets/images/list-game/valorant.jpg"
+      "petunjuk": "/assets/images/petunjuk/valo.jpg"
     }
   }
 ]
