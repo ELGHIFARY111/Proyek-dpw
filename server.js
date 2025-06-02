@@ -89,13 +89,7 @@ app.get("/kebijakanPrivasi", (req, res) => {
 app.get("/dashboard-admin", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "dashboard-admin.html"));
 });
-app.get("/testimonial", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "testimoni.html"));
-});
 
-app.get("/testi", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "testimoni.html"));
-});
 app.get("/hubungi-kami", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "hubungi_kami.html"));
 });
@@ -104,6 +98,9 @@ app.get("/halaman-form", (req, res) => {
 });
 app.get("/winrate", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "winrate.html"));
+});
+app.get("/testimoni", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "testimoni.html"));
 });
 
 // ========================================================================

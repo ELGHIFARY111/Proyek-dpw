@@ -34,6 +34,26 @@ body {
     image-rendering: pixelated;
 }
 
+.content {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 10px;          
+    margin-top: 20px;
+}
+
+.button-register {
+    font-family: var(--font-pixel);
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: var(--biru3);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 .card-login {
     margin-right: 100px;
     background-color: var(--biru3);
@@ -42,7 +62,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 400px;
-    height: 250px;
+    height: 260px;
 }
 
 .card-login label {
@@ -66,6 +86,15 @@ body {
 ::placeholder {
     color: white;
     font-family: var(--font-pixel);
+}
+
+a {
+    color: inherit;
+}
+
+.lupa {
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
 .sumbit-login {
