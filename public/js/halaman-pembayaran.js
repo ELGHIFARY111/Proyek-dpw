@@ -27,7 +27,6 @@ async function loadData() {
   const invoiceData = dataTransaksi.find((item) => item.invoice === invoiceId);
   if (!invoiceData) {
     console.error("Invoice tidak ditemukan");
-    // bisa tampilkan pesan error di UI juga
     return;
   }
   console.log("Data invoice:", invoiceData);

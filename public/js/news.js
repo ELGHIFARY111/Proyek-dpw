@@ -22,6 +22,11 @@ fetch("/api/news.json")
 
     if (!filtered) return;
 
+    const styledDeskripsi = filtered.deskripsi.replace(
+      /(https?:\/\/[^\s]+)/g,
+      '<a href="$1" target="_blank">$1</a>'
+    );
+
     document.title = `SixFussion | News - ${filtered.judul}`;
     const parsedJudul = marked.parse(filtered.judul);
     const parsedDeskripsi = marked.parse(

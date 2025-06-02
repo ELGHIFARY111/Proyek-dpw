@@ -13,31 +13,37 @@ fetch("/api/artikel.json")
   .then((res) => res.json())
   .then((data) => {
     const container = document.getElementById("container");
-
     data.forEach((artikel) => {
-      const artkl = createElement("section", container, {
-        className: "artikel-card",
-      });
+      const firstImage = artikel.konten.find(
+        (konten) => konten.type === "image"
+      );
+      if (firstImage) {
+        const artkl = createElement("section", container, {
+          className: "artikel-card",
+        });
+        artkl.addEventListener("click", () => {
+          window.location.href = `/artikel/${artikel.id}`;
+        });
+        createElement("img", artkl, {
+          src: firstImage.url,
+          alt: firstImage.caption,
+        });
+      }
 
-      artkl.addEventListener("click", () => {
-        window.location.href = "/artikel";
-      });
-
-      createElement("img", artkl, {
-        src: artikel.gambar1,
-        alt: "Gambar artikel",
-      });
-      createElement("div", artkl, {
+      const heading = artikel.konten.find((k) => k.type === "heading2");
+      const desc = artikel.konten.find((k) => k.type === "paragraph");
+      const publikasi = artikel.konten.find((k) => k.type === "pblk");
+      createElement("div", container.lastChild, {
         className: "judul",
-        text: artikel.judul1,
+        text: heading?.text || "Tanpa judul",
       });
-      createElement("div", artkl, {
+      createElement("div", container.lastChild, {
         className: "deskripsi",
-        text: artikel.deskripsi1,
+        text: desc?.text || "Tanpa deskripsi",
       });
-      createElement("div", artkl, {
+      createElement("div", container.lastChild, {
         className: "publish",
-        text: artikel.publikasi,
+        text: publikasi?.publikasi || "Tanpa tanggal",
       });
     });
   })
