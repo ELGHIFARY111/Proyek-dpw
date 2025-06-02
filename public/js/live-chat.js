@@ -2,53 +2,63 @@ const chatInput = document.getElementById("chat");
 const sendButton = document.getElementById("kirim");
 const chatArea = document.getElementById("chatArea");
 const maxCharMsg = 1500;
-const maxCharsInput = 1500;
-const headerHeight = 75;
-let isFirstMessage = true;
-function resizeTextarea() {
-    chatInput.style.height = 'auto';
-    chatInput.style.height = chatInput.scrollHeight + 'px'; 
-}
-function handleInput() {
-    if (chatInput.value.length > maxCharsInput) {
-        chatInput.value = chatInput.value.slice(0, maxCharsInput);
+const currentUser = "User";
+
+async function fetchMessages() {
+    try {
+        const response = await fetch('/api/pesan');
+        const messages = await response.json();
+
+        let html = "";
+        messages.forEach((msg, index) => {
+            const isUser = msg.username.trim() === currentUser;
+            const className = isUser ? "from-user" : "from-others";
+            const marginTop = index === 0 ? "margin-top: 20px;" : "";
+
+            html += `
+                <div class="message ${className}" style="${marginTop}">
+                    <a style="font-size:10px;">${msg.username}:</a><br> ${msg.content}
+                </div>`;
+        });
+
+        chatArea.innerHTML = html;
+        chatArea.scrollTop = chatArea.scrollHeight;
+    } catch (error) {
+        console.error("Error fetching messages:", error);
     }
-    resizeTextarea();
 }
-function splitMessage(text) {
-    const chunks = [];
-    let start =0;
-    while (start<text.length) {
-        chunks.push(text.slice(start,start+maxCharMsg));
-        start+=maxCharMsg;
-    }
-    return chunks;
-}
-sendButton.addEventListener("click", function() {
+
+sendButton.addEventListener("click", async function () {
     const messageText = chatInput.value.trim();
     if (messageText) {
-        const messageChunks = splitMessage(messageText);
-        messageChunks.forEach(chunk => {
-            const messageElement = document.createElement("div");
-            messageElement.classList.add("message");
-            messageElement.textContent = chunk;
-            chatArea.appendChild(messageElement);
-            if (isFirstMessage) {
-                messageElement.style.marginTop = `${headerHeight}px`;
-                isFirstMessage = false;
+        try {
+            const response = await fetch('/api/pesan', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    username: currentUser,
+                    content: messageText
+                })
+            });
+
+            if (response.ok) {
+                console.log("Pesan berhasil dikirim");
+                chatInput.value = "";
+                fetchMessages(); // Refresh setelah kirim
+            } else {
+                console.error("Gagal mengirim pesan");
             }
-        });
-        chatInput.value = "";
-        handleInput();
-        chatArea.scrollTop = chatArea.scrollHeight;
+        } catch (error) {
+            console.error("Error:", error);
+        }
     }
 });
-chatInput.addEventListener("keydown", function(event) {
+
+chatInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
         sendButton.click();
     }
 });
 
-handleInput();
-
+fetchMessages();

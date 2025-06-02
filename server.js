@@ -107,6 +107,9 @@ app.get("/dashboard-admin", (req, res) => {
 app.get("/testimonial", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "testimoni.html"));
 });
+app.get("/live-chat", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "live-chat.html"));
+});
 
 
 
@@ -202,6 +205,32 @@ app.post("/simpan-transaksi", (req, res) => {
       res.send("Transaksi berhasil disimpan");
     });
   });
+});
+// Endpoint untuk mendapatkan semua pesan
+app.get("/api/pesan", (req, res) => {
+    const dataPath = path.join(__dirname, "data", "pesan.json");
+    fs.readFile(dataPath, "utf-8", (err, jsonData) => {
+        if (err) return res.status(500).json({ error: "Gagal membaca data pesan" });
+        res.json(JSON.parse(jsonData));
+    });
+});
+
+// Endpoint untuk mengirim pesan baru
+app.post("/api/pesan", (req, res) => {
+    const newMessage = req.body;
+    const dataPath = path.join(__dirname, "data", "pesan.json");
+
+    fs.readFile(dataPath, "utf-8", (err, jsonData) => {
+        if (err) return res.status(500).json({ error: "Gagal membaca data pesan" });
+
+        const pesan = JSON.parse(jsonData);
+        pesan.push(newMessage); // Tambah pesan baru
+
+        fs.writeFile(dataPath, JSON.stringify(pesan, null, 2), (err) => {
+            if (err) return res.status(500).json({ error: "Gagal menyimpan pesan" });
+            res.status(201).json(newMessage); // Kembalikan pesan yang baru ditambahkan
+        });
+    });
 });
 
 app.listen(PORT, () => {
