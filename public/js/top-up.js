@@ -510,11 +510,11 @@ fetch("/api/testimonial.json")
   .then((res) => res.json())
   .then((testimonialList) => {
     gameData.then((dataGame) => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const gameId = urlParams.get("id");
+      const gameId = window.location.pathname.split("/").pop();
 
       testimonialList.forEach((testi, index) => {
         const selectedGame = dataGame.find((game) => game.id === testi.id);
+
         // console.log("Testi ID:", testi.id);
         // console.log("Selected Game:", selectedGame);
 

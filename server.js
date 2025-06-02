@@ -23,14 +23,6 @@ app.get("/", (req, res) => {
 app.get("/list-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "list-game.html"));
 });
-
-app.get("/artikel-home", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
-});
-app.get("/artikel", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "artikel.html"));
-});
-
 app.get("/detail", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "detail.html"));
 });
@@ -43,16 +35,9 @@ app.get("/referal", (req, res) => {
 app.get("/saldo-dan-top-up", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "saldo-dan-top-up.html"));
 });
-
-app.get("/HALAMAN_UTAMA", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
-});
-
 app.get("/cek-pesanan", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
 });
-
-
 
 app.get("/select-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "select-game.html"));
@@ -105,10 +90,6 @@ app.get("/dashboard-admin", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "dashboard-admin.html"));
 });
 
-
-app.get("/testi", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "testimoni.html"));
-});
 app.get("/hubungi-kami", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "hubungi_kami.html"));
 });
@@ -126,6 +107,27 @@ app.get("/searching", (req, res) => {
 });
 
 // ========================================================================
+
+// routing artikel
+app.get("/artikel-home", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
+});
+app.get("/artikel/:heading2", (req, res) => {
+  const head2 = req.params.heading2;
+  const dataPath = path.join(__dirname, "data", "artikel.json");
+
+  fs.readFile(dataPath, "utf-8", (err, jsonData) => {
+    if (err)
+      return res.status(500).json({ error: `Gagal membaca data ${dataPath}` });
+
+    const data = JSON.parse(jsonData);
+    const found = data.find((j) => j.id === head2);
+    if (!found) {
+      return res.status(404).json({ error: "Data news tidak di temukan" });
+    }
+    res.sendFile(path.join(__dirname, "pages", "artikel.html"));
+  });
+});
 
 // routing news
 app.get("/news-home", (req, res) => {
