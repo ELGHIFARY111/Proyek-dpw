@@ -192,7 +192,7 @@ app.get("/payment/:invoice", (req, res) => {
   });
 });
 
-// Endpoint transaksi baru
+// Endpoint transaksi => transaksi.json
 app.post("/simpan-transaksi", (req, res) => {
   const newData = req.body;
   console.log("Transaksi baru:", newData);
@@ -203,7 +203,7 @@ app.post("/simpan-transaksi", (req, res) => {
   fs.readFile(filePath, "utf8", (err, data) => {
     let transaksiArray = JSON.parse(data);
 
-    transaksiArray.push(newData); // tambah data baru
+    transaksiArray.push(newData);
     fs.writeFile(filePath, JSON.stringify(transaksiArray, null, 2), (err) => {
       if (err) {
         console.error(err);
@@ -213,31 +213,32 @@ app.post("/simpan-transaksi", (req, res) => {
     });
   });
 });
+
 // Endpoint untuk mendapatkan semua pesan
 app.get("/api/pesan", (req, res) => {
-    const dataPath = path.join(__dirname, "data", "pesan.json");
-    fs.readFile(dataPath, "utf-8", (err, jsonData) => {
-        if (err) return res.status(500).json({ error: "Gagal membaca data pesan" });
-        res.json(JSON.parse(jsonData));
-    });
+  const dataPath = path.join(__dirname, "data", "pesan.json");
+  fs.readFile(dataPath, "utf-8", (err, jsonData) => {
+    if (err) return res.status(500).json({ error: "Gagal membaca data pesan" });
+    res.json(JSON.parse(jsonData));
+  });
 });
 
 // Endpoint untuk mengirim pesan baru
 app.post("/api/pesan", (req, res) => {
-    const newMessage = req.body;
-    const dataPath = path.join(__dirname, "data", "pesan.json");
+  const newMessage = req.body;
+  const dataPath = path.join(__dirname, "data", "pesan.json");
 
-    fs.readFile(dataPath, "utf-8", (err, jsonData) => {
-        if (err) return res.status(500).json({ error: "Gagal membaca data pesan" });
+  fs.readFile(dataPath, "utf-8", (err, jsonData) => {
+    if (err) return res.status(500).json({ error: "Gagal membaca data pesan" });
 
-        const pesan = JSON.parse(jsonData);
-        pesan.push(newMessage); // Tambah pesan baru
+    const pesan = JSON.parse(jsonData);
+    pesan.push(newMessage); // Tambah pesan baru
 
-        fs.writeFile(dataPath, JSON.stringify(pesan, null, 2), (err) => {
-            if (err) return res.status(500).json({ error: "Gagal menyimpan pesan" });
-            res.status(201).json(newMessage); // Kembalikan pesan yang baru ditambahkan
-        });
+    fs.writeFile(dataPath, JSON.stringify(pesan, null, 2), (err) => {
+      if (err) return res.status(500).json({ error: "Gagal menyimpan pesan" });
+      res.status(201).json(newMessage); // Kembalikan pesan yang baru ditambahkan
     });
+  });
 });
 
 app.listen(PORT, () => {
