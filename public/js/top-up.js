@@ -565,8 +565,6 @@ fetch("/api/testimonial.json")
             `${testi.time.hour} - ${testi.time.date}`,
             "date"
           );
-        } else {
-          document.getElementById("no-testi").style.display = "flex";
         }
       });
     });
