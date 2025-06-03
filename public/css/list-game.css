@@ -16,7 +16,7 @@ body {
 .container {
   display: grid;
   gap: 20px;
-  padding: 5rem 10rem;
+  padding: 0 10rem 5rem 10rem;
   perspective: 1000px;
   max-width: 1500px;
   margin: 0 auto;
@@ -99,16 +99,35 @@ body {
   font-size: 12px;
   transition: color 0.1s ease;
 }
-label{
-  font-size: 30px;
-  margin-top: 15px;
-  margin-left: 30px;
-  color: white;
+
+/* ============ */
+.filter {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  padding: 2rem 10rem;
 }
-select{
-  margin-top: 15px;
-  font-size: 30px;
-  margin-left: 30px;
-  border-radius: 20px;
-  width: 260px;
+.filter button {
+  padding: 7px 24px;
+  border: 2px dotted var(--biru2);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--putih);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  min-width: 80px;
+  font-family: inherit;
+}
+.filter button:hover {
+  background: var(--biru1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.filter button.active {
+  background: var(--biru1);
+  color: white;
 }
