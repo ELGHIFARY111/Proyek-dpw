@@ -34,11 +34,12 @@ body {
     image-rendering: pixelated;
 }
 
-.left-side span {
-    margin-top: 10px;
-    margin-left: -40px;
-    font-size: 15px;
-    align-items: center;
+.content {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 10px;          
+    margin-top: 20px;
 }
 
 .button-sign-in {
