@@ -37,25 +37,58 @@ async function loadData() {
   console.log(invoiceData);
   console.log(filteredGame);
 
+  const statusCombo = `${invoiceData.status.pembayaran}-${invoiceData.status.pesanan}`;
+
+  let prcbngBayar;
+  switch (statusCombo) {
+    case "false-false":
+      prcbngBayar = "Menunggu Pembayaran";
+      break;
+    case "true-false":
+      prcbngBayar = "Memproses Top-up";
+      break;
+    case "true-true":
+      prcbngBayar = "Transaksi Berhasil";
+      break;
+    default:
+      prcbngBayar = "Status Tidak Dikenal";
+  }
+
+  let prcbngInv;
+  switch (statusCombo) {
+    case "false-false":
+      prcbngInv = " menunggu pembayaran sebelum dikirim.";
+      break;
+    case "true-false":
+      prcbngInv = " sedang diproses untuk dikirim.";
+      break;
+    case "true-true":
+      prcbngInv = " telah dikirim dan akan segera tiba.";
+      break;
+    default:
+      prcbngInv = " dengan status tidak dikenal.";
+  }
+
   const container = document.querySelector("main");
   const sec1 = createElement("section", container);
   const jdlSts = createElement("div", sec1, "", "judul-status");
-  const pJudul = createElement("p", jdlSts, "Menunggu pembayaran ");
+  const pJudul = createElement("p", jdlSts, prcbngBayar);
   const contInvTop = createElement(
     "span",
     pJudul,
     "Pesanan Anda dengan No. Invoice "
   );
   createElement("span", contInvTop, invoiceData.invoice);
-  const textNode = document.createTextNode(
-    " menunggu pembayaran sebelum dikirim."
-  );
+  const textNode = document.createTextNode(prcbngInv);
   contInvTop.appendChild(textNode);
   createElement("div", sec1, "Rincian Pesanan", "rincian");
 
   // waktunya
   let totalDetik = 24 * 3600 + 0 * 60 + 0;
   const contKadalrs = createElement("div", sec1, "", "kadaluarsa");
+  if (invoiceData.status.pembayaran === true) {
+    contKadalrs.remove();
+  }
   const contKadalrs2 = createElement("div", contKadalrs, "", "space");
   const bungkusWaktu = createElement("div", contKadalrs2, "", "bungkus-waktu");
   createElement("p", bungkusWaktu, "Pesanan akan kadaluarsa dalam");
@@ -88,7 +121,14 @@ async function loadData() {
   contKiriAtas.innerHTML = `
               <i class="bi bi-bag"></i>
               <p>
-                Pesanan dibuat <span>${invoiceData.time.tanggal} | <span>${invoiceData.time.waktu}</span></span>
+              ${
+                invoiceData.status.pembayaran === true
+                  ? "Terbayarkan Pada"
+                  : "Pesanan Dibuat Pada"
+              }
+                <span>  ${invoiceData.time.tanggal} | <span>${
+    invoiceData.time.waktu
+  }</span></span>
               </p>
   `;
 
@@ -115,9 +155,6 @@ async function loadData() {
   const tr2 = createElement("tr", tabel);
   createElement("td", tr2, `User ID:`);
   createElement("td", tr2, `${invoiceData.userId}`);
-  const tr3 = createElement("tr", tabel);
-  createElement("td", tr3, `Server ID:`);
-  createElement("td", tr3, `${invoiceData.userId}`);
 
   const contKanan = createElement("div", sec2, "", "kanan");
   const atas = createElement("div", contKanan, "", "atas");
@@ -147,13 +184,24 @@ async function loadData() {
     invoiceData.status.pesanan == false ? "Pending" : "Success";
   const statusPembayaran =
     invoiceData.status.pembayaran == false ? "Unpaid" : "Paid";
+
   const tabelStatus = createElement("table", atas);
   const trStatus1 = createElement("tr", tabelStatus);
   createElement("td", trStatus1, "Status Pesanan:");
-  createElement("td", trStatus1, statusPesanan, "pending");
+  createElement(
+    "td",
+    trStatus1,
+    statusPesanan,
+    statusPesanan === "Success" ? "status" : "pending"
+  );
   const trStatus2 = createElement("tr", tabelStatus);
   createElement("td", trStatus2, "Status Pembayaran:");
-  createElement("td", trStatus2, statusPembayaran, "unpaid");
+  createElement(
+    "td",
+    trStatus2,
+    statusPembayaran,
+    statusPembayaran === "Paid" ? "status" : "unpaid"
+  );
   const trStatus3 = createElement("tr", tabelStatus);
   // perbaiki
   createElement("td", trStatus3, "Kode Voucher:");
@@ -161,6 +209,9 @@ async function loadData() {
   // =========
   const expr = invoiceData.time.tanggal;
   const trStatus4 = createElement("tr", tabelStatus);
+  if (invoiceData.status.pembayaran === true) {
+    trStatus4.remove();
+  }
   createElement("td", trStatus4, "Kadaluarsa:");
   createElement(
     "td",
@@ -184,6 +235,8 @@ async function loadData() {
   createElement("td", trItem4, `Rp. ${invoiceData.harga}`);
 
   const contBawah = createElement("div", contKanan, "", "bawah");
-  createElement("a", contBawah, "Bayar Sekarang", "bayar");
+  invoiceData.status.pembayaran === true
+    ? (contBawah.style.display = "none")
+    : createElement("a", contBawah, "Bayar Sekarang", "bayar");
 }
 loadData();

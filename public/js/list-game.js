@@ -1,4 +1,5 @@
 let listGame = [];
+console.log(listGame);
 
 function displayGames(games) {
   const container = document.getElementById("container");
