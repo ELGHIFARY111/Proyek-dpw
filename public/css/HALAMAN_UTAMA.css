@@ -21,6 +21,8 @@ body {
 .header {
   padding: 15px 30px;
   width: 100%;
+  position: relative;
+  z-index: 1000;
 }
 
 .container {
@@ -149,6 +151,7 @@ p {
     cursor: pointer;
     margin: 5px;
     text-decoration: none;
+
 }
 
 .button-hijau:hover {
@@ -217,6 +220,7 @@ p {
     position: absolute;
     z-index: 10;
     margin-bottom: 0px;
+
 }
 
 .bg-gambar2 {
@@ -238,6 +242,7 @@ p {
     height: 34%;
     top: 40%;
     left: 75%;
+    z-index: 1;
 }
 
 .bg-gambar5 {
@@ -245,6 +250,7 @@ p {
     height: 34%;
     top: 10%;
     left: 15%;
+    z-index: 1;
 }
 
 .bg-gambar6 {
@@ -252,7 +258,11 @@ p {
     height: 34%;
     top: 45%;
     left: 3%;
-    
+    z-index: 1;
+}
+
+.container-gambar {
+    z-index: 1;
 }
 
 .info1,
