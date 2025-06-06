@@ -15,6 +15,7 @@ window.onload = function () {
             alert('Login Sukses!!');
             localStorage.setItem('loggedInUser', JSON.stringify(foundUser));
             form.reset();
+            window.location.href = "/";
         } else {
             alert('Email atau password salah!');
         }
