@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/formtesti.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Review Transaksi Top Up</h2>
+        </header>
+
+        <section>
+            <label for="namagame">Nama Game: </label>
+            <input type="text" required id="namagame">
+        </section>
+                
+        <section>
+            <p>Berikan Rating Pengalaman</p>
+            <select name="bintang" id="rating">
+                    <option value="5">⭐⭐⭐⭐⭐</option>
+                    <option value="4">⭐⭐⭐⭐</option>
+                    <option value="3">⭐⭐⭐</option>
+                    <option value="2">⭐⭐</option>
+                    <option value="1">⭐</option>
+                </select>
+        </section>
+
+        <section>
+            <p></p>
+        </section>
+                     
+        <section class="review-section">
+            <p>Tuliskan Ulasan Kamu:</p>
+            <textarea id="reviewtext" placeholder="Ceritakan pengalaman kamu selama proses top up..."></textarea>
+        </section>
+
+        <div class="buttons">
+            <button id="submitReview">Submit Ulasan</button>
+            <button id="skipReview">Lewati &  Kembali ke Utama</button>
+        </div>
+    </div>
+<script src="/belajar.js"></script>
+</body>
+</html>

@@ -108,6 +108,9 @@ app.get("/winrate", (req, res) => {
 app.get("/testimoni", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "testimoni.html"));
 });
+app.get("/form-testi", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "formtesti.html"));
+});
 app.get("/searching", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "searching.html"));
 });
