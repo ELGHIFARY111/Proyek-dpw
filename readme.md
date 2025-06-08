@@ -7,8 +7,6 @@ Website ini dibuat sebagai tugas akhir untuk mata kuliah **Dasar Pemrograman Web
 
 ## Contributors
 
-## 👥 Contributors
-
 <table align="center">
   <tr>
     <td align="center">
