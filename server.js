@@ -247,6 +247,50 @@ app.post("/api/pesan", (req, res) => {
   });
 });
 
+// Endpoint testi 
+app.get("/testimoni", (req, res) => {
+    const dataPath = path.join(__dirname, "data", "testimonial.json");
+    
+    fs.readFile(dataPath, "utf8", (err, jsonData) => {
+        if (err) {
+            return res.status(500).json({ error: `Gagal membaca data ${dataPath}` });
+        }
+        
+        try {
+            const testimoniArray = JSON.parse(jsonData);
+            res.json(testimoniArray); 
+        } catch (parseErr) {
+            return res.status(500).json({ error: "Gagal parsing data JSON" });
+        }
+    });
+});
+
+app.post("/simpan-testimonial", (req, res) => {
+    const newData = req.body;
+    const dataPath = path.join(__dirname, "data", "testimonial.json"); 
+
+    fs.readFile(dataPath, "utf8", (err, jsonData) => {
+        if (err) {
+            return res.status(500).json({ error: "Gagal membaca file testimonial" });
+        }
+
+        try {
+            let testimoniArray = JSON.parse(jsonData);
+            testimoniArray.push(newData);
+            
+            fs.writeFile(dataPath, JSON.stringify(testimoniArray, null, 2), (writeErr) => {
+                if (writeErr) {
+                    console.error(writeErr);
+                    return res.status(500).json({ error: "Gagal simpan testimonial" });
+                }
+                res.json({ message: "Testimonial berhasil disimpan" }); 
+            });
+        } catch (parseErr) {
+            return res.status(500).json({ error: "Gagal parsing data JSON" });
+        }
+    });
+});
+
 app.listen(PORT, () => {
   console.log(`Server nyala di http://localhost:${PORT}`);
 });
