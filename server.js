@@ -17,6 +17,9 @@ app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 app.get("/notfound", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "pages", "not-found.html"));
 });
+app.get("/faq", (req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "pages", "faq.html"));
+});
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "HALAMAN_UTAMA.html"));
 });
@@ -51,9 +54,7 @@ app.get("/mengetik_cepat", (req, res) => {
   );
 });
 app.get("/game_reaction", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "game", "game reaction", "index.html")
-  );
+  res.sendFile(path.join(__dirname, "game", "game reaction", "index.html"));
 });
 app.get("/tangkap_blok", (req, res) => {
   res.sendFile(path.join(__dirname, "game", "game tangkap blok", "index.html"));
@@ -118,6 +119,10 @@ app.get("/searching", (req, res) => {
 app.get("/artikel", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
 });
+app.get("/pay", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "konfirmasi-pembayaran.html"));
+});
+
 // ========================================================================
 
 // routing artikel
@@ -142,7 +147,7 @@ app.get("/artikel/:heading2", (req, res) => {
 });
 
 // routing news
-app.get("/news-home", (req, res) => {
+app.get("/news", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "news-home.html"));
 });
 app.get("/news/:judulId", (req, res) => {
@@ -172,11 +177,6 @@ app.get("/top-up/:idGame", (req, res) => {
     if (err)
       return res.status(500).json({ error: `Gagal membaca data ${dataPath}` });
 
-    const data = JSON.parse(jsonData);
-    const found = data.find((g) => g.id === game);
-    if (!found) {
-      return res.status(404).json({ error: "Data game tidak di temukan" });
-    }
     res.sendFile(path.join(__dirname, "pages", "top-up.html"));
   });
 });

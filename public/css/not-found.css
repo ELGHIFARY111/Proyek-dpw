@@ -77,7 +77,6 @@ body {
   background-color: var(--hijau1);
   box-shadow: 0 0 20px var(--hijau1);
   font-weight: 900;
-  letter-spacing: 1px;
 }
 
 .not-found .kanan {
