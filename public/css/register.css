@@ -69,7 +69,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 350px;
-    height: 450px;
+    height: 550px;
 }
 
 .card label {
@@ -91,6 +91,18 @@ body {
 }
 
 ::placeholder {
+    color: white;
+    font-family: var(--font-pixel);
+}
+
+.card select {
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    background-color: #222;
+    border: 1px solid #884dff;
     color: white;
     font-family: var(--font-pixel);
 }

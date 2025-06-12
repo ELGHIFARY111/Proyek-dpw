@@ -291,6 +291,85 @@ app.post("/simpan-testimonial", (req, res) => {
     });
 });
 
+// login user admin 
+app.post("/login-user", (req, res) => {
+  const { email, password } = req.body;
+  const filePath = path.join(__dirname, "data", "users.json");
+
+  fs.readFile(filePath, "utf8", (err, jsonData) => {
+    if (err) {
+      console.error("Gagal membaca user:", err);
+      return res.status(500).json({ error: "Gagal membaca data user" });
+    }
+
+    let users = JSON.parse(jsonData);
+    const userFound = users.find(u => u.email === email && u.password === password);
+
+    if (!userFound) {
+      return res.status(401).json({ error: "Email atau password salah!" });
+    }
+
+    res.json({
+      message: "Login sukses",
+      user: {
+        email: userFound.email,
+        nama: userFound.nama,
+        role: userFound.role
+      }
+    });
+  });
+});
+
+// register user admin
+app.post("/register-user", (req, res) => {
+  console.log(req.body);
+  console.log("Data yang diterima:", req.body);
+
+  const { nama, email, password, role } = req.body;
+
+  if (!nama || !email || !password || !role) {
+    return res.status(400).json({ error: "Semua field wajib diisi." });
+  }
+
+  const dataPath = path.join(__dirname, "data", "users.json");
+  const users = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
+
+  const userExists = users.find(
+    (user) => user.email === email || user.nama === nama
+  );
+  if (userExists) {
+    return res.status(400).json({ error: "Username atau email sudah terdaftar." });
+  }
+
+  const newUser = { nama, email, password, role };
+  users.push(newUser);
+
+  try {
+    fs.writeFileSync(dataPath, JSON.stringify(users, null, 2));
+    console.log("User berhasil disimpan:", newUser);
+    res.json({ message: "Registrasi berhasil!" });
+  } catch (err) {
+    console.error("Gagal menulis file:", err);
+    res.status(500).json({ error: "Terjadi kesalahan saat menyimpan data." });
+  }
+});
+
+// forgot password
+app.post('/api/forgot-password', (req, res) => {
+  const { email, newPassword } = req.body;
+  const users = JSON.parse(fs.readFileSync('./data/users.json', 'utf-8'));
+
+  const userIndex = users.findIndex(user => user.email === email);
+
+  if (userIndex !== -1) {
+    users[userIndex].password = newPassword;
+    fs.writeFileSync('./data/users.json', JSON.stringify(users, null, 2));
+    res.status(200).json({ message: 'Password berhasil diubah!' });
+  } else {
+    res.status(404).json({ message: 'Email tidak ditemukan!' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server nyala di http://localhost:${PORT}`);
 });

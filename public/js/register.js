@@ -1,4 +1,3 @@
-const users = JSON.parse(localStorage.getItem('users')) || [];
 const form = document.getElementById('register');
 
 form.addEventListener('submit', function (event) {
@@ -8,6 +7,7 @@ form.addEventListener('submit', function (event) {
     const email = document.getElementById('email').value;
     const password = document.getElementById('pass').value;
     const confirmPassword = document.getElementById('pass-ulang').value;
+    const role = document.getElementById('role').value;
 
     if (password !== confirmPassword) {
         alert('Password tidak cocok!');
@@ -15,14 +15,31 @@ form.addEventListener('submit', function (event) {
     }
 
     const newUser = {
-        username,
+        nama: username,
         email,
-        password
+        password,
+        role
     };
 
-    users.push(newUser);
-    localStorage.setItem('users', JSON.stringify(users));
-    form.reset();
-    alert('Registrasi berhasil!');
-    console.log('Users:', users);
+    fetch("/register-user", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newUser)
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.error) {
+            alert(data.error);
+        } else {
+            alert(data.message);
+            form.reset();
+            window.location.href = "/login";
+        }
+    })
+    .catch(error => {
+        console.error("Gagal daftar:", error);
+        alert("Terjadi kesalahan saat mendaftar.");
+    });
 });
