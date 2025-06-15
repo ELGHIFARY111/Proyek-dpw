@@ -45,19 +45,19 @@
         <button class="button-hijau" onclick="window.location.href='/logout'">Logout</button>
     </div>
     <button class="button-hijau-login" id="login-button" onclick="window.location.href='/login'">Login</button>
-    <button class="button-hijau-login" onclick="window.location.href='/Register'">Register</button>
+    <button class="button-hijau-login" id="register-button" onclick="window.location.href='/Register'">Register</button>
 
     <script>
         window.addEventListener("DOMContentLoaded", () => {
-            const userName = "<%= userName %>"; // Get the user's name from the server
+            const userName = "<%= userName %>"; 
             const loginButton = document.getElementById("login-button");
             const userInfo = document.getElementById("user-info");
             const userNameSpan = document.getElementById("user-name");
 
             if (userName) {
-                loginButton.style.display = "none"; // Hide login button
-                userInfo.style.display = "block"; // Show user info
-                userNameSpan.textContent = `Welcome, ${userName}`; // Display user's name
+                loginButton.style.display = "none";
+                userInfo.style.display = "block"; 
+                userNameSpan.textContent = `Welcome, ${userName}`; 
             }
         });
     </script>
