@@ -172,3 +172,6 @@ h2{
     cursor: pointer;
     background-color: var(--kuning);
 }
+li{
+    font-size: 20px;
+}

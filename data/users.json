@@ -16,5 +16,11 @@
     "email": "rendi1@gmail.com",
     "password": "432",
     "role": "user"
+  },
+  {
+    "nama": "roni",
+    "email": "ar@gmail.com",
+    "password": "123456789",
+    "role": "user"
   }
 ]
