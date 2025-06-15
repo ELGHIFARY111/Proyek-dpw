@@ -107,3 +107,8 @@ a {
     border-radius: 20px;
     cursor: pointer;
 }
+
+.sumbit-login:hover {
+    background-color: var(--kuning);
+    color: var(--biru2);
+}
