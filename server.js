@@ -103,7 +103,7 @@ app.get("/api/user", (req, res) => {
   }
 });
 app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "login.html"));
+  res.sendFile(path.join(__dirname, "pages/login.html"));
 });
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
