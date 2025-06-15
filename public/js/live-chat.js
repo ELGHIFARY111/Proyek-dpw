@@ -2,7 +2,20 @@ const chatInput = document.getElementById("chat");
 const sendButton = document.getElementById("kirim");
 const chatArea = document.getElementById("chatArea");
 const maxCharMsg = 1500;
-const currentUser = "User";
+let currentUser = null;
+
+async function getCurrentUser() {
+    try {
+        const res = await fetch("/api/user");
+        const data = await res.json();
+        currentUser = data.username;
+        fetchMessages();
+    } catch (err) {
+        console.error("Belum login");
+        window.location.href = "/login";
+    }
+}
+getCurrentUser();
 
 async function fetchMessages() {
     try {

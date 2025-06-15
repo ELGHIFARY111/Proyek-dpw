@@ -34,22 +34,6 @@ main{
 .back-button:hover{
     background-color: var(--biru1);
 }
-.info1,
-.info4,
-.info5{
-    background-color: var(--kuning);
-    color: var(--biru2);
-    padding: 10px;
-    border: 10px dashed var(--biru2);
-}
-.info2,
-.info3,
-.info6{
-    background-color: var(--biru2);
-    color: white;
-    padding: 10px;
-    border: 10px dashed var(--kuning);
-}
 .judul{
     color: var(--hijau1);
     text-align: center;
@@ -59,10 +43,16 @@ main{
 .team{
     padding: 15px;
     margin-right: 40px;
-    width: 140px;
+    width: 190px;
+    height: 350px;
     border: 2px solid var(--kuning);
     border-radius: 20px;
     background-color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .name{
     font-size: 15px;
@@ -70,6 +60,7 @@ main{
 }
 .foto{
     width: 140px;
+    height: 150px;
     border: 1px solid var(--kuning);
     border-radius: 20px;
 }
@@ -77,34 +68,53 @@ main{
     display: flex;
 }
 .icon{
+    position: absolute;
+    top: 30px;
+    left: 10px;
     width: 20px;
+    margin: 0;
 }
-.top{
-    margin-bottom: 0px;
-    margin-top: 5px;
+.top {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    margin: 0;
     color: black;
-    margin-left: 4px;
+    font-size: 16px;
 }
-.iconb{
+.icon-wrapper {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    text-align: right;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    margin: 0;
+    transform: rotate(180deg);
+    font-size: 16px;
+    color: black;
+}
+
+.iconb {
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
     width: 20px;
     transform: rotate(180deg);
-    float: right;
-    margin-top: 0px;
+    margin: 0;
 }
-.bottom{
-    margin-bottom: 0px;
-    margin-top: 5px;
-    color: black;
-    margin-right: 4px;
-    transform: rotate(180deg);
-    margin-top: 0px;
-}
+
 .team1,
 .team2,
 .team3,
 .team4,
 .team5,
 .team6{
+    margin-top: 20px;
     display: none;
 }
 
@@ -117,6 +127,8 @@ main{
     width: 135px;
     margin-top: 35px;
     margin-bottom: 35px;
+    margin: 80px auto;
+    display: block; 
 }
 .heart1:hover,
 .heart2:hover,
@@ -140,6 +152,7 @@ main{
     background-color: gray;
     margin-top: 100px;
     margin-left: 420px;
+    z-index: 10;
 }
 .deskripsi{
     font-size: 20px;
@@ -152,4 +165,7 @@ main{
 }
 .wrapper-team{
     margin-left: 80px;
+}
+.link1,.link2,.link3,.link4,.link5,.link6{
+    display: none;
 }

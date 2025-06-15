@@ -12,6 +12,7 @@
   "dependencies": {
     "bootstrap-icons": "^1.12.1",
     "express": "^5.1.0",
+    "express-session": "^1.18.1",
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {

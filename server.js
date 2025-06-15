@@ -7,7 +7,14 @@ const PORT = process.env.PORT || 8000;
 
 // midlware buat baca json
 app.use(express.json());
+const session = require("express-session");
 
+app.use(session({
+  secret: "rahasia_super_aman",  // bebas, asal aman
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: 1000 * 60 * 60 } // 1 jam
+}));
 // Static files tanpa prefix
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/api", express.static(path.join(__dirname, "data")));
@@ -21,6 +28,10 @@ app.get("/faq", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "pages", "faq.html"));
 });
 app.get("/", (req, res) => {
+  if (req.session.user) {
+    console.log("User terlogin:", req.session.user);
+  }
+
   res.sendFile(path.join(__dirname, "pages", "HALAMAN_UTAMA.html"));
 });
 app.get("/list-game", (req, res) => {
@@ -72,8 +83,45 @@ app.get("/register", (req, res) => {
 app.get("/f-pass", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "f-pass.html"));
 });
-app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "login.html"));
+app.get("/logout", (req, res) => {
+  req.session.destroy(() => {
+    res.redirect("/login");
+  });
+});
+app.get("/api/user", (req, res) => {
+  if (req.session.user) {
+    res.json(req.session.user);
+  } else {
+    res.status(401).json({ error: "Belum login" });
+  }
+});
+app.post("/login", (req, res) => {
+  const { email, password } = req.body;
+  const filePath = path.join(__dirname, "data", "users.json");
+
+  fs.readFile(filePath, "utf8", (err, jsonData) => {
+    if (err) {
+      console.error("Gagal membaca user:", err);
+      return res.status(500).json({ error: "Gagal membaca data user" });
+    }
+
+    let users = JSON.parse(jsonData);
+    const userFound = users.find(u => u.email === email && u.password === password);
+
+    if (!userFound) {
+      return res.status(401).json({ error: "Email atau password salah!" });
+    }
+    req.session.user = {
+      email: userFound.email,
+      nama: userFound.nama,
+      role: userFound.role
+    };
+
+    res.json({
+      message: "Login sukses",
+      user: req.session.user
+    });
+  });
 });
 app.get("/dashboard-user", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "dashboard-user.html"));
