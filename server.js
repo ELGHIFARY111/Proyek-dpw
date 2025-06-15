@@ -60,13 +60,10 @@ app.get("/referal", (req, res) => {
 app.get("/saldo-dan-top-up", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "saldo-dan-top-up.html"));
 });
-<<<<<<< HEAD
 app.get("/HALAMAN_UTAMA", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
 });
 
-=======
->>>>>>> e435daa617ec4859cd231cfa371fb2d576cffbaa
 app.get("/cek-pesanan", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
 });
