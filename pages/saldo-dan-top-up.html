@@ -1,46 +1,82 @@
 <!DOCTYPE html>
-<html lang="id">
-<<<<<<< HEAD
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Top-up Saldo</title>
-    <link rel="stylesheet" href="/css/saldo-dan-top-up.css" />
-    <link rel="stylesheet" href="/css/global.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="title">Dompet Digital</h1>
-=======
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Top-up Saldo</title>
+  <title>Six fussion</title>
   <link rel="stylesheet" href="/public/css/saldo-dan-top-up.css" />
   <link rel="stylesheet" href="/public/css/global.css">
 </head>
 <body>
   <div class="container">
-    <h1 class="title">Dompet Digital</h1>
->>>>>>> 02c619ced397c1f7e9f3e44ae15cc6f4cd5d1f3c
 
-      <div class="saldo-box">
-        <p>Saldo Anda Saat Ini</p>
-        <h2 class="saldo">Rp120.000</h2>
+<div class="sidebar">
+<div class="back">
+  <div class="profil">
+    <img src="/public/assets/foto/fotoanonym.png" alt="Foto Profil" class="foto-profil" />
+    <p><strong>ID:</strong> 123456789</p>
+    <p><strong>Nama:</strong> Arik Setiawan</p>
+    <p><strong>Email:</strong> Arik@email.com</p>
+  </div>
+</div>
+
+  <div class="saldo">
+    <h3>Saldo Anda</h3>
+    <p class="nominal">Rp. 50.000</p>
+ 
+      <a class="histori" href="/pages/hissaldo.html">Lihat Histori Transaksi</a>
+  
+  </div>
+</div>
+
+    <div class="main">
+      <h2>Top up Instan</h2>
+      <p class="sub">1. Pilih Jumlah Top up</p>
+      <div class="topup-options">
+        <input type="radio" name="topup" id="t10" />
+        <label for="t10">Rp. 10.000</label>
+
+        <input type="radio" name="topup" id="t20" />
+        <label for="t20">Rp. 20.000</label>
+
+        <input type="radio" name="topup" id="t50" />
+        <label for="t50">Rp. 50.000</label>
+
+        <input type="radio" name="topup" id="t100" />
+        <label for="t100">Rp. 100.000</label>
+
+        <input type="radio" name="topup" id="t200" />
+        <label for="t200">Rp. 200.000</label>
+
+        <input type="radio" name="topup" id="t500" />
+        <label for="t500">Rp. 500.000</label>
       </div>
 
-      <div>
-        <label for="topup">Masukkan Nominal Top-up:</label>
-        <input
-          type="number"
-          id="topup"
-          name="nominal"
-          placeholder="Masukkan "
-          required
-        />
+      <p class="sub">2. Pilih Metode Pembayaran</p>
+      <div class="payment-methods">
+        <input type="radio" name="metode" id="BNI" />
+        <label for="BNI" class="payment">BNI </label>
 
-        <a href="saldo2.html" class="btn">Top Up Sekarang</a>
+        <input type="radio" name="metode" id="BRI" />
+        <label for="BRI" class="payment"> BRI</label>
+
+        <input type="radio" name="metode" id="BCA" />
+        <label for="BCA" class="payment">BCA </label>
+
+        <input type="radio" name="metode" id="dana" />
+        <label for="dana" class="payment">DANA</label>
+
+        <input type="radio" name="metode" id="Gopay" />
+        <label for="Gopay" class="payment">Gopay</label>
+        
+        <input type="radio" name="metode" id="OVO" />
+        <label for="OVO" class="payment">OVO</label>
+
       </div>
+    <div class="topsekarang">
+      <a href="/pages/code.html" class="submit-btn">Top Up Sekarang</a>
     </div>
-  </body>
+    </div>
+  </div>
+</body>
 </html>

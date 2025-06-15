@@ -1,81 +1,211 @@
+:root {
+  /* font */
+  --font-pixel: "Pixelify Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-depixelklein: "Depixelklein", sans-serif;
+  --font-kemco: "Kemco Pixel", sans-serif;
 
+  /* pixel / 8 bit */
+  --biru1: #622aff;
+  --biru2: #28248c;
+  --biru3: #222044;
+  --biru4: #794AD7;
+  --kuning: #e3ff37;
+  --putih: #ffffff;
+  --hijau1: #8ad22e;
+  --hijau2: #569a00;
+  --merah: red;
+  --hitam: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-pixel);
+}
 
 body {
-  margin: 0;
-  font-family: var(--font-kemco);
-  background-color: var(--biru1);
+  background-color: var(--biru2);
   color: var(--putih);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 400px;
-  margin: 60px auto;
-  background: var(--biru2);
-  border: 3px solid var(--kuning);
-  border-radius: 20px;
-  padding: 30px 20px;
-  text-align: center;
+  display: flex;
+  gap: 20px;
+  width: 900px;
 }
 
-.title {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: var(--kuning);
-  font-family: var(--font-kemco);
+.sidebar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.saldo-box {
-  background-color: var(--biru3);
+.back {
+  background-color: var(--putih);
+  color: var(--hitam);
   padding: 20px;
-  border-radius: 15px;
-  box-shadow: inset 0 0 10px var(--hitam);
-  margin-bottom: 25px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: var(--font-kemco);
+  border: 2px solid var(--putih);
 }
 
-.saldo-box p {
-  margin: 0;
-  font-size: 16px;;
+.foto-profil {
+  background-color: var(--biru1);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+  border: 3px solid var(--putih);
 }
 
 .saldo {
-  font-size: 32px;
-  margin-top: 10px;
-  color: var(--hijau1);
+  background-color: var(--putih);
+  color: var(--biru3);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--font-kemco);
+  border: 3px solid var(--biru4);
+}
+
+.saldo h3 {
+  color: var(--biru3);
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.nominal {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.histori {
+  background-color: var(--biru4);
+  color: var(--putih);
+  padding: 6px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: var(--font-depixelklein);
+  font-weight: bold;
+  display: inline-block;
+}
+
+.main {
+  width: 70%;
+  background-color: var(--putih);
+  color: var(--biru3);
+  padding: 20px;
+  border-radius: 16px;
+  font-family: var(--font-poppins);
+  border: 2px dashed var(--biru4);
+}
+
+.main h2 {
+  margin-bottom: 15px;
+  font-family: var(--font-kemco);
+  color: var(--biru1);
+}
+
+.sub {
+  font-weight: bold;
+  margin: 15px 0 10px;
+  font-family: var(--font-depixelklein);
+  color: var(--biru3);
+}
+
+.topup-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.topup-options input[type="radio"] {
+  display: none;
+}
+
+.topup-options label {
+  background-color: var(--putih);
+  border: 2px solid var(--biru3);
+  border-radius: 10px;
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--biru3);
   font-family: var(--font-kemco);
 }
 
-.topup-form label {
-  display: block;
-  text-align: left;
-  margin-bottom: 8px;
-  font-family: var(--font-poppins);
+.topup-options input[type="radio"]:checked + label {
+  background-color: var(--biru1);
+  color: var(--putih);
+  border-color: var(--biru1);
 }
 
-input {
-  width: 95%;
-  padding: 12px;
+.payment-methods {
+  margin-top: 10px;
+}
+
+.payment-methods input[type="radio"] {
+  display: none;
+}
+
+.payment-methods label {
+  display: block;
+  background-color: var(--putih);
+  color: var(--biru3);
+  padding: 10px;
+  border: 2px solid var(--biru3);
   border-radius: 10px;
-  border: none;
-  margin-bottom: 20px;
-  font-size: 16px;
-  background-color: var(--biru4);
-  color: var(--putih);
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-weight: bold;
   font-family: var(--font-depixelklein);
 }
 
+.payment-methods input[type="radio"]:checked + label {
+  background-color: var(--biru1);
+  color: var(--putih);
+  border-color: var(--biru1);
+}
 
-button.btn,
-a.btn {
-  background-color: var(--kuning);
+.submit-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 0;
+  background-color: var(--biru1);
   border: none;
-  padding: 12px 25px;
-  color: var(--hitam);
+  border-radius: 16px;
+  color: var(--putih);
   font-weight: bold;
-  font-size: 16px;
+  font-family: var(--font-kemco);
   cursor: pointer;
-  border-radius: 8px;
-  transition: 0.3s;
   text-decoration: none;
-  display: inline-block;
-  font-family: var(--font-pixel);
+}
+
+.submit-btn:hover {
+  background-color: var(--biru4);
+  transform: scale(1.02);
+}
+
+.topsekarang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
