@@ -21,6 +21,7 @@ window.onload = function () {
       if (response.ok) {
         alert(result.message);
         form.reset();
+        window.location.href = '/login';
       } else {
         alert(result.message);
       }
