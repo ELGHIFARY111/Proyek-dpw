@@ -25,7 +25,7 @@ function isAuthenticated(req, res, next) {
 }
 // Static files tanpa prefix
 app.use(express.static(path.join(__dirname, "public")));
-app.use("/data", express.static(path.join(__dirname, "data")));
+app.use("/api", express.static(path.join(__dirname, "data")));
 app.use("/node_modules", express.static(path.join(__dirname, "node_modules")));
 
 // Routing
@@ -103,7 +103,7 @@ app.get("/logout", (req, res) => {
     res.redirect("/login");
   });
 });
-app.get("/data/user", (req, res) => {
+app.get("/api/user", (req, res) => {
   if (req.session.user) {
     res.json(req.session.user);
   } else {
@@ -301,7 +301,7 @@ app.post("/simpan-transaksi", (req, res) => {
 });
 
 // Endpoint untuk mendapatkan semua pesan
-app.get("/data/pesan", (req, res) => {
+app.get("/api/pesan", (req, res) => {
   const dataPath = path.join(__dirname, "data", "pesan.json");
   fs.readFile(dataPath, "utf-8", (err, jsonData) => {
     if (err) return res.status(500).json({ error: "Gagal membaca data pesan" });
@@ -310,7 +310,7 @@ app.get("/data/pesan", (req, res) => {
 });
 
 // Endpoint untuk mengirim pesan baru
-app.post("/data/pesan", (req, res) => {
+app.post("/api/pesan", (req, res) => {
   const newMessage = req.body;
   const dataPath = path.join(__dirname, "data", "pesan.json");
 
@@ -435,7 +435,7 @@ app.post("/register-user", (req, res) => {
 });
 
 // forgot password
-app.post('/data/forgot-password', (req, res) => {
+app.post('/api/forgot-password', (req, res) => {
   const { email, newPassword } = req.body;
   const users = JSON.parse(fs.readFileSync('./data/users.json', 'utf-8'));
 

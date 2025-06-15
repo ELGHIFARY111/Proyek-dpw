@@ -4,12 +4,13 @@ const chatArea = document.getElementById("chatArea");
 const maxCharMsg = 1500;
 let currentUser = null;
 
+// Ambil user yang sedang login
 async function getCurrentUser() {
     try {
-        const res = await fetch("/data/user");
+        const res = await fetch("/api/user");
         const data = await res.json();
         currentUser = data.username;
-        fetchMessages();
+        fetchMessages(); // ambil pesan setelah user diketahui
     } catch (err) {
         console.error("Belum login");
         window.location.href = "/login";
@@ -17,40 +18,47 @@ async function getCurrentUser() {
 }
 getCurrentUser();
 
+// Ambil semua pesan dan tampilkan
 async function fetchMessages() {
     try {
-        const response = await fetch('/data/pesan');
+        const response = await fetch('/api/pesan');
         const messages = await response.json();
 
         let html = "";
         messages.forEach((msg, index) => {
-            const isUser = msg.username.trim() === currentUser;
+            const isUser = msg.nama.trim() === currentUser;
             const className = isUser ? "from-user" : "from-others";
             const marginTop = index === 0 ? "margin-top: 20px;" : "";
 
             html += `
                 <div class="message ${className}" style="${marginTop}">
-                    <a style="font-size:10px;">${msg.username}:</a><br> ${msg.content}
+                    <a style="font-size:10px;">${msg.nama}:</a><br> ${msg.pesan}
                 </div>`;
         });
 
         chatArea.innerHTML = html;
-        chatArea.scrollTop = chatArea.scrollHeight;
+        chatArea.scrollTop = chatArea.scrollHeight; // scroll ke bawah
     } catch (error) {
         console.error("Error fetching messages:", error);
     }
 }
 
+// Kirim pesan saat tombol klik
 sendButton.addEventListener("click", async function () {
     const messageText = chatInput.value.trim();
     if (messageText) {
+        if (messageText.length > maxCharMsg) {
+            alert("Pesan terlalu panjang!");
+            return;
+        }
+
         try {
-            const response = await fetch('/data/pesan', {
+            const response = await fetch('/api/pesan', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    username: currentUser,
-                    content: messageText
+                    nama: currentUser,
+                    pesan: messageText
                 })
             });
 
@@ -67,11 +75,10 @@ sendButton.addEventListener("click", async function () {
     }
 });
 
+// Kirim pesan dengan tombol Enter
 chatInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
         sendButton.click();
     }
 });
-
-fetchMessages();
