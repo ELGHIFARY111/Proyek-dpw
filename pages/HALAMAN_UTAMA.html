@@ -21,75 +21,48 @@
     </nav>
 
     <div class="right-section">
-        <div class="search-box">
-          <iframe title="Search" class="serchh" src="/searching" frameborder="0"
-          width="300px"
-          height="300px"
-          >
-          
-        </iframe>
-        </div>
-        <a title="profil" href="/dashboard"><img id="profilPengguna" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Free-Image.png" alt="" ></a>
-        <style>
-  #profilPengguna {
-    display: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    right: 300px; /* geser ke kiri dari kanan */
-    bottom: 275px; /* geser ke atas dari bawah */
-  }
-</style>
-
-        <button class="button-hijau-login" onclick="window.location.href='/login'">Login</button>
-        <button class="button-hijau" onclick="window.location.href='/Register'">Register</button>
-        
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".button-hijau");
-    const fotoProfil = document.getElementById("profilPengguna");
-
-    buttons.forEach((btn) => {
-      const text = btn.textContent.trim().toLowerCase();
-
-      if (text.includes("register")) {
-        const sudahRegister = localStorage.getItem("sudahRegister");
-        if (sudahRegister === "true") {
-          btn.style.display = "none";
+    <div class="search-box">
+        <iframe title="Search" class="serchh" src="/searching" frameborder="0" width="300px" height="300px"></iframe>
+    </div>
+    <a title="profil" href="/dashboard">
+        <img id="profilPengguna" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Free-Image.png" alt="">
+    </a>
+    <style>
+        #profilPengguna {
+            display: none;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            right: 300px; /* geser ke kiri dari kanan */
+            bottom: 275px; /* geser ke atas dari bawah */
         }
+    </style>
 
-        btn.addEventListener("click", () => {
-          localStorage.setItem("sudahRegister", "true");
-          btn.style.display = "none";
-          window.location.href = "/Register";
+    <div id="user-info" style="display: none;">
+        <span id="user-name"></span>
+        <button class="button-hijau" onclick="window.location.href='/logout'">Logout</button>
+    </div>
+    <button class="button-hijau-login" id="login-button" onclick="window.location.href='/login'">Login</button>
+    <button class="button-hijau-login" onclick="window.location.href='/Register'">Register</button>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const userName = "<%= userName %>"; // Get the user's name from the server
+            const loginButton = document.getElementById("login-button");
+            const userInfo = document.getElementById("user-info");
+            const userNameSpan = document.getElementById("user-name");
+
+            if (userName) {
+                loginButton.style.display = "none"; // Hide login button
+                userInfo.style.display = "block"; // Show user info
+                userNameSpan.textContent = `Welcome, ${userName}`; // Display user's name
+            }
         });
-      }
+    </script>
+</div>
 
-      if (text.includes("login")) {
-        const sudahLogin = localStorage.getItem("sudahLogin");
-        if (sudahLogin === "true") {
-          btn.style.display = "none";
-          if (fotoProfil) fotoProfil.style.display = "inline-block";
-        }
-
-        btn.addEventListener("click", () => {
-          localStorage.setItem("sudahLogin", "true");
-          btn.style.display = "none";
-          if (fotoProfil) fotoProfil.style.display = "inline-block";
-          window.location.href = "/login";
-        });
-      }
-    });
-
-    if (localStorage.getItem("sudahLogin") === "true") {
-      if (fotoProfil) fotoProfil.style.display = "inline-block";
-    }
-  });
-</script>
-
-      </div>
     </div>
     </header>
 

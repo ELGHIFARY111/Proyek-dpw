@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 8000;
 
 // midlware buat baca json
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
 const session = require("express-session");
 
 app.use(session({
@@ -37,11 +36,15 @@ app.get("/faq", (req, res) => {
 });
 app.get("/", (req, res) => {
   if (req.session.user) {
-    console.log("User terlogin:", req.session.user);
+    console.log("User  terlogin:", req.session.user);
+    res.sendFile(path.join(__dirname, "pages", "HALAMAN_UTAMA.html"), {
+      userName: req.session.user.nama 
+    });
+  } else {
+    res.sendFile(path.join(__dirname, "pages", "HALAMAN_UTAMA.html"));
   }
-
-  res.sendFile(path.join(__dirname, "pages", "HALAMAN_UTAMA.html"));
 });
+
 app.get("/list-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "list-game.html"));
 });
