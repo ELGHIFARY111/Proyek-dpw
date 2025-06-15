@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 8000;
 
 // midlware buat baca json
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "public")));
 const session = require("express-session");
 
 app.use(session({
@@ -103,7 +104,7 @@ app.get("/api/user", (req, res) => {
   }
 });
 app.get("/login", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages/login.html"));
+  res.sendFile(path.join(__dirname, "pages", "login.html"));
 });
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
