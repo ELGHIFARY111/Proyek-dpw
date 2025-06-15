@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konfirmasi Pembayaran</title>
+  <link rel="stylesheet" href="/public/css/code.css" />
+  <link rel="stylesheet" href="/public/css/global.css" />
+</head>
+<body>
+  <input type="checkbox" id="showQR">
+  <input type="checkbox" id="QRshow">
+
+
+  <div class="popup-wrapper">
+    <div class="popup-box">
+      <h2>Detail Pesanan</h2>
+      <p class="sub">Pastikan informasi pembelian sudah benar</p>
+
+      <div class="info">
+        <p><span>Transaksi</span><span>: Top up Six fussion</span></p>
+        <p><span>Bayar pakai</span><span>: Dana</span></p>
+        <p><span>Harga</span><span>: Rp. 10.000</span></p>
+      </div>
+
+      <div class="total">
+        <p>Total pembayaran</p>
+        <h3>Rp. 10.000</h3>
+      </div>
+
+      <div class="actions">
+        <a href="/pages/saldo-dan-top-up.html"   class="batal">Batalkan</a>
+      
+        <label for="showQR" class="konfirmasi" id="btn1">Konfirmasi</label>
+      
+        <a href="/pages/saldo-dan-top-up.html" class="konfirmasi next-step">Konfirmasi</a>
+      </div>
+      
+
+      <div class="qr-wrapper">
+        <p style="color: black; margin-bottom: 8px;">Scan QR Code untuk membayar:</p>
+        <img src="/public/assets/foto/QRCODE.png" alt="QR Code">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

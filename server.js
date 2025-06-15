@@ -45,11 +45,6 @@ app.get("/referal", (req, res) => {
 app.get("/saldo-dan-top-up", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "saldo-dan-top-up.html"));
 });
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> d3e98ac24747cbb22886bbe6705203ebe23ccc09
 app.get("/HALAMAN_UTAMA", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
 });
@@ -58,11 +53,6 @@ app.get("/cek-pesanan", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
 });
 
-=======
-app.get("/cek-pesanan", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
-});
->>>>>>> ef0759222093544c0b4d1dc183c7819b5deb18bb
 app.get("/select-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "select-game.html"));
 });

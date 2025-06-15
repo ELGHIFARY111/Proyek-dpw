@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-kemco);
+}
+
+body {
+  background-color: var(--biru1);
+  color: var(--putih);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.popup-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background-color: var(--biru2);
+  color: var(--putih);
+  border-radius: 20px;
+  padding: 30px;
+  width: 420px;
+  text-align: center;
+}
+
+.popup-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--kuning);
+}
+
+.sub {
+  font-size: 0.9rem;
+  color: var(--putih);
+  margin-bottom: 20px;
+  font-family: var(--font-poppins);
+}
+
+.history-list {
+  border-top: 1px dashed var(--putih);
+  padding-top: 12px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--biru4);
+  color: var(--putih);
+  font-family: var(--font-pixel);
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.tanggal {
+  width: 40%;
+}
+
+.metode {
+  width: 30%;
+  text-align: center;
+}
+
+.jumlah {
+  width: 30%;
+  text-align: right;
+}
+
+.actions {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.batal {
+  background-color: var(--biru4);
+  color: var(--putih);
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--font-pixel);
+}
+
+.batal:hover {
+  background-color: var(--biru3);
+}

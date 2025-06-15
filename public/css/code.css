@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-pixel);
+}
+
+body {
+  background: var(--biru2);
+  color: var(--putih);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.popup-box {
+  background: var(--putih);
+  color: var(--hitam);
+  border: 4px solid var(--biru1);
+  border-radius: 12px;
+  padding: 24px;
+  width: 360px;
+  text-align: center;
+}
+
+.popup-box h2 {
+  color: var(--biru1);
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.sub {
+  font-size: 0.85rem;
+  color: var(--abu-tua);
+  margin-bottom: 16px;
+}
+
+.info p {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.total {
+  border-top: 1px dashed var(--abu);
+  margin-top: 16px;
+  padding-top: 8px;
+  text-align: right;
+}
+
+.total h3 {
+  color: var(--biru1);
+  font-size: 1.4rem;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.actions a,
+.actions label {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid var(--biru3);
+}
+
+.batal {
+  background: var(--biru1);
+  color: var(--putih);
+  cursor: pointer;
+
+}
+.batal:hover {
+  background: var(--biru4);
+  color: var(--putih);
+}
+
+.konfirmasi {
+  background: var(--biru1);
+  color: var(--putih);
+  cursor: pointer;
+}
+.konfirmasi:hover {
+  background: var(--biru4);
+  color: var(--putih);
+}
+
+
+.qr-wrapper {
+  display: none;
+  margin-top: 16px;
+}
+
+#showQR:checked ~ .popup-wrapper .qr-wrapper {
+  display: block;
+}
+
+.qr-wrapper img {
+  width: 180px;
+  display: block;
+  margin: 0 auto;
+  border: 3px solid var(--biru1);
+}
+
+.next-step {
+  display: none;
+}
+
+#showQR:checked ~ .popup-wrapper .popup-box .actions .next-step {
+  display: inline-block;
+}
+
+#showQR:checked ~ .popup-wrapper .popup-box .actions #btn1 {
+  display: none;
+}
+
+#showQR {
+  display: none;
+}
+#QRshow {
+  display: none;
+}
+
