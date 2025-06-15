@@ -1,93 +1,56 @@
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  color: var(--putih);
+  background-color: var(--biru1);
+  font-family: var(--font-depixelklein);
 }
-
-body {
-  font-size: 16px;
-  line-height: 1.5;
-  background: var(--biru1);
-  margin: 2rem 8rem;
-}
-
-header p {
-  font-family: var(--font-kemco);
-  color: var(--kuning);
-  text-shadow: 5px 5px 3px var(--biru3);
-  display: flex;
-  align-items: center;
-  font-size: 40px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-header span {
-  border-top: 5px dashed var(--kuning);
-  box-shadow: 3px 3px 0 var(--biru3);
-  flex-grow: 1;
-  margin-left: 10px;
-}
-
-main,
-#container {
-  margin: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
-  /* grid-template-columns: repeat(3, 1fr); */
-  gap: 0.8rem;
-}
-
-.artikel-card {
-  width: 100%;
-  max-height: 25rem;
-  overflow: hidden;
+main {
+  margin: 5rem 15rem;
   display: flex;
   flex-direction: column;
-  background-color: var(--biru3);
+  line-height: 1;
   padding: 1rem;
-  border-radius: 15px;
-  border: 3px solid transparent;
-  transition: 0.2s ease;
-  box-shadow: 3px 3px 10px var(--biru3);
+  background-color: var(--biru3);
+  border-radius: 10px;
 }
-
-.artikel-card:hover {
-  border: 3px solid var(--kuning);
-}
-
-.artikel-card img {
-  width: 100%;
-  height: 10rem;
-  border: 3px dashed var(--biru1);
-  border-radius: 15px;
-  object-fit: cover;
-}
-
-.artikel-card .judul {
-  font-family: var(--font-depixelklein);
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--putih);
-  margin-top: 1rem;
-}
-
-.artikel-card .deskripsi {
-  margin: 0.4rem 0;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--putih);
-  font-family: var(--font-pixel);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-  max-height: 4.2rem;
-}
-
-.artikel-card .publish {
-  font-family: var(--font-depixelklein);
-  font-size: 14px;
-  font-weight: 700;
+.cont-img {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 12px;
   color: var(--biru1);
-  margin-top: auto;
+}
+img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+h2,
+h3,
+h4 {
+  font-weight: 900;
+  line-height: 1;
+  border-left: 3px solid var(--biru1);
+  padding-left: 0.5rem;
+}
+h2 {
+  margin-top: 0;
+}
+h3,
+h2 {
+  margin-bottom: 0;
+}
+
+.contAtas {
+  display: flex;
+  font-size: 10px;
+  gap: 1rem;
+}
+.pnls {
+  padding-left: 1rem;
+  border-left: 2px solid var(--biru1);
 }

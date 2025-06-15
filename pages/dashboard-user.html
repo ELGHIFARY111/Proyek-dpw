@@ -3,36 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6fussion | Dashboard User</title>
+    <title>6Fusion | Dashboard User</title>
     <link rel="stylesheet" href="/css/dashboard-user.css">
     <link rel="stylesheet" href="/css/global.css">
 </head>
 <body>
-    <div class="container">
-        <div class="saldo-section">
-            <h2>Saldo Anda</h2>
-            <div class="saldo-value" id="saldo">Rp 0</div>
+    <div class="dashboard">
+        <div class="bar-left">
+            <img class="foto" src="/assets/foto/fotoanonym.png">
+            <div class="nama">USERNAME</div>
+            <ul>
+                <li class="saldo" onclick="muncul('saldo')">Ringkasan Saldo</li>
+                <li class="riwayat" onclick="muncul('riwayat')">Riwayat Top Up</li>
+            </ul>
         </div>
-
-        <div class="riwayat-section">
-            <h2>Riwayat Top Up</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>NO</th>
-                        <th>TANGGAL</th>
-                        <th>PRODUK</th>
-                        <th>HARGA</th>
-                        <th>TUJUAN</th>
-                        <th>STATUS</th>
-                    </tr>
-                </thead>
-                <tbody id="riwayat-body">
-                    <!-- Isi dengan JavaScript -->
-                </tbody>
-            </table>
+        <div class="content">
+            <div class="saldo-content" id="saldo-content">
+                    <h2>Ringkasan Saldo</h2>
+                    <p>Total Saldo : Rp 500.000</p>
+            </div>
+            <div class="riwayat-content" id="riwayat-content">
+                <div>
+                    <h2>
+                        Riwayat Top Up
+                    </h2>
+                    <table border="1">
+                        <thead>
+                            <th>No</th>
+                            <th>Tanggal</th>
+                            <th>Game</th>
+                            <th>Harga</th>
+                        </thead>
+                        <tr>
+                            <td>1. </td>
+                            <td>01/03/2026</td>
+                            <td>Mobile Legend</td>
+                            <td>Rp 100.000</td>
+                        </tr>
+                        <tr>
+                            <td>2. </td>
+                            <td>12/05/2026</td>
+                            <td>Free Fire</td>
+                            <td>Rp 50.000</td>
+                        </tr>
+                        <tr>
+                            <td>3. </td>
+                            <td>21/06/2026</td>
+                            <td>Stumble Guys</td>
+                            <td>Rp 20.000</td>
+                        </tr>
+                        <tr>
+                            <td>4. </td>
+                            <td>23/10/2026</td>
+                            <td>PUBG</td>
+                            <td>Rp 200.000</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
-    <script src="/js/dashboard-user.js"></script>
+    <script>
+        function muncul(menu){
+            document.getElementById("saldo-content").style.display = "none";
+            document.getElementById("riwayat-content").style.display = "none";
+
+            if (menu=="saldo"){
+                document.getElementById("saldo-content").style.display = "block";
+            } else if (menu=="riwayat"){
+                document.getElementById("riwayat-content").style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>

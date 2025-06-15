@@ -6,13 +6,91 @@
     <title>TOP UP GAME</title>
     <link rel="stylesheet" href="/css/HALAMAN_UTAMA.css">
     <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/testimoni.css">
+
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <button class="button-hijau" onclick="window.location.href='/login'">Login</button>
+
+    <nav class="left-section">
+      <a href="#" class="active">Beranda</a>
+      <a href="/cek-pesanan">Cek Pesanan</a>
+      <a href="/news-home">News</a>
+      <a href="/artikel-home">Artikel</a>
+    </nav>
+
+    <div class="right-section">
+        <div class="search-box">
+          <iframe title="Search" class="serchh" src="/searching" frameborder="0"
+          width="300px"
+          height="300px"
+          >
+          
+        </iframe>
+        </div>
+        <a title="profil" href="/dashboard"><img id="profilPengguna" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Free-Image.png" alt="" ></a>
+        <style>
+  #profilPengguna {
+    display: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 300px; /* geser ke kiri dari kanan */
+    bottom: 275px; /* geser ke atas dari bawah */
+  }
+</style>
+
+        <button class="button-hijau-login" onclick="window.location.href='/login'">Login</button>
         <button class="button-hijau" onclick="window.location.href='/Register'">Register</button>
+        
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".button-hijau");
+    const fotoProfil = document.getElementById("profilPengguna");
+
+    buttons.forEach((btn) => {
+      const text = btn.textContent.trim().toLowerCase();
+
+      if (text.includes("register")) {
+        const sudahRegister = localStorage.getItem("sudahRegister");
+        if (sudahRegister === "true") {
+          btn.style.display = "none";
+        }
+
+        btn.addEventListener("click", () => {
+          localStorage.setItem("sudahRegister", "true");
+          btn.style.display = "none";
+          window.location.href = "/Register";
+        });
+      }
+
+      if (text.includes("login")) {
+        const sudahLogin = localStorage.getItem("sudahLogin");
+        if (sudahLogin === "true") {
+          btn.style.display = "none";
+          if (fotoProfil) fotoProfil.style.display = "inline-block";
+        }
+
+        btn.addEventListener("click", () => {
+          localStorage.setItem("sudahLogin", "true");
+          btn.style.display = "none";
+          if (fotoProfil) fotoProfil.style.display = "inline-block";
+          window.location.href = "/login";
+        });
+      }
+    });
+
+    if (localStorage.getItem("sudahLogin") === "true") {
+      if (fotoProfil) fotoProfil.style.display = "inline-block";
+    }
+  });
+</script>
+
       </div>
+    </div>
     </header>
 
     <div class="container-isi">
@@ -24,6 +102,7 @@
         <a class="button-hijau" href="/select-game">Mainkan Game</a>
         <a class="button-hijau" href="/list-game">Mulai Top-up</a>
       </div>
+
     </div>
       <div class="container-gambar">
         <img class="bg-gambar" src="/assets/foto/BGDESA.png" alt="Gambar hutan" />
@@ -34,44 +113,32 @@
         <img class="bg-gambar6" src="/assets/gif/awan.gif" alt="Gambar awan" />
         <a class="teksdibawahbg">TOP UP NOW TOP UP NOW TOP UP NOW TOP UP NOW TOP UP NOW TOP UP NOW TOP UP</a>
       </div>
+
       <!-- dftar game -->
     <div class="container-game">
         <h1>Daftar Top Up Game</h1>
-        <div class="game-list" id="game-list"></div>
-        <script>
-          fetch('/json/game.json')
-            .then(response => response.json())
-            .then(games => {
-              const container = document.getElementById('game-list');
-              games.forEach(game => {
-                const item = document.createElement('div');
-                item.className = 'game-item';
-                item.innerHTML = `
-                  <img src="${game.gambar.logo}" alt="${game.nama}">
-                  <p>${game.nama}</p>
-                `;
-                container.appendChild(item);
-              });
-            })
-            .catch(error => {
-              console.error("Gagal memuat data game:", error);
-            });
-        </script>
+
+
+       <iframe title="List Game" src="/list-game" frameborder="0" 
+          width="100%"
+          height="1250px">
+        
+       </iframe>
     </div>
-      <div class="container-tampilan">
-
-      </div>
 
 
-      <div class="container-artikel" style="display: flex; justify-content: center; margin: 40px 0;">
+      <div class="container-artikel" >
         <iframe 
+          title="Artikel Home"
+          frameborder="0"
           src="/artikel-home" 
           name="frame1" 
-          scrolling="yes" 
           width="100%" 
-          height="900px">
+          scrolling="no"
+          height="1250px">
         </iframe>
       </div>
+
       <div class="container-Testimoni">
         
       </div>
@@ -83,46 +150,68 @@
         
         <p>Kenapa Harus 6 fussion?</p>
 
-                <table>
-            <tr>
-                <td><p>1. Bayar dalam hitungan detik</p> 
-                    Hanya butuh beberapa detik untuk menyelesaikan pembayaran di 6Fushion. ID dan pembayaran yang lengkap langsung diproses.</p></td>
-                <td><p>2. Metode pembayaran terbanyak</p>Menyediakan berbagai pilihan pembayaran mulai dari e-wallet, potong pulsa, transfer bank, hingga pembayaran di mini market.</td>
-            </tr>
-            <tr>
-                <td><p>3. Pengiriman instan</p> 
-                    Ketika kamu melakukan top-up di 6Fushion, item atau barang yang kamu beli akan langsung dikirim ke akunmu secara cepat dan instan tanpa penundaan</p></td>
-                <td><p>4. Layanan Pelanggan Cepat & Ramah</p>Tim customer service kami siap membantu kapanpun dan di manapun kamu berada.</td>
-            </tr>
-            <tr>
-                <td><p>5. Dapatkan rewards untuk setiap pembelian</p> 
-                    Log in atau daftar untuk bergabung dalam program loyalitas 6Fushion dan dapatkan rewards untuk setiap transaksi.</p></td>
-                <td><p>6. Dapatkan Lebih Banyak Keuntungan</p>Ikuti Program Referral Kami Sekarang! Ajak temanmu untuk menggunakan 6Fushion dan dapatkan bonus setiap kali mereka melakukan pembelian pertama. Semakin banyak teman, semakin banyak bonus!</td>
-            </tr>
-        </table>
+               <table>
+                    <tr>
+                        <td class="info1"><p>1. Bayar dalam hitungan detik</p> 
+                            <p>Hanya butuh beberapa detik untuk menyelesaikan pembayaran di 6Fushion. ID dan pembayaran yang lengkap langsung diproses.</p>
+                        </td>
+                        <td class="info2"><p>2. Metode pembayaran terbanyak</p>
+                            <p>Menyediakan berbagai pilihan pembayaran mulai dari e-wallet, potong pulsa, transfer bank, hingga pembayaran di mini market.</p>                                
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td  class="info3"><p>3. Pengiriman instan</p> 
+                            <p>Ketika kamu melakukan top-up di 6Fushion, item atau barang yang kamu beli akan langsung dikirim ke akunmu secara cepat dan instan tanpa penundaan</p>
+                        </td>
+                        <td class="info4"><p>4. Layanan Pelanggan Cepat & Ramah</p>
+                            <p>Tim customer service kami siap membantu kapanpun dan di manapun kamu berada.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  class="info5"><p>5. Dapatkan rewards untuk setiap pembelian</p> 
+                            <p>Log in atau daftar untuk bergabung dalam program loyalitas 6Fushion dan dapatkan rewards untuk setiap transaksi.</p>
+                        </td>
+                        <td class="info6"><p>6. Dapatkan Lebih Banyak Keuntungan</p>
+                            <p>Ikuti Program Referral Kami Sekarang! Ajak temanmu untuk menggunakan 6Fushion dan dapatkan bonus setiap kali mereka melakukan pembelian pertama. Semakin banyak teman, semakin banyak bonus!</p>
+                        </td>   
+                    </tr>
+                </table> 
+
+      </div>
+
+
+
+      <iframe title="Testimoni" src="/testimoni" frameborder="0"
+       width="100%"
+       height="1400px">
+        
+       </iframe>
+
       <div class="container-sponsor">
       </div>
+
     <footer>
         <div class="footer-content">
             <div class="brand">
                 <h1>SIXFUSION</h1>
                 <p>Top up Diamond Mobile Legends, Free Fire, Honor of Kings, dan game lainnya dengan harga murah. Proses instan, aman, dan berbagai metode pembayaran!</p>
                 <div class="socials">
-                    <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-                    <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                    <a href="https://www.facebook.com" target="_blank">Facebook</a>
-                    <a href="https://www.x.com" target="_blank">X</a>
-                    <a href="https://www.whatsapp.com" target="_blank">WhatsApp</a>
+                    <a href="https://www.tiktok.com" target="#">TikTok</a>
+                    <a href="https://www.instagram.com" target="#">Instagram</a>
+                    <a href="https://www.facebook.com" target="#">Facebook</a>
+                    <a href="https://www.x.com" target="#">X</a>
+                    <a href="https://www.whatsapp.com" target="#">WhatsApp</a>
                 </div>
             </div>
             <div class="links">
                 <h2>LINK</h2>
                 <ul>
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="#">Cek Pesanan</a></li>
-                    <li><a href="#">Testimonial</a></li>
-                    <li><a href="#">Artikel</a></li>
-                    <li><a href="#">Masuk</a></li>
+                    <li><a href="#" class="active">Beranda</a></li>
+                    <li><a href="/cek-pesanan">Cek Pesanan</a></li>
+                    <li><a href="/promo">Promo</a></li>
+                    <li><a href="/testimoni">testimoni</a></li>
+                    <li><a href="/referal">Referral</a></li>
                     <li><a href="/about-us">About Us</a></li>
                 </ul>
             </div>
@@ -131,6 +220,7 @@
                 <ul>
                     <li><a href="/kebijakanPrivasi">Kebijakan Privasi</a></li>
                     <li><a href="/syarat&ketentuan">Syarat & Ketentuan</a></li>
+                    <li><a href="/hubungi-kami">Hubungi Kami</a></li>
                 </ul>
             </div>
             <div class="help">
@@ -143,5 +233,7 @@
         </div>
     </footer>
       </div>
+
+      <script src="/public/js/halaman_utama.js"></script>
   </body>
 </html>

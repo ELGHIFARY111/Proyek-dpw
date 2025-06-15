@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>6Fussin | Login</title>
-    <link rel="stylesheet" href="/css/style-login.css" />
+    <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/global.css" />
   </head>
   <body>
@@ -12,10 +12,14 @@
       <div class="left-side">
         <h1>LOGIN</h1>
         <img src="/assets/gif/ninja_lari.gif" alt="#" class="pixel-lari" />
+        <div class="content">
+          <p>Belum Memiliki akun? </p>
+          <a href="/register" class="button-register">REGISTER</a>
+        </div>
       </div>
       <div class="right-side">
         <div class="form-login">
-          <form action="" method="get" class="card-login" id="login">
+          <form action="/" method="get" class="card-login" id="login">
             <label for="email">Email</label><br />
             <input
               type="text"
@@ -32,6 +36,7 @@
               placeholder="example123"
               required
             /><br />
+            <a href="/f-pass" class="lupa">Forgot Password?</a>
             <button class="sumbit-login" type="submit">LOGIN</button>
           </form>
         </div>

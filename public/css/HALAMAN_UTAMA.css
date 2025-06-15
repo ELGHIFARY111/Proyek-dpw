@@ -7,6 +7,82 @@ body {
     margin-left: 0px;
     margin-right: 0px
 }
+
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Header */
+.header {
+  padding: 15px 30px;
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position:fixed;
+}
+
+
+
+
+/* Navigasi */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  color: #FFD700; /* Warna kuning */
+  font-weight: bold;
+}
+
+/* Search Box */
+.right-section {
+  display: flex;
+  align-items:flex-start;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.left-section{
+    display: flex-start;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  margin-left: 8px;
+  outline: none;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
 * {
   box-sizing: border-box;
   font-family: var(--font-pixel); 
@@ -65,7 +141,7 @@ p {
     background-image: url(/assets/foto/tombol.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: var(--biru1);
+    background-color: transparent;
     width: 200px;
     height: 50px;
     color: black;
@@ -75,30 +151,37 @@ p {
     cursor: pointer;
     margin: 5px;
     text-decoration: none;
+
 }
 
 .button-hijau:hover {
   background-color: darkgreen;
 }
 
+.button-hijau-login{
+    background-image: url(/assets/foto/tombol.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 200px;
+    height: 50px;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
 
-
-/* Game List */
-.game-list {
-    display: flex;
-    overflow-x: auto;
-    padding: 10px;
-    scrollbar-width: none;
-    background-color: #5c7aad;
 }
 
-.game-list::-webkit-scrollbar {
-    height: 8px;
+.button-hijau-login:hover {
+  background-color: darkgreen;
 }
-.game-list::-webkit-scrollbar-thumb {
-    background: #4b3e70;
-    border-radius: 10px;
-}
+
+
+
+
 
 .game-item {
     min-width: 150px;
@@ -159,6 +242,7 @@ p {
     position: absolute;
     z-index: 10;
     margin-bottom: 0px;
+
 }
 
 .bg-gambar2 {
@@ -180,6 +264,7 @@ p {
     height: 34%;
     top: 40%;
     left: 75%;
+    z-index: 1;
 }
 
 .bg-gambar5 {
@@ -187,6 +272,7 @@ p {
     height: 34%;
     top: 10%;
     left: 15%;
+    z-index: 1;
 }
 
 .bg-gambar6 {
@@ -194,10 +280,29 @@ p {
     height: 34%;
     top: 45%;
     left: 3%;
-    
+    z-index: 1;
 }
 
+.container-gambar {
+    z-index: 1;
+}
 
+.info1,
+.info4,
+.info5{
+    background-color: var(--kuning);
+    color: var(--biru2);
+    padding: 10px;
+    border: 10px dashed var(--biru2);
+}
+.info2,
+.info3,
+.info6{
+    background-color: var(--biru2);
+    color: white;
+    padding: 10px;
+    border: 10px dashed var(--kuning);
+}
 
 
 
@@ -254,6 +359,7 @@ footer {
 .links h2, .legal h2, .help h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    text-align: left;
     color: #f1c40f; /* Header color */
 }
 
@@ -307,4 +413,7 @@ footer {
 td{
     border: 5px dashed var(--kuning);
 
+}
+.serchh{
+    float: right;
 }

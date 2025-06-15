@@ -1,9 +1,9 @@
 body{
-    background-color: var(--biru1);
+    background-color: #5315cf;
 }
 h2{
     font-family: var(--font-pixel);
-    color: var(--kuning);
+    color: var(--kuning1);
     text-align: center;
 }
 h1{
@@ -11,21 +11,22 @@ h1{
     font-weight: bolder;
     text-align: center;
 }
-.testimoni{
+
+#testimonial-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 80px;
-    max-width: 1000px; /* Atur ukuran sesuai kebutuhan */
+    max-width: 1000px; 
     margin: auto;
 }
 .testimonial{
     display: flex;
     flex-direction: column;
     border: 1px solid var(--putih);
-    background-color: var(--biru2);
+    background-color:  #320c7d;
     padding: 20px;
     border-radius: 10px;
-    width: 100%; /* Pastikan elemen menyesuaikan grid */
+    width: 100%; 
     max-width: 100%;
 }
 .testimonial:hover {
@@ -41,11 +42,12 @@ h1{
 
 .testimonial-header h3{
     color: var(--putih);
+    letter-spacing: 2px;
     font-weight: bold;
     font-family: var(--font-pixel);
 }
-.rating span {
-    color: #f1c40f; /* warna emas untuk bintang */
+.rating{
+    color: var(--kuning1); /* warna emas untuk bintang */
     font-size: 20px;
      margin-right: 2px;
 }
@@ -56,7 +58,6 @@ hr{
     margin: 5px 0;
 }
 
-.phone,
 .purchase,
 .date {
   margin: 5px 0;

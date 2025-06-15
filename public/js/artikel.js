@@ -1,40 +1,54 @@
-function createElement(tag, parent, options = {}) {
-  const el = document.createElement(tag);
-  if (options.text) el.textContent = options.text;
-  if (options.html) el.innerHTML = options.html;
-  if (options.className) el.className = options.className;
-  if (options.id) el.id = options.id;
-  if (options.src) el.src = options.src;
-  if (options.alt) el.alt = options.alt;
-  if (parent) parent.appendChild(el);
+function createElement(
+  tagName,
+  container,
+  content = "",
+  className = "",
+  id = ""
+) {
+  const el = document.createElement(tagName);
+  el.innerHTML = content;
+  if (className) el.className = className;
+  if (id) el.id = id;
+  container.appendChild(el);
   return el;
 }
-fetch("/json/artikel.json")
+
+const container = document.querySelector("main");
+
+fetch("/api/artikel.json")
   .then((res) => res.json())
   .then((data) => {
-    const container = document.getElementById("container");
+    const headi2 = window.location.pathname.split("/").pop();
+    const filtered = data.find((a) => a.id === headi2);
+    if (!filtered) return;
 
-    data.artikel.forEach((artikel) => {
-      const artkl = createElement("section", container, {
-        className: "artikel-card",
-      });
+    const contAtas = createElement("div", container, "", "contAtas");
 
-      createElement("img", artkl, {
-        src: artikel.gambar,
-        alt: "Gambar artikel",
-      });
-      createElement("div", artkl, {
-        className: "judul",
-        text: artikel.judul,
-      });
-      createElement("div", artkl, {
-        className: "deskripsi",
-        text: artikel.deskripsi,
-      });
-      createElement("div", artkl, {
-        className: "publish",
-        text: artikel.publikasi,
-      });
+    filtered.konten.forEach((konten) => {
+      if (konten.type === "image") {
+        const contImg = createElement("div", container, "", "cont-img");
+        const img = createElement("img", contImg);
+        img.src = konten.url;
+        // caption bisa pakai markdown
+        createElement("p", contImg, marked.parse(konten.caption));
+      } else if (konten.type === "pblk") {
+        createElement("p", contAtas, marked.parse(konten.publikasi), "pblks");
+      } else if (konten.type === "pnls") {
+        createElement("p", contAtas, marked.parse(konten.penulis), "pnls");
+      } else if (konten.type === "heading2") {
+        document.title = `SixFussion | Artikel - ${konten.text}`;
+        createElement("h2", container, marked.parseInline(konten.text));
+      } else if (konten.type === "heading3") {
+        createElement("h3", container, marked.parseInline(konten.text));
+      } else if (konten.type === "heading4") {
+        createElement("h4", container, marked.parseInline(konten.text));
+      } else if (konten.type === "paragraph") {
+        createElement("p", container, marked.parse(konten.text));
+      } else if (konten.type === "list") {
+        const contList = createElement("ul", container);
+        konten.text.forEach((text) => {
+          createElement("li", contList, marked.parseInline(text));
+        });
+      }
     });
-  })
-  .catch((err) => console.error("Gagal load artikel:", err));
+  });

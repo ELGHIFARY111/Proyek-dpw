@@ -5,10 +5,10 @@
 }
 body {
   color: var(--putih);
-  background-color: var(--biru1);
+  background-color: var(--biru3);
 }
 main {
-  margin: 0 10rem;
+  margin: 3rem 10rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -32,12 +32,12 @@ section {
   gap: 20px;
   margin-bottom: 10px;
   font-weight: 900;
-  text-shadow: 1px 1px 1px var(--biru3);
+  text-shadow: 1px 1px 1px var(--biru1);
   font-size: 13px;
   font-family: var(--font-depixelklein);
 }
 .container-info p:last-child {
-  border-left: 3px solid var(--biru3);
+  border-left: 3px solid var(--biru1);
   padding-left: 1.2rem;
 }
 img {
@@ -46,8 +46,8 @@ img {
   height: auto;
   display: flex;
   justify-content: center;
-  border: 2px dashed var(--biru3);
-  box-shadow: 10px 10px 0 var(--biru3);
+  border: 2px dashed var(--biru1);
+  box-shadow: 10px 10px 0 var(--biru1);
 }
 .main-desk {
   font-size: 20px;
@@ -57,4 +57,7 @@ img {
   font-family: var(--font-pixel);
   text-shadow: 1px 1px 1px var(--biru3);
   width: 100%;
+}
+a {
+  color: var(--biru1);
 }

@@ -347,6 +347,9 @@ main {
   animation: fadeInOut 5s forwards;
   /* max-width: 280px; */
   z-index: 1000;
+  height: 10rem;
+  width: 25rem;
+  object-fit: cover;
 }
 @keyframes fadeInOut {
   0% {

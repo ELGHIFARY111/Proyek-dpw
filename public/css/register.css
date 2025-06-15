@@ -34,16 +34,19 @@ body {
     image-rendering: pixelated;
 }
 
-.left-side span {
-    margin-top: 10px;
-    margin-left: -40px;
-    font-size: 15px;
-    align-items: center;
+.content {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 10px;          
+    margin-top: 20px;
 }
 
 .button-sign-in {
     font-family: var(--font-pixel);
     margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
     padding: 10px 20px;
     font-size: 15px;
     background-color: var(--biru3);
@@ -67,7 +70,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 350px;
-    height: 450px;
+    height: 550px;
 }
 
 .card label {
@@ -93,6 +96,18 @@ body {
     font-family: var(--font-pixel);
 }
 
+.card select {
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    background-color: #222;
+    border: 1px solid #884dff;
+    color: white;
+    font-family: var(--font-pixel);
+}
+
 .sumbit-regist {
     font-family: var(--font-pixel);
     padding: 12px;
@@ -102,4 +117,9 @@ body {
     border: none;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.sumbit-regist:hover {
+    background-color: var(--kuning);
+    color: var(--biru2);
 }

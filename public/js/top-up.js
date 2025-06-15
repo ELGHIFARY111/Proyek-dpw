@@ -13,12 +13,12 @@ class Methd {
   cleanAndUppercaseKey(key) {
     return key.replace(/[_\-=+]/g, " ").toUpperCase(); // ganti simbol jadi spasi terus di-uppercase
   }
-  generateShortCode() {
+  generateInv() {
     const timestamp = Date.now();
     const random = Math.floor(1000 + Math.random() * 9000);
     return `INV-${timestamp}-${random}`;
   }
-  timeUnderNine(value) {
+  timeUnderTen(value) {
     return value < 10 ? "0" + value : value;
   }
   showPopup({
@@ -103,11 +103,12 @@ class Methd {
     });
 
     // send ke endpoint
+    const inv = this.generateInv();
     const now = new Date();
     document.querySelector(".payNow").addEventListener("click", () => {
       const sendData = {
         id,
-        invoice: this.generateShortCode(),
+        invoice: inv,
         username,
         userId,
         kategori,
@@ -121,10 +122,18 @@ class Methd {
           pembayaran: false,
         },
         time: {
-          waktu: `${this.timeUnderNine(now.getHours())}:${this.timeUnderNine(
+          waktu: `${this.timeUnderTen(now.getHours())}:${this.timeUnderTen(
             now.getMinutes()
-          )}:${this.timeUnderNine(now.getSeconds())}`,
-          tanggal: `${this.timeUnderNine(now.getDate())}/${this.timeUnderNine(
+          )}:${this.timeUnderTen(now.getSeconds())}`,
+          tanggal: `${this.timeUnderTen(now.getDate())}/${this.timeUnderTen(
+            now.getMonth()
+          )}/${now.getFullYear()}`,
+        },
+        expired: {
+          waktu: `${this.timeUnderTen(now.getHours())}:${this.timeUnderTen(
+            now.getMinutes()
+          )}:${this.timeUnderTen(now.getSeconds())}`,
+          tanggal: `${this.timeUnderTen(now.getDate() + 1)}/${this.timeUnderTen(
             now.getMonth()
           )}/${now.getFullYear()}`,
         },
@@ -141,14 +150,14 @@ class Methd {
         .then((msg) => {
           console.log(msg);
           popup.style.display = "none";
-          window.location.href = "/payment";
+          window.location.href = `/payment/${inv}`;
         })
         .catch((err) => console.error("Gagal kirim data:", err));
     });
   }
 }
-const dataPay = fetch("/json/payment.json").then((res) => res.json());
-const gameData = fetch("/json/game.json").then((res) => res.json());
+const dataPay = fetch("/api/payment.json").then((res) => res.json());
+const gameData = fetch("/api/game.json").then((res) => res.json());
 const fungsi = new Methd();
 
 // reset popup konfirmasi pembayaran
@@ -186,17 +195,14 @@ gameData
     const headerCont = document.querySelector("header");
 
     // Ambil ID dari URL
-    const urlParams = new URLSearchParams(window.location.search);
-    // Cari data game berdasarkan ID
-    const gameId = urlParams.get("id");
+    const ResGame = window.location.pathname.split("/").pop();
 
-    const selectedGame = data.find((item) => item.id === gameId);
+    const selectedGame = data.find((item) => item.id === ResGame);
 
     // title
     if (selectedGame) {
       document.title = `SixFussion | Top Up ${selectedGame.nama}`;
     }
-
     if (!selectedGame) {
       window.location.href = "/notfound";
     }
@@ -500,15 +506,15 @@ dataPay
   .catch((err) => console.error("Error fetching payment data:", err));
 
 const containerTesti = document.getElementById("container-testimonial");
-fetch("/json/testimonial.json")
+fetch("/api/testimonial.json")
   .then((res) => res.json())
   .then((testimonialList) => {
     gameData.then((dataGame) => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const gameId = urlParams.get("id");
+      const gameId = window.location.pathname.split("/").pop();
 
       testimonialList.forEach((testi, index) => {
         const selectedGame = dataGame.find((game) => game.id === testi.id);
+
         // console.log("Testi ID:", testi.id);
         // console.log("Selected Game:", selectedGame);
 
@@ -559,8 +565,6 @@ fetch("/json/testimonial.json")
             `${testi.time.hour} - ${testi.time.date}`,
             "date"
           );
-        } else {
-          document.getElementById("no-testi").style.display = "flex";
         }
       });
     });

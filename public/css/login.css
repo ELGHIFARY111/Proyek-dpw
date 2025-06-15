@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-pixel);
+    background: var(--biru1);
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-side {
+    flex: 1;
+    text-align: center;
+}
+
+.left-side h1 {
+    margin-top: -50px;
+    margin-left: -100px;
+    font-size: 60px; 
+    letter-spacing: 5px;
+}
+
+.pixel-lari {
+    width: 750px;
+    height: 750px;
+    margin-top: -300px;
+    margin-left: -200px;
+    image-rendering: pixelated;
+}
+
+.content {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    gap: 10px;          
+    margin-top: 20px;
+}
+
+.button-register {
+    font-family: var(--font-pixel);
+    margin-left: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    background-color: var(--biru3);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card-login {
+    margin-right: 100px;
+    background-color: var(--biru3);
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 260px;
+}
+
+.card-login label {
+    color: white;
+    font-size: 15px;
+    border-bottom: 2px dotted var(--biru1);
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.card-login input {
+    padding: 10px;
+    font-size: 13px;
+    background-color: #222;
+    border: 1px solid #884dff;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+    font-family: var(--font-pixel);
+}
+
+a {
+    color: inherit;
+}
+
+.lupa {
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.sumbit-login {
+    font-family: var(--font-pixel);
+    padding: 12px;
+    font-size: 15px;
+    background-color: var(--biru2);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sumbit-login:hover {
+    background-color: var(--kuning);
+    color: var(--biru2);
+}

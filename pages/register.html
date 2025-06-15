@@ -16,12 +16,14 @@
           alt="ninja_diam"
           class="pixel-berdiri"
         />
-        <span>Sudah Memiliki akun? </span>
-        <a href="#" class="button-sign-in">SIGN IN</a>
+        <div class="content">
+          <p>Sudah Memiliki Akun?</p>
+          <a href="/login" class="button-sign-in">SIGN IN</a>
+        </div>
       </div>
       <div class="right-side">
         <div class="form-register">
-          <form action="" method="get" class="card" id="register">
+          <form class="card" id="register">
             <label for="user">Username</label><br />
             <input
               type="text"
@@ -54,6 +56,11 @@
               placeholder="example123"
               required
             /><br />
+            <label for="role">Admin/User: </label>
+            <select name="role" id="role" required>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
             <button class="sumbit-regist" type="submit">SIGN UP</button>
           </form>
         </div>
@@ -62,3 +69,4 @@
     <script src="/js/register.js"></script>
   </body>
 </html>
+<!--  -->
