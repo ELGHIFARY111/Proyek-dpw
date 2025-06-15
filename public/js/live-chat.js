@@ -6,7 +6,7 @@ let currentUser = null;
 
 async function getCurrentUser() {
     try {
-        const res = await fetch("/api/user");
+        const res = await fetch("/data/user");
         const data = await res.json();
         currentUser = data.username;
         fetchMessages();
@@ -19,7 +19,7 @@ getCurrentUser();
 
 async function fetchMessages() {
     try {
-        const response = await fetch('/api/pesan');
+        const response = await fetch('/data/pesan');
         const messages = await response.json();
 
         let html = "";
@@ -45,7 +45,7 @@ sendButton.addEventListener("click", async function () {
     const messageText = chatInput.value.trim();
     if (messageText) {
         try {
-            const response = await fetch('/api/pesan', {
+            const response = await fetch('/data/pesan', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
