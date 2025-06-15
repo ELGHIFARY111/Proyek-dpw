@@ -15,6 +15,13 @@ app.use(session({
   saveUninitialized: true,
   cookie: { maxAge: 1000 * 60 * 60 } // 1 jam
 }));
+function isAuthenticated(req, res, next) {
+  if (req.session && req.session.user) {
+    next();
+  } else {
+    res.redirect("/login");
+  }
+}
 // Static files tanpa prefix
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/api", express.static(path.join(__dirname, "data")));
@@ -95,35 +102,43 @@ app.get("/api/user", (req, res) => {
     res.status(401).json({ error: "Belum login" });
   }
 });
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "login.html"));
+});
 app.post("/login", (req, res) => {
   const { email, password } = req.body;
   const filePath = path.join(__dirname, "data", "users.json");
 
   fs.readFile(filePath, "utf8", (err, jsonData) => {
     if (err) {
-      console.error("Gagal membaca user:", err);
-      return res.status(500).json({ error: "Gagal membaca data user" });
+      return res.status(500).json({ error: "Gagal membaca data pengguna" });
     }
 
-    let users = JSON.parse(jsonData);
-    const userFound = users.find(u => u.email === email && u.password === password);
+    const users = JSON.parse(jsonData);
+    const user = users.find(u => u.email === email && u.password === password);
 
-    if (!userFound) {
-      return res.status(401).json({ error: "Email atau password salah!" });
-    }
+  if (user) {
     req.session.user = {
-      email: userFound.email,
-      nama: userFound.nama,
-      role: userFound.role
+      nama: user.nama,
+      email: user.email,
+      role: user.role,
     };
 
-    res.json({
-      message: "Login sukses",
-      user: req.session.user
-    });
+    if (user.role === "admin") {
+      res.redirect("/dashboard-admin");
+    } else {
+      res.redirect("/dashboard-user");
+    }
+  } else {
+    res.status(401).json({ error: "Email atau password salah" });
+  }
   });
 });
-app.get("/dashboard-user", (req, res) => {
+
+app.get("/dashboard-user", isAuthenticated, (req, res) => {
+  if (req.session.user.role !== "user") {
+    return res.status(403).send("Akses ditolak!");
+  }
   res.sendFile(path.join(__dirname, "pages", "dashboard-user.html"));
 });
 app.get("/laporkan", (req, res) => {
@@ -135,7 +150,10 @@ app.get("/syarat&ketentuan", (req, res) => {
 app.get("/kebijakanPrivasi", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "kebijakanPrivasi.html"));
 });
-app.get("/dashboard-admin", (req, res) => {
+app.get("/dashboard-admin", isAuthenticated, (req, res) => {
+  if (req.session.user.role !== "admin") {
+    return res.status(403).send("Akses ditolak!");
+  }
   res.sendFile(path.join(__dirname, "pages", "dashboard-admin.html"));
 });
 app.get("/testimonial", (req, res) => {
