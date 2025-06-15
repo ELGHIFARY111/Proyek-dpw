@@ -4,17 +4,19 @@ const chatArea = document.getElementById("chatArea");
 const maxCharMsg = 1500;
 let currentUser = null;
 
-// Ambil user yang sedang login
-async function getCurrentUser() {
-    try {
-        const res = await fetch("/api/user");
-        const data = await res.json();
-        currentUser = data.username;
-        fetchMessages(); // ambil pesan setelah user diketahui
-    } catch (err) {
-        console.error("Belum login");
-        window.location.href = "/login";
+// Minta nama pengguna saat pertama kali masuk
+function getCurrentUser() {
+    let nama = localStorage.getItem("namaUser");
+
+    if (!nama) {
+        while (!nama || !nama.trim()) {
+            nama = prompt("Masukkan nama Anda:");
+        }
+        localStorage.setItem("namaUser", nama.trim());
     }
+
+    currentUser = nama.trim();
+    fetchMessages(); // ambil pesan setelah user diketahui
 }
 getCurrentUser();
 

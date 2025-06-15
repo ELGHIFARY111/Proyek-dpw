@@ -47,20 +47,36 @@
     <button class="button-hijau" id="login-button" onclick="window.location.href='/login'">Login</button>
     <button class="button-hijau" id="register-button" onclick="window.location.href='/Register'">Register</button>
 
-    <script>
-        window.addEventListener("DOMContentLoaded", () => {
-            const userName = "<%= userName %>"; 
-            const loginButton = document.getElementById("login-button");
-            const userInfo = document.getElementById("user-info");
-            const userNameSpan = document.getElementById("user-name");
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const loginButton = document.getElementById("login-button");
+    const registerButton = document.getElementById("register-button");
+    const userInfo = document.getElementById("user-info");
+    const userNameSpan = document.getElementById("user-name");
+    const profil = document.getElementById("profilPengguna");
 
-            if (userName) {
-                loginButton.style.display = "none";
-                userInfo.style.display = "block"; 
-                userNameSpan.textContent = `Welcome, ${userName}`; 
-            }
-        });
-    </script>
+    fetch("/api/current-user")
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.loggedIn) {
+          loginButton.style.display = "none";
+          registerButton.style.display = "none";
+          userInfo.style.display = "inline-block";
+          userNameSpan.textContent = `Hi, ${data.userName}`;
+          profil.style.display = "inline-block";
+        } else {
+          loginButton.style.display = "inline-block";
+          registerButton.style.display = "inline-block";
+          userInfo.style.display = "none";
+          profil.style.display = "none";
+        }
+      })
+      .catch((err) => {
+        console.error("Gagal mengambil data user:", err);
+      });
+  });
+</script>
+
 </div>
 
     </div>

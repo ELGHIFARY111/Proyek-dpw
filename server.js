@@ -10,10 +10,10 @@ app.use(express.json());
 const session = require("express-session");
 
 app.use(session({
-  secret: "rahasia_super_aman",  // bebas, asal aman
+  secret: "aman", 
   resave: false,
   saveUninitialized: true,
-  cookie: { maxAge: 1000 * 60 * 60 } // 1 jam
+  cookie: { maxAge: 1000 * 60 * 60 }
 }));
 function isAuthenticated(req, res, next) {
   if (req.session && req.session.user) {
@@ -35,15 +35,10 @@ app.get("/faq", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "pages", "faq.html"));
 });
 app.get("/", (req, res) => {
-  if (req.session.user) {
-    console.log("User  terlogin:", req.session.user);
-    res.sendFile(path.join(__dirname, "pages", "HALAMAN_UTAMA.html"), {
-      userName: req.session.user.nama 
-    });
-  } else {
-    res.sendFile(path.join(__dirname, "pages", "HALAMAN_UTAMA.html"));
-  }
+  const userName = req.session.userName || "";
+  res.sendFile(path.join(__dirname, "pages", "HALAMAN_UTAMA.html"));
 });
+
 
 app.get("/list-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "list-game.html"));
@@ -102,6 +97,13 @@ app.get("/logout", (req, res) => {
   req.session.destroy(() => {
     res.redirect("/login");
   });
+});
+app.get("/api/current-user", (req, res) => {
+  if (req.session && req.session.userName) {
+    res.json({ loggedIn: true, userName: req.session.userName });
+  } else {
+    res.json({ loggedIn: false });
+  }
 });
 app.get("/api/user", (req, res) => {
   if (req.session.user) {
@@ -299,32 +301,40 @@ app.post("/simpan-transaksi", (req, res) => {
     });
   });
 });
-
-// Endpoint untuk mendapatkan semua pesan
+// baca pesan
 app.get("/api/pesan", (req, res) => {
-  const dataPath = path.join(__dirname, "data", "pesan.json");
-  fs.readFile(dataPath, "utf-8", (err, jsonData) => {
-    if (err) return res.status(500).json({ error: "Gagal membaca data pesan" });
-    res.json(JSON.parse(jsonData));
-  });
-});
-
-// Endpoint untuk mengirim pesan baru
-app.post("/api/pesan", (req, res) => {
-  const newMessage = req.body;
-  const dataPath = path.join(__dirname, "data", "pesan.json");
-
-  fs.readFile(dataPath, "utf-8", (err, jsonData) => {
-    if (err) return res.status(500).json({ error: "Gagal membaca data pesan" });
-
-    const pesan = JSON.parse(jsonData);
-    pesan.push(newMessage); // Tambah pesan baru
-
-    fs.writeFile(dataPath, JSON.stringify(pesan, null, 2), (err) => {
-      if (err) return res.status(500).json({ error: "Gagal menyimpan pesan" });
-      res.status(201).json(newMessage); // Kembalikan pesan yang baru ditambahkan
+    fs.readFile("data/pesan.json", "utf8", (err, data) => {
+        if (err) {
+            return res.status(500).json({ message: "Gagal membaca pesan" });
+        }
+        const pesanData = JSON.parse(data);
+        res.json(pesanData);
     });
-  });
+});
+// kirim pesan
+app.post("/api/pesan", (req, res) => {
+    const { nama, pesan } = req.body;
+
+    if (!nama || !pesan) {
+        return res.status(400).json({ message: "Nama dan pesan wajib diisi" });
+    }
+
+    fs.readFile("data/pesan.json", "utf8", (err, data) => {
+        if (err) {
+            return res.status(500).json({ message: "Gagal membaca pesan" });
+        }
+
+        const pesanData = JSON.parse(data);
+        pesanData.push({ nama, pesan }); // ← Tambah pesan baru
+
+        fs.writeFile("data/pesan.json", JSON.stringify(pesanData, null, 2), (err) => {
+            if (err) {
+                return res.status(500).json({ message: "Gagal menyimpan pesan" });
+            }
+
+            res.status(201).json({ message: "Pesan berhasil dikirim" });
+        });
+    });
 });
 
 // Endpoint testi 
