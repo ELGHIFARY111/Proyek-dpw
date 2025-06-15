@@ -3,64 +3,160 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kebijakan Privasi</title>
+        <title>Dashboard Admin</title>
         <link rel="stylesheet" href="/css/dashboard-admin.css">
         <link rel="stylesheet" href="/css/global.css">
     </head>
     <body>
         <div class="container">
             <div class="left-bar">
-                <img title="Foto Profil" class="foto" src="/assets/foto/fotoanonym.png">
-                <div class="nama"> raihan X arik</div>
-                <p></p>
+                <img class="foto" src="/assets/foto/fotoanonym.png" title="Foto Profil">
+                <div class="nama">raihan X arik</div>
                 <ol>
                     <li class="side-dashboard">Dashboard</li>
-                    <li class="side-akun">account</li>
+                    <li class="side-akun">Account</li>
                     <hr>
-                    <li class="side-games">Games</li>  
+                    <li class="side-games">Games</li>
                     <li class="side-topup">Topup</li>
-                    <li class="side-riwayat">Riwayat Transaksi</li>
-                    <li class="side-laporan">laporan</li>
+                    <li class="side-riwayat">Riwayat</li>
+                    <li class="side-laporan">Laporan</li>
                 </ol>
-                </div>
             </div>
-        
+
             <div class="main">
-                <div id="dashboard">
+                <div id="dashboard" class="active">
+                    <h2>Dashboard</h2>
                     <div class="container-dashboard-top">
-                        <div class="totalPeng"><p class="styleP">Total Pengguna</p>10.000.000+ pengguna<p class="styleP"><br>Pengguna Bulan ini</p>100.000+ pengguna</div>
-                        <div class="order"><p class="styleP">Total Order</p>100.000+ order<br><p class="styleP">Order Bulan ini</p>14.000+ order</div>
-                        <div class="waktuMain"><p class="styleP">Total Game Di Mainkan</p>120.000 x dimainkan<p class="styleP">Game Di Mainkan bulan ini</p>2.000 x dimainkan</div>
+                        <div class="totalPeng"><p class="styleP">Total Pengguna</p>10.000.000+<p class="styleP">Pengguna Bulan ini</p>100.000+</div>
+                        <div class="order"><p class="styleP">Total Order</p>100.000+<p class="styleP">Order Bulan ini</p>14.000+</div>
+                        <div class="waktuMain"><p class="styleP">Total Game Dimainkan</p>120.000x<p class="styleP">Bulan ini</p>2.000x</div>
                         <div class="kanan-top">
                             <div class="rating-top"><p class="styleP">Rating Bulan ini</p>200+</div>
                             <div class="report-top"><p class="styleP">Report Bulan ini</p>34</div>
                         </div>
                     </div>
-                    <div class="container-dashboard-bottom">
-                        <div></div>
+                </div>
+                <div id="akun">
+                    <h2>Kelola Akun Admin</h2>
+                    <table class="kotak-akun" cellspacing="10px">
+                        <tr><th>Username</th><td class="username">: Rehan Aryanova narendra</td><td class="edit-username">EDIT</td></tr>
+                        <tr><th>email</th><td class="email">: raihan@gmail.com</td><td class="edit-email">EDIT</td></tr>
+                        <tr><th>Status</th><td>: Admin</td><td></td></tr>
+                    </table>
+                </div>
+                <div id="games">
+                    <h2>Daftar Game</h2>
+                    <div class="game-container">
+                        <div class="game-card">
+                            <img src="/assets/gif/burung.gif" alt="Flappy Bird">
+                            <p>Flappy bird</p>
+                        </div>
+                        <div class="game-card">
+                            <img src="/assets/gif/burung.gif" alt="Tangkap Blok">
+                            <p>Tangkap Blok</p>
+                        </div>
+                        <div class="game-card">
+                            <img src="/assets/gif/burung.gif" alt="Mengetik Cepat">
+                            <p>Mengetik Cepat</p>
+                        </div>
+                        <div class="game-card">
+                            <img src="/assets/gif/burung.gif" alt="Mengetik Cepat">
+                            <p>Mengetik Cepat</p>
+                        </div>
+                        <div class="game-card add-game-card">
+                            <a class="tambah-game">+</a>
+                            <p>Tambah Game</p>
+                        </div>
                     </div>
                 </div>
-                <div id="akun">akun</div>
-                <div id="games">games</div>
-                <div id="topup">topup</div>
-                <div id="riwayat">riwayat</div>
-                <div id="laporan">laporan</div>
+                <div id="topup">
+                    <h2>Daftar Topup</h2>
+                </div>
+                <div id="riwayat">
+                    <h2>Riwayat</h2>
+                </div>
+                <div id="laporan">
+                    <h2>Laporan</h2>
+                </div>
             </div>
         </div>
     <script>
-        const pages = document.querySelectorAll(".main > div");
-        function showPage(id) {
-            pages.forEach(page => page.style.display = "none");
-            const target = document.getElementById(id);
-            if(target) target.style.display = "block";
-        }
-        document.querySelector(".side-dashboard").onclick = () => showPage("dashboard");
-        document.querySelector(".side-akun").onclick = () => showPage("akun");
-        document.querySelector(".side-games").onclick = () => showPage("games");
-        document.querySelector(".side-topup").onclick = () => showPage("topup");
-        document.querySelector(".side-riwayat").onclick = () => showPage("riwayat");
-        document.querySelector(".side-laporan").onclick = () => showPage("laporan");
-        window.onload = () => showPage("dashboard");
+    // fungsi pindah-pindah page
+    const pages = document.querySelectorAll(".main > div");
+
+    function showPage(id) {
+        pages.forEach(page => page.style.display = "none");
+        const target = document.getElementById(id);
+        if (target) target.style.display = "block";
+    }
+
+    function clearSelection() {
+        document.querySelector(".side-dashboard")?.classList.remove("terpilih");
+        document.querySelector(".side-akun")?.classList.remove("terpilih");
+        document.querySelector(".side-games")?.classList.remove("terpilih");
+        document.querySelector(".side-topup")?.classList.remove("terpilih");
+        document.querySelector(".side-riwayat")?.classList.remove("terpilih");
+        document.querySelector(".side-laporan")?.classList.remove("terpilih");
+    }
+
+    const dashboardBtn = document.querySelector(".side-dashboard");
+    const akunBtn = document.querySelector(".side-akun");
+    const gamesBtn = document.querySelector(".side-games");
+    const topupBtn = document.querySelector(".side-topup");
+    const riwayatBtn = document.querySelector(".side-riwayat");
+    const laporanBtn = document.querySelector(".side-laporan");
+
+    dashboardBtn.onclick = function () {
+        showPage("dashboard");
+        clearSelection();
+        dashboardBtn.classList.add("terpilih");
+    };
+
+    akunBtn.onclick = function () {
+        showPage("akun");
+        clearSelection();
+        akunBtn.classList.add("terpilih");
+    };
+
+    gamesBtn.onclick = function () {
+        showPage("games");
+        clearSelection();
+        gamesBtn.classList.add("terpilih");
+    };
+
+    topupBtn.onclick = function () {
+        showPage("topup");
+        clearSelection();
+        topupBtn.classList.add("terpilih");
+    };
+
+    laporanBtn.onclick = function () {
+        showPage("laporan");
+        clearSelection();
+        laporanBtn.classList.add("terpilih");
+    };
+
+    riwayatBtn.onclick = function () {
+        showPage("riwayat");
+        clearSelection();
+        riwayatBtn.classList.add("terpilih");
+    };
+    window.onload = function () {
+        showPage("dashboard");
+        clearSelection();
+        dashboardBtn.classList.add("terpilih");
+    };
+    const btnUsername = document.querySelector(".edit-username");
+    const btnEmail = document.querySelector(".edit-email");
+
+    btnUsername.onclick = function () {
+        // TODO: Tambahkan fungsi untuk edit username
+    };
+
+    btnEmail.onclick = function () {
+        // TODO: Tambahkan fungsi untuk edit email
+    };
+
     </script>
     </body>
 </html>

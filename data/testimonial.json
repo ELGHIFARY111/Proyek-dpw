@@ -1,6 +1,7 @@
 [
   {
     "id": "ff",
+    "nama": "Free Fire",
     "rating": 5,
     "comment": "Sudah masuk diamondnya, aman legal !!",
     "time": {
@@ -11,6 +12,7 @@
   },
   {
     "id": "mlbb",
+    "nama": "Mobile Legend",
     "rating": 4,
     "comment": "Top up kilat! Baru transfer, langsung masuk. Suka banget!",
     "time": {
@@ -21,6 +23,7 @@
   },
   {
     "id": "pb",
+    "nama": "Point Blank",
     "rating": 5,
     "comment": "gak ribet dan prosesnya ga sampe 1 menit",
     "time": {
@@ -31,6 +34,7 @@
   },
   {
     "id": "ff",
+    "nama": "Free Fire",
     "rating": 4,
     "comment": "Udah langganan dari dulu. Gak pernah zonk, CS-nya juga responsif.",
     "time": {
@@ -41,6 +45,7 @@
   },
   {
     "id": "mlbb",
+    "nama": "Mobile Legend",
     "rating": 4,
     "comment": "Saya sangat puas dengan pelayanannya. Prosesnya cepat, mudah, dan sangat murah",
     "time": {
@@ -51,6 +56,7 @@
   },
   {
     "id": "cod",
+    "nama": "Call Of Duty",
     "rating": 4,
     "comment": "Bakal langganan disini terus, aman, cepet juga masuknya",
     "time": {
@@ -61,6 +67,7 @@
   },
   {
     "id": "ff",
+    "nama": "Free Fire",
     "rating": 4,
     "comment": "Tempat Topup terbaik !!",
     "time": {
@@ -71,6 +78,7 @@
   },
   {
     "id": "ff",
+    "nama": "Free Fire",
     "rating": 4,
     "comment": "Prosesnya cukup cepat, meskipun sempat ragu awalnya. Tapi aman kok.",
     "time": {

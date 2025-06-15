@@ -1,91 +1,177 @@
-*{
-    font-family: "Pixelify Sans";
+* {
+    font-family: "Pixelify Sans", sans-serif;
+    box-sizing: border-box;
 }
 body {
     margin: 0;
-    background-color: var(--biru1);
+    background-color: white;
     color: white;
 }
-main{
-    margin:35px;
-}
-.container{
+
+.container {
     display: flex;
-}
-.left-bar{
-    background-color: var(--biru2);
     height: 100vh;
+}
+
+.left-bar {
+    background-color: var(--biru2);
     width: 250px;
-    border-right:8px dashed var(--biru1);
+    padding: 20px;
+    border-right: 8px dashed white;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    flex-shrink: 0;
 }
-.nama{
-    text-align: center;
-    font-size: 20px;
-}
-.foto{
+
+.foto {
     width: 150px;
-    margin-left: 50px;
-    margin-top: 20px;
+    display: block;
+    margin: 0 auto 10px auto;
     border: 2px solid var(--kuning);
     border-radius: 100%;
 }
-.left-bar ol{
-    list-style-type:none;
-    padding-left: 20px;
 
+.nama {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
-.side-dashboard:hover,
-.side-akun:hover,
-.side-games:hover,
-.side-topup:hover,
-.side-riwayat:hover,
-.side-laporan:hover{
+
+.left-bar ol {
+    list-style: none;
+    padding: 0 0 0 20px;
+}
+
+.left-bar li {
+    margin: 10px 0;
     cursor: pointer;
-    color:yellow;
+    transition: 0.2s;
 }
 
-/* dashboard */
-.container-dashboard-top{
-    margin: 50px;
+.left-bar li:hover {
+    color: yellow;
+}
+
+/* MAIN CONTENT */
+.main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    color: var(--biru1);
+}
+
+.main > div {
+    display: none;
+}
+
+.main > div.active {
+    display: block;
+}
+
+/* DASHBOARD ITEMS */
+.container-dashboard-top {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
-
 }
-.totalPeng,.order,.waktuMain{
-    background-color: lightyellow;
+
+.totalPeng,
+.order,
+.waktuMain,
+.rating-top,
+.report-top {
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px;
+    font-size: 18px;
+    border: 2px solid var(--biru2);
+    box-shadow: 5px 5px 5px var(--biru2);
     border-bottom-right-radius: 20%;
     border-top-left-radius: 20%;
-    border: 2px solid var(--biru2);
-    box-shadow: 5px 5px 5px var(--biru2);
     min-width: 200px;
-    min-height: 50px;
-    padding:20px;
     text-align: center;
-    color: black;
-    font-size: 20px;
 }
-.rating-top,.report-top{
-    background-color: lightyellow;
-    border: 2px solid var(--biru2);
-    box-shadow: 5px 5px 5px var(--biru2);
-    min-width: 200px;
-    min-height: 50px;
-    padding:20px;
-    text-align: center;
-    color: black;
-    font-size: 20px;
-    align-content: flex-start;
-}
-.kanan-top{
+
+.kanan-top {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-
+    gap: 10px;
 }
-.styleP{
-    font-weight: bolder;
-    text-align: left; 
+
+.styleP {
+    font-weight: bold;
+    text-align: left;
+    margin: 10px 0 5px 0;
+}
+.terpilih{
+    color: var(--kuning);
+}
+h2{
+    color: white;
+    border: 4px solid var(--biru2);
+    border-radius: 20px;
+    background-color: var(--biru1);
+    width:fit-content;
+    padding: 10px;
+}
+/* akun */
+.kotak-akun{
+    background-color: whitesmoke;
+    border-radius: 20px;
+    border: 3px solid var(--biru2);
+    padding: 30px;
+    font-size: 20px
+}
+.edit-email, .edit-username{
+    border-radius: 20px;
+    background-color: var(--biru2);
+    padding: 5px;
+    color: white;
+}
+.edit-username:hover{
+    color: var(--kuning);
+    cursor: pointer;
+}
+.edit-email:hover{
+    color: var(--kuning);
+    cursor: pointer;
+}
+/* games */
+.game-card img{
+    width: 80px;
+}
+.game-card{
+    background-color: whitesmoke;
+    width: 170px;
+    height: 150px;
+    border-radius: 20px;
+    border:2px solid var(--biru2);
+    box-shadow: 3px 3px 5px var(--biru2);
+    text-align: center;
+    padding: 10px;
+    align-content: center;
+}
+.game-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin: 20px;
+}
+.tambah-game{
+    font-size: 50px;
+    color: white;
+    background-color: var(--biru4);
+    padding: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    border: 4px dashed white;
+}
+.add-game-card a:hover{
+    cursor: pointer;
+    background-color: var(--kuning);
+}
+li{
+    font-size: 20px;
 }

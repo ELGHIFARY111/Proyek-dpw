@@ -1,9 +1,9 @@
 body{
-    background-color: var(--biru1);
+    background-color: #5315cf;
 }
 h2{
     font-family: var(--font-pixel);
-    color: var(--kuning);
+    color: var(--kuning1);
     text-align: center;
 }
 h1{
@@ -16,17 +16,17 @@ h1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 80px;
-    max-width: 1000px; /* Atur ukuran sesuai kebutuhan */
+    max-width: 1000px; 
     margin: auto;
 }
 .testimonial{
     display: flex;
     flex-direction: column;
     border: 1px solid var(--putih);
-    background-color: var(--biru2);
+    background-color:  #320c7d;
     padding: 20px;
     border-radius: 10px;
-    width: 100%; /* Pastikan elemen menyesuaikan grid */
+    width: 100%; 
     max-width: 100%;
 }
 .testimonial:hover {
@@ -47,7 +47,7 @@ h1{
     font-family: var(--font-pixel);
 }
 .rating{
-    color: #f1c40f; /* warna emas untuk bintang */
+    color: var(--kuning1); /* warna emas untuk bintang */
     font-size: 20px;
      margin-right: 2px;
 }
