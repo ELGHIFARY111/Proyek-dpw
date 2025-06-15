@@ -115,6 +115,10 @@ app.get("/searching", (req, res) => {
 app.get("/artikel", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "artikel-home.html"));
 });
+
+app.get("/dashboard", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "dashboard-user.html"));
+});
 // ========================================================================
 
 // routing artikel

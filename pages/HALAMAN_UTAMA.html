@@ -29,8 +29,67 @@
           
         </iframe>
         </div>
-        <button class="button-hijau" onclick="window.location.href='/login'">Login</button>
+        <a title="profil" href="/dashboard"><img id="profilPengguna" src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Free-Image.png" alt="" ></a>
+        <style>
+  #profilPengguna {
+    display: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 300px; /* geser ke kiri dari kanan */
+    bottom: 275px; /* geser ke atas dari bawah */
+  }
+</style>
+
+        <button class="button-hijau-login" onclick="window.location.href='/login'">Login</button>
         <button class="button-hijau" onclick="window.location.href='/Register'">Register</button>
+        
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".button-hijau");
+    const fotoProfil = document.getElementById("profilPengguna");
+
+    buttons.forEach((btn) => {
+      const text = btn.textContent.trim().toLowerCase();
+
+      if (text.includes("register")) {
+        const sudahRegister = localStorage.getItem("sudahRegister");
+        if (sudahRegister === "true") {
+          btn.style.display = "none";
+        }
+
+        btn.addEventListener("click", () => {
+          localStorage.setItem("sudahRegister", "true");
+          btn.style.display = "none";
+          window.location.href = "/Register";
+        });
+      }
+
+      if (text.includes("login")) {
+        const sudahLogin = localStorage.getItem("sudahLogin");
+        if (sudahLogin === "true") {
+          btn.style.display = "none";
+          if (fotoProfil) fotoProfil.style.display = "inline-block";
+        }
+
+        btn.addEventListener("click", () => {
+          localStorage.setItem("sudahLogin", "true");
+          btn.style.display = "none";
+          if (fotoProfil) fotoProfil.style.display = "inline-block";
+          window.location.href = "/login";
+        });
+      }
+    });
+
+    if (localStorage.getItem("sudahLogin") === "true") {
+      if (fotoProfil) fotoProfil.style.display = "inline-block";
+    }
+  });
+</script>
+
+      </div>
     </div>
     </header>
 
@@ -60,7 +119,7 @@
         <h1>Daftar Top Up Game</h1>
 
 
-       <iframe title="List Game" src="/list-game" frameborder="0"
+       <iframe title="List Game" src="/list-game" frameborder="0" 
           width="100%"
           height="1250px">
         
@@ -161,6 +220,7 @@
                 <ul>
                     <li><a href="/kebijakanPrivasi">Kebijakan Privasi</a></li>
                     <li><a href="/syarat&ketentuan">Syarat & Ketentuan</a></li>
+                    <li><a href="/hubungi-kami">Hubungi Kami</a></li>
                 </ul>
             </div>
             <div class="help">
@@ -173,5 +233,7 @@
         </div>
     </footer>
       </div>
+
+      <script src="/public/js/halaman_utama.js"></script>
   </body>
 </html>

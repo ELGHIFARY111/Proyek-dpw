@@ -22,7 +22,7 @@ fetch("/api/artikel.json")
           className: "artikel-card",
         });
         artkl.addEventListener("click", () => {
-          window.location.href = `/artikel/${artikel.id}`;
+          window.top.location.href = `/artikel/${artikel.id}`;
         });
         createElement("img", artkl, {
           src: firstImage.url,

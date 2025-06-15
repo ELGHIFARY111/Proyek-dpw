@@ -158,6 +158,28 @@ p {
   background-color: darkgreen;
 }
 
+.button-hijau-login{
+    background-image: url(/assets/foto/tombol.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 200px;
+    height: 50px;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+
+}
+
+.button-hijau-login:hover {
+  background-color: darkgreen;
+}
+
+
 
 
 
