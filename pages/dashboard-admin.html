@@ -50,6 +50,7 @@
                             <th>Username</th>
                             <th>Email</th>
                             <th>Role</th>
+                            <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody></tbody>
@@ -192,19 +193,80 @@
                             <td>${data.username || "-"}</td>
                             <td>${data.email || "-"}</td>
                             <td>${data.role || "user"}</td>
+                            <td><button class="hapus-akun" data-id="${docu.id}">Hapus</button></td>
                         `;
                         tbody.appendChild(row);
                     }
                 });
-
+                document.querySelectorAll(".hapus-akun").forEach(btn => {
+                btn.addEventListener("click", async () => {
+                    const userId = btn.getAttribute("data-id");
+                    const konfirmasi = confirm("Apakah Anda yakin ingin menghapus akun ini?");
+                    if (konfirmasi) {
+                    try {
+                        await deleteDoc(doc(db, "users", userId));
+                        alert("Akun berhasil dihapus.");
+                        btn.closest("tr").remove();
+                    } catch (error) {
+                        console.error("Gagal menghapus akun:", error);
+                        alert("Gagal menghapus akun.");
+                    }
+                    }
+                });
+                });
             } else {
                 alert("Data pengguna tidak ditemukan.");
                 window.location.href = "/login";
             }
         }
     });
+    async function tampilkanLaporan() {
+    const laporanContainer = document.getElementById("laporan");
+    const reportsCol = collection(db, "reports");
+    const reportsSnap = await getDocs(reportsCol);
 
-    // Logout
+    if (reportsSnap.empty) {
+        laporanContainer.innerHTML += "<p>Tidak ada laporan.</p>";
+        return;
+    }
+
+    // Buat tabel laporan
+    let html = `
+        <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; margin-top: 10px;">
+        <thead>
+            <tr>
+            <th>Judul</th>
+            <th>Detail</th>
+            <th>Email</th>
+            <th>Waktu</th>
+            </tr>
+        </thead>
+        <tbody>
+    `;
+
+    reportsSnap.forEach(doc => {
+        const data = doc.data();
+        const waktu = data.waktu?.toDate().toLocaleString() || "-";
+        html += `
+        <tr>
+            <td>${data.judul || "-"}</td>
+            <td>${data.detail || "-"}</td>
+            <td>${data.email || "-"}</td>
+            <td>${waktu}</td>
+        </tr>
+        `;
+    });
+
+    html += "</tbody></table>";
+    laporanContainer.innerHTML += html;
+    }
+    onAuthStateChanged(auth, async (user) => {
+    if (user) {
+        if (userData.role === "admin") {
+        await tampilkanLaporan(); 
+        }
+    }
+    });
     document.getElementById("logoutBtn").addEventListener("click", () => {
         signOut(auth)
             .then(() => {
@@ -216,8 +278,6 @@
                 alert("Logout gagal");
             });
     });
-
-    // Edit Username
     document.querySelector(".edit-username").addEventListener("click", async () => {
         const newUsername = prompt("Masukkan username baru:");
         if (newUsername && auth.currentUser) {
@@ -228,8 +288,6 @@
             document.querySelector(".username").innerHTML = `: ${newUsername}`;
         }
     });
-
-    // Edit Email
     document.querySelector(".edit-email").addEventListener("click", () => {
         alert("Fitur edit email belum tersedia.");
     });

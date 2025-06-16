@@ -250,39 +250,18 @@ app.post("/simpan-transaksi", (req, res) => {
     });
   });
 });
-// baca pesan
-const messages = [];
+app.delete("/deleteUser/:uid", async (req, res) => {
+  const { uid } = req.params;
 
-app.get("/api/pesan", async (req, res) => {
   try {
-    const snapshot = await pesanCollection.orderBy("timestamp", "asc").get();
-    const messages = snapshot.docs.map(doc => doc.data());
-    res.json(messages);
-  } catch (err) {
-    console.error("Error getting messages:", err);
-    res.status(500).send("Server Error");
+    await admin.auth().deleteUser(uid);
+    res.status(200).json({ message: "Akun berhasil dihapus.", uid });
+  } catch (error) {
+    console.error("Gagal menghapus akun:", error);
+    res.status(500).json({ error: "Gagal menghapus akun.", detail: error.message });
   }
 });
 
-app.post("/api/pesan", async (req, res) => {
-  const { username, content } = req.body;
-
-  if (!username || !content) {
-    return res.status(400).json({ error: "username dan content wajib diisi" });
-  }
-
-  try {
-    await pesanCollection.add({
-      username,
-      content,
-      timestamp: admin.firestore.FieldValue.serverTimestamp()
-    });
-    res.status(200).send("Pesan disimpan");
-  } catch (err) {
-    console.error("Error saving message:", err);
-    res.status(500).send("Server Error");
-  }
-});
 
 
 // Endpoint testi 
