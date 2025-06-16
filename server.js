@@ -153,6 +153,21 @@ app.get("/pay", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "konfirmasi-pembayaran.html"));
 });
 
+app.get("/kalkulasi-winrate", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "winrate.html"));
+});
+
+app.get("/saldo_dan_topup", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "saldo-dan-top-up.html"));
+});
+ 
+app.get("/halaman-pengaturan", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "Halaman-pengaturan.html"));
+});
+
+app.get("/hissaldo", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "hissaldo.html"));
+});
 
 // ========================================================================
 
