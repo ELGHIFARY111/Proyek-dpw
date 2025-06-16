@@ -260,7 +260,7 @@ li{
     color: #444;
 }
 #laporan table th {
-    background-color: #007BFF;
+    background-color: var(--biru2);
     color: white;
     font-weight: bold;
 }
