@@ -165,7 +165,7 @@
         const riwayatContainer = document.getElementById("riwayat");
 
         try {
-            const res = await fetch("/data/transaksi.json");
+            const res = await fetch("/api/transaksi.json");
             const transaksi = await res.json();
 
             if (!transaksi.length) {
@@ -249,6 +249,7 @@
     document.querySelector(".username").innerHTML = `: ${userData.username || "-"}`;
     document.querySelector(".email").innerHTML = `: ${userData.email || "-"}`;
     await tampilkanLaporan();
+    await tampilkanRiwayat();
     const usersCol = collection(db, "users");
     const usersSnap = await getDocs(usersCol);
     const tbody = document.querySelector("#user-list tbody");
