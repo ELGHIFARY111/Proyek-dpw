@@ -272,3 +272,32 @@ li{
     color: #888;
     font-style: italic;
 }
+/* RIWAYAT - Container */
+#riwayat {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+#riwayat table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+}
+#riwayat table thead {
+    background-color: var(--biru2);
+    color: white;
+}
+
+#riwayat table th,
+#riwayat table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+#riwayat table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
