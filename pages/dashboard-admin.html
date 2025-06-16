@@ -43,6 +43,17 @@
                         <tr><th>Username</th><td class="username">: Rehan Aryanova narendra</td><td class="edit-username">EDIT</td></tr>
                         <tr><th>email</th><td class="email">: raihan@gmail.com</td><td class="edit-email">EDIT</td></tr>
                         <tr><th>Status</th><td>: Admin</td><td></td></tr>
+                        <h3 style="margin-top: 30px;">Daftar Akun Pengguna</h3>
+                        <table id="user-list" border="1" cellspacing="0" cellpadding="8">
+                        <thead>
+                            <tr>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                        </table>
                     </table>
                 </div>
                 <div id="games">
@@ -82,120 +93,146 @@
             </div>
         </div>
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-        import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
-        import {
-            getFirestore,
-            doc,
-            getDoc,
-            updateDoc
-        } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+    import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+    import {
+        getFirestore,
+        doc,
+        getDoc,
+        updateDoc,
+        collection,
+        getDocs
+    } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyBY5RLqhhp1IJJGdiKBQEOHTDoSPwvx8ZM",
-            authDomain: "fussion-proyek-dpw.firebaseapp.com",
-            projectId: "fussion-proyek-dpw",
-            storageBucket: "fussion-proyek-dpw.appspot.com",
-            messagingSenderId: "301956673407",
-            appId: "1:301956673407:web:5d2bf8749996c113cf344a",
-            measurementId: "G-CBS2216ZFG"
+    // Konfigurasi Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyBY5RLqhhp1IJJGdiKBQEOHTDoSPwvx8ZM",
+        authDomain: "fussion-proyek-dpw.firebaseapp.com",
+        projectId: "fussion-proyek-dpw",
+        storageBucket: "fussion-proyek-dpw.appspot.com",
+        messagingSenderId: "301956673407",
+        appId: "1:301956673407:web:5d2bf8749996c113cf344a",
+        measurementId: "G-CBS2216ZFG"
+    };
+
+    // Inisialisasi Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    // Navigasi
+    const pages = document.querySelectorAll(".main > div");
+
+    function showPage(id) {
+        pages.forEach(page => page.style.display = "none");
+        const target = document.getElementById(id);
+        if (target) target.style.display = "block";
+    }
+
+    function clearSelection() {
+        document.querySelectorAll("ol li").forEach(li => li.classList.remove("terpilih"));
+    }
+
+    function addNavEvents() {
+        const navMap = {
+            "side-dashboard": "dashboard",
+            "side-akun": "akun",
+            "side-games": "games",
+            "side-topup": "topup",
+            "side-riwayat": "riwayat",
+            "side-laporan": "laporan"
         };
 
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getFirestore(app);
-
-        const pages = document.querySelectorAll(".main > div");
-
-        function showPage(id) {
-            pages.forEach(page => page.style.display = "none");
-            const target = document.getElementById(id);
-            if (target) target.style.display = "block";
-        }
-
-        function clearSelection() {
-            document.querySelectorAll("ol li").forEach(li => li.classList.remove("terpilih"));
-        }
-
-        function addNavEvents() {
-            const navMap = {
-                "side-dashboard": "dashboard",
-                "side-akun": "akun",
-                "side-games": "games",
-                "side-topup": "topup",
-                "side-riwayat": "riwayat",
-                "side-laporan": "laporan"
-            };
-
-            Object.entries(navMap).forEach(([cls, id]) => {
-                const btn = document.querySelector(`.${cls}`);
-                btn.addEventListener("click", () => {
-                    showPage(id);
-                    clearSelection();
-                    btn.classList.add("terpilih");
-                });
+        Object.entries(navMap).forEach(([cls, id]) => {
+            const btn = document.querySelector(`.${cls}`);
+            btn.addEventListener("click", () => {
+                showPage(id);
+                clearSelection();
+                btn.classList.add("terpilih");
             });
+        });
 
-            showPage("dashboard");
-            clearSelection();
-            document.querySelector(".side-dashboard").classList.add("terpilih");
-        }
+        showPage("dashboard");
+        clearSelection();
+        document.querySelector(".side-dashboard").classList.add("terpilih");
+    }
 
-        addNavEvents();
+    addNavEvents();
 
-        // Cek auth user
-        onAuthStateChanged(auth, async (user) => {
-            if (!user) {
-                window.location.href = "/login";
-            } else {
-                const uid = user.uid;
-                const userRef = doc(db, "users", uid);
-                const userSnap = await getDoc(userRef);
+    // Autentikasi
+    onAuthStateChanged(auth, async (user) => {
+        if (!user) {
+            window.location.href = "/login";
+        } else {
+            const uid = user.uid;
+            const userRef = doc(db, "users", uid);
+            const userSnap = await getDoc(userRef);
 
-                if (userSnap.exists()) {
-                    const userData = userSnap.data();
-                    document.querySelector(".username").innerHTML = `: ${userData.username || "-"}`;
-                    document.querySelector(".email").innerHTML = `: ${userData.email || "-"}`;
-                    if (userData.role !== "admin") {
-                        alert("Akses ditolak. Anda bukan admin.");
-                        window.location.href = "/";
-                    }
-                } else {
-                    alert("Data pengguna tidak ditemukan.");
-                    window.location.href = "/login";
+            if (userSnap.exists()) {
+                const userData = userSnap.data();
+                document.querySelector(".username").innerHTML = `: ${userData.username || "-"}`;
+                document.querySelector(".email").innerHTML = `: ${userData.email || "-"}`;
+                
+                if (userData.role !== "admin") {
+                    alert("Akses ditolak. Anda bukan admin.");
+                    window.location.href = "/";
+                    return;
                 }
-            }
-        });
 
-        // Logout
-        document.getElementById("logoutBtn").addEventListener("click", () => {
-            signOut(auth)
-                .then(() => {
-                    alert("Berhasil logout");
-                    window.location.href = "/login";
-                })
-                .catch((error) => {
-                    console.error("Gagal logout:", error);
-                    alert("Logout gagal");
+                // Tampilkan daftar akun pengguna lain
+                const usersCol = collection(db, "users");
+                const usersSnap = await getDocs(usersCol);
+                const tbody = document.querySelector("#user-list tbody");
+
+                usersSnap.forEach(docu => {
+                    const data = docu.data();
+                    if (docu.id !== uid) {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td>${data.username || "-"}</td>
+                            <td>${data.email || "-"}</td>
+                            <td>${data.role || "user"}</td>
+                        `;
+                        tbody.appendChild(row);
+                    }
                 });
-        });
 
-        // Edit Username
-        document.querySelector(".edit-username").addEventListener("click", async () => {
-            const newUsername = prompt("Masukkan username baru:");
-            if (newUsername && auth.currentUser) {
-                const uid = auth.currentUser.uid;
-                const userRef = doc(db, "users", uid);
-                await updateDoc(userRef, { username: newUsername });
-                alert("Username berhasil diubah.");
-                document.querySelector(".username").innerHTML = `: ${newUsername}`;
+            } else {
+                alert("Data pengguna tidak ditemukan.");
+                window.location.href = "/login";
             }
-        });
+        }
+    });
 
-        // Edit Email (opsional jika ingin ditambahkan)
-        document.querySelector(".edit-email").addEventListener("click", () => {
-            alert("Fitur edit email belum tersedia.");
-        });
+    // Logout
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+        signOut(auth)
+            .then(() => {
+                alert("Berhasil logout");
+                window.location.href = "/login";
+            })
+            .catch((error) => {
+                console.error("Gagal logout:", error);
+                alert("Logout gagal");
+            });
+    });
+
+    // Edit Username
+    document.querySelector(".edit-username").addEventListener("click", async () => {
+        const newUsername = prompt("Masukkan username baru:");
+        if (newUsername && auth.currentUser) {
+            const uid = auth.currentUser.uid;
+            const userRef = doc(db, "users", uid);
+            await updateDoc(userRef, { username: newUsername });
+            alert("Username berhasil diubah.");
+            document.querySelector(".username").innerHTML = `: ${newUsername}`;
+        }
+    });
+
+    // Edit Email
+    document.querySelector(".edit-email").addEventListener("click", () => {
+        alert("Fitur edit email belum tersedia.");
+    });
     </script>
     </body>
 </html>
