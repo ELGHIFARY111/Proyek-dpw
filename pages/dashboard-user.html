@@ -1,118 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>6Fusion | Dashboard User</title>
-    <link rel="stylesheet" href="/css/dashboard-user.css">
-    <link rel="stylesheet" href="/css/global.css">
-    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6Fusion | Dashboard User</title>
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/dashboard-user.css" />
+  <link rel="stylesheet" href="/css/saldo-dan-top-up.css" />
 
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js"></script>
 </head>
 <body>
-    <div class="dashboard">
-        <div class="bar-left">
-            <img class="foto" src="/assets/foto/fotoanonym.png">
-            <div class="nama">USERNAME</div>
-            <ul>
-                <li class="saldo" onclick="muncul('saldo')">Ringkasan Saldo</li>
-                <li class="riwayat" onclick="muncul('riwayat')">Riwayat Top Up</li>
-                <li><button onclick="logoutFirebase()" class="logout-button" id="logoutBtn">Logout</button></li>
-            </ul>
-        </div>
-        <div class="content">
-            <div class="saldo-content" id="saldo-content">
-                <h2>Ringkasan Saldo</h2>
-                <p>Total Saldo : Rp 500.000</p>
-            </div>
-            <div class="riwayat-content" id="riwayat-content">
-                <div>
-                    <h2>
-                        Riwayat Top Up
-                    </h2>
-                    <table border="1">
-                        <thead>
-                            <th>No</th>
-                            <th>Tanggal</th>
-                            <th>Game</th>
-                            <th>Harga</th>
-                        </thead>
-                        <tr>
-                            <td>1. </td>
-                            <td>01/03/2026</td>
-                            <td>Mobile Legend</td>
-                            <td>Rp 100.000</td>
-                        </tr>
-                        <tr>
-                            <td>2. </td>
-                            <td>12/05/2026</td>
-                            <td>Free Fire</td>
-                            <td>Rp 50.000</td>
-                        </tr>
-                        <tr>
-                            <td>3. </td>
-                            <td>21/06/2026</td>
-                            <td>Stumble Guys</td>
-                            <td>Rp 20.000</td>
-                        </tr>
-                        <tr>
-                            <td>4. </td>
-                            <td>23/10/2026</td>
-                            <td>PUBG</td>
-                            <td>Rp 200.000</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
+  <div class="dashboard">
+    <div class="bar-left">
+      <img class="foto" src="/assets/foto/fotoanonym.png" />
+      <div class="nama">USERNAME</div>
+      <ul>
+        <li class="saldo" onclick="muncul('saldo')">Ringkasan Saldo</li>
+        <li class="riwayat" onclick="muncul('riwayat')">Riwayat Top Up</li>
+        <li><button onclick="logoutFirebase()" class="logout-button" id="logoutBtn">Logout</button></li>
+      </ul>
     </div>
-    <script>
-        function muncul(menu){
-            document.getElementById("saldo-content").style.display = "none";
-            document.getElementById("riwayat-content").style.display = "none";
 
-            if (menu=="saldo"){
-                document.getElementById("saldo-content").style.display = "block";
-            } else if (menu=="riwayat"){
-                document.getElementById("riwayat-content").style.display = "block";
-            }
-        }
-    </script>
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-        import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
-        import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
+    <div class="content">
+      <!-- Ringkasan Saldo -->
+      <div class="saldo-content" id="saldo-content">
+        <div class="container">
+          <div class="sidebar">
+            <div class="back">
+              <div class="profil">
+                <img src="/assets/foto/fotoanonym.png" alt="Foto Profil" class="foto-profil" />
+                <p><strong>ID:</strong> 123456789</p>
+                <p><strong>Nama:</strong> Arik Setiawan</p>
+                <p><strong>Email:</strong> Arik@email.com</p>
+              </div>
+            </div>
+            <div class="saldo">
+              <h3>Saldo Anda</h3>
+              <p class="nominal">Rp. 50.000</p>
+              <a class="histori" href="/hissaldo">Lihat Histori Transaksi</a>
+            </div>
+          </div>
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyBY5RLqhhp1IJJGdiKBQEOHTDoSPwvx8ZM",
-            authDomain: "fussion-proyek-dpw.firebaseapp.com",
-            projectId: "fussion-proyek-dpw",
-            storageBucket: "fussion-proyek-dpw.appspot.com",
-            messagingSenderId: "301956673407",
-            appId: "1:301956673407:web:5d2bf8749996c113cf344a",
-            measurementId: "G-CBS2216ZFG"
-        };
+          <div class="main">
+            <h2>Top up Instan</h2>
+            <p class="sub">1. Pilih Jumlah Top up</p>
+            <div class="topup-options">
+              <input type="radio" name="topup" id="t10" />
+              <label for="t10">Rp. 10.000</label>
 
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        onAuthStateChanged(auth, (user) => {
-            if (!user) {
-            window.location.href = "/login.html";
-            }
+              <input type="radio" name="topup" id="t20" />
+              <label for="t20">Rp. 20.000</label>
+
+              <input type="radio" name="topup" id="t50" />
+              <label for="t50">Rp. 50.000</label>
+
+              <input type="radio" name="topup" id="t100" />
+              <label for="t100">Rp. 100.000</label>
+
+              <input type="radio" name="topup" id="t200" />
+              <label for="t200">Rp. 200.000</label>
+
+              <input type="radio" name="topup" id="t500" />
+              <label for="t500">Rp. 500.000</label>
+            </div>
+
+            <p class="sub">2. Pilih Metode Pembayaran</p>
+            <div class="payment-methods">
+              <input type="radio" name="metode" id="BNI" />
+              <label for="BNI" class="payment">BNI</label>
+
+              <input type="radio" name="metode" id="BRI" />
+              <label for="BRI" class="payment">BRI</label>
+
+              <input type="radio" name="metode" id="BCA" />
+              <label for="BCA" class="payment">BCA</label>
+
+              <input type="radio" name="metode" id="dana" />
+              <label for="dana" class="payment">DANA</label>
+
+              <input type="radio" name="metode" id="Gopay" />
+              <label for="Gopay" class="payment">Gopay</label>
+
+              <input type="radio" name="metode" id="OVO" />
+              <label for="OVO" class="payment">OVO</label>
+            </div>
+
+            <div class="topsekarang">
+              <a href="/code" class="submit-btn">Top Up Sekarang</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Riwayat Top Up -->
+      <div class="riwayat-content" id="riwayat-content">
+        <div>
+          <h2>Riwayat Top Up</h2>
+          <table border="1">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Tanggal</th>
+                <th>Game</th>
+                <th>Harga</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.</td>
+                <td>01/03/2026</td>
+                <td>Mobile Legend</td>
+                <td>Rp 100.000</td>
+              </tr>
+              <tr>
+                <td>2.</td>
+                <td>12/05/2026</td>
+                <td>Free Fire</td>
+                <td>Rp 50.000</td>
+              </tr>
+              <tr>
+                <td>3.</td>
+                <td>21/06/2026</td>
+                <td>Stumble Guys</td>
+                <td>Rp 20.000</td>
+              </tr>
+              <tr>
+                <td>4.</td>
+                <td>23/10/2026</td>
+                <td>PUBG</td>
+                <td>Rp 200.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Navigasi -->
+  <script>
+    function muncul(menu) {
+      document.getElementById("saldo-content").style.display = "none";
+      document.getElementById("riwayat-content").style.display = "none";
+
+      if (menu === "saldo") {
+        document.getElementById("saldo-content").style.display = "block";
+      } else if (menu === "riwayat") {
+        document.getElementById("riwayat-content").style.display = "block";
+      }
+    }
+
+    window.onload = function () {
+      muncul("saldo");
+    };
+  </script>
+
+  <!-- Firebase Authentication -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+    import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBY5RLqhhp1IJJGdiKBQEOHTDoSPwvx8ZM",
+      authDomain: "fussion-proyek-dpw.firebaseapp.com",
+      projectId: "fussion-proyek-dpw",
+      storageBucket: "fussion-proyek-dpw.appspot.com",
+      messagingSenderId: "301956673407",
+      appId: "1:301956673407:web:5d2bf8749996c113cf344a",
+      measurementId: "G-CBS2216ZFG"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        window.location.href = "/login.html";
+      }
+    });
+
+    const logoutBtn = document.getElementById("logoutBtn");
+    logoutBtn.addEventListener("click", () => {
+      signOut(auth)
+        .then(() => {
+          alert("Berhasil logout");
+          window.location.href = "/login";
+        })
+        .catch((error) => {
+          console.error("Gagal logout:", error);
+          alert("Logout gagal");
         });
-        const logoutBtn = document.getElementById("logoutBtn");
-        logoutBtn.addEventListener("click", () => {
-            signOut(auth)
-            .then(() => {
-                alert("Berhasil logout");
-                window.location.href = "/login";
-            })
-            .catch((error) => {
-                console.error("Gagal logout:", error);
-                alert("Logout gagal");
-            });
-        });
-    </script>
+    });
+  </script>
 </body>
 </html>
