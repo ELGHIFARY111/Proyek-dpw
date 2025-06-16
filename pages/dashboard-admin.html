@@ -161,7 +161,67 @@
     }
 
     addNavEvents();
+    async function tampilkanRiwayat() {
+        const riwayatContainer = document.getElementById("riwayat");
 
+        try {
+            const res = await fetch("/data/transaksi.json");
+            const transaksi = await res.json();
+
+            if (!transaksi.length) {
+                riwayatContainer.innerHTML += "<p>Tidak ada riwayat transaksi.</p>";
+                return;
+            }
+
+            let html = `
+                <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; margin-top: 10px;">
+                <thead>
+                    <tr>
+                        <th>Invoice</th>
+                        <th>Username</th>
+                        <th>User ID</th>
+                        <th>Game</th>
+                        <th>Produk</th>
+                        <th>No WA</th>
+                        <th>Voucher</th>
+                        <th>Metode</th>
+                        <th>Harga</th>
+                        <th>Status Pesanan</th>
+                        <th>Status Pembayaran</th>
+                        <th>Waktu Order</th>
+                        <th>Expired</th>
+                    </tr>
+                </thead>
+                <tbody>
+            `;
+
+            transaksi.forEach(d => {
+                html += `
+                <tr>
+                    <td>${d.invoice || "-"}</td>
+                    <td>${d.username || "-"}</td>
+                    <td>${d.userId || "-"}</td>
+                    <td>${d.kategori || "-"}</td>
+                    <td>${d.produk || "-"}</td>
+                    <td>${d.wa || "-"}</td>
+                    <td>${d.voucher || "-"}</td>
+                    <td>${d.metode || "-"}</td>
+                    <td>Rp ${d.harga || "0"}</td>
+                    <td>${d.status?.pesanan ? "✅" : "❌"}</td>
+                    <td>${d.status?.pembayaran ? "✅" : "❌"}</td>
+                    <td>${d.time?.tanggal || "-"} ${d.time?.waktu || "-"}</td>
+                    <td>${d.expired?.tanggal || "-"} ${d.expired?.waktu || "-"}</td>
+                </tr>
+                `;
+            });
+
+            html += "</tbody></table>";
+            riwayatContainer.innerHTML += html;
+        } catch (error) {
+            console.error("Gagal memuat data transaksi:", error);
+            riwayatContainer.innerHTML += "<p>Gagal memuat data transaksi.</p>";
+        }
+    }
     // Autentikasi
     onAuthStateChanged(auth, async (user) => {
     if (!user) {
