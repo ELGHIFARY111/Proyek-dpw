@@ -3,7 +3,7 @@ const express = require("express");
 const fs = require("fs");
 const path = require("path");
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 const admin = require("firebase-admin");
 
 const firebaseKey = process.env.FIREBASE_KEY;

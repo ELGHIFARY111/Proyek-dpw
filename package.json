@@ -10,7 +10,9 @@
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^2.2.0",
     "bootstrap-icons": "^1.12.1",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "express-session": "^1.18.1",
     "firebase-admin": "^13.4.0",
