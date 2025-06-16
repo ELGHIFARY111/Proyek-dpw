@@ -81,87 +81,15 @@
                 </div>
             </div>
         </div>
-    <script>
-    // fungsi pindah-pindah page
-    const pages = document.querySelectorAll(".main > div");
-
-    function showPage(id) {
-        pages.forEach(page => page.style.display = "none");
-        const target = document.getElementById(id);
-        if (target) target.style.display = "block";
-    }
-
-    function clearSelection() {
-        document.querySelector(".side-dashboard")?.classList.remove("terpilih");
-        document.querySelector(".side-akun")?.classList.remove("terpilih");
-        document.querySelector(".side-games")?.classList.remove("terpilih");
-        document.querySelector(".side-topup")?.classList.remove("terpilih");
-        document.querySelector(".side-riwayat")?.classList.remove("terpilih");
-        document.querySelector(".side-laporan")?.classList.remove("terpilih");
-    }
-
-    const dashboardBtn = document.querySelector(".side-dashboard");
-    const akunBtn = document.querySelector(".side-akun");
-    const gamesBtn = document.querySelector(".side-games");
-    const topupBtn = document.querySelector(".side-topup");
-    const riwayatBtn = document.querySelector(".side-riwayat");
-    const laporanBtn = document.querySelector(".side-laporan");
-
-    dashboardBtn.onclick = function () {
-        showPage("dashboard");
-        clearSelection();
-        dashboardBtn.classList.add("terpilih");
-    };
-
-    akunBtn.onclick = function () {
-        showPage("akun");
-        clearSelection();
-        akunBtn.classList.add("terpilih");
-    };
-
-    gamesBtn.onclick = function () {
-        showPage("games");
-        clearSelection();
-        gamesBtn.classList.add("terpilih");
-    };
-
-    topupBtn.onclick = function () {
-        showPage("topup");
-        clearSelection();
-        topupBtn.classList.add("terpilih");
-    };
-
-    laporanBtn.onclick = function () {
-        showPage("laporan");
-        clearSelection();
-        laporanBtn.classList.add("terpilih");
-    };
-
-    riwayatBtn.onclick = function () {
-        showPage("riwayat");
-        clearSelection();
-        riwayatBtn.classList.add("terpilih");
-    };
-    window.onload = function () {
-        showPage("dashboard");
-        clearSelection();
-        dashboardBtn.classList.add("terpilih");
-    };
-    const btnUsername = document.querySelector(".edit-username");
-    const btnEmail = document.querySelector(".edit-email");
-
-    btnUsername.onclick = function () {
-        // TODO: Tambahkan fungsi untuk edit username
-    };
-
-    btnEmail.onclick = function () {
-        // TODO: Tambahkan fungsi untuk edit email
-    };
-
-    </script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
         import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+        import {
+            getFirestore,
+            doc,
+            getDoc,
+            updateDoc
+        } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyBY5RLqhhp1IJJGdiKBQEOHTDoSPwvx8ZM",
@@ -175,24 +103,98 @@
 
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
+        const db = getFirestore(app);
 
-        onAuthStateChanged(auth, (user) => {
+        const pages = document.querySelectorAll(".main > div");
+
+        function showPage(id) {
+            pages.forEach(page => page.style.display = "none");
+            const target = document.getElementById(id);
+            if (target) target.style.display = "block";
+        }
+
+        function clearSelection() {
+            document.querySelectorAll("ol li").forEach(li => li.classList.remove("terpilih"));
+        }
+
+        function addNavEvents() {
+            const navMap = {
+                "side-dashboard": "dashboard",
+                "side-akun": "akun",
+                "side-games": "games",
+                "side-topup": "topup",
+                "side-riwayat": "riwayat",
+                "side-laporan": "laporan"
+            };
+
+            Object.entries(navMap).forEach(([cls, id]) => {
+                const btn = document.querySelector(`.${cls}`);
+                btn.addEventListener("click", () => {
+                    showPage(id);
+                    clearSelection();
+                    btn.classList.add("terpilih");
+                });
+            });
+
+            showPage("dashboard");
+            clearSelection();
+            document.querySelector(".side-dashboard").classList.add("terpilih");
+        }
+
+        addNavEvents();
+
+        // Cek auth user
+        onAuthStateChanged(auth, async (user) => {
             if (!user) {
-            window.location.href = "/login";
+                window.location.href = "/login";
+            } else {
+                const uid = user.uid;
+                const userRef = doc(db, "users", uid);
+                const userSnap = await getDoc(userRef);
+
+                if (userSnap.exists()) {
+                    const userData = userSnap.data();
+                    document.querySelector(".username").innerHTML = `: ${userData.username || "-"}`;
+                    document.querySelector(".email").innerHTML = `: ${userData.email || "-"}`;
+                    if (userData.role !== "admin") {
+                        alert("Akses ditolak. Anda bukan admin.");
+                        window.location.href = "/";
+                    }
+                } else {
+                    alert("Data pengguna tidak ditemukan.");
+                    window.location.href = "/login";
+                }
             }
         });
 
-        const logoutBtn = document.getElementById("logoutBtn");
-        logoutBtn.addEventListener("click", () => {
+        // Logout
+        document.getElementById("logoutBtn").addEventListener("click", () => {
             signOut(auth)
-            .then(() => {
-                alert("Berhasil logout");
-                window.location.href = "/login";
-            })
-            .catch((error) => {
-                console.error("Gagal logout:", error);
-                alert("Logout gagal");
-            });
+                .then(() => {
+                    alert("Berhasil logout");
+                    window.location.href = "/login";
+                })
+                .catch((error) => {
+                    console.error("Gagal logout:", error);
+                    alert("Logout gagal");
+                });
+        });
+
+        // Edit Username
+        document.querySelector(".edit-username").addEventListener("click", async () => {
+            const newUsername = prompt("Masukkan username baru:");
+            if (newUsername && auth.currentUser) {
+                const uid = auth.currentUser.uid;
+                const userRef = doc(db, "users", uid);
+                await updateDoc(userRef, { username: newUsername });
+                alert("Username berhasil diubah.");
+                document.querySelector(".username").innerHTML = `: ${newUsername}`;
+            }
+        });
+
+        // Edit Email (opsional jika ingin ditambahkan)
+        document.querySelector(".edit-email").addEventListener("click", () => {
+            alert("Fitur edit email belum tersedia.");
         });
     </script>
     </body>
