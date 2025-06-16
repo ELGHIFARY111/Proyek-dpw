@@ -162,9 +162,12 @@ app.get("/saldo_dan_topup", (req, res) => {
 });
  
 app.get("/halaman-pengaturan", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "halaman-pengaturan.html"));
+  res.sendFile(path.join(__dirname, "pages", "Halaman-pengaturan.html"));
 });
 
+app.get("/hissaldo", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "hissaldo.html"));
+});
 
 // ========================================================================
 
