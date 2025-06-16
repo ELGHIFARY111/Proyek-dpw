@@ -1,3 +1,4 @@
 # despencies
 node_modules/
 .vercel
+firebase-key.json
