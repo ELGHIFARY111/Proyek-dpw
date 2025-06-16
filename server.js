@@ -53,6 +53,12 @@ app.get("/HALAMAN_UTAMA", (req, res) => {
 app.get("/cek-pesanan", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "cek-pesanan.html"));
 });
+app.get("/code", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "code.html"));
+});
+app.get("/hissaldo", (req, res) => {
+  res.sendFile(path.join(__dirname, "pages", "hissaldo.html"));
+});
 
 app.get("/select-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "select-game.html"));
