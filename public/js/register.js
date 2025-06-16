@@ -1,45 +1,49 @@
-const form = document.getElementById('register');
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
+const firebaseConfig = {
+  apiKey: "AIzaSyBY5RLqhhp1IJJGdiKBQEOHTDoSPwvx8ZM",
+  authDomain: "fussion-proyek-dpw.firebaseapp.com",
+  projectId: "fussion-proyek-dpw",
+  storageBucket: "fussion-proyek-dpw.firebasestorage.app",
+  messagingSenderId: "301956673407",
+  appId: "1:301956673407:web:5d2bf8749996c113cf344a",
+  measurementId: "G-CBS2216ZFG"
+};
 
-    const username = document.getElementById('user').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('pass').value;
-    const confirmPassword = document.getElementById('pass-ulang').value;
-    const role = document.getElementById('role').value;
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
 
-    if (password !== confirmPassword) {
-        alert('Password tidak cocok!');
-        return;
-    }
+document.getElementById("register").addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-    const newUser = {
-        nama: username,
-        email,
-        password,
-        role
-    };
+  const username = document.getElementById("user").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("pass").value;
+  const passwordUlang = document.getElementById("pass-ulang").value;
+  const role = document.getElementById("role").value;
 
-    fetch("/register-user", {
-        method: "POST",
-        headers: {
-        "Content-Type": "application/json"
-        },
-        body: JSON.stringify(newUser)
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.error) {
-            alert(data.error);
-        } else {
-            alert(data.message);
-            form.reset();
-            window.location.href = "/login";
-        }
-    })
-    .catch(error => {
-        console.error("Gagal daftar:", error);
-        alert("Terjadi kesalahan saat mendaftar.");
+  if (password !== passwordUlang) {
+    alert("Password dan konfirmasi password tidak cocok.");
+    return;
+  }
+
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+
+    // Simpan data tambahan ke Firestore
+    await setDoc(doc(db, "users", user.uid), {
+      email: user.email,
+      username: username,
+      role: role
     });
+
+    alert("Registrasi berhasil. Silakan login.");
+    window.location.href = "/login";
+  } catch (error) {
+    alert("Registrasi gagal: " + error.message);
+  }
 });
