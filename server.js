@@ -4,7 +4,15 @@ const fs = require("fs");
 const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8000;
+const admin = require("firebase-admin");
+const serviceAccount = require("./firebase-key.json");
 
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
+
+const db = admin.firestore();
+const pesanCollection = db.collection("pesan");
 // midlware buat baca json
 app.use(express.json());
 
@@ -237,34 +245,37 @@ app.post("/simpan-transaksi", (req, res) => {
 // baca pesan
 const messages = [];
 
-app.get('/api/pesan', (req, res) => {
-  res.json(messages);
+app.get("/api/pesan", async (req, res) => {
+  try {
+    const snapshot = await pesanCollection.orderBy("timestamp", "asc").get();
+    const messages = snapshot.docs.map(doc => doc.data());
+    res.json(messages);
+  } catch (err) {
+    console.error("Error getting messages:", err);
+    res.status(500).send("Server Error");
+  }
 });
 
-app.post('/api/pesan', (req, res) => {
+app.post("/api/pesan", async (req, res) => {
   const { username, content } = req.body;
 
-  if (
-    typeof username !== 'string' || username.trim() === '' ||
-    typeof content !== 'string' || content.trim() === ''
-  ) {
-    return res.status(400).json({ error: 'Invalid username or content' });
+  if (!username || !content) {
+    return res.status(400).json({ error: "username dan content wajib diisi" });
   }
 
-  if (content.length > 1500) {
-    return res.status(400).json({ error: 'Message content too long' });
+  try {
+    await pesanCollection.add({
+      username,
+      content,
+      timestamp: admin.firestore.FieldValue.serverTimestamp()
+    });
+    res.status(200).send("Pesan disimpan");
+  } catch (err) {
+    console.error("Error saving message:", err);
+    res.status(500).send("Server Error");
   }
-
-  const newMessage = {
-    username: username.trim(),
-    content: content.trim(),
-    timestamp: new Date().toISOString(),
-  };
-
-  messages.push(newMessage);
-
-  res.status(201).json(newMessage);
 });
+
 
 // Endpoint testi 
 app.get("/testimoni", (req, res) => {
@@ -311,67 +322,61 @@ app.post("/simpan-testimonial", (req, res) => {
 });
 
 // login user admin 
-app.post("/login-user", (req, res) => {
+app.post("/login-user", async (req, res) => {
   const { email, password } = req.body;
-  const filePath = path.join(__dirname, "data", "users.json");
 
-  fs.readFile(filePath, "utf8", (err, jsonData) => {
-    if (err) {
-      console.error("Gagal membaca user:", err);
-      return res.status(500).json({ error: "Gagal membaca data user" });
-    }
+  try {
+    const snapshot = await db.collection("users")
+      .where("email", "==", email)
+      .where("password", "==", password)
+      .get();
 
-    let users = JSON.parse(jsonData);
-    const userFound = users.find(u => u.email === email && u.password === password);
-
-    if (!userFound) {
+    if (snapshot.empty) {
       return res.status(401).json({ error: "Email atau password salah!" });
     }
+
+    const userData = snapshot.docs[0].data();
 
     res.json({
       message: "Login sukses",
       user: {
-        email: userFound.email,
-        nama: userFound.nama,
-        role: userFound.role
+        email: userData.email,
+        nama: userData.nama,
+        role: userData.role
       }
     });
-  });
+  } catch (err) {
+    console.error("Gagal login:", err);
+    res.status(500).json({ error: "Server error saat login." });
+  }
 });
 
-// register user admin
-app.post("/register-user", (req, res) => {
-  console.log(req.body);
-  console.log("Data yang diterima:", req.body);
 
+
+// register user admin
+app.post("/register-user", async (req, res) => {
   const { nama, email, password, role } = req.body;
 
   if (!nama || !email || !password || !role) {
     return res.status(400).json({ error: "Semua field wajib diisi." });
   }
 
-  const dataPath = path.join(__dirname, "data", "users.json");
-  const users = JSON.parse(fs.readFileSync(dataPath, "utf-8"));
-
-  const userExists = users.find(
-    (user) => user.email === email || user.nama === nama
-  );
-  if (userExists) {
-    return res.status(400).json({ error: "Username atau email sudah terdaftar." });
-  }
-
-  const newUser = { nama, email, password, role };
-  users.push(newUser);
-
   try {
-    fs.writeFileSync(dataPath, JSON.stringify(users, null, 2));
-    console.log("User berhasil disimpan:", newUser);
+    const userRef = db.collection("users");
+    const snapshot = await userRef.where("email", "==", email).get();
+
+    if (!snapshot.empty) {
+      return res.status(400).json({ error: "Email sudah terdaftar." });
+    }
+
+    await userRef.add({ nama, email, password, role });
     res.json({ message: "Registrasi berhasil!" });
   } catch (err) {
-    console.error("Gagal menulis file:", err);
-    res.status(500).json({ error: "Terjadi kesalahan saat menyimpan data." });
+    console.error("Gagal register user:", err);
+    res.status(500).json({ error: "Server error saat register." });
   }
 });
+
 
 // forgot password
 app.post('/api/forgot-password', (req, res) => {

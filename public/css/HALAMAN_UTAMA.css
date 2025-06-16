@@ -21,16 +21,8 @@ body {
 .header {
   padding: 15px 30px;
   width: 100%;
-  position: relative;
+  position: fixed;
   z-index: 1000;
-}
-
-.container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position:fixed;
 }
 
 
@@ -46,6 +38,7 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: normal;
+  font-size: 120px;
   transition: color 0.3s;
 }
 
@@ -63,8 +56,11 @@ nav a:hover {
   padding-right: 20px;
 }
 
-.left-section{
-    display: flex-start;
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
 }
 
 .search-box input {
@@ -92,14 +88,14 @@ html, body {
   overflow-x: hidden; 
 }
 .container {
-    width: 100%;
-    margin: auto;
-    text-align: right;
-    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .container-isi {
-    width: 100%;
     margin: auto;
     text-align: center;
     padding-top: 10%;
@@ -398,7 +394,7 @@ footer {
 }
 
 .help .contact-btn:hover {
-    background-color: #e67e22; /* Button hover color */
+    background-color: #e67e22; 
 }
 
 /* Footer Bottom */
@@ -416,4 +412,22 @@ td{
 }
 .serchh{
     float: right;
+}
+#profilPengguna {
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid var(--kuning);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    display: block;
+    align-content: center;
+    align-items: center;
+}
+#user-name {
+  font-size: 25px;
+  position: relative;
+  top: 0;        
 }
