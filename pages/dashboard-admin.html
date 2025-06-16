@@ -11,7 +11,7 @@
         <div class="container">
             <div class="left-bar">
                 <img class="foto" src="/assets/foto/fotoanonym.png" title="Foto Profil">
-                <div class="nama">raihan X arik</div>
+                <div class="nama username-display">raihan X arik</div>
                 <ol>
                     <li class="side-dashboard">Dashboard</li>
                     <li class="side-akun">Account</li>
@@ -228,7 +228,7 @@
         window.location.href = "/login";
         return;
     }
-
+    
     const uid = user.uid;
     const userRef = doc(db, "users", uid);
     const userSnap = await getDoc(userRef);
@@ -248,6 +248,7 @@
     }
     document.querySelector(".username").innerHTML = `: ${userData.username || "-"}`;
     document.querySelector(".email").innerHTML = `: ${userData.email || "-"}`;
+    document.querySelector(".username-display").textContent = userData.username || "-";
     await tampilkanLaporan();
     await tampilkanRiwayat();
     const usersCol = collection(db, "users");
