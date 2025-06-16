@@ -38,24 +38,25 @@
                     </div>
                 </div>
                 <div id="akun">
-                    <h2>Kelola Akun Admin</h2>
-                    <table class="kotak-akun" cellspacing="10px">
-                        <tr><th>Username</th><td class="username">: Rehan Aryanova narendra</td><td class="edit-username">EDIT</td></tr>
-                        <tr><th>email</th><td class="email">: raihan@gmail.com</td><td class="edit-email">EDIT</td></tr>
-                        <tr><th>Status</th><td>: Admin</td><td></td></tr>
-                        <h3 style="margin-top: 30px;">Daftar Akun Pengguna</h3>
-                        <table id="user-list" border="1" cellspacing="0" cellpadding="8">
-                        <thead>
-                            <tr>
-                            <th>Username</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Aksi</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                        </table>
-                    </table>
+                <h2>Kelola Akun Admin</h2>
+                <table class="kotak-akun" cellspacing="10px">
+                    <tr><th>Username</th><td class="username">: -</td><td class="edit-username">EDIT</td></tr>
+                    <tr><th>Email</th><td class="email">: -</td><td class="edit-email">EDIT</td></tr>
+                    <tr><th>Status</th><td>: Admin</td><td></td></tr>
+                </table>
+
+                <h3 style="margin-top: 30px;">Daftar Akun Pengguna</h3>
+                <table id="user-list" border="1" cellspacing="0" cellpadding="8">
+                    <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Aksi</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
                 </div>
                 <div id="games">
                     <h2>Daftar Game</h2>
@@ -102,7 +103,8 @@
         getDoc,
         updateDoc,
         collection,
-        getDocs
+        getDocs,
+        deleteDoc
     } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
     // Konfigurasi Firebase
@@ -162,63 +164,65 @@
 
     // Autentikasi
     onAuthStateChanged(auth, async (user) => {
-        if (!user) {
-            window.location.href = "/login";
-        } else {
-            const uid = user.uid;
-            const userRef = doc(db, "users", uid);
-            const userSnap = await getDoc(userRef);
+    if (!user) {
+        window.location.href = "/login";
+        return;
+    }
 
-            if (userSnap.exists()) {
-                const userData = userSnap.data();
-                document.querySelector(".username").innerHTML = `: ${userData.username || "-"}`;
-                document.querySelector(".email").innerHTML = `: ${userData.email || "-"}`;
-                
-                if (userData.role !== "admin") {
-                    alert("Akses ditolak. Anda bukan admin.");
-                    window.location.href = "/";
-                    return;
-                }
+    const uid = user.uid;
+    const userRef = doc(db, "users", uid);
+    const userSnap = await getDoc(userRef);
 
-                // Tampilkan daftar akun pengguna lain
-                const usersCol = collection(db, "users");
-                const usersSnap = await getDocs(usersCol);
-                const tbody = document.querySelector("#user-list tbody");
+    if (!userSnap.exists()) {
+        alert("Data pengguna tidak ditemukan.");
+        window.location.href = "/login";
+        return;
+    }
 
-                usersSnap.forEach(docu => {
-                    const data = docu.data();
-                    if (docu.id !== uid) {
-                        const row = document.createElement("tr");
-                        row.innerHTML = `
-                            <td>${data.username || "-"}</td>
-                            <td>${data.email || "-"}</td>
-                            <td>${data.role || "user"}</td>
-                            <td><button class="hapus-akun" data-id="${docu.id}">Hapus</button></td>
-                        `;
-                        tbody.appendChild(row);
-                    }
-                });
-                document.querySelectorAll(".hapus-akun").forEach(btn => {
-                btn.addEventListener("click", async () => {
-                    const userId = btn.getAttribute("data-id");
-                    const konfirmasi = confirm("Apakah Anda yakin ingin menghapus akun ini?");
-                    if (konfirmasi) {
-                    try {
-                        await deleteDoc(doc(db, "users", userId));
-                        alert("Akun berhasil dihapus.");
-                        btn.closest("tr").remove();
-                    } catch (error) {
-                        console.error("Gagal menghapus akun:", error);
-                        alert("Gagal menghapus akun.");
-                    }
-                    }
-                });
-                });
-            } else {
-                alert("Data pengguna tidak ditemukan.");
-                window.location.href = "/login";
+    const userData = userSnap.data();
+
+    if (userData.role !== "admin") {
+        alert("Akses ditolak. Anda bukan admin.");
+        window.location.href = "/";
+        return;
+    }
+    document.querySelector(".username").innerHTML = `: ${userData.username || "-"}`;
+    document.querySelector(".email").innerHTML = `: ${userData.email || "-"}`;
+    await tampilkanLaporan();
+    const usersCol = collection(db, "users");
+    const usersSnap = await getDocs(usersCol);
+    const tbody = document.querySelector("#user-list tbody");
+    tbody.innerHTML = "";
+    usersSnap.forEach(docu => {
+        const data = docu.data();
+        if (docu.id !== uid) {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${data.username || "-"}</td>
+            <td>${data.email || "-"}</td>
+            <td>${data.role || "user"}</td>
+            <td><button class="hapus-akun" data-id="${docu.id}">Hapus</button></td>
+        `;
+        tbody.appendChild(row);
+        }
+    });
+
+    document.querySelectorAll(".hapus-akun").forEach(btn => {
+        btn.addEventListener("click", async () => {
+        const userId = btn.getAttribute("data-id");
+        const konfirmasi = confirm("Apakah Anda yakin ingin menghapus akun ini?");
+        if (konfirmasi) {
+            try {
+            await deleteDoc(doc(db, "users", userId));
+            alert("Akun berhasil dihapus.");
+            btn.closest("tr").remove();
+            } catch (error) {
+            console.error("Gagal menghapus akun:", error);
+            alert("Gagal menghapus akun.");
             }
         }
+        });
+    });
     });
     async function tampilkanLaporan() {
     const laporanContainer = document.getElementById("laporan");
@@ -229,8 +233,6 @@
         laporanContainer.innerHTML += "<p>Tidak ada laporan.</p>";
         return;
     }
-
-    // Buat tabel laporan
     let html = `
         <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; margin-top: 10px;">
         <thead>
@@ -260,13 +262,6 @@
     html += "</tbody></table>";
     laporanContainer.innerHTML += html;
     }
-    onAuthStateChanged(auth, async (user) => {
-    if (user) {
-        if (userData.role === "admin") {
-        await tampilkanLaporan(); 
-        }
-    }
-    });
     document.getElementById("logoutBtn").addEventListener("click", () => {
         signOut(auth)
             .then(() => {
@@ -288,8 +283,19 @@
             document.querySelector(".username").innerHTML = `: ${newUsername}`;
         }
     });
-    document.querySelector(".edit-email").addEventListener("click", () => {
-        alert("Fitur edit email belum tersedia.");
+    import { updateEmail } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+
+    document.querySelector(".edit-email").addEventListener("click", async () => {
+    const newEmail = prompt("Masukkan email baru:");
+    try {
+        await updateEmail(auth.currentUser, newEmail);
+        await updateDoc(doc(db, "users", auth.currentUser.uid), { email: newEmail });
+        alert("Email berhasil diubah.");
+        document.querySelector(".email").innerHTML = `: ${newEmail}`;
+    } catch (e) {
+        console.error("Gagal update email:", e);
+        alert("Gagal mengubah email.");
+    }
     });
     </script>
     </body>
