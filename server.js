@@ -7,21 +7,7 @@ const PORT = process.env.PORT || 8000;
 
 // midlware buat baca json
 app.use(express.json());
-const session = require("express-session");
 
-app.use(session({
-  secret: "aman", 
-  resave: false,
-  saveUninitialized: true,
-  cookie: { maxAge: 1000 * 60 * 60 }
-}));
-function isAuthenticated(req, res, next) {
-  if (req.session && req.session.user) {
-    next();
-  } else {
-    res.redirect("/login");
-  }
-}
 // Static files tanpa prefix
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/api", express.static(path.join(__dirname, "data")));
@@ -35,11 +21,8 @@ app.get("/faq", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "pages", "faq.html"));
 });
 app.get("/", (req, res) => {
-  const userName = req.session.userName || "";
   res.sendFile(path.join(__dirname, "pages", "HALAMAN_UTAMA.html"));
 });
-
-
 app.get("/list-game", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "list-game.html"));
 });
@@ -98,57 +81,10 @@ app.get("/logout", (req, res) => {
     res.redirect("/login");
   });
 });
-app.get("/api/current-user", (req, res) => {
-  if (req.session && req.session.userName) {
-    res.json({ loggedIn: true, userName: req.session.userName });
-  } else {
-    res.json({ loggedIn: false });
-  }
-});
-app.get("/api/user", (req, res) => {
-  if (req.session.user) {
-    res.json(req.session.user);
-  } else {
-    res.status(401).json({ error: "Belum login" });
-  }
-});
 app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "login.html"));
 });
-app.post("/login", (req, res) => {
-  const { email, password } = req.body;
-  const filePath = path.join(__dirname, "data", "users.json");
-
-  fs.readFile(filePath, "utf8", (err, jsonData) => {
-    if (err) {
-      return res.status(500).json({ error: "Gagal membaca data pengguna" });
-    }
-
-    const users = JSON.parse(jsonData);
-    const user = users.find(u => u.email === email && u.password === password);
-
-  if (user) {
-    req.session.user = {
-      nama: user.nama,
-      email: user.email,
-      role: user.role,
-    };
-
-    if (user.role === "admin") {
-      res.redirect("/dashboard-admin");
-    } else {
-      res.redirect("/dashboard-user");
-    }
-  } else {
-    res.status(401).json({ error: "Email atau password salah" });
-  }
-  });
-});
-
-app.get("/dashboard-user", isAuthenticated, (req, res) => {
-  if (req.session.user.role !== "user") {
-    return res.status(403).send("Akses ditolak!");
-  }
+app.get("/dashboard-user",(req, res) => {
   res.sendFile(path.join(__dirname, "pages", "dashboard-user.html"));
 });
 app.get("/laporkan", (req, res) => {
@@ -160,10 +96,7 @@ app.get("/syarat&ketentuan", (req, res) => {
 app.get("/kebijakanPrivasi", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "kebijakanPrivasi.html"));
 });
-app.get("/dashboard-admin", isAuthenticated, (req, res) => {
-  if (req.session.user.role !== "admin") {
-    return res.status(403).send("Akses ditolak!");
-  }
+app.get("/dashboard-admin", (req, res) => {
   res.sendFile(path.join(__dirname, "pages", "dashboard-admin.html"));
 });
 app.get("/testimonial", (req, res) => {
@@ -302,39 +235,35 @@ app.post("/simpan-transaksi", (req, res) => {
   });
 });
 // baca pesan
-app.get("/api/pesan", (req, res) => {
-    fs.readFile("data/pesan.json", "utf8", (err, data) => {
-        if (err) {
-            return res.status(500).json({ message: "Gagal membaca pesan" });
-        }
-        const pesanData = JSON.parse(data);
-        res.json(pesanData);
-    });
+const messages = [];
+
+app.get('/api/pesan', (req, res) => {
+  res.json(messages);
 });
-// kirim pesan
-app.post("/api/pesan", (req, res) => {
-    const { nama, pesan } = req.body;
 
-    if (!nama || !pesan) {
-        return res.status(400).json({ message: "Nama dan pesan wajib diisi" });
-    }
+app.post('/api/pesan', (req, res) => {
+  const { username, content } = req.body;
 
-    fs.readFile("data/pesan.json", "utf8", (err, data) => {
-        if (err) {
-            return res.status(500).json({ message: "Gagal membaca pesan" });
-        }
+  if (
+    typeof username !== 'string' || username.trim() === '' ||
+    typeof content !== 'string' || content.trim() === ''
+  ) {
+    return res.status(400).json({ error: 'Invalid username or content' });
+  }
 
-        const pesanData = JSON.parse(data);
-        pesanData.push({ nama, pesan }); // ← Tambah pesan baru
+  if (content.length > 1500) {
+    return res.status(400).json({ error: 'Message content too long' });
+  }
 
-        fs.writeFile("data/pesan.json", JSON.stringify(pesanData, null, 2), (err) => {
-            if (err) {
-                return res.status(500).json({ message: "Gagal menyimpan pesan" });
-            }
+  const newMessage = {
+    username: username.trim(),
+    content: content.trim(),
+    timestamp: new Date().toISOString(),
+  };
 
-            res.status(201).json({ message: "Pesan berhasil dikirim" });
-        });
-    });
+  messages.push(newMessage);
+
+  res.status(201).json(newMessage);
 });
 
 // Endpoint testi 
@@ -463,4 +392,3 @@ app.post('/api/forgot-password', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server nyala di http://localhost:${PORT}`);
 });
-
