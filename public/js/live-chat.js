@@ -1,24 +1,11 @@
 const chatInput = document.getElementById("chat");
 const sendButton = document.getElementById("kirim");
 const chatArea = document.getElementById("chatArea");
+const nameInput = document.querySelector(".namanya");
+const okButton = document.querySelector(".ok");
+const usernameDisplay = document.getElementById("usernameDisplay");
 const maxCharMsg = 1500;
-let currentUser = null;
-
-// Ambil user yang sedang login
-async function getCurrentUser() {
-    try {
-        const res = await fetch("/api/user");
-        const data = await res.json();
-        currentUser = data.username;
-        fetchMessages(); // ambil pesan setelah user diketahui
-    } catch (err) {
-        console.error("Belum login");
-        window.location.href = "/login";
-    }
-}
-getCurrentUser();
-
-// Ambil semua pesan dan tampilkan
+let currentUser  = "User ";
 async function fetchMessages() {
     try {
         const response = await fetch('/api/pesan');
@@ -26,46 +13,49 @@ async function fetchMessages() {
 
         let html = "";
         messages.forEach((msg, index) => {
-            const isUser = msg.nama.trim() === currentUser;
-            const className = isUser ? "from-user" : "from-others";
+            const isUser  = msg.username.trim() === currentUser ;
+            const className = isUser  ? "from-user" : "from-others";
             const marginTop = index === 0 ? "margin-top: 20px;" : "";
 
             html += `
                 <div class="message ${className}" style="${marginTop}">
-                    <a style="font-size:10px;">${msg.nama}:</a><br> ${msg.pesan}
+                    <a style="font-size:10px;">${msg.username}:</a><br> ${msg.content}
                 </div>`;
         });
 
         chatArea.innerHTML = html;
-        chatArea.scrollTop = chatArea.scrollHeight; // scroll ke bawah
+        chatArea.scrollTop = chatArea.scrollHeight;
     } catch (error) {
         console.error("Error fetching messages:", error);
     }
 }
-
-// Kirim pesan saat tombol klik
+okButton.addEventListener("click", function () {
+    const name = nameInput.value.trim();
+    if (name) {
+        currentUser  = name;
+        usernameDisplay.textContent = `Welcome, ${currentUser }!`; 
+        usernameDisplay.style.display = "block";
+        nameInput.style.display = "none";
+        okButton.style.display = "none";
+    }
+});
 sendButton.addEventListener("click", async function () {
     const messageText = chatInput.value.trim();
     if (messageText) {
-        if (messageText.length > maxCharMsg) {
-            alert("Pesan terlalu panjang!");
-            return;
-        }
-
         try {
             const response = await fetch('/api/pesan', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    nama: currentUser,
-                    pesan: messageText
+                    username: currentUser ,
+                    content: messageText
                 })
             });
 
             if (response.ok) {
                 console.log("Pesan berhasil dikirim");
                 chatInput.value = "";
-                fetchMessages(); // Refresh setelah kirim
+                fetchMessages();
             } else {
                 console.error("Gagal mengirim pesan");
             }
@@ -74,11 +64,10 @@ sendButton.addEventListener("click", async function () {
         }
     }
 });
-
-// Kirim pesan dengan tombol Enter
 chatInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
         sendButton.click();
     }
 });
+fetchMessages();

@@ -169,3 +169,9 @@ main{
 .link1,.link2,.link3,.link4,.link5,.link6{
     display: none;
 }
+.namanya{
+    display: block;
+}
+.ok{
+    display: block;
+}
