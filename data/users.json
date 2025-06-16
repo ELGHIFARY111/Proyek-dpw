@@ -18,9 +18,6 @@
     "role": "user"
   },
   {
-    "nama": "roni",
-    "email": "ar@gmail.com",
-    "password": "123456789",
     "nama": "rendi2",
     "email": "rendi2@gmail.com",
     "password": "890",
@@ -31,5 +28,23 @@
     "email": "fuad@gmail.com",
     "password": "1",
     "role": "user"
+  },
+  {
+    "nama": "raihan",
+    "email": "raihanaryanova@gmail.com",
+    "password": "admin123",
+    "role": "admin"
+  },
+  {
+    "nama": "narend",
+    "email": "Rajacheat252@gmail.com",
+    "password": "admin33",
+    "role": "admin"
+  },
+  {
+    "nama": "999",
+    "email": "raihan@gmail.com",
+    "password": "123123",
+    "role": "admin"
   }
 ]
