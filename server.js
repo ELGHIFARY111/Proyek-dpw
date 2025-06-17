@@ -5,8 +5,12 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8080;
 const admin = require("firebase-admin");
-
+require("dotenv").config();
 const firebaseKey = process.env.FIREBASE_KEY;
+if (!firebaseKey) {
+  console.error("FIREBASE_KEY tidak tersedia.");
+  process.exit(1);
+}
 const serviceAccount = JSON.parse(firebaseKey);
 
 admin.initializeApp({
