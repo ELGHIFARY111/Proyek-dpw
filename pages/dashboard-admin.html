@@ -135,11 +135,9 @@
             "side-dashboard": "dashboard",
             "side-akun": "akun",
             "side-games": "games",
-            "side-topup": "topup",
             "side-riwayat": "riwayat",
             "side-laporan": "laporan"
         };
-
         Object.entries(navMap).forEach(([cls, id]) => {
             const btn = document.querySelector(`.${cls}`);
             btn.addEventListener("click", () => {
