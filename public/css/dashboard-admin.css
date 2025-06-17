@@ -194,28 +194,20 @@ li{
     border-collapse: collapse;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fff;
+    background-color: white;
     border-radius: 10px;
     overflow: hidden;
 }
-
 #user-list thead {
-    background-color: #394867;
-    color: #fff;
+    background-color: var(--biru2);
+    color: white;
 }
-
 #user-list th,
 #user-list td {
     padding: 12px 16px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
-
-#user-list tr:hover {
-    background-color: #f1f1f1;
-}
-
 #user-list button.hapus-akun {
     padding: 6px 12px;
     background-color: #e63946;
@@ -265,7 +257,6 @@ li{
     color: #888;
     font-style: italic;
 }
-/* RIWAYAT - Container */
 #riwayat {
     padding: 20px;
     background-color: #ffffff;
@@ -276,6 +267,7 @@ li{
 #riwayat table {
     width: 100%;
     border-collapse: collapse;
+    border-radius: 12px;
     font-size: 14px;
     background-color: #fafafa;
     border: 1px solid #ddd;
@@ -284,13 +276,9 @@ li{
     background-color: var(--biru2);
     color: white;
 }
-
 #riwayat table th,
 #riwayat table td {
     padding: 10px 12px;
-    border: 1px solid #ddd;
+    border: 1px solid blue;
     text-align: center;
-}
-#riwayat table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
 }

@@ -17,7 +17,6 @@
                     <li class="side-akun">Account</li>
                     <hr>
                     <li class="side-games">Games</li>
-                    <li class="side-topup">Topup</li>
                     <li class="side-riwayat">Riwayat</li>
                     <li class="side-laporan">Laporan</li>
                 </ol>
@@ -83,9 +82,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="topup">
-                    <h2>Daftar Topup</h2>
-                </div>
                 <div id="riwayat">
                     <h2>Riwayat</h2>
                 </div>
@@ -107,7 +103,6 @@
         deleteDoc
     } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
-    // Konfigurasi Firebase
     const firebaseConfig = {
         apiKey: "AIzaSyBY5RLqhhp1IJJGdiKBQEOHTDoSPwvx8ZM",
         authDomain: "fussion-proyek-dpw.firebaseapp.com",
@@ -118,7 +113,6 @@
         measurementId: "G-CBS2216ZFG"
     };
 
-    // Inisialisasi Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
