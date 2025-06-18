@@ -74,6 +74,6 @@ Run Project
   npm run dev
 ```
 
-## Demo
+## Demo 
 
-[https://proyek-dpw.vercel.app/](https://proyek-dpw.vercel.app/)
+[https://6fussion.up.railway.app/](https://6fussion.up.railway.app/)
